@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}Useful Resources}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}Advanced projects}{2}{subsection.1.1}
+\contentsline {section}{\numberline {2}Journal}{2}{section.2}
+\contentsline {section}{\numberline {3}Questions to ask to Nikos}{25}{section.3}
+\contentsline {section}{\numberline {4}Questions}{25}{section.4}
+\contentsline {section}{\numberline {5}TO DO list}{26}{section.5}

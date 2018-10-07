@@ -1,0 +1,957 @@
+
+
+%% See "book", "report", "letter" for other types of document.
+\documentclass[11pt,a4paper]{article}
+%\documentclass[11pt,a4paper]{article} % use larger type; default would be 10pt
+
+%% Packages
+\usepackage{lipsum} % to get some dummy text
+\usepackage[utf8]{inputenc} % set input encoding 
+%\usepackage[francais]{babel} %accens aigus acceptés dans le texte
+\usepackage{hyperref} % for web links
+\usepackage{amssymb, amsmath, amsfonts} % symbols math (\mathbb etc...).
+\usepackage{geometry} % for page dimensions, landscape, format
+\usepackage{fancyhdr}
+\usepackage{enumerate} % to be able to determine the style of the enumeration
+%\usepackage[toc,page]{appendix} % For appendices
+%\usepackage[final]{pdfpages} % to include a pdf
+
+%% Definition of the environment for a diary
+\newenvironment{loggentry}[2]% date, heading
+{\noindent\textbf{#1}\hspace{1cm}$\mathbf{\sim}$\text{ }\textbf{#2}\\}{\vspace{0.5cm}}
+
+
+%% Page dimensions, landscape format
+%\geometry{legalpaper, margin=1in} % c.f. doc package geometry
+
+
+%% Headers and footers
+%% This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{1pt} % customise the layout...
+\lhead{}\chead{}\rhead{Aritz Bercher}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%% Title
+
+\title{TensorFlow and Keras Journal}
+\author{Aritz Bercher}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\begin{abstract}
+In this journal, I will try to keep track of the useful references to learn TensorFlow and Keras (mainly webpages) I find online and of my little progresses.
+\end{abstract}
+
+\section{Useful Resources}
+\begin{itemize}
+\item There is a MOOK online about Tensor Flow:\\
+\url{https://de.udacity.com/course/deep-learning--ud730}
+\item This code seems to contain a lot of TensorFlow APIs without being too long:\\
+\url{https://github.com/tensorflow/tensorflow/blob/r1.7/tensorflow/examples/tutorials/mnist/mnist_with_summaries.py}
+\item This tutorial is a good place to get started:\\
+\url{https://www.tensorflow.org/get_started/}
+\item More advanced tutorials for specific tasks can be found there
+\url{https://www.tensorflow.org/tutorials/}\\
+\item Here are a lot of different models:\\
+\url{https://github.com/tensorflow/models}\\
+\item This tutorial about Pytorch contains a very small basic example of a TensorFlow program which I find very instructive:\\
+\url{http://pytorch.org/tutorials/beginner/pytorch_with_examples.html#pytorch-variables-and-autograd}
+\item Roman recommended this coursera mook on NLP using TensorFlow:\\
+\url{https://www.coursera.org/learn/language-processing}\\
+\item This page contains information about how to \textbf{read data without using the} \texttt{tf.data} \textbf{API}.\\
+\url{https://www.tensorflow.org/api_guides/python/reading_data}\\
+\item This page contains a very nice tutorial about the basic APIs from TF and explains the general architecture of TF:\\
+\url{http://www.goldsborough.me/tensorflow/ml/ai/python/2017/06/28/20-21-45-a_sweeping_tour_of_tensorflow/}\\
+\item This page is the \textbf{official documentation for Keras}:\\
+\url{https://keras.io/}
+\end{itemize}
+
+\subsection{Advanced projects}
+In this section, I present complicated models that could be interesting to study:
+\begin{itemize}
+\item Here is a project that Nikos recommended to me which uses TF:\\
+\href{https://allenai.github.io/bi-att-flow/}{BiDAF}
+\item This script coming from the official repo implements with TF a CNN model for Sentiment Analysis. It uses some recent architecture where the size of some layers vary to make up for the fact that not all input have the same length:\\
+\url{https://github.com/tensorflow/models/tree/master/research/sentiment_analysis}
+\end{itemize}
+
+\section{Journal}
+
+\begin{loggentry}{03.04.18}{Bi-Directional Attention Flow for Machine Comprehension (BiDAF), Comparison Pytorch and TensorFlow}
+I looked at this webpage that Nikos recommended me:\\
+\url{https://allenai.github.io/bi-att-flow/}\\
+It looks like they developed a special architecture for a neural network which goal is to find answers in a text to questions asked in natural language.\\
+I play a bit with their demo version:\\
+\url{http://allgood.cs.washington.edu:1995/}\\
+but it's easy to fool.\\
+I read this article which gives comparison of pytorch and tensorflow:\\
+\url{https://towardsdatascience.com/pytorch-vs-tensorflow-spotting-the-difference-25c75777377b}\\
+\end{loggentry}
+
+\begin{loggentry}{04.04.18}{Installing pip3 and tensorflow-gpu}
+In order to install tensorflow (I read somewhere that it was better to use pip than conda for installing tensorflow), I installed \texttt{pip3} with this command:\\
+\begin{verbatim}
+sudo apt install python3-pip
+\end{verbatim}
+I then installed TensorFlow following the recommendations found  with the following command:\\
+\begin{verbatim}
+pip3 install --upgrade tensorflow-gpu
+\end{verbatim}
+It went well but at the end I received this warning:
+\begin{verbatim}
+You are using pip version 8.1.1, however version 9.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+\end{verbatim}
+I don't understand exactly how it is possible since I just installed \texttt{pip3}. I suspect that when one uses sudo apt-get, the computer looks inside some given list of packages put online by the ubuntu community, and that these packages are not always the latest available version. For now I won't upgrade pip as it doesn't seem necessary.\\
+Then I tried to run the example but it didn't work, I received this error:\\
+\begin{verbatim}
+ModuleNotFoundError: No module named 'matplotlib'
+\end{verbatim}
+I installed it using
+\begin{verbatim}
+conda install matplotlib
+\end{verbatim}
+and the error disappeared but was replaced by 
+\begin{verbatim}
+ModuleNotFoundError: No module named 'tensorflow'
+\end{verbatim}
+I don't know the reason. If, after having activated my conda environment mypy36\\
+\begin{verbatim}
+conda list
+\end{verbatim}
+tensorflow doesn't appear, and if I deactivate mypy36, it also doesn't appear. Nikos suggested that it might be related to the fact that I use python 3.6 and not 3.5. There is also an issue with \texttt{pip} itself. It might be the case that when using it it doesn't work well with the conda environment. More precisely, it could happen that pip installs the packages in the root environment instead of the activated environment, and it also might be the case that the packages installed with pip do not appear when using conda list. The solution (suggested by Nikos and hinted by \href{https://stackoverflow.com/questions/18640305/how-do-i-keep-track-of-pip-installed-packages-in-an-anaconda-conda-environment}{this post}) would be to install pip with anaconda, and directly at the creation of the environment.\\
+I think I will create a new environment special for tensorflow with python 3.5 (as suggested in \href{https://stackoverflow.com/questions/40884668/installing-tensorflow-on-windows-python-3-6-x}{this post}).\\
+According to this page:
+\begin{verbatim}
+https://stackoverflow.com/questions/18640305/how-do-i-keep-track-of-pip-installed-packages-in-an-anaconda-conda-environment
+\end{verbatim}
+in order to see all the packages installed by both conda and pip, one can use this command (for an environment called mypy36):
+\begin{verbatim}
+conda env export -n mypy36
+\end{verbatim}
+
+I tried again to install tensorflow but this time following this guideline:\\
+\url{https://github.com/williamFalcon/tensorflow-gpu-install-ubuntu-16.04}\\
+I tried to install cuda with\\
+\begin{verbatim}
+sudo apt-get install cuda-9-0
+\end{verbatim}
+but for some reason my internet connection failed in the middle of the download.\\
+Following the recommendations appearing in the terminal, I entered\\
+\begin{verbatim}
+sudo apt-get install --fix-missing
+\end{verbatim}
+and received the following output\\
+\begin{verbatim}
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  gstreamer1.0-fluendo-mp3 gstreamer1.0-libav libenca0 libguess1 librubberband2v5 libsdl2-2.0-0 libsndio6.1 libva-wayland1 linux-headers-4.10.0-28 linux-headers-4.10.0-28-generic
+  linux-headers-4.13.0-32 linux-headers-4.13.0-32-generic linux-headers-4.13.0-36 linux-headers-4.13.0-36-generic linux-image-4.10.0-28-generic linux-image-4.13.0-32-generic
+  linux-image-4.13.0-36-generic linux-image-extra-4.10.0-28-generic linux-image-extra-4.13.0-32-generic linux-image-extra-4.13.0-36-generic mpv oxideqt-codecs-extra rtmpdump
+  ubuntu-restricted-addons
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 7 not upgraded.
+\end{verbatim}
+Then I tried to do
+\begin{verbatim}
+sudo apt purge cuda-9-0
+\end{verbatim}
+and received this output:
+\begin{verbatim}
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Package 'cuda-9-0' is not installed, so not removed
+The following packages were automatically installed and are no longer required:
+  gstreamer1.0-fluendo-mp3 gstreamer1.0-libav libenca0 libguess1 librubberband2v5 libsdl2-2.0-0 libsndio6.1 libva-wayland1 linux-headers-4.10.0-28 linux-headers-4.10.0-28-generic
+  linux-headers-4.13.0-32 linux-headers-4.13.0-32-generic linux-headers-4.13.0-36 linux-headers-4.13.0-36-generic linux-image-4.10.0-28-generic linux-image-4.13.0-32-generic
+  linux-image-4.13.0-36-generic linux-image-extra-4.10.0-28-generic linux-image-extra-4.13.0-32-generic linux-image-extra-4.13.0-36-generic mpv oxideqt-codecs-extra rtmpdump
+  ubuntu-restricted-addons
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 7 not upgraded.
+\end{verbatim}
+Then I entered again
+\begin{verbatim}
+sudo apt-get install cuda-9-0
+\end{verbatim}
+It seemed to have worked. A lot of messages appeared on the screen including this one:
+\begin{verbatim}
+A modprobe blacklist file has been created at /etc/modprobe.d to prevent Nouveau from loading. This can be reverted by deleting /etc/modprobe.d/nvidia-graphics-drivers.conf.
+A new initrd image has also been created. To revert, please replace /boot/initrd-4.13.0-38-generic with /boot/initrd-$(uname -r)-backup.
+
+*****************************************************************************
+*** Reboot your computer and verify that the NVIDIA graphics driver can   ***
+*** be loaded.                                                            ***
+*****************************************************************************
+\end{verbatim}
+I deviated slightly from the tutorial when I created the conda environment by using this:\\
+\begin{verbatim}
+conda create -n tensorflow python=3.5 pip=9.0.1
+\end{verbatim}
+instead
+of
+\begin{verbatim}
+conda create -n tensorflow
+\end{verbatim}
+After entering
+
+I received the following messages:
+\begin{verbatim}
+Requirement already satisfied: tensorflow-gpu in ./.local/lib/python3.5/site-packages
+Requirement already satisfied: protobuf>=3.4.0 in ./.local/lib/python3.5/site-packages (from tensorflow-gpu)
+Requirement already satisfied: astor>=0.6.0 in ./.local/lib/python3.5/site-packages (from tensorflow-gpu)
+Requirement already satisfied: grpcio>=1.8.6 in ./.local/lib/python3.5/site-packages (from tensorflow-gpu)
+Requirement already satisfied: absl-py>=0.1.6 in ./.local/lib/python3.5/site-packages (from tensorflow-gpu)
+Requirement already satisfied: tensorboard<1.8.0,>=1.7.0 in ./.local/lib/python3.5/site-packages (from tensorflow-gpu)
+Requirement already satisfied: gast>=0.2.0 in ./.local/lib/python3.5/site-packages (from tensorflow-gpu)
+Requirement already satisfied: numpy>=1.13.3 in ./.local/lib/python3.5/site-packages (from tensorflow-gpu)
+Requirement already satisfied: termcolor>=1.1.0 in ./.local/lib/python3.5/site-packages (from tensorflow-gpu)
+Requirement already satisfied: six>=1.10.0 in ./.local/lib/python3.5/site-packages (from tensorflow-gpu)
+Requirement already satisfied: wheel>=0.26 in ./.local/lib/python3.5/site-packages (from tensorflow-gpu)
+Requirement already satisfied: setuptools in ./.local/lib/python3.5/site-packages (from protobuf>=3.4.0->tensorflow-gpu)
+Requirement already satisfied: werkzeug>=0.11.10 in ./.local/lib/python3.5/site-packages (from tensorboard<1.8.0,>=1.7.0->tensorflow-gpu)
+Requirement already satisfied: html5lib==0.9999999 in ./.local/lib/python3.5/site-packages (from tensorboard<1.8.0,>=1.7.0->tensorflow-gpu)
+Requirement already satisfied: bleach==1.5.0 in ./.local/lib/python3.5/site-packages (from tensorboard<1.8.0,>=1.7.0->tensorflow-gpu)
+Requirement already satisfied: markdown>=2.6.8 in ./.local/lib/python3.5/site-packages (from tensorboard<1.8.0,>=1.7.0->tensorflow-gpu)
+\end{verbatim}
+which let me think that I successfully installed tensorflow on my first trial but that for some reason it wasn't accessible when I tried to run the script from the tensorflow tutorial.\\
+When I ran
+\begin{verbatim}
+sess = tf.Session()
+\end{verbatim}
+I got this output:\\
+\begin{verbatim}
+2018-04-04 17:32:06.689952: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-04-04 17:32:06.832301: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:898] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2018-04-04 17:32:06.832758: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1344] Found device 0 with properties: 
+name: GeForce 940MX major: 5 minor: 0 memoryClockRate(GHz): 1.2415
+pciBusID: 0000:02:00.0
+totalMemory: 1.96GiB freeMemory: 1.59GiB
+2018-04-04 17:32:06.832775: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1423] Adding visible gpu devices: 0
+2018-04-04 17:34:23.194390: I tensorflow/core/common_runtime/gpu/gpu_device.cc:911] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-04-04 17:34:23.194416: I tensorflow/core/common_runtime/gpu/gpu_device.cc:917]      0 
+2018-04-04 17:34:23.194422: I tensorflow/core/common_runtime/gpu/gpu_device.cc:930] 0:   N 
+2018-04-04 17:34:23.196587: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1041] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 1328 MB memory) -> physical GPU (device: 0, name: GeForce 940MX, pci bus id: 0000:02:00.0, compute capability: 5.0)
+\end{verbatim}
+which I think is good (the guideline says ``when you run sess, you should see a bunch of lines with the word gpu in them (if install worked) otherwise, not running on gpu").
+\end{loggentry}
+
+\begin{loggentry}{05.04.18}{Finishing the installation of tensorflow, some basic TF APIs, Introduction to Keras}
+Something strange happened: even if I can import tensorflow in the console while my environment ``tensorflow" is activated, I still get the error
+\begin{verbatim}
+No module named 'tensorflow'
+\end{verbatim}
+when I try to use it in a jupyter notebook. Suspecting that the reason might be that jupyter is not installed inside the environment ``tensorflow" but only on the root, I installed juypter with
+\begin{verbatim}
+conda install jupyter
+\end{verbatim}
+but the error remained even after restarting jupyter...\\
+Then I tried to install tensorflow from source (following the indication of \href{https://www.tensorflow.org/install/install_linux#the_url_of_the_tensorflow_python_package}{this page} and not of \href{https://github.com/williamFalcon/tensorflow-gpu-install-ubuntu-16.04}{the guideline} that I followed yesterday) using this command
+\begin{verbatim}
+pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.6.0-cp35-cp35m-linux_x86_64.whl
+\end{verbatim}
+but still I was getting the same error.\\
+I deactivated and reactivated the tensorflow environment and then tried to execute the cells of my notebook but this time even matplotlib seems not to be installed:
+\begin{verbatim}
+ImportError: No module named 'matplotlib'
+\end{verbatim}
+which actually makes sense since I haven't reinstalled it (with conda) after creating my new environment. I installed it (inside my tensorflow environment) and after rebooting my system it finally works.\\
+I read the beginning of this page:\\
+\url{https://www.tensorflow.org/programmers_guide/eager}
+which explains what \texttt{eager} is and how to use it. ``TensorFlow's eager execution is an imperative programming environment that evaluates operations immediately, without an extra graph-building step. Operations return concrete values instead of constructing a computational graph to run later. This makes it easy to get started with TensorFlow, debug models, reduce boilerplate code, and is fun!".\\
+But I don't want to spend to much time on this page.\\
+I read the beginning of this page about \textbf{Datasets API}:
+\url{https://www.tensorflow.org/programmers_guide/datasets}
+but not the diverse example. What I understand from it is that it is a classes which help building kind of pipelines to preprocess the input.\\
+I read this basic tutorial about \textbf{Keras}:\\
+\url{https://keras.io/getting-started/sequential-model-guide/}\\
+\end{loggentry}
+
+\begin{loggentry}{06.04.18}{Getting started with tensorflow}
+I began this tutorial:
+\url{https://www.tensorflow.org/get_started/eager}
+I went until the training part.
+\end{loggentry}
+
+\begin{loggentry}{09.04.18}{Trying to print the value of the tensors used in the program, etimators, input functions}
+I tried to print the value of the tensors appearing in the tutorial mentioned in the previous entry of this journal. It is more tricky than I thought due to the architecture of TF:\\
+\href{https://stackoverflow.com/questions/33633370/how-to-print-the-value-of-a-tensor-object-in-tensorflow#33633839}{Stackoverflow: How to print the value of a tensor object in tensorflow?}\\
+I will wait to know more about it to try to do it.\\
+In fact, when one uses eager execution mode, one can use
+\begin{verbatim}
+tfe.Iterator(train_dataset).next()
+\end{verbatim}
+I tried to understand how Automatic differentiation works, in particular how to use this \texttt{tfe.GradientTape} but it didn't  get it. I will come back to it later.\\
+I finished reading this tutorial:\\
+\url{https://www.tensorflow.org/get_started/eager}\\
+I didn't understand everything but I will try to study other tutorials instead of focusing on this one because some aspect might be specific to this eager tool (I think I asked Nikos about this tape and he told me he didn't know it so I assume it's not central).\\
+I started this tutorial which emphasizes the notion of \textbf{estimator} (an object which encapsulates the model as well as methods to train the model, to judge the model's accuracy, and to generate predictions):\\
+\url{https://www.tensorflow.org/get_started/premade_estimators}\\
+``An Estimator is any class derived from \texttt{tf.estimator.Estimator}". I learned about \textbf{Input functions}. I think it is the function defining where the data comes from. It is used when the model is trained or used to do predictions. It outputs an object of class \texttt{tf.data.Dataset}.\\
+Here is an example taken from custom\_estimator.py :
+\begin{verbatim}
+    classifier.train(
+        input_fn=lambda:iris_data.train_input_fn(train_x, train_y, args.batch_size),
+        steps=args.train_steps)
+\end{verbatim}
+It also introduces the class \texttt{Dataset} (see \href{https://www.tensorflow.org/api_docs/python/tf/data/Dataset}{here}) and some of its subclasses like \texttt{TextLineDataset} (see \href{https://www.tensorflow.org/api_docs/python/tf/data/TextLineDataset}{here}) which have already appeared in this journal (see entry of the 05.04.18).\\
+There is a file called premade\_estimator.py which contains most of the code of the tutorial. It is \textbf{a good example of a simple script using tensorflow's APIs}
+\end{loggentry}
+
+\begin{loggentry}{10.04.18}{Premade estimators tutorial}
+I kept reading this tutorial:\\
+\url{https://www.tensorflow.org/get_started/premade_estimators}\\
+I learned a bit about \textbf{feature column} and the \texttt{tf.feature\_column} API. It seems to be an attribute of models object given to the models when they are initialized. It describes the type of each input. I also learned about some \textbf{premade estimator classes} like \texttt{tf.estimator.DNNClassifier}.\\
+I learned how to train one of these premade estimators, how evaluate its accuracy, and how to use it for predictions.\\
+I finished reading this tutorial.
+\end{loggentry}
+
+\begin{loggentry}{11.04.18}{Checkpoint format, feature columns}
+I read this tutorial about \textbf{Checkpoint format}:\\
+\url{https://www.tensorflow.org/get_started/checkpoints}\\
+From what I understand this is just describing how the values of the weights etc... are stored in external files. One should be careful when building a copy of an existing model and changing it as it might use the checkpoint files of the first estimator and create conflict.\\
+Then I started this tutorial:\\
+\url{https://www.tensorflow.org/get_started/feature_columns}\\
+which explains more about \textbf{feature columns}, what they represent and how to build them using the \texttt{tf.feature\_column} API. My understanding is that it encapsulates inside the model information about the data provided by the input function. This is required when using \texttt{tf.estimator.Estimator} objects. It says if an input is supposed to be used as a numerical value, or if it has to be categorized or bucketized, etc... There is a list of the possibilities on this page\\
+\url{https://www.tensorflow.org/api_docs/python/tf/feature_column/crossed_column}\\
+In this tutorial they present
+\begin{itemize}
+\item Numeric columns
+\item Bucketized columns
+\item Categorical identity columns
+\item Categorical vocabulary columns\\
+\item Hashed Columns
+\item Crossed columns
+\item Indicator and embedding columnss
+\end{itemize}
+It touches the topic of embeddings and gives an interesting rule of thumb to determine the number of embedding dimensions:\\
+\begin{verbatim}
+embedding_dimensions =  number_of_categories**0.25
+\end{verbatim}
+At the end it is precised that not all premade estimators accept all kinds of feature columns. There is a list specifying which ones accept what.
+\end{loggentry}
+
+\begin{loggentry}{12.04.18}{Two (tree) APIs to create a model}
+It seems that there are various API's to create a model with TF. In the ``Get started with Eager execution" tutorial here:\\
+\url{https://www.tensorflow.org/get_started/eager}\\
+the model is defined as follow using \texttt{keras.Sequential}\\
+\begin{verbatim}
+model = tf.keras.Sequential([
+  tf.keras.layers.Dense(10, activation="relu", input_shape=(4,)),  # input shape required
+  tf.keras.layers.Dense(10, activation="relu"),
+  tf.keras.layers.Dense(3)
+])
+\end{verbatim}
+but in the ``Pre-made estimator" tutorial found here:\\
+\url{https://www.tensorflow.org/get_started/premade_estimators}\\
+it is done using a pre-made estimator (\texttt{estimator.DNNClassifier}):
+\begin{verbatim}
+# Build a DNN with 2 hidden layers and 10 nodes in each hidden layer.
+classifier = tf.estimator.DNNClassifier(
+    feature_columns=my_feature_columns,
+    # Two hidden layers of 10 nodes each.
+    hidden_units=[10, 10],
+    # The model must choose between 3 classes.
+    n_classes=3)
+\end{verbatim}
+I guess that these feature columns are used only by these classes of pre-made estimator.\\
+\textbf{Edit (04.06.18):} Actually, it seems to be a common practice to build a python class encapsulating a NN model built with TF basic APIs. The assignment of the second week of coursera's course is a good example of this. So there are three ways to define a model.\\
+
+I finished the tutorial on feature columns.
+\end{loggentry}
+
+\begin{loggentry}{13.04.18}{Loading a dataset, defining number of epochs (with estimator objects), input functions, Dataset objects}
+I started this tutorial about data sets (\texttt{Dataset}), \textbf{input functions}:\\
+\url{https://www.tensorflow.org/get_started/datasets_quickstart}\\
+``The \texttt{tf.data} module contains a collection of classes that allows you to easily load data, manipulate it, and pipe it into your model. This document introduces the API by walking through two simple examples:
+\begin{itemize}
+\item Reading in-memory data from numpy arrays.
+\item Reading lines from a csv file."
+\end{itemize}
+\textbf{Edit (04.07.18):} \begin{itemize}
+\item Here is a little summary of \textbf{how to load data in the model using Estimator, and Dataset APIs}: One has to coordinate and understand \textbf{tf.data.Dataset} (an object encapsulating the preprocessed data), \textbf{input functions} (functions which are arguments of the \texttt{train} and \texttt{evaluate} methods of the \texttt{tf.estimator.Estimator} object and which are supposed to return a Dataset object), and \textbf{feature columns} (an argument of the initializer of an estimator object which specifies the type, shape, and name of the inputs). One tricky detail I didn't see at first is that when creating a Dataset (typically with \texttt{tf.data.Dataset.from\_tensor\_slices}) one has to provide features in the form of a dictionary, and its keys are then used again in the definition of the feature columns (argument of the initializer of an Estimator object). For a good example, see \href{https://www.tensorflow.org/get_started/premade_estimators}{this tutorial}) and the premade\_estimator.ipynb notebook I saved on my computer.\\
+\item To see how to use Dataset together with low-level TF APIs, see this part of the low level tutorial:\\
+\url{https://www.tensorflow.org/programmers_guide/low_level_intro#datasets}
+\end{itemize}
+\textbf{Edit (15.07.18):} I noticed some inconsistency about the \textbf{output type of an input function} According to this page, the input functions is supposed to return a \texttt{tf.data.Dataset} object as explained above:\\
+\url{https://www.tensorflow.org/guide/premade_estimators#create_input_functions}\\
+but in other tutorials, like \href{https://www.tensorflow.org/guide/custom_estimators#write_an_input_function}{this one on Custom Estimators} or \href{https://www.dlology.com/blog/an-easy-guide-to-build-new-tensorflow-datasets-and-estimator-with-keras-model/}{this one on how to turn a Keras model into an Estimator model}, it looks like the input functions returns an iterator over a \texttt{tf.data.Dataset} object. My guess is that both are possible and that Estimators internally recognize in which case we are.\\
+
+
+I think that I understood something concerning the way \textbf{epochs} are defined in the example premade\_estimator.py. I get the impression that this is dealt with by the argument \texttt{steps} of the \texttt{train} method of objects of the class (or subclass) \texttt{Estimator}. If I understood it well, this argument fixes the number of batches through which the model will be trained (the number of steps of the training). So indirectly it fixes the number of epochs to
+$$
+\# epochs = \# steps \times (batch\ size)/(data\ length).
+$$
+In order to be able to have as many epochs as one wants, we use the method \texttt{repeat()} in the definition of the returned data set of the input function (as seen in the definition of \texttt{train\_input\_fn} inside iris\_data.py).\\
+In order to read a CSV file and tranform it to an input for the model, the first step is to use \texttt{tf.data.TextLineDataset} as here:\\
+\begin{verbatim}
+ds = tf.data.TextLineDataset(train_path).skip(1)
+\end{verbatim}
+This builds a \texttt{TextLineDataset} object to read the file one line at a time. The object itself is still not a usual array. It looks more like an object having a pointer to the location of the CSV file being able to bring it to the model, one line at the time (I think that an Iterator has to be built in order to do that, explicitly or using a wrapper function).\\
+The next tool to use is \texttt{tf.decode\_csv} which allows to turn each line of the CSV file into something that we can really use (like a simple list). To apply a function which does the parsing on one line to the whole data set use the method \texttt{map} of the \texttt{TextLineDataset} object used before.\\
+
+So to summarize the two approaches, in the first one we use a tool from the pandas library (\texttt{pd.read\_csv} inside the function \texttt{load\_data} inside iris\_data.py) to load the data and then we transform the dataframe into a \texttt{data.Dataset} object, and in the second we use a tool from tensorflow to load the data (\texttt{data.TextLineDataset}).
+
+I wanted to look inside a tensor to see what it was exactly but I didn't know how to do it. I remembered that I had done it in the past (c.f. entry of the 09.04.19) using eager. So I enabled eager execution and repeated what I had done before and it worked. I also looked at this page explaining what the \textbf{Eager} module is:\\
+\href{https://stackoverflow.com/questions/45967895/what-is-tensorflow-eager-module-for}{Stackoverflow: What is tensorflow eager module for?}\\
+It seems to be a way to going from a static graph to a dynamic graph like pytorch, and hence making it easier to use.\\
+But it seems that it is not possible to use (premade) estimators in Eager execution mode as I received this error when I tried to train the toy model of the tutorial:\\
+\begin{verbatim}
+Estimators are not supported when eager execution is enabled.
+\end{verbatim}
+
+I finished the tutorial and here is the summary: ``The \texttt{tf.data} module provides a collection of classes and functions for easily reading data from a variety of sources. Furthermore, \texttt{tf.data} has simple powerful methods for applying a wide variety of standard and custom transformations."\\
+\textbf{Edit (31.05.18):} This should be completed by this page about \textbf{how to read data} in TF, giving a broader look on the possibilities to do the task:\\
+\url{https://www.tensorflow.org/api_guides/python/reading_data}\\
+\textbf{Edit (09.07.18):} This should be completed by this page:\\
+\url{https://www.tensorflow.org/programmers_guide/datasets}\\
+explaining (among other things) 
+\begin{itemize}
+\item \textbf{how to use several datasets} in the same model (typically for training, validation, testing)
+\item how to \textbf{create datasets from different data} (data stored in an array, or data stored on the disk using TFRecord format)
+\item how to create a dataset which applies transformation to each element (using \texttt{Dataset.map()})
+\end{itemize}
+
+
+\end{loggentry}
+
+\begin{loggentry}{18.04.18}{A nice comparison between pytorch and tensorflow}
+In this pytorch tutorial, they show how to do the same thing with both pytorch and tensorflow. I found it quite instructive concerning how tensorflow works:\\
+\href{http://pytorch.org/tutorials/beginner/pytorch_with_examples.html#pytorch-variables-and-autograd}{pytorch.org: pytorch with examples}
+\end{loggentry}
+
+\begin{loggentry}{19.04.18}{Creating custom estimators}
+I started this tutorial about \textbf{creating custom estimators}:\\
+\url{https://www.tensorflow.org/get_started/custom_estimators}\\
+It seems to be very important because I guess in real applications, it is better to be able to define the architecture yourself. The tutorial is quite clear and well done. It introduces the API's \texttt{tf.feature\_column.input\_layer} and \texttt{tf.layers.dense} which allow to define the input, hidden, and output layers.\\
+\textbf{Edit (14.07.18):} It seems that the tutorial has been moved to\\
+\href{https://www.tensorflow.org/guide/custom_estimators}{tensorflow.org: Custom estimators}\\
+But I saved the directory
+\begin{verbatim}
+/home/aritz/Documents/CS_Programming_Machine_Learning/Machine_learning_and_AI/Online_courses/Tensor_flow_tutorials/Official_tutorials/
+\end{verbatim}
+inside a notebook called custom\_estimator.ipynb.
+\end{loggentry}
+
+\begin{loggentry}{20.04.18}{Finishing the custom estimator tutorial and problems with tensorboard}
+I finished the tutorial about custom estimators. Here is the conclusion of the tutorial: ``Although pre-made Estimators can be an effective way to quickly create new models, you will often need the additional flexibility that custom Estimators provide. Fortunately, pre-made and custom Estimators follow the same programming model. The only practical difference is that you must write a model function for custom Estimators; everything else is the same."\\
+The code of the example used in this tutorial is contained in the file custom\_estimator.py and should be compared to premade\_estimator.py. There are two main things that I got out of the tutorial concerning this \texttt{model\_fn} function that we have to define (it is an argument of the constructor of the class \texttt{tf.estimator.Estimator}):\\
+\begin{enumerate}
+\item The first one is that the way the architecture is defined. In our example it is this portion of code:\\
+\begin{verbatim}
+    net = tf.feature_column.input_layer(features, params['feature_columns'])
+    for units in params['hidden_units']:
+        net = tf.layers.dense(net, units=units, activation=tf.nn.relu)
+
+    # Compute logits (1 per class).
+    logits = tf.layers.dense(net, params['n_classes'], activation=None)
+
+    # Compute predictions.
+    predicted_classes = tf.argmax(logits, 1)
+\end{verbatim}
+\item We have define what the model returns for the three methods \texttt{predict()}, \texttt{train()}, and \texttt{evaluate()} by imposing conditions on the value of the argument \texttt{mode}.
+\end{enumerate}
+
+If I run
+\begin{verbatim}
+python custom_estimator.py
+\end{verbatim}
+I obtain a very long output. This line caught my attention\\
+\begin{verbatim}
+2018-04-20 16:37:05.900885: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+\end{verbatim}
+From this page:\\
+\url{https://stackoverflow.com/questions/47068709/your-cpu-supports-instructions-that-this-tensorflow-binary-was-not-compiled-to-u}
+this just means that I could optimize the way my CPU is used by tensorflow. But as the page cited explains it is useless since it is anyway better to try to use GPU.\\
+Then looked at this line:\\
+\begin{verbatim}
+2018-04-20 16:37:05.902531: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUDA_ERROR_UNKNOWN
+\end{verbatim}
+This is discussed here:\\
+\url{https://github.com/tensorflow/tensorflow/issues/394}\\
+and some solution mentioned in this tread is repeated here:\\
+\url{http://kawahara.ca/tensorflow-failed-call-to-cuinit-cuda_error_unknown/}\\
+But I don't know if I should try to apply the solution (i.e. do 
+\begin{verbatim}
+sudo apt-get install nvidia-modprobe
+\end{verbatim}
+or not because, my program still runs at the end. Thing is, it is not clear to me if TensorFlow manages to use my GPU or not, and what this error is about.\\
+
+
+I also couldn't use tensorboard. When I open the webpage, I'm told that there is no information to display. After discussing with Nikos, it seems that no files containing the information used by Tensorboard is created (maybe the code I have is incomplete).
+\end{loggentry}
+
+\begin{loggentry}{22.04.18}{Verifying that Tensorflow is running on GPU}
+Since I wasn't sure that I was using the GPU, I looked at this page which gives several approaches to determine if Tensorflow is running on GPU or not:\\
+\href{https://stackoverflow.com/questions/38009682/how-to-tell-if-tensorflow-is-using-gpu-acceleration-from-inside-python-shell}{Stackoverflow: How to tell if Tensorflow is using GPU acceleration from inside python shell}\\
+I entered\\
+\begin{verbatim}
+import tensorflow as tf
+with tf.device('/gpu:0'):
+    a = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[2, 3], name='a')
+    b = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[3, 2], name='b')
+    c = tf.matmul(a, b)
+
+with tf.Session() as sess:
+    print (sess.run(c))
+\end{verbatim}
+and obtained the following input (which lets me believe that Tensorflow is running on GPU):\\
+\begin{verbatim}
+2018-04-22 10:54:45.457127: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-04-22 10:54:45.575997: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:898] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2018-04-22 10:54:45.576464: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1344] Found device 0 with properties: 
+name: GeForce 940MX major: 5 minor: 0 memoryClockRate(GHz): 1.2415
+pciBusID: 0000:02:00.0
+totalMemory: 1.96GiB freeMemory: 1.55GiB
+2018-04-22 10:54:45.576479: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1423] Adding visible gpu devices: 0
+2018-04-22 10:54:46.081373: I tensorflow/core/common_runtime/gpu/gpu_device.cc:911] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-04-22 10:54:46.081399: I tensorflow/core/common_runtime/gpu/gpu_device.cc:917]      0 
+2018-04-22 10:54:46.081405: I tensorflow/core/common_runtime/gpu/gpu_device.cc:930] 0:   N 
+2018-04-22 10:54:46.081609: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1041] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 1306 MB memory) -> physical GPU (device: 0, name: GeForce 940MX, pci bus id: 0000:02:00.0, compute capability: 5.0)
+[[22. 28.]
+ [49. 64.]]
+\end{verbatim}
+Then I entered
+\begin{verbatim}
+sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
+\end{verbatim}
+The output was
+\begin{verbatim}
+2018-04-22 11:04:49.935218: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1423] Adding visible gpu devices: 0
+2018-04-22 11:04:49.935309: I tensorflow/core/common_runtime/gpu/gpu_device.cc:911] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-04-22 11:04:49.935346: I tensorflow/core/common_runtime/gpu/gpu_device.cc:917]      0 
+2018-04-22 11:04:49.935368: I tensorflow/core/common_runtime/gpu/gpu_device.cc:930] 0:   N 
+2018-04-22 11:04:49.935656: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1041] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 1306 MB memory) -> physical GPU (device: 0, name: GeForce 940MX, pci bus id: 0000:02:00.0, compute capability: 5.0)
+Device mapping:
+/job:localhost/replica:0/task:0/device:GPU:0 -> device: 0, name: GeForce 940MX, pci bus id: 0000:02:00.0, compute capability: 5.0
+2018-04-22 11:04:49.936007: I tensorflow/core/common_runtime/direct_session.cc:297] Device mapping:
+/job:localhost/replica:0/task:0/device:GPU:0 -> device: 0, name: GeForce 940MX, pci bus id: 0000:02:00.0, compute capability: 5.0
+\end{verbatim}
+which looks like what is on stack exchange, so I guess that Tensorflow is using GPU.\\
+
+I read this tutorial:\\
+\url{https://www.tensorflow.org/programmers_guide/summaries_and_tensorboard}\\
+which is based on this code:\\
+\url{https://github.com/tensorflow/tensorflow/blob/r1.7/tensorflow/examples/tutorials/mnist/mnist_with_summaries.py}\\
+which is a bit more complex than the toy examples I had seen in the past.\\
+I didn't understand everything. I will try to correct the example with the custom estimator as an exercise.
+\end{loggentry}
+
+\begin{loggentry}{23.04.18}{Building a computational graph and running it}
+There is a section dedicated to tensorflow in this pytorch tutorial and it illustrates pretty well the basic APIs of TensorFlow:\\
+\url{http://pytorch.org/tutorials/beginner/pytorch_with_examples.html#pytorch-variables-and-autograd}\\
+One starts by building a computational graph (my understanding is that it is the architecture of the neural network, together with the weight updating scheme, but without any actual data) with ``place holders" for the input and output data of the model, creating ``variables" for the weights/parameters of the different layers, using only tensorflow operations on tensors, and after that one uses these \texttt{sess.run} APIs (even though I don't get all the details).\\
+I think it is closer to the core of tensor flow than \texttt{tf.estimator.Estimator} objects which seem to be a level of abstraction higher.
+\end{loggentry}
+
+\begin{loggentry}{26.04.18}{Different ways to build a tensorflow model/estimator, Coming back to tensorboard}
+It looks like there are \textbf{several approaches to use tensorflow}, or more precisely \textbf{three levels of APIs} to use TF. I will try to list them here and provide examples for each one.
+\begin{enumerate}
+\item One way seems to be to build a computational graph directly from the basic APIs from Tensorflow and then use \texttt{sess.run()}. I saved an example under the name toy\_basic\_approach\_pytorch.py that I had found there:\\
+\url{http://pytorch.org/tutorials/beginner/pytorch_with_examples.html#tensorflow-static-graphs}\\
+Another toy example comes from this TF tutorial:\\
+\url{https://www.tensorflow.org/programmers_guide/low_level_intro}\\
+and I saved the code under basic\_APIs\_tutorial\_2.py.\\
+\textbf{Edit (30.05.18):} It is interesting to compare the two. In toy\_basic\_approach\_pytorch.py the value of the parameters of the model is updated manually, but in basic\_APIs\_tutorial\_2.py it is done with a subclass of the \texttt{tf.train.Optimizer}.\\
+\textbf{Edit (04.05.18):} Another good example is given by the second assignment of the NLP coursera class from Moscow university. It uses Tensor Flow basic API to perform Named-Entity-Recognition on tweets. The jupyter notebook is called week2-NER\_modified.ipynb.
+\item One way is to build \texttt{tf.estimator.Estimator} objects. From what I could see, it seems to be the best way since it offers all the possibility to create models with completely customizable architecture, while still satisfying the OOP paradigm with separate tasks being encapsulated in different objects with fixed names but flexible implementation. One example is in the file custom\_estimator.py. copied from there:\\
+\url{https://www.tensorflow.org/get_started/custom_estimators#tensorboard}\\
+\item One way is to use some library like \textbf{Keras}, \texttt{TFLearn}, or \textbf{TensorLayer} offering high-level API built on the top of TF to create a model. Keras imitates the way scikit-learn APIs work. I copied a little toy example under the name toy\_keras\_approach.py from here:\\
+\url{https://keras.io/getting-started/sequential-model-guide/}
+\end{enumerate}
+\end{loggentry}
+
+\begin{loggentry}{27.04.18}{Managing to use Tensorboard with Estimator and basic APIs}
+I managed to use \textbf{tensorboard} as I was supposed to do in this tutorial (with \textbf{Estimator level APIs}):\\
+\url{https://www.tensorflow.org/get_started/custom_estimators#tensorboard}\\
+There are several reasons why I couldn't do it in the first place:
+\begin{enumerate}
+\item The proper tensorboard tutorial:
+\url{https://www.tensorflow.org/programmers_guide/summaries_and_tensorboard}\\
+uses the basic tensorflow API, with \texttt{sess.run()} whereas here we use the \texttt{tf.estimator.Estimator} APIs which hide a lot of things. It seems that in this later case, the \texttt{tf.summary.merge\_all} and \texttt{tf.summary.FileWriter} APIs are somehow hidden internally in the body of the Estimator, as explained/hinted there:\\
+\href{https://stackoverflow.com/questions/43908432/how-to-add-tensorboard-to-a-tensorflow-estimator-process}{Tensorboard: how to add tensorboard to a tensorflow estimator process?}
+\item It looks like these ``summary log" are sent to the ``\texttt{model\_dir}" directory. This is one of the optional arguments of the constructor of a \texttt{tf.estimator.Estimator} object. The default value was not clear to me so I created an explicit temporary directory for it with these lines:
+\begin{verbatim}
+LOGDIR = "/tmp/custom_estimator_tutorial/"
+model_dir = "/tmp/custom_estimator_tutorial/"+"model_dir/"
+\end{verbatim}
+and (see last argument)
+\begin{verbatim}
+    classifier = tf.estimator.Estimator(
+        model_fn=my_model,
+        params={
+            'feature_columns': my_feature_columns,
+            # Two hidden layers of 10 nodes each.
+            'hidden_units': [10, 10],
+            # The model must choose between 3 classes.
+            'n_classes': 3,
+        },
+        model_dir=model_dir)
+\end{verbatim}
+\end{enumerate}
+It looks like the graph is automatically added to the summary logs when using tensorboard also (since I could see it, without adding a single line of code). But I have difficulty interpreting my plot of the computational graph...\\
+What I take from this is that in order to use Tensorboard with a custom estimator, one has to do the following:
+\begin{enumerate}
+\item Add lines like:
+\begin{verbatim}
+tf.summary.scalar('accuracy', accuracy[1])
+\end{verbatim}
+in order to produce some graphs or histograms of some scalar values (see the tutorial page for more options), inside the body of the model function of the \texttt{tf.estimator.Estimator} that we want to create.
+\item Give an extra \texttt{model\_dir} argument to the constructor of the \texttt{tf.estimator.Estimator} object as follow
+\begin{verbatim}
+classifier = tf.estimator.Estimator(
+    model_fn=my_model,
+    params={
+        'feature_columns': my_feature_columns,
+        # Two hidden layers of 10 nodes each.
+        'hidden_units': [10, 10],
+        # The model must choose between 3 classes.
+        'n_classes': 3,
+        },
+        model_dir=model_dir)
+\end{verbatim}
+where \texttt{model\_dir} is the path where we put the ``summary logs". See for instance
+\begin{verbatim}
+model_dir = "/tmp/custom_estimator_tutorial/"+"model_dir/"
+\end{verbatim}
+\item Use the following command in the terminal with the model\_dir path as argument:
+\begin{verbatim}
+aritz@aritz-ThinkPad-T460p:/tmp/custom_estimator_tutorial/model_dir$ tensorboard --logdir=./
+\end{verbatim}
+\item Go to this address in the browser: http://localhost:6006 (or click on the link displayed in this tutorial:\url{https://www.tensorflow.org/get_started/custom_estimators#tensorboard}).
+\end{enumerate}
+
+It looks like a new summary log is created by the train method of an estimator every 100 steps (by default). I guess this could be changed if one used something like
+\begin{verbatim}
+my_estimator = tf.estimator.Estimator(
+model_fn = my_model_fn,
+model_dir = my_model_dir,
+config=tf.contrib.learn.RunConfig(
+save_checkpoints_steps=20,
+save_checkpoints_secs=None,
+save_summary_steps=40,
+)
+)
+\end{verbatim}
+
+\textbf{Edit (13.07.18):} I also managed to use \textbf{Tensorboard with the basic APIs} (in my IMDB sentiment analysis project) even if I still have problems with the \texttt{global\_step} argument of the \texttt{add\_summary} method. One of the main difference, is that one has to explicitely define one (or serveral) ``writer(s)" (instance(s) of the class \texttt{tf.train.SummaryWriter}) and tell it (them) when to write the event files which are used by Tensorboard, and what to put in it. There is a relatively simple example there:\\
+\url{https://stackoverflow.com/questions/37902705/how-to-manually-create-a-tf-summary#37915182}\\
+even if most of the time, the actual summary is not created this way but by evaluating a variable \texttt{merged} defined by something like
+\begin{verbatim}
+tf.summary.scalar('accuracy', accuracy[1])
+tf.summary.scalar('loss', loss)
+merged = tf.summary.merge_all()
+\end{verbatim}
+inside the computational graph, with some command like
+\begin{verbatim}
+summary, acc = sess_debug.run([merged, accuracy])
+\end{verbatim}
+and then calling the writer like this
+\begin{verbatim}
+writer_train.add_summary(summary, step)
+\end{verbatim}
+where the writer has been previous defined by
+\begin{verbatim}
+writer_train = tf.summary.FileWriter(model_dir+'Basic_log/Plot_train/', sess_debug.graph)
+\end{verbatim}
+One of the tricks to differentiate the curve of the training and the curve of the testing on Tensorboard is to use two different writers for the training and for the testing set as explained there:\\
+\href{https://www.quora.com/How-do-you-plot-training-and-validation-loss-on-the-same-graph-using-TensorFlow%E2%80%99s-TensorBoard}{Quora: How to plot training nad validation loss on the same graph using TensorFlow}\\
+
+For an \textbf{tutorial showing more capabilities of Tensorboard} see this page:\\
+\url{https://www.tensorflow.org/guide/summaries_and_tensorboard}\\
+
+This \textbf{video} displays other \textbf{fancy visualization tools of Tensorboard}:\\
+\href{https://www.youtube.com/watch?v=eBbEDRsCmv4}{Youtube: Hands-on TensorBoard (TensorFlow Dev Summit 2017)}\\
+There is a way to \textbf{embed the multidimensional space of labels in a three dimensional space to visualize the distance between the different samples}. It can be useful in NLP.
+
+I started this tutorial about \textbf{low-level TensorFlow APIs}:\\
+\href{https://www.tensorflow.org/programmers_guide/low_level_intro}{tensorflow.org: low level intro}\\
+But the basic example with tensorboard doesn't work. It looks like no event file is produced.
+\end{loggentry}
+
+\begin{loggentry}{29.04.18}{TF basic API's: \texttt{tf.Graph}, \texttt{tf.Session}}
+I came back to this tutorial:
+\href{https://www.tensorflow.org/programmers_guide/low_level_intro}{tensorflow.org: low level intro}\\
+and it seems to be working (I mean Tensorboard is displaying the graph of the addition of the two constants now, if I enter the constants described whereas it wasn't displaying anything the other day).\\
+Here is a little list of these basic APIs that are covered in this tutorial:\\
+\begin{itemize}
+\item \texttt{tf.constant}
+\item \texttt{tf.summary.FileWriter}
+\item \texttt{writer.add\_graph(tf.get\_default\_graph())}
+\item \texttt{tf.Session()}
+\item \texttt{sess.run}
+\item \texttt{sess.run({'ab':(a, b), 'total':total})}
+\item \texttt{tf.placeholder}
+\item \texttt{tf.data.Dataset.from\_tensor\_slices}
+\item \texttt{slices.make\_one\_shot\_iterator()}
+\item \texttt{get\_next()}
+\item \texttt{sess.run(iterator.initializer)}
+\item \texttt{tf.layers.Dense} and \texttt{tf.layers.dense}
+\item \texttt{tf.global\_variables\_initializer()}
+\item \texttt{tf.feature\_column.categorical\_column\_with\_vocabulary\_list}
+\item \texttt{tf.feature\_column.indicator\_column}
+\item \texttt{tf.feature\_column.numeric\_column}
+\item \texttt{tf.feature\_column.input\_layer} (accepts only dense columns as inputs (c.f. the tutorial section ``Feature columns").
+\item \texttt{tf.tables\_initializer()
+}
+\end{itemize}
+
+\end{loggentry}
+
+\begin{loggentry}{13.05.18}{Break and links toward tutorials and NLP coursera courses}
+I didn't touch Tensorflow for a while due to my job searches. I will put here the \textbf{links toward the tutorials}:\\
+\url{https://www.tensorflow.org/get_started/}\\
+\url{https://www.tensorflow.org/get_started/custom_estimators}\\
+\url{https://www.tensorflow.org/programmers_guide/low_level_intro}\\
+and the \textbf{NLP coursera course}:\\
+\url{https://www.coursera.org/learn/language-processing/home/welcome}\\
+\end{loggentry}
+
+\begin{loggentry}{15.05.18}{Starting a new Journal for Coursera NLP course}
+I will start a separate journal for the Coursera course on NLP. Since the course is based on TensorFlow, there will be some overlap with this journal.
+\end{loggentry}
+
+\begin{loggentry}{30.05.18}{An advanced implementation of LSTM with dropout, how to set parameters of a model via command line arguments}
+I copied the files ptb\_word\_Im.py and reader.py from\\
+\url{https://github.com/tensorflow/models/tree/master/tutorials/rnn/ptb}\\
+to be able to read this tutorial about \textbf{RNN with tensorflow to build a language model}:\\
+\url{https://www.tensorflow.org/tutorials/recurrent}\\
+(I had actually already downloaded it together with all the TF tutorials in the folder ``(...)/Online\_courses/Tensor\_flow\_tutorials/Official\_tutorials/models/tutorials/rnn/ptb/")\\
+I started reading the code.\\
+I discovered (in this code the) \texttt{flags.DEFINE\_string} (and similar) API which allows to \textbf{specify parameters of the model with command line arguments} before running the training.\\
+\end{loggentry}
+
+\begin{loggentry}{31.05.18}{More about this RNN model, a good tutorial for TF basic APIs}
+One thing I don't fully understand in the code above is why do we put the model in a class.\\
+I think that the way the data is read in this example is outdated (it uses Queue Runner but according to \href{https://www.tensorflow.org/api_guides/python/reading_data}{this page} this is better to use the \texttt{tf.data} API now).\\
+I learned about the usefulness of
+\begin{verbatim}
+ with tf.Graph().as_default():
+\end{verbatim}
+there:\\
+\href{https://stackoverflow.com/questions/39614938/why-do-we-need-tensorflow-tf-graph#39616491}{Stack Overflow: Why do we need TensorFlow tf.Graph?}\\
+I read this tutorial about the \textbf{basic APIs of tensorflow} and \textbf{how tensorflow is organized}:\\
+\url{http://www.goldsborough.me/tensorflow/ml/ai/python/2017/06/28/20-21-45-a_sweeping_tour_of_tensorflow/}\\
+and it is very good. In particular it explains well APIs like
+\begin{itemize}
+\item \begin{verbatim}
+graph = tf.Graph()
+with graph.as_default():
+\end{verbatim}
+\item \begin{verbatim}
+with tf.Session(graph=graph) as session:
+\end{verbatim}
+\item \begin{verbatim}
+with tf.Session():
+\end{verbatim}
+\item \begin{verbatim}
+with tf.name_scope('conv1'):
+\end{verbatim}
+\end{itemize}
+
+Otherwise I gave up the idea of going in all the details of this code:\\
+\url{https://github.com/tensorflow/models/blob/master/tutorials/rnn/ptb/ptb_word_lm.py}\\
+because it is to tedious and maybe useless. But I keep it in mind as an example of a complex network.
+\end{loggentry}
+
+\begin{loggentry}{03.06.18}{A useful example for basic API and LSTM}
+The second assignment of the NLP coursera course is a very good example of how to build and train a model with the basic APIs of TF. The aim is to build a language model based on LSTM.\\
+I would like to try various modification on it. I will list here ideas I have and should try later:
+\begin{itemize}
+\item Replace the variable declaration using \texttt{tf.Variable} by \texttt{tf.get\_variable}
+\item Try to use Estimators instead of the basic APIs
+\item Try to use Keras instead of the basic APIs
+\item Use spacy and other tools to feed the data into the model, build the dictionary, etc...
+\item Try to use the \texttt{tf.data} to replace \texttt{batches\_generator}.
+\item Can we use pretrained embeddings for instance? Or pretrained models?
+\end{itemize}
+\end{loggentry}
+
+\begin{loggentry}{04.06.18}{Summary of lessons learned with second assignment from Coursera NLP course}
+In the second assignment of the Coursera NLP course that I follow currently, I had to use an LSTM RNN implemented with TF to perform Named Entity recognition. I will list here the useful things I learned. Not everything is TF API's but I will still write it here.
+\begin{itemize}
+\item How to \textbf{read a text file} containing all the tweets separated by line jumps, and build two lists of lists. In the first one each sublist contains strings for the tokens present in the corresponding tweet. In the second each sublist contains strings for the tags of the tokens of the corresponding tweet. Implemented in \texttt{read\_data}
+\item How to \textbf{build the dictionaries} mapping tokens to indexes and indexes to token, using the outputs of \texttt{read\_data}. Implemented in \texttt{build\_dict}.
+\item How to \textbf{create a batch-generator} from scratch. Implemented in \texttt{batches\_generator}.
+\item How to \textbf{build a model using TF-basic APIs} and embed it in a class with all necessary methods. More precisely, the different steps/methods were:
+\begin{itemize}
+\item Declare placeholders which will recieve the inputs.
+\item Build the different layers:\begin{itemize}
+\item Embeddings of indices representing tokens, into $\mathbb{R}^n$ vectors.
+\item BiLSTM layer
+\item Dense layer
+\end{itemize}
+\item Compute the predictions (using softmax, and then taking the argmax).
+\item Compute the loss
+\item Perform optimization, AKA adjust the weights.
+\item How to train the model on one batch. This part is quite subtle. Upon initialization of the model the whole graph is built. And then we use a \texttt{tf.Session} to run the operation which adjusts the weights. To compute this one, all the previous ones have to be executed as well.
+\item Predict the output for one batch of data.
+\end{itemize}
+\item How to evaluate a given model on a batch of data (independently of the model) to get predictions and transforms indices to tokens and tags. Implemented in \texttt{predict\_tags}
+\item How to calculate precision, recall and F1 for the results. Implemented in \texttt{eval\_conll}.
+\end{itemize}
+\end{loggentry}
+
+\begin{loggentry}{15.06.18}{TF wrappers: Keras, TFLearn, TensorLayer, an interesting post about sentiment analysis with TF}
+I just realized that there is not only Keras which is built on the top of TF, but also \textbf{TFLearn} (see for instance \href{https://github.com/tflearn/tflearn/blob/master/examples/nlp/lstm.py}{this code} for an example), and \textbf{TensorLearn}. Here are a few webpages I read comparing the respective performances of these libraries:\\
+\url{https://datascience.stackexchange.com/questions/25317/what-are-the-pros-and-cons-of-keras-and-tflearn}\\
+\url{https://www.reddit.com/r/MachineLearning/comments/50eokb/which_one_should_i_choose_keras_tensorlayer/}\\
+\url{https://progur.com/2018/04/tflearn-vs-keras-which-better.html}\\
+
+I read this post about using TF for sentiment analysis:\\
+\url{http://domkaukinen.com/sentiment-analysis-with-tensorflow/}\\
+it gives plenty of useful tips.
+\end{loggentry}
+
+\begin{loggentry}{10.07.18}{Computing accuracy over different batches with TF basic APIs}
+I learned about \texttt{tf.metrics.accuracy} in the documentation:\\
+\url{https://www.tensorflow.org/api_docs/python/tf/metrics/accuracy}\\
+and also in this Stack Overflow post which provides a good insight:\\
+\url{https://stackoverflow.com/questions/46409626/how-to-properly-use-tf-metrics-accuracy}\\
+It looks like it computes the accuracy \textbf{over all the batches}. It is not the accuracy on each specific batch of data. This page gives some further details:\\
+\url{https://stackoverflow.com/questions/46409626/how-to-properly-use-tf-metrics-accuracy}\\
+\end{loggentry}
+
+\begin{loggentry}{14.07.18}{Saving and restoring models with Estimators APIs}
+For a while, I didn't know how to save and restore a tf.estimator.Estimator that I had created and trained. I found this tutorial which explains everything:\\
+\href{https://www.tensorflow.org/guide/checkpoints}{tensorflow.org: checkpoints}\\
+In brief there are two ways to do it:
+\begin{itemize}
+\item with checkpoints, which is a format dependent on the code that created the model.
+\item SavedModel, which is a format independent of the code that created the model.
+\end{itemize}
+The first method is explained in this tutorial. Basically, everything is done automatically. If one reuse a script where the same estimator is defined, and its \texttt{model\_dir} argument corresponds to the \texttt{model\_dir} argument of the estimator previously defined and trained, the new estimator will automatically reuse the ``checkpoint" and ``model..." files created by the previous one (without having to write any command for this).\\
+For the other method (which might be better in an industry setting), this link seems to be the right place to look for a way to \textbf{save estimators models}:\\
+\href{https://www.tensorflow.org/guide/saved_model#using_savedmodel_with_estimators}{tensorflow.org: using SavedModel with Estimators}\\
+\end{loggentry}
+
+\begin{loggentry}{15.07.18}{Turn a Keras model into a \texttt{tf.estimator.Estimator}}
+I read this tutorial explaining how to \textbf{transform a Keras model into a TF custom estimator}:\\
+\url{https://www.dlology.com/blog/an-easy-guide-to-build-new-tensorflow-datasets-and-estimator-with-keras-model/}\\
+It seems that the opposite is not as easy.\\
+
+I found this list of \textbf{Keras models} for various tasks:\\
+\url{https://github.com/keras-team/keras/tree/master/examples}\\
+
+I tried to \textbf{install Keras}. When I tried to install it inside my `tensorflow' environment, a message warned me that it would have to first install tensorflow 1.1.0. This seems strange to me because it seems I have a more advanced version of tensorflow already. But it may be because I installed `tensorflow-gpu' (version 1.6.0 according to the output of \texttt{conda list}) and not simply `tensorflow'. What is even stranger is that when I enter the command I found on stack exchange to know if I have tensorflow or not (while having my `tensorflow' environment activated):
+\begin{verbatim}
+ython3 -c 'import tensorflow as tf; print(tf.__version__)' 
+\end{verbatim}
+I'm told that I have the version 1.7.0...\\
+So I followed the advice of Nikos and I created a new conda environment named `keras' where I will download keras:\\
+\begin{verbatim}
+conda create -n keras python=3.5 pip=9.0.1 
+\end{verbatim}
+to avoid messing with my tensorflow.
+\end{loggentry}
+
+\begin{loggentry}{23.07.18}{TensorBoard with Keras}
+It seems that it is possible to use TensorBoard with Keras:\\
+use \href{https://keras.io/callbacks/#tensorboard}{this link} together with \href{https://stackoverflow.com/questions/42112260/how-do-i-use-the-tensorboard-callback-of-keras#42112935}{this one}.\\
+
+\end{loggentry}
+
+
+
+\section{Questions to ask to Nikos}
+\begin{enumerate}
+\item How does he start implementing a model? What are the first things he defines? Does he use Jupyter notebook for testing? Does he use some smaller dataset to make tests? These TF models are quite complex, the chance of doing everything right from the start are slim.
+\item Could he give me his code? It sounds like a good example to train.
+\item When a model (like a Neural network) can have plenty of different parameters or variation (number of layers, simple LSTM vs Bi-LSTM, etc...) how does he find the one which performs the best? Does he do an exhaustive search? Is there some easier approach?
+\end{enumerate}
+
+\section{Questions}
+\begin{enumerate}
+\item What are these different ``scopes" and ``graph"? Is it only to be able to have a clearer representation in Tensorboard? For instance, at the end of this script:\\
+\url{https://github.com/tensorflow/models/blob/master/tutorials/rnn/ptb/ptb_word_lm.py}\\
+there is\\
+\begin{verbatim}
+ with tf.Graph().as_default():
+    initializer = tf.random_uniform_initializer(-config.init_scale,
+                                                config.init_scale)
+
+    with tf.name_scope("Train"):
+      train_input = PTBInput(config=config, data=train_data, name="TrainInput")
+      with tf.variable_scope("Model", reuse=None, initializer=initializer):
+        m = PTBModel(is_training=True, config=config, input_=train_input)
+      tf.summary.scalar("Training Loss", m.cost)
+      tf.summary.scalar("Learning Rate", m.lr)
+
+    with tf.name_scope("Valid"):
+      valid_input = PTBInput(config=config, data=valid_data, name="ValidInput")
+      with tf.variable_scope("Model", reuse=True, initializer=initializer):
+        mvalid = PTBModel(is_training=False, config=config, input_=valid_input)
+tf.summary.scalar("Validation Loss", mvalid.cost)
+\end{verbatim}
+\item How to use this \texttt{tf.Print}? Very often I would like to test that what I do makes sense and it would be convenient to be able to print the content of my \texttt{tf.string} or \texttt{tf.data}.
+\item On this page:\\
+\url{https://www.tensorflow.org/get_started/checkpoints}\\
+I don't really understand what is meant by ``To run experiments in which you train and compare slightly different versions of a model, save a copy of the code that created each \texttt{model\_dir}, possibly by creating a separate git branch for each version".
+\end{enumerate}
+
+
+\section{TO DO list}
+
+\begin{enumerate}
+\item I should learn more how to make custom layers with Keras to be able to have the power of TF inside Keras.
+\end{enumerate}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

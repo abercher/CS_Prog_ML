@@ -1,0 +1,34 @@
+######################
+# undesired extensions
+######################
+
+###############################
+# specific files or directories
+###############################
+Projects/
+Machine_learning_and_AI/Courses_ETH/
+Machine_learning_and_AI/Data_analysis_guideline/
+Machine_learning_and_AI/List_algo_ML/
+Machine_learning_and_AI/List_data_sets/
+Machine_learning_and_AI/Miscalleanous_papers/
+Machine_learning_and_AI/Online_courses/*
+Machine_learning_and_AI/Online_courses/Fast_AI/*
+!Machine_learning_and_AI/Online_courses/Fast_AI/Journal_fast_AI/
+Machine_learning_and_AI/Online_courses/NLP_tutorials/*
+!Machine_learning_and_AI/Online_courses/NLP_tutorials/Coursera_NLP/
+Machine_learning_and_AI/Online_courses/NLP_tutorials/Coursera_NLP/*
+!Machine_learning_and_AI/Online_courses/NLP_tutorials/Coursera_NLP/Journal_coursera_NLP/
+!Machine_learning_and_AI/Online_courses/NLP_tutorials/spaCy_tutorials/
+!Machine_learning_and_AI/Online_courses/Pytorch_tutorials/
+Machine_learning_and_AI/Online_courses/Pytorch_tutorials/*
+!Machine_learning_and_AI/Online_courses/Pytorch_tutorials/Journal_Pytorch/
+!Machine_learning_and_AI/Online_courses/Tensor_flow_tutorials/
+Machine_learning_and_AI/Online_courses/Tensor_flow_tutorials/*
+!Machine_learning_and_AI/Online_courses/Tensor_flow_tutorials/Journal_Tensor_flow/
+Programming/*
+!Programming/Python/
+Programming/Python/*
+!Programming/Python/Journal_python/
+!Programming/Python/Useful_scripts/
+!Programming/Python/my_tests/
+!Programming/Linux_doc/

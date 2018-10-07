@@ -1,0 +1,1052 @@
+%% See "book", "report", "letter" for other types of document.
+\documentclass[11pt,a4paper]{article}
+%\documentclass[11pt,a4paper]{article} % use larger type; default would be 10pt
+
+%% Packages
+\usepackage{lipsum} % to get some dummy text
+\usepackage[utf8]{inputenc} % set input encoding 
+%\usepackage[francais]{babel} %accens aigus acceptés dans le texte
+\usepackage{hyperref} % for web links
+\usepackage{amssymb, amsmath, amsfonts, nicefrac} % symbols math (\mathbb etc...).
+\usepackage{geometry} % for page dimensions, landscape, format
+\usepackage{fancyhdr}
+\usepackage{enumerate} % to be able to determine the style of the enumeration
+%\usepackage[toc,page]{appendix} % For appendices
+%\usepackage[final]{pdfpages} % to include a pdf
+
+%% Definition of the environment for a diary
+\newenvironment{loggentry}[2]% date, heading
+{\noindent\textbf{#1}\hspace{1cm}$\mathbf{\sim}$\text{ }\textbf{#2}\\}{\vspace{0.5cm}}
+
+%% Page dimensions, landscape format
+%\geometry{legalpaper, margin=1in} % c.f. doc package geometry
+
+%% Headers and footers
+%% This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{1pt} % customise the layout...
+\lhead{}\chead{}\rhead{Aritz Bercher}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%% Shortcuts
+\newcommand{\R}{\mathbb{R}}
+
+%% Title
+
+\title{Useful resources for Python}
+\author{Aritz Bercher}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This will be a diary containing a list of reference concerning python programming, what I discovered, remarks, and everything I could reuse later.
+\end{abstract}
+
+\tableofcontents
+
+\section{Useful resources}
+In this section I will try to list some useful resources (mainly websites) to look for information concerning python.
+\begin{itemize}
+\item The official documentation: \url{https://docs.python.org/3.6/tutorial/index.html}
+\item \url{http://www.pythonforbeginners.com/basics}
+\item A website quite beginner friendly: \url{https://www.python-course.eu/python3_course.php}
+\end{itemize}
+
+\section{Journal}
+
+\begin{loggentry}{05.10.17}{Starting with python, anaconda and jupyter notebook}
+Since a couple of days I try to assimilate the bases of Python.\\
+I did a little latex file called ``Python doc and how to start" where I explain in detail how to start with python.\\
+At first I was a bit puzzled by the fact that Python needs an interpreter and not a compiler (the difference is quite well explained in the book of Charles Severance p.8). I'm still a bit confused by the notions of Python virtual environment and in which way it differs from a virtual machine. I found a nice explanation there:\\
+\url{https://blog.docker.com/2016/03/containers-are-not-vms/}\\
+but it seems to be a reading a bit too advanced for my current knowledge. I started by installing Anaconda and it seems to be one of the easiest way to begin using Python.\\
+I was a bit confused at the beginning before I had the following understanding of programming. First we write a script in a text file (generally inside a IDE) and then use a compiler (by pressing on a button in the IDE for instance) which translates it into some machine language and gives it to the CPU. And because of this I was failing to see how it could be done in several ways and what could be a virtual environment. Now I see it a bit differently. I see Python as a bunch of files (which include all the packages that we add little by little) describing a function which is called when we use \texttt{python arguments} in the terminal. So having a virtual environment is just telling to the computer ``now when I say \texttt{python} in the terminal, I want you to use these files there".\\
+It seems there is no standard editor for python script. I've been recommended to use jupyter notebook, pycharm and sublime. At first jupyter notebook didn't behave how I wanted. When I was in a virtual environment with python 2 installed and launched jupyter notebook from the command line, I was only able to create python 3 kernel. The problem was that I had not installed the package jupyter notebook in this virtual environment so it was going back to the root (the python installed ``normally" on my linux) to find it. But then I installed the package jupyter notebook in all my virtual environment and it solved the problem.\\
+I learned a bit about \textbf{list}, \textbf{tuples} and \textbf{dictionaries} (globally data structures) here:\\
+\url{https://docs.python.org/3.6/tutorial/datastructures.html#dictionaries}\\
+and abount sequence type here:\\
+\url{https://docs.python.org/3.6/library/stdtypes.html?highlight=list#sequence-types-list-tuple-range}\\
+and a bit about \textbf{class} and \textbf{methods} here:\\
+\url{http://networkstatic.net/python-tutorial-classes-objects-methods-init-and-simple-examples/}\\
+I also discovered the keyword \texttt{pass} which is explained here:\\
+\url{https://stackoverflow.com/questions/13886168/how-to-use-the-pass-statement-in-python}\\
+I also had difficulty to change the language of the dictionary of texmaker but I found the solution here (although it is supposed to be for windows):\\
+\url{http://www.swisswuff.ch/wordpress/?p=166}\\
+\end{loggentry}
+
+\begin{loggentry}{06.10.17}{yield, iterables, generators, with}
+I learned a bit about the keyword \texttt{yield}, \textbf{iterables} and \textbf{generators} here:\\
+\url{https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do}\\
+As I'm trying to create a python script to download songs from internet and that \texttt{youtube\_dl} seems to be the right command to this in python, I tried to read this page:\\
+\url{https://github.com/rg3/youtube-dl/blob/master/README.md#embedding-youtube-dl}\\
+But for this I needed to understand what the keyword \texttt{with} was. I found several links:\\
+\url{https://stackoverflow.com/questions/1369526/what-is-the-python-keyword-with-used-for#11783672}\\
+\url{https://stackoverflow.com/questions/3012488/what-is-the-python-with-statement-designed-for}\\
+\url{effbot.org/zone/python-with-statement.htm}\\
+\url{https://docs.python.org/release/2.5.2/lib/typecontextmanager.html}
+\url{https://www.python.org/dev/peps/pep-0343/}\\
+But these pages require already a good basic knowledge of python so I didn't get everything.\\
+\textbf{Edit2 (20.02.18):} I read again \href{https://stackoverflow.com/questions/1369526/what-is-the-python-keyword-with-used-for#11783672}{this page} about the \texttt{with} statement. It is a kind of safety command. If we open a file, and then do some manipulation with it, we want the file (or maybe the flow) to be closed if an error occurs. This command \texttt{with} guarantees it.\\
+\textbf{Edit:} I found this page concerning \textbf{generators} which is quite beginner-friendly:\\
+\url{https://wiki.python.org/moin/Generators}
+\end{loggentry}
+
+\begin{loggentry}{08.10.17}{Adding a password to jupyter notebook}
+I would like to get rid of this page appearing each time I start a jupyter notebook where I have to insert the password. I found this page which might tell me how to do it:\\
+\url{https://jupyter-notebook.readthedocs.io/en/stable/public_server.html}\\
+but as I didn't find this jupyter folder, I wanted to use the command \texttt{find} but and as I would like to filter out all the ``permission denied" errors, I read this page:\\
+\url{https://unix.stackexchange.com/questions/42841/how-to-skip-permission-denied-errors-when-running-find-in-linux#42842}\\
+I wasn't sure what was the symbol $|$ for but I found it p.14 of the bashguide pdf given by TheAlternative.\\
+I also found out what a symbolic link is there:\\
+\url{https://kb.iu.edu/d/abbe}\\
+As I didn't find the config file I created one as indicated and I received this message from the console indicating where the configuration file for jupyter was put:
+\begin{verbatim}
+Writing default config to: /home/aritz/.jupyter/jupyter_notebook_config.py
+\end{verbatim}
+Even though I created this passord when I was inside the virtual environment my\_python35 it seems that now when I enter the command \texttt{jupyter notebook} in this environment or on the normal one I'm directed to a page where I need to enter the password I chose (and no longer copy paste the code appearing in the terminal or clicking on the link appearing in the terminal).\\
+\end{loggentry}
+
+\begin{loggentry}{11.10.17}{youtube dl for python (Roman)}
+Roman sent me a link to a one of his projects on GitHub where he used python and youtube\_dl:\\
+\url{http://nbviewer.jupyter.org/github/rlyapin/video_summarization/blob/master/video_summarization_with_dl_embeddings_%28part_II%29.ipynb}.
+\end{loggentry}
+
+\begin{loggentry}{12.10.17}{Vectorized operations in Python: lists, Creating and manipulating matrices with NumPy, Comprehension lists, asterisk (how to transform a list into positional arguments for a function), zip, and other tools}
+I started looking at the exercises of the course CIL. Everything which follows comes more or less from the first exercise sheet of CIL. I learned a few command to use NumPy objects and methods with the exercise sheet 1.
+The library NumPy seems to provide the basic tool to do array manipulation and vectorized operations which are computationally lighter for python that using for loops. If I understood well what is written here:\\
+\href{https://stackoverflow.com/questions/11077023/what-are-the-differences-between-pandas-and-numpyscipy-in-python#11077215}{stack overflow: difference pandas and numpy}\\
+NumPy provides the basis and pandas some more advanced tools.\\
+Comprehension lists seems the tool to do a lot of vectorized operations, or to apply a function iteratively to entry of one or more lists. It is presented here:\\
+\href{https://docs.python.org/2/tutorial/datastructures.html#list-comprehensions}{list comprehensions}\\
+I learned about the \texttt{zip} function. Somehow, it inverses the dimensions in a list.\\
+\url{https://stackoverflow.com/questions/13704860/zip-lists-in-python#13704903}\\
+The exercise 1 instruction sheet contains a list of basic vectorized operations and the associated commands in python.\\
+I learned useful informations about the use of asterisk in order to take a list as input, and expand it into actual positional arguments in the function call, or deal with extra argument in a function, here:\\
+\url{https://stackoverflow.com/questions/5239856/foggy-on-asterisk-in-python}\\
+and there:\\
+\url{https://stackoverflow.com/questions/400739/what-does-asterisk-mean-in-python}\\
+The last exercise was nice. It consisted in computing for some points in $\R^2$ their likelihood depending on two different Gaussian model assumption and assigning each point to the most likely model.
+\end{loggentry}
+
+\begin{loggentry}{14.10.17}{More arrays with NumPy}
+I found this nice tutorial to use NumPy:\\
+\href{https://docs.scipy.org/doc/numpy-dev/user/quickstart.html}{NumPy Tutorial}\\
+and learned how to manipulate these arrays. 
+\end{loggentry}
+
+\begin{loggentry}{15.10.17}{Beginning of first ML project}
+I think I should decide a naming convention for my files and directories. I think I will always try to put Capital letters at the beginning of the name of a folder and lower case for files.\\
+There is a nice explanation of what this SSH encryption is here:\\
+\href{https://www.digitalocean.com/community/tutorials/understanding-the-ssh-encryption-and-connection-process}{Understandin the SSH encryption and connection process}\\
+I also started the first project of the course Machine Learning of ETH.\\
+\end{loggentry}
+
+\begin{loggentry}{16.10.17}{ML project, trying to get started:  Sumatra, Scikitlearn}
+I kept trying to do this ML project but there are plenty of things to get familiar with before being able to start like Sumatra and Scikitlearn (c.f. journal project ML1 for more details). I came across this page which gives a very good introduction to machine learning and how to use python for it:\\
+\href{http://scikit-learn.org/stable/tutorial/basic/tutorial.html}{basic tutorial on scikit learn}\\
+\end{loggentry}
+
+\begin{loggentry}{17.10.17}{Python coding guideline, Python modules and packages, python classes and metaclasses, doctstrings, API, signatures, magic methods}
+I found this general guideline for python coding style:\\
+\url{https://www.python.org/dev/peps/pep-0008/}\\
+I learned a few things concerning python packages and modules in these two webpages:\\
+\href{https://stackoverflow.com/questions/9048518/importing-packages-in-python#9049246}{importing subpackages}\\
+\href{https://stackoverflow.com/questions/7948494/whats-the-difference-between-a-python-module-and-a-python-package#7948672}{difference module and packages}\\
+For more informations about modules and packages this page looks very detailed:\\
+\url{https://docs.python.org/2/tutorial/modules.html}\\
+Concerning the Scikit-learn part of the project we are encouraged to read the following webpages:\\
+\href{http://scikit-learn.org/stable/developers/contributing.html#coding-guidelines}{coding guidlines}\\
+\href{http://scikit-learn.org/stable/developers/contributing.html#apis-of-scikit-learn-objects}{APIs of scikit-learn objects}\\
+\href{http://scikit-learn.org/stable/developers/contributing.html#rolling-your-own-estimator}{rolling your own estimator}\\
+I think I start seeing why we use this scikit-learn. This story of fit, fit transform etc... is described in the ``API's of scikit-learn objects" section. If I get it right, the organizers of the project want us all to use the same kind of syntax with the function/method/API that we use in our code.\\
+I found another good website for python documentation:
+\url{http://www.pythonforbeginners.com/basics}\\
+And in particular for docstrings:\\
+\href{http://www.pythonforbeginners.com/basics/python-docstrings/}{docstrings}\\
+I will put all good tutorials for python in the latex file ``how to use python".\\
+This two webpages explain in a complementary way what a python signature is (more or less):\\
+\href{https://stackoverflow.com/questions/2322736/what-is-the-difference-between-function-declaration-and-signature#2323005}{difference between function declaration and signature}\\
+\href{https://stackoverflow.com/questions/2677185/how-can-i-read-a-functions-signature-including-default-argument-values#2677263}{how to read the signature of a function}\\
+There's a beginning of information concerning API's here:\\
+\url{https://wiki.python.org/moin/API}\\
+I found an interesting page about classes and magic methods here:\\
+\href{https://www.python-course.eu/python3_magic_methods.php}{magic methods and operator overloading}\\
+I also found this great webpage about objects, classes, and metaclasses in python:\\
+\url{https://stackoverflow.com/questions/100003/what-is-a-metaclass-in-python#6581949}
+\end{loggentry}
+
+\begin{loggentry}{18.10.17}{More on scikit-learn}
+The organizers published a very helpful sequence of slide which I called 
+\begin{verbatim}
+final_submission_instructions
+\end{verbatim}
+which explains a bit better how to use this scikit-learn framework.
+\end{loggentry}
+
+\begin{loggentry}{19.10.17}{Trying to follow the instructions provided for the ML project, git, pipeline}
+Otherwise I finished following the instructions given by in the file called ``final submission instructions". I really didn't do much as everything was implemented but I got a bit an idea of what these different tools are. There are still plenty of things I need to figure out (see my ml project journal for more details).\\
+Concerning scikit-learn pipeline, I found these two pages which seem very good:\\
+\href{https://stackoverflow.com/questions/33091376/python-what-is-exactly-sklearn-pipeline-pipeline#33094099}{Stack Overflow: sklearn pipeline}\\
+and\\
+\url{http://scikit-learn.org/stable/auto_examples/model_selection/grid_search_text_feature_extraction.html}\\
+\end{loggentry}
+
+\begin{loggentry}{24.10.17}{Flake8, Submitting my code for ML project 1}
+I will try to submit my code (even though it is exactly what the tutors gave us as a model). I ran the command \texttt{flake8} and corrected what was pointed out. It seems to indicate style errors (like additional spaces at the end of a line) in order to obtain a code which follows some standards. Here is a webpage which introduces it well:\\
+\href{https://medium.com/python-pandemonium/what-is-flake8-and-why-we-should-use-it-b89bd78073f2}{Flake8}
+\end{loggentry}
+
+\begin{loggentry}{26.10.17}{Scikit-Learn tutorial}
+I started to read the first scikit-learn tutorial:\\
+\url{http://scikit-learn.org/stable/tutorial/basic/tutorial.html}
+\end{loggentry}
+
+\begin{loggentry}{28.10.17}{Saving objects with Pickle, getting familiar with scikit-learn, and merging numpy arrays}
+I learned a few things about the \texttt{pickle} tool in these tow pages:\\
+\url{https://stackoverflow.com/questions/8968884/python-serialization-why-pickle#8968969}\\
+\url{https://www.thoughtco.com/using-pickle-to-save-objects-2813661}\\
+I progressed in the reading of the scikit-learn tutorial. I learned fitting, predicting, splitting the data set into a train set and a test set, saving python object with \texttt{pickle}, reshaping a data set, the K-nearest neighbor algorithm, from these pages:\\
+\url{http://scikit-learn.org/stable/tutorial/basic/tutorial.html}\\
+\url{http://scikit-learn.org/stable/tutorial/statistical_inference/settings.html}\\
+\url{http://scikit-learn.org/stable/tutorial/statistical_inference/supervised_learning.html}\\
+I also learned how to merge/concatenate numpy arrays with the commands \texttt{np.r} and \texttt{np.c} here mainly:\\
+\url{https://docs.scipy.org/doc/numpy/reference/generated/numpy.r_.html}\\
+and here\\
+\url{https://docs.scipy.org/doc/numpy/reference/generated/numpy.c_.html}\\
+\end{loggentry}
+
+\begin{loggentry}{30.10.17}{Plots for support machine algorithm with Python}
+In the scikit-learn documentation there is this nice script to output plot to delimit the boundaries of the areas computed by the support machine algorithm:\\
+\url{http://scikit-learn.org/stable/auto_examples/svm/plot_iris.html#sphx-glr-auto-examples-svm-plot-iris-py}\\
+I read an interesting page about randomness in python here:\\
+\url{https://stackoverflow.com/questions/7029993/differences-between-numpy-random-and-random-random-in-python}
+It looks like numpy.random is the most convenient library.
+\end{loggentry}
+
+\begin{loggentry}{31.10.17}{Sequence type objects, mutable and immutable types, built in functions, lists, cross-validation}
+\url{https://www.tutorialspoint.com/python/list_pop.htm}
+I learned plenty of interesting things about lists and more generally sequence type objects here:\\
+\href{https://docs.python.org/3.6/library/stdtypes.html?highlight=list#sequence-types-list-tuple-range}{Official documentation on list tuple and range}\\
+Among which the way memory is shared when doing copy of an object (which Roman told me about). This is also related to:\\
+\href{https://docs.python.org/3.6/faq/programming.html#faq-multidimensional-list}{How to create a multidimensional list}\\
+Concerning the topic of memory allocation, I think this topic is actually the ``mutable and immutable types" topic in python. I read something very interesting about it here:\\
+\url{https://stackoverflow.com/questions/8056130/immutable-vs-mutable-types}\\
+it reminds me of pointers in C++. I have the impression that immutable types variable behave like ``normal" variable while mutable looks like pointers. \\
+Here is a list of built-in functions, i.e. functions that we can use in a python script without having to use \texttt{import}:\\
+\url{https://docs.python.org/3.6/library/functions.html}\\
+There is also a very nice list of questions and answers for python programming here:\\
+\href{https://docs.python.org/3.6/faq/programming.html#faq-multidimensional-list}{Programming FAQ}\\
+I learned a few things on for loops and iterable here:\\
+\url{https://wiki.python.org/moin/ForLoop}\\
+I learned what the
+\begin{verbatim}
+%s
+\end{verbatim}
+symbol means here:\\
+\url{https://stackoverflow.com/questions/997797/what-does-s-mean-in-python#997807}\\
+I learned how to do cross-validation in python here:\\
+\url{http://scikit-learn.org/stable/tutorial/statistical_inference/model_selection.html}
+It presents several ways to do cross-validation:
+\begin{enumerate}
+\item The naive implementation, where we cut manually the data set and use a normal for loop.
+\item An implementation using ``Cross validation generators" like \texttt{KFold} which produce distinct set of indices to separate between training and testing set, and using a regular for loop.
+\item An implementation using ``Cross validation generators" like \texttt{KFold} which produce distinct set of indices to separate between training and testing set, and using a comprehension list instead of a regular for loop.
+\item A method using the \texttt{cross\_val\_score} helper, which is a kind of wrapper for the previous method.
+\end{enumerate}
+Now all these methods, tell us how to compute the average score across the k different folds for one value of the parameter of our estimation model that we want to choose. To choose it well one might use a for loop over a grid of values for this parameter using one of the method above. Or one can use a wrapper called \texttt{GridSearchCV} like displayed below (example taken from the tutorial):
+\begin{verbatim}
+lasso = Lasso(random_state=0)
+alphas = np.logspace(-4, -0.5, 30)
+
+tuned_parameters = [{'alpha': alphas}]
+n_folds = 3
+
+clf = GridSearchCV(lasso, tuned_parameters, cv=n_folds, refit=False)
+clf.fit(X, y)
+scores = clf.cv_results_['mean_test_score']
+scores_std = clf.cv_results_['std_test_score']
+\end{verbatim}
+\end{loggentry}
+
+\begin{loggentry}{01.11.17}{cross-validation and grid searching for parameters of ML algorithm, ploting with python}
+I kept reading the tutorial presented above concerning cross validation. It presented a tool called \texttt{GridSearchCV} designed to for an optimal parameter among a set of parameters for a regression/classification algo using cross validation.\\
+Also, if I understood right, stratified cross validation is used if we have a classifier, and then the observations are distributed in the different folds in a way assuring that there are (more or less) the same number of observations with a given label in each class.\\
+I learned what the \texttt{enumerate} command does here:\\
+\url{https://stackoverflow.com/questions/22171558/what-does-enumerate-mean}\\
+I found this nice tutorial for ploting with python:\\
+\url{http://matplotlib.org/users/pyplot_tutorial.html}\\
+There is a more detailed page in the scikit-learn tutorial dedicated to cross-validation but I didn't read it yet:\\
+\url{http://scikit-learn.org/stable/modules/cross_validation.html#cross-validation}\\
+To create a list of values between two values with a given increment the tool is numpy \texttt{arange}\\
+I tried to do the exercise at the end of this page:\\
+\url{http://scikit-learn.org/stable/tutorial/statistical_inference/model_selection.html}\\
+but I obtain different results with different methods and it is not coherent with the solution. I need to investigate furthermore. Actually the main difference between what I had done and the solution was that I was shuffling the observations in the data and not the solution. The solution is also restricting itself to only the first 150 observations (I don't know why), which also had an influence. The file which contains my solution was called ``scikit-learn ex4" with an underscore.\\
+For the normalization of data, I also found this scikit-learn page:\\
+\href{http://scikit-learn.org/stable/modules/preprocessing.html#preprocessing-normalization}{sk-learn: normalization}\\
+It is part of a bigger tutorial on how to preprocess the data. The tool for normalization seems to be \texttt{StandardScaler} which is presented here:\\
+\href{http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html}{sklearn.preprocessing.StandardScaler}
+\end{loggentry}
+
+\begin{loggentry}{04.11.17}{PCA with python, Exceptions and error handling}
+I looked a bit at this PCA, and here is what I learned. If we have some centered data $X\in \R^{n\times p}$ (meaning the average value of each column of $X$ is $0$), the covariance matrix of the $p$ features is estimated by
+$$
+C=\tfrac{1}{n-1}X^TX.
+$$
+We aim to somehow reduce the dimensionality of $X$ while keeping the most information, i.e. the most variance. We perform Singular value decomposition (c.f. \href{https://stats.stackexchange.com/questions/134282/relationship-between-svd-and-pca-how-to-use-svd-to-perform-pca#134283}{Stack Exchange: PCA and SVD}, \href{https://stats.stackexchange.com/questions/125684/how-does-fundamental-theorem-of-factor-analysis-apply-to-pca-or-how-are-pca-l}{Stack Exchange: Loadings and Eigenvectors} for instance) on $X$ and we get
+$$
+X=USV^T
+$$
+where 
+$
+U\in \R^{n \times n},\ V\in\R^{p\times p}
+$ 
+and $S$ is a diagonal matrix, and 
+$$
+U^TU = \operatorname{Id}, \qquad V^TV = \operatorname{Id}
+$$
+which implies that 
+$$
+C=VLV^T \qquad \text{with} \qquad L = \tfrac{1}{n-1}S^2.
+$$
+This last decomposition is called Principal Component Analysis (PCA). The columns of $V$ are eigenvectors of $C$, also called \textbf{principal axis} or \textbf{principal directions}. The columns $v_i$ of $XV$ are called \textbf{principal components}.\\
+If I understood it right, when we do in python
+\begin{verbatim}
+pca = PCA(n_components=20).fit(X)
+\end{verbatim}
+we keep only the first $20$ columns of $V$ (get $\tilde{V}\in \R^{p\times 20}$) and of $U$ (get $\tilde{U}\in \R^{n\times 20}$), and only the first $20$ columns of $L$ (get $\tilde{L}\in \R^{20 \times p}$). So we have a new data matrix 
+$
+\tilde{X} \in \R^{n\times p}
+$ 
+which satisfies 
+$$
+\tilde{X} = \tilde{U}\tilde{L}\tilde{V},
+$$
+but has only rank $20$. I think that the attribute 
+\begin{verbatim}
+pca.components_
+\end{verbatim}
+contains $\tilde{X}\tilde{V}$, but Actually I'm quite confused. I tried to follow an example of wikipedia to see precisely what is what, but it turns out that the pca method of sk-learn doesn't give me the expected result.\\
+From what I read online, if the sole purpose that we have is to compute the SVD, then this might be better:\\
+\href{https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.svd.html}{scipy.linalg.svd}
+
+At the end I couln't figure out what this .components\_ attribute was. I wrote a jupyter notebook called PCA\_SVD\_test where I tried to find out but I failed. Ultimately I posted a question on Cross Validated:\\
+\href{https://stats.stackexchange.com/questions/311908/what-is-pca-components-in-sk-learn}{Cross Validated: meaning of pca.components\_}\\
+\textbf{Edit:} Someone answered. It seems that PCA assumes centered columns and in my example the columns were not centered...\\\\
+\textbf{Edit (05.05.18):} Someone posted a more detailed answer on my stack exchange/cross validated tread, with a project used as illustration.\\
+I read something interesting about \textbf{exceptions and errors handling} here:\\
+\href{https://stackoverflow.com/questions/13484740/what-are-exceptions-in-python}{Stack Overflow: exception handling}\\
+If I understand well exceptions in python are objects of some predefined classes. What I don't understand is how to trow an error of a specific type. For instance if I want to check that the arguments received by a function are of the appropriate type and throw an error if they aren't how do I do?
+\end{loggentry}
+
+\begin{loggentry}{08.11.17}{Scikit-learn developer guide}
+To see if an estimator satisfies the sk-learn standards, I found this tool on the sk-learn website:
+\begin{verbatim}
+>>> from sklearn.utils.estimator_checks import check_estimator
+>>> from sklearn.svm import LinearSVC
+>>> check_estimator(LinearSVC)  # passes
+\end{verbatim}
+\end{loggentry}
+
+\begin{loggentry}{18.11.17}{Preprocessing data and more on Cross Validation}
+ I found this blog for preprocessing. It gives some sample code with scikit-learn:\\
+\href{http://blog.datadive.net/selecting-good-features-part-i-univariate-selection/}{blog about feature selection and preprocessing}\\
+For Cross Validation with scikit learn, this page contains a lot of informations:\\
+\href{http://scikit-learn.org/stable/modules/grid_search.html#grid-search}{sk-learn: cross validation}\\
+\end{loggentry}
+
+\begin{loggentry}{25.11.17}{Image processing and view as block}
+To reshape an array into array of arrays (blocks) there is a command called \texttt{view\_as\_blocks}. The way it works is explained there:\\
+\href{http://scikit-image.org/docs/dev/api/skimage.util.html#skimage.util.view_as_blocks}{view\_as\_blocks}\\
+The library is 
+\end{loggentry}
+
+\begin{loggentry}{30.11.17}{Overview of what is possible with sklearn}
+I found this link toward a page which contains plenty of useful examples for some machine learning tasks performed with sklearn tools:
+\href{http://scikit-learn.org/stable/auto_examples/index.html}{sklearn: examples}
+and in particular something about ``Feature union with heterogeneous data sources":\\
+\href{http://scikit-learn.org/stable/auto_examples/hetero_feature_union.html#sphx-glr-auto-examples-hetero-feature-union-py}{Feature union with heterogeneous data sources}
+\end{loggentry}
+
+\begin{loggentry}{14.12.17}{Indexing, Contiguous arrays}
+I stumbled upon something strange in my project about ECG where I wanted to transform some array of complex values into something in $\mathbb{R}^2$ (an array with twice more columns) and received an array with twice more rows. I posted the question on stack overflow:\\
+\href{https://stackoverflow.com/questions/47796207/subsetting-affects-viewnp-float64-behaviour}{Stack overflow: subsetting affects view}\\
+and someone said that I should look at the page about indexing in python:\\
+\url{https://docs.scipy.org/doc/numpy-1.13.0/reference/arrays.indexing.html#detailed-notes}\\
+Someone also indicated this nice glossary for numpy:\\
+\href{https://docs.scipy.org/doc/numpy-1.13.0/glossary.html#term-view}{scipy: numpy glossary}\\
+Some answer to my question lead me to the topic of ``Contiguous", ``C-contiguous", and ``Fortran-contiguous", which is quite well explained here:\\
+\href{https://stackoverflow.com/questions/26998223/what-is-the-difference-between-contiguous-and-non-contiguous-arrays#26999092}{Stack overflow: difference contiguous and non-contiguous arrays}.
+\end{loggentry}
+
+\begin{loggentry}{16.12.17}{Oversampling unbalanced data sets}
+Someone on Piazza indicated this webpage for oversampling minority classes in case of unbalanced data set:
+\href{http://contrib.scikit-learn.org/imbalanced-learn/stable/generated/imblearn.over_sampling.SMOTE.html}{imblearn.over\_sampling.SMOTE}
+\end{loggentry}
+
+\begin{loggentry}{17.12.17}{jupyter notebook doesn't find a package inside an environment}
+Yesterday, I tried to use some function from imblearn inside a jupyter notebook that I had started from my environment ml\_project. I received the error message 
+\begin{verbatim}
+ModuleNotFoundError                       Traceback (most recent call last)
+<ipython-input-1-d51ab97bec0a> in <module>()
+----> 1 from imblearn.over_sampling import SMOTE, ADASYN
+
+ModuleNotFoundError: No module named 'imblearn'
+\end{verbatim}
+even though imblearn was install in the conda environment ml\_project. As a student explained it to me on piazza, the problem was that jupyter notebook wasn't itself installed in the environment. The solution can be found here:\\
+\href{https://stackoverflow.com/questions/36382508/packages-from-conda-env-not-found-in-jupyer-notebook}{stack overflow: packages from conda env not found in jupyter notebook}\\
+\end{loggentry}
+
+\begin{loggentry}{01.01.18}{Literals variables, f-strings}
+I learned about \textbf{literals variables} in python here:\\
+\href{https://stackoverflow.com/questions/34189086/what-are-literals-in-python#34189196}{Stack overflow: What are literals in python}\\
+I read about a new kind of string literal called ``\textbf{f-strings}" here:\\
+\href{https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-pep498}{docs.python.org: what's new in python 3.6}\\
+\end{loggentry}
+
+\begin{loggentry}{08.01.18}{autoreload, magic methods}
+I learned about \texttt{autoreload} here:\\
+\href{https://ipython.org/ipython-doc/3/config/extensions/autoreload.html}{ipython.org: autoreload}\\
+and a bit about magic IPython commands here:\\
+\url{https://scientificallysound.org/2017/06/01/ipython-magic-commands/}\\
+``IPython magic commands provide extra functionality to develop code, and some are especially useful when writing code in Jupyter notebooks."
+\end{loggentry}
+
+\begin{loggentry}{11.01.18}{Useful tips for Jupyter notebook, Decorators, del statement, Oriented Object Programming}
+I found some nice tips for Jupyter notebooks here:\\
+\url{https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/}\\
+I learned about decorators which look like \texttt{@something} here:\\
+\url{https://en.wikipedia.org/wiki/Python_syntax_and_semantics#Decorators}\\
+I learned about the \texttt{del} statement here:\\
+\url{https://docs.python.org/2/tutorial/datastructures.html#the-del-statement}
+I read some of this very nice introduction of Oriented Object Programming in python here:\\
+\href{https://www.python-course.eu/python3_object_oriented_programming.php}{python-course: python3 object oriented programming}\\
+The concept of encapsulation is interesting. Everything related to the manipulation of attributes of the given class should be implemented as a method.
+\end{loggentry}
+
+\begin{loggentry}{12.01.18}{Property, Getters, Setters}
+I learned a bit about the keyword \texttt{@property} here:\\
+\href{https://www.python-course.eu/python3_properties.php}{python-course: python3 properties}\\
+From what I understood, it is only a way to avoid using explicitly getters and setters, and more precisely, being able to update some class where the attributes were previously public and had no getters and setters, without having to change the script based on the original implementation of the class.\\
+I also found this page which provides more details (but less OOP background):\\
+\href{https://www.programiz.com/python-programming/property}{programiz: property}\\
+I also read this about the reason why one would use ``ambiguous" assignment:\\
+\href{https://stackoverflow.com/questions/1554546/when-and-how-to-use-the-builtin-function-property-in-python}{stackoverflow: When and how to use the builtin function property in python}
+\end{loggentry}
+
+\begin{loggentry}{13.01.18}{Updating output of a cell, fetching images from the web}
+Talking with Roman, I discover a nice trick: if one wants to run a loop and having the ouput of the cell updated for each loop (for a plot for instance), one can use this:\\
+\url{https://stackoverflow.com/questions/24816237/ipython-notebook-clear-cell-output-in-code#24818304}\\
+I tried to create a new data set to reproduce the experiment of the first lecture. I tried to use the code presented here:\\
+\url{https://github.com/hardikvasa/google-images-download/blob/master/google-images-download.py}\\
+but the results I got were not very satisfying. I also lacked a way to put it in the right subfolders, with the right naming convention. The guys from the slack channel told me that they did this last part manually.\\
+Maybe I could use this script for this last goal:\\
+\url{http://forums.fast.ai/t/dogs-vs-cats-lessons-learned-share-your-experiences/1656/37}\\
+Someone on the forum, gave a link to this code:\\
+\url{https://github.com/ohmeow/google_image_downloader}\\
+I found also this website which seems to be good source of images:\\
+\url{http://www.image-net.org/}\\
+and this one:\\
+\url{http://yfcc100m.appspot.com/}\\
+In this page they give some bash script to put a percentage of images in one folder in a different subfolders:\\
+\url{http://forums.fast.ai/t/bash-scripts-for-creating-sample-datasets/2235}\\
+and also this one:\\
+\href{https://stackoverflow.com/questions/36476326/linux-bash-move-x-percentage-of-files-from-each-folder}{stackoverflow: linux bash move x percentage of files from each folder}\\
+\end{loggentry}
+
+\begin{loggentry}{14.01.18}{Classes and subclasses, classmethod and staticmethod}
+I found this page which gives a good introduction to classes and \textbf{inheritance} in python:\\
+\url{http://www.jesshamrick.com/2011/05/18/an-introduction-to-classes-and-inheritance-in-python/}\\
+I learned about \texttt{@classmethod} and \texttt{@staticmethod} here:\\
+\href{https://stackoverflow.com/questions/12179271/meaning-of-classmethod-and-staticmethod-for-beginner}{Stackoverflow: classmethod and staticmethod for beginner}.
+\end{loggentry}
+
+\begin{loggentry}{18.01.18}{next, iter}
+I learned a bit about the \texttt{next} and \texttt{iter} functions there:\\
+\url{https://docs.python.org/2/library/functions.html#iter}\\
+\end{loggentry}
+
+\begin{loggentry}{22.01.18}{Debugging}
+Jeremy Howard (fastai) advised to read this concerning debugging in python:\\
+\url{https://pythonconquerstheuniverse.wordpress.com/2009/09/10/debugging-in-python/}
+\end{loggentry}
+
+\begin{loggentry}{23.01.18}{Displaying progress bar with tqdm}\\
+I discovered the command \texttt{tqdm}, looking at the code of the method \texttt{TTA} of the class \texttt{learner}
+\end{loggentry}
+
+\begin{loggentry}{09.02.18}{Reinstalling Python and Anaconda}
+Since I had to reinstall Kubuntu, I need to reinstall Pyhton and Anaconda. Python 3.5 seems to have been installed by default:\\
+\begin{verbatim}
+aritz@aritz-ThinkPad-T460p:~$ python -V
+Python 2.7.12
+aritz@aritz-ThinkPad-T460p:~$ python3 -V
+Python 3.5.2
+\end{verbatim}
+Then I installed anaconda after having downloaded the infos from the \href{https://www.anaconda.com/download/#download}{website of Anaconda} and followed \href{https://docs.anaconda.com/anaconda/install/linux}{these indications}.\\
+To know if I was able to reinstall an environment from the folder (inside 
+\begin{verbatim}
+/media/aritz/My Passport/Sauvegardes/Kubuntu/Home_29.01.18/anaconda3/
+\end{verbatim}
+) I copied one of these folders present on my hard drive (my\_anaconda35) into the envs folder of my new anaconda folder (the one created on my home by the installer in
+\begin{verbatim}
+/home/aritz/anaconda3/envs/
+\end{verbatim}
+). To see if it had worked I tried to activate and it looks like it worked:
+\begin{verbatim}
+aritz@aritz-ThinkPad-T460p:~$ conda env list
+# conda environments:
+#
+my_python35              /home/aritz/anaconda3/envs/my_python35
+root                  *  /home/aritz/anaconda3
+
+aritz@aritz-ThinkPad-T460p:~$ source activate my_python35
+(my_python35) aritz@aritz-ThinkPad-T460p:~$ jupyther notebook
+jupyther: command not found
+(my_python35) aritz@aritz-ThinkPad-T460p:~$ anaconda-navigator
+(my_python35) aritz@aritz-ThinkPad-T460p:~$ 
+\end{verbatim}
+I guess that it works. Rather copying each one of my environments, I will try to download use again the .yml file from fastai to rebuild the environment. If later (for my ML projects for instance I need to rebuild an environment) I will copy it from my backup of home of the 29.01.18 on my passport.\\
+I created a tread here:\\
+\url{https://groups.google.com/a/continuum.io/forum/#!topic/anaconda/XZN2YqTTBBA}\\
+to know if it is possible to reinstall the environment the way I did it.
+\end{loggentry}
+
+\begin{loggentry}{11.02.18}{isinstance, duck typing}
+I learned a bit about \texttt{isinstance} and \textit{basestring} here:\\
+\href{https://stackoverflow.com/questions/1549801/what-are-the-differences-between-type-and-isinstance#1549814}{stackoverflow: difference between type and isinstance}\\
+It touches the topic of ``\textbf{duck typing}" which seems to be a widespread concept in python. If I understood it well, it aims at developping tools which treat variables depending on their ``superficial behaviour" (\textit{if it looks like a duck, swim like a duck...}) rather than depending on their specific implementations.\\
+\end{loggentry}
+
+\begin{loggentry}{13.02.18}{pandas (manipulating tables), seaborn (data visualization)}
+I read this introduction to the pandas library:\\
+\url{https://towardsdatascience.com/a-quick-introduction-to-the-pandas-python-library-f1b678f34673}\\
+It seems to be the right tool to manipulate excell-like sheets (typically .csv) files.\\
+I discovered the existence of \href{https://seaborn.pydata.org/index.html}{seaborn}, a library to do data visualization like histograms.
+\end{loggentry}
+
+\begin{loggentry}{20.02.18}{glob for globbing in python, checking that CUDA is working and that we are using GPU, opening and reading/writing files within Python}
+I discovered the function \texttt{glob} which is used to do globing (like in bash) when manipulating file and directory names:\\
+\href{https://docs.python.org/3/library/glob.html}{python.org: glob}\\
+The notebook 1 of fastai has been updated and now contains two commands to verify that we are using the GPU:
+\begin{verbatim}
+torch.cuda.is_available()
+\end{verbatim}
+and
+\begin{verbatim}
+torch.backends.cudnn.enabled
+\end{verbatim}
+Both give me True, so I think that I'm using my GPU correctly (even though it is very slow).\\
+I read a bit about \textbf{double and simple quotes in pyhton} here:\\
+\href{https://stackoverflow.com/questions/56011/single-quotes-vs-double-quotes-in-python}{stackoverflow: single quotes vs double quotes in python}\\
+I learned how to \textbf{open text files inside python} and how the \texttt{open} and \texttt{close} commands have to be combined with the \texttt{with} command here:\\
+\url{https://pythontips.com/2014/01/15/the-open-function-explained/}\\
+It seems to be also working for .csv files (since a .csv file is nothing but a text file, where the columns are separated by comas and the rows by a jump of line). One can also open other types of files as explained here :\\
+\url{http://www.blog.pythonlibrary.org/2010/09/04/python-101-how-to-open-a-file-or-program/}\\
+This last link contains plenty of useful links at the end for 
+\begin{itemize}
+\item \textbf{os module} documentation
+\item \textbf{subprocess module} documentation
+\item Reading and Writing a File
+\item Working With File Objects
+\end{itemize}
+\end{loggentry}
+
+\begin{loggentry}{22.02.18}{Pandas (again), merging data frames}
+Since I need to manipulate \textbf{data stored in tables} for the Rossmann data set, I tried to learn a bit more about the library pandas. I first read this page:\\
+\url{https://pythonforengineers.com/introduction-to-pandas/}\\
+but it was a bit too elementary.\\
+This tutorial was a bit better:\\
+\url{https://towardsdatascience.com/a-quick-introduction-to-the-pandas-python-library-f1b678f34673}\\
+and I completed it with some stack overflow pages:\\
+\url{https://stackoverflow.com/questions/14734533/how-to-access-pandas-groupby-dataframe-by-key#17302673}\\
+\url{https://stackoverflow.com/questions/39755981/explain-how-pandas-dataframe-join-works#39756074}\\
+Then I looked again at the third notebook of fastai, and there is a nice example of merging of several tables using different methods of pandas. This page helped me understand how to \textbf{merge data frames}:\\
+\url{https://chrisalbon.com/python/data_wrangling/pandas_join_merge_dataframe/}\\
+I learned a bit about \textbf{regular expressions} and the command \texttt{re.sub()} here:\\
+\url{https://docs.python.org/2/library/re.html}\\
+and here:\\
+\url{https://docs.python.org/3.5/library/re.html#re.sub}
+\end{loggentry}
+
+\begin{loggentry}{24.02.18}{Trying to solve ordinary differential equations with python}
+To help Joffrey with his master thesis I tried to solve find a way to solve numerically a non linear, ordinary equation of the second degree with python. It seems that PyDSTool is a good tool for that:\\
+\url{http://www2.gsu.edu/~matrhc/PyDSTool.htm}\\
+but from its \href{http://www2.gsu.edu/~matrhc/GettingStarted.html}{information guideline} it seem to require to use Python 2.7. I created a new environment called \texttt{mypy27} and then I tried to install numpy version 1.4.1 with conda but it failed. So I tried to use pip and it looked like it worked:\\
+\begin{verbatim}
+(mypy27) aritz@aritz-ThinkPad-T460p:~$ pip install numpy==1.4.1
+Collecting numpy==1.4.1
+  Downloading numpy-1.4.1.tar.gz (2.2MB)
+    100% || 2.2MB 426kB/s 
+Building wheels for collected packages: numpy
+  Running setup.py bdist_wheel for numpy ... done
+  Stored in directory: /home/aritz/.cache/pip/wheels/b9/cc/6a/e92386a68ce853f545c7122f5af60bad31709a48747cc07443
+Successfully built numpy
+Installing collected packages: numpy
+Successfully installed numpy-1.4.1
+\end{verbatim}
+But then when I tried to install the version of matplotlib which was installed I ran into trouble (it looks like it wasn't available anymore) so I installed the most recent version. Buth then it turned out that this version of matplotlib required a newer version of numpy. So I upgraded numpy (by uninstalling it with pip and reinstalling it). Here is a summary of the version of the three packages required to install PyDSTool:
+\begin{verbatim}
+(mypy27) aritz@aritz-ThinkPad-T460p:~$ python 
+Python 2.7.14 |Anaconda, Inc.| (default, Dec  7 2017, 17:05:42) 
+[GCC 7.2.0] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import numpy
+>>> import scipy
+>>> import matplotlib
+>>> print numpy.__version__
+1.7.1
+>>> print scipy.__version__
+0.9.0
+>>> print matplotlib.__version__
+2.1.2
+\end{verbatim}
+Then there is an issue with the fact that my system has is 64 bit system and not 32 but if I'm not mistaken it is only for something optional, so I will hope that it works well. If not, I don't really know what I will have to do.\\
+Then, I'm supposed to install and unzip a file in a directory of my choice, and update my system's path so that Python can find the package, plus several other complicated things. Since Joffrey seems to be able to solve his problem with matlab, I don't think I will try further to install this because I'm a bit worried I might hurt my computer and screw up the whole system.\\
+There seem to be alternatives like sympy:\\
+\href{https://stackoverflow.com/questions/36232863/how-do-i-solve-a-non-linear-equation-in-sympy}{stackoverflow: how do I solve a non linear equation in sympy?}\\
+or scipy:\\
+\url{https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.odeint.html}\\
+and\\
+\url{https://stackoverflow.com/questions/40832798/solve-ordinary-differential-equations-using-scipy}
+and (this last one seems very good):\\
+\href{https://stackoverflow.com/questions/15928750/numerical-ode-solving-in-python#15929381}{stackoverflow: numerical ODE solving in python}\\
+and\\
+\href{https://scicomp.stackexchange.com/questions/11616/how-to-get-ode-solution-at-specified-time-points}{scicomp stackexchange: how to get ODE solution at specific time points}\\
+\end{loggentry}
+
+\begin{loggentry}{26.02.18}{Pandas DataFrame and Series, Numpy Datetimes and Timedeltas}
+I learned a bit about the main types of the \texttt{pandas} library called \texttt{DataFrame} and \texttt{Series}:
+\url{https://pandas.pydata.org/pandas-docs/version/0.15.2/dsintro.html}\\
+If I get it right, one can see a DataFrame object as a dictionary of Series object where the rows are aligned depending of their index (each Series object has one index).\\
+I also learned about numpy \texttt{datetime64} and \texttt{timedelta64}, which seem to be a way of encoding dates and times and manipulating (\texttt{timedelta64} allows to look at differences between times).
+\end{loggentry}
+
+\begin{loggentry}{05.03.17}{pandas grouby, pandas rolling}
+I learned a bit about the command \texttt{groupby} there:\\
+\url{https://www.tutorialspoint.com/python_pandas/python_pandas_groupby.htm}\\
+It allows to perform operations (filtering, applying functions, transforming) on entries (rows) of the table depending of the value they have for one (or several) column(s). It allows to somehow modify the structure of the data frame: we can create from a 2D data frame a kind of 3D data frame, where the index of the new dimension corresponds to the value of one of the columns of the original data frame.\\
+I learned about \texttt{pandas.DataFram.rolling} there:\\
+\url{https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.rolling.html}\\
+\end{loggentry}
+
+\begin{loggentry}{06.03.18}{pandas MultiIndex, pandas .loc}
+I learned a bit about \textbf{multi-level indexing with pandas} there:\\
+\url{https://pandas.pydata.org/pandas-docs/stable/advanced.html}\\
+I also learned a bit about pandas \texttt{.loc} method to subset parts of a DataFrame there:\\
+\href{https://stackoverflow.com/questions/31571217/loc-function-in-pandas#31585881}{Stackoverflow: loc function in pandas}\\
+It seems to be a safety measure useful when one wants to subset rows of an array which satisfy some conditions relative to the values of certain columns.\\
+\textbf{Edit (05.05.18):} I found this very nice page explaining how to do \textbf{indexing on Pandas Series and DataFrame} with \texttt{.log} and \texttt{.iloc} and what is the difference between the two:\\
+\url{https://stackoverflow.com/questions/31593201/pandas-iloc-vs-ix-vs-loc-explanation-how-are-they-different#31593712}
+\end{loggentry}
+
+\begin{loggentry}{23.03.18}{Trying to install pytorch, \_\_iter\_\_ and \_\_next\_\_}
+I tried to reproduce in a Jupyter notebook the N-gram language model example from this page:\\
+\href{http://pytorch.org/tutorials/beginner/nlp/word_embeddings_tutorial.html}{pytorch.org: word embeddings tutorial}\\
+but with my personal conda environment \texttt{mypy36}. But pytorch wasn't installed so I installed it. But even after that I still got the same error message in the jupyter notebook. I found this page:\\
+\url{https://github.com/pytorch/pytorch/issues/4827}\\
+and I tried
+\begin{verbatim}
+conda update conda
+\end{verbatim}
+but I ran into error. Some googling made me realize that it was maybe because I didn't have the right privileges in the conda environment I was running and indeed, after deactivating it, I could run the command. Then I ran
+\begin{verbatim}
+conda install mkl=2018
+\end{verbatim}
+but it is still not working. I'm still getting
+\begin{verbatim}
+No module named 'torch'
+\end{verbatim}
+when I run a cell in Jupyter notebook containing
+\begin{verbatim}
+import torch
+\end{verbatim}
+but if I enter
+\begin{verbatim}
+python -c "import torch"
+echo $?
+\end{verbatim}
+in the terminal I obtain 0 which indicates that torch is installed in mypy36 (according to \href{https://askubuntu.com/questions/588390/how-do-i-check-whether-a-module-is-installed-or-not-in-python}{this page}).\\
+After reading the message of soumith here:\\
+\url{https://github.com/pytorch/pytorch/issues/909}\\
+I suspect that it is due to the fact that maybe jupyter notebook is not installed directly in the environment mypy36. So I entered
+\begin{verbatim}
+conda install jupyter
+\end{verbatim}
+and started again a jupyter notebook and this time the command worked!\\
+An important remark is that the library is called \texttt{torch} and not \texttt{pytorch} inside python (meaning one has to use \texttt{import torch}).\\
+
+I learned a bit about the \texttt{\_\_iter\_\_()} and \texttt{\_\_next\_\_()}: if I understood it well, these methods are only some ``internal machinery", and are not really supposed to be used by the user. They are used if we want to iterate over an object with a for loop. For instance if one has an instance MyInstance of a class MyClass where these two methods are implemented (and follow the conditions explained in the doc) one can use\\
+\begin{verbatim}
+for i in MyInstance
+\end{verbatim}
+\end{loggentry}
+
+\begin{loggentry}{30.03.18}{Initializing list of lists (strange behaviour)}
+I stumbled on this problem while trying to initialize a list of list of zeros:\\
+\url{https://en.wikibooks.org/wiki/Python_Programming/Lists#List_creation_shortcuts}
+\end{loggentry}
+
+\begin{loggentry}{05.04.18}{Find python version, package version}
+In order to know \textbf{which version of python} we are using (typically inside a conda environment), a simple way is to type
+\begin{verbatim}
+python -V
+\end{verbatim}
+In order to list all the modules installed within an environment (with both \texttt{pip} and \texttt{conda}) together with their version, use
+\begin{verbatim}
+conda env export -n myenv
+\end{verbatim}
+(note that \texttt{conda list} will only list the packages installed with conda).
+\end{loggentry}
+
+\begin{loggentry}{10.04.18}{from future, lambda}
+I learned about the command
+\begin{verbatim}
+from __future__ import whatever
+\end{verbatim}
+here:\\
+\href{https://stackoverflow.com/questions/7075082/what-is-future-in-python-used-for-and-how-when-to-use-it-and-how-it-works#7075121}{Stackoverflow: What is future in python used for and how/when to use it?}\\
+I learned about the \textbf{lambda expressions} and more precisely the \texttt{lambda} keyword here:\\
+\url{https://docs.python.org/3/tutorial/controlflow.html}\\
+\end{loggentry}
+
+\begin{loggentry}{12.04.18}{iterable object, iter(), next()}
+Looking at the object \texttt{trainloader} appearing in this tutorial:\\
+\url{http://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html}\\
+I realized the following thing: an object (here \texttt{trainloader}) might have the \texttt{\_\_iter\_\_()} method implemented (as can be seen in its source code \href{http://pytorch.org/docs/master/_modules/torch/utils/data/dataloader.html}{here}) but it doesn't necessarily mean that we can use\\
+\begin{verbatim}
+trainloader.next()
+\end{verbatim}
+to obtain manually the items it contains one by one (typically when we want to test some procedure on only one item instead of doing it on the whole data set). To be able to do it one has to use first the function $iter()$ like this:\\
+\begin{verbatim}
+dataiter = iter(trainloader)
+images, labels = dataiter.next()
+\end{verbatim}
+\end{loggentry}
+
+\begin{loggentry}{03.05.18}{reversed, assert for sanity check}
+I learend about \texttt{reversed} here:\\
+\url{https://docs.python.org/3.5/library/functions.html#reversed}
+and saw it in application in this tutorial:\\
+\url{https://pytorch.org/tutorials/beginner/nlp/advanced_tutorial.html}\\
+More precisely the code was:
+\begin{verbatim}
+for bptrs_t in reversed(backpointers):
+    best_tag_id = bptrs_t[best_tag_id]
+    best_path.append(best_tag_id)
+\end{verbatim}
+Also in this tutorial, I ran across \texttt{assert} which is used for sanity check, or more precisely to verify that something holds (if it doesn't it produces an error). The code was:
+\begin{verbatim}
+assert start == self.tag_to_ix[START_TAG]
+\end{verbatim}
+\end{loggentry}
+
+\begin{loggentry}{05.05.18}{Python string formatter: old style, new style, f-format}
+I found this page which explains pretty well how strings can be formatted (often used when \textbf{printing values of variables}):\\
+\url{https://pyformat.info/}\\
+An example of application of the new style found in \href{https://pytorch.org/tutorials/beginner/data_loading_tutorial.html#sphx-glr-beginner-data-loading-tutorial-py}{this tutorial} is
+\begin{verbatim}
+print('Image name: {}'.format(img_name))
+\end{verbatim}
+This is completed by the more recent \textbf{f-strings} formats:\\
+\url{https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-pep498}\\
+\end{loggentry}
+
+\begin{loggentry}{06.05.18}{Installing spaCy, pip vs pip3,  spaCy vs NLTK}
+I started \textbf{installing Spacy}, following this webpage:\\
+\url{https://www.analyticsvidhya.com/blog/2017/04/natural-language-processing-made-easy-using-spacy-%e2%80%8bin-python/}\\
+After having activated mypy36, I entered
+\begin{verbatim}
+sudo pip3 install spacy
+\end{verbatim}
+But it didn't work properly. spacy was installed on the root environment instead of mypy36. I think that it is because I don't pip3 in mypy36, but only pip. That made me wonder what was the \textbf{difference between pip and pip3}. If I understood well \href{https://www.quora.com/What-is-difference-between-pip-and-pip3}{this answer} I think that pip is supposed to be used (at least when working directly on the root) for python 2.7 whereas pip3 is supposed to be used for python 3.5 and onward. I guess that when we activate a virtual environment (like mypy36) using python 3, then we can use pip or pip3 interchangeably (as long as both pip and pip3 are installed in the given virtual environment). Actually it seems that in this last case, it is really the same thing if I believe what is written in this post:\\
+\url{https://stackoverflow.com/questions/40189744/should-i-use-pip-or-pip3-to-install-python3-packages-inside-of-a-virtual-environ}
+and also the output of this command:\\
+\begin{verbatim}
+(mypy36) aritz@aritz-ThinkPad-T460p:~$ pip -V
+pip 10.0.1 from /home/aritz/anaconda3/envs/mypy36/lib/python3.6/site-packages/pip (python 3.6)
+\end{verbatim}
+I uninstall spacy from the root environment with
+\begin{verbatim}
+sudo pip3 uninstall spacy
+\end{verbatim}
+and tried spacy in mypy36 with
+\begin{verbatim}
+sudo pip install spacy
+\end{verbatim}
+but it seems to have failed:\\
+\begin{verbatim}
+(mypy36) aritz@aritz-ThinkPad-T460p:~$ spacy -V
+/home/aritz/anaconda3/envs/mypy36/bin/python: No module named spacy
+\end{verbatim}
+So I tried to install it again but using the -H flag (following the advice from some warning but I got this message telling me that it was already installed:
+\begin{verbatim}
+(mypy36) aritz@aritz-ThinkPad-T460p:~$ sudo -H pip install spacy
+[sudo] password for aritz: 
+Requirement already satisfied (use --upgrade to upgrade): spacy in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied (use --upgrade to upgrade): numpy>=1.7 in /usr/lib/python2.7/dist-packages (from spacy)
+Requirement already satisfied (use --upgrade to upgrade): murmurhash<0.29,>=0.28 in /usr/local/lib/python2.7/dist-packages (from spacy)
+Requirement already satisfied (use --upgrade to upgrade): cymem<1.32,>=1.30 in /usr/local/lib/python2.7/dist-packages (from spacy)
+Requirement already satisfied (use --upgrade to upgrade): preshed<2.0.0,>=1.0.0 in /usr/local/lib/python2.7/dist-packages (from spacy)
+Requirement already satisfied (use --upgrade to upgrade): thinc<6.11.0,>=6.10.1 in /usr/local/lib/python2.7/dist-packages (from spacy)
+Requirement already satisfied (use --upgrade to upgrade): plac<1.0.0,>=0.9.6 in /usr/local/lib/python2.7/dist-packages (from spacy)
+Requirement already satisfied (use --upgrade to upgrade): pathlib in /usr/local/lib/python2.7/dist-packages (from spacy)
+Requirement already satisfied (use --upgrade to upgrade): ujson>=1.35 in /usr/local/lib/python2.7/dist-packages (from spacy)
+Requirement already satisfied (use --upgrade to upgrade): dill<0.3,>=0.2 in /usr/local/lib/python2.7/dist-packages (from spacy)
+Requirement already satisfied (use --upgrade to upgrade): regex==2017.4.5 in /usr/local/lib/python2.7/dist-packages (from spacy)
+Requirement already satisfied (use --upgrade to upgrade): wrapt in /usr/local/lib/python2.7/dist-packages (from thinc<6.11.0,>=6.10.1->spacy)
+Requirement already satisfied (use --upgrade to upgrade): tqdm<5.0.0,>=4.10.0 in /usr/local/lib/python2.7/dist-packages (from thinc<6.11.0,>=6.10.1->spacy)
+Requirement already satisfied (use --upgrade to upgrade): cytoolz<0.9,>=0.8 in /usr/local/lib/python2.7/dist-packages (from thinc<6.11.0,>=6.10.1->spacy)
+Requirement already satisfied (use --upgrade to upgrade): six<2.0.0,>=1.10.0 in /usr/lib/python2.7/dist-packages (from thinc<6.11.0,>=6.10.1->spacy)
+Requirement already satisfied (use --upgrade to upgrade): termcolor in /usr/local/lib/python2.7/dist-packages (from thinc<6.11.0,>=6.10.1->spacy)
+Requirement already satisfied (use --upgrade to upgrade): msgpack-python in /usr/local/lib/python2.7/dist-packages (from thinc<6.11.0,>=6.10.1->spacy)
+Requirement already satisfied (use --upgrade to upgrade): msgpack-numpy==0.4.1 in /usr/local/lib/python2.7/dist-packages (from thinc<6.11.0,>=6.10.1->spacy)
+Requirement already satisfied (use --upgrade to upgrade): toolz>=0.8.0 in /usr/local/lib/python2.7/dist-packages (from cytoolz<0.9,>=0.8->thinc<6.11.0,>=6.10.1->spacy)
+You are using pip version 8.1.1, however version 10.0.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+\end{verbatim}
+which makes me believe that for some reason it was installed in the python2.7 of the root but I really don't get why. Maybe using \texttt{sudo} implicitly imply installing things on the root. So I tried
+\begin{verbatim}
+pip install spacy
+\end{verbatim}
+and it seems to have worked!\\
+But then I tried to do the next step of \href{https://www.analyticsvidhya.com/blog/2017/04/natural-language-processing-made-easy-using-spacy-%e2%80%8bin-python/}{the tutorial} but it didn't work:
+\begin{verbatim}
+(mypy36) aritz@aritz-ThinkPad-T460p:~$ python -m spacy.en.download all
+/home/aritz/anaconda3/envs/mypy36/bin/python: Error while finding module specification for 'spacy.en.download' (ModuleNotFoundError: No module named 'spacy.en')
+
+\end{verbatim}
+so instead I used
+\begin{verbatim}
+python -m spacy download en
+\end{verbatim}
+and it worked. Then I could proceed with this tutorial:\\
+\url{https://www.analyticsvidhya.com/blog/2017/04/natural-language-processing-made-easy-using-spacy-%e2%80%8bin-python/}\\
+
+From now on I will use always pip and not pip3 for my virtual environments.\\
+
+I must say I don't really understand what are these ``data and models" from spaCy. So I went on the official page:\\
+\url{https://spacy.io/models/}\\
+but it didn't help me much. I don't understand exactly what these models are supposed to do. It looks like spaCy can do plenty of things but it is not clear to me how this relates to pytorch and tensorflow. Is it supposed to be combined with these models or can it perform these tasks completely independently?\\
+It seems that there are two big libraries designed especially for NLP tasks: NLTK and spaCy. Here are some \textbf{difference between NLTK and spaCy}: From wikipedia: ``Unlike NLTK, which is widely used for teaching and research, spaCy focuses on providing software for production usage." What comes again and again online is that NLTK provides more features, more liberty, and may be good for some specific rare tasks, and that spaCy just implements for each task the best method to perform it, with computationally more efficient way than NLTK. And the default methods of spaCy are supposed to be constantly updated to satisfy state of the art results, so updating spaCy might boost the performance of a script using it. So I guess that spaCy would be better for industry. These two pages provide summaries of the differences:\\
+\url{https://blog.thedataincubator.com/2016/04/nltk-vs-spacy-natural-language-processing-in-python/}\\
+\url{https://www.reddit.com/r/LanguageTechnology/comments/69xbkc/question_spacy_or_nltk/}\\
+From this last article the API's of spaCy are more object oriented which makes it more pythonic. The only real default of spaCy seems to be the fact that it was usable only for English at the time (April 2016) where the article was written. But this may have changed since then. When I go on this page:\\
+\url{https://spacy.io/models/}\\
+and look at the models it seems that other languages are supported.
+
+I looked at the beginning of this tutorial:\\
+\url{https://www.analyticsvidhya.com/blog/2017/04/natural-language-processing-made-easy-using-spacy-%e2%80%8bin-python/}\\
+which displays some of the possibilities of spaCy and copied the code in a notebook called spaCy\_tutorial\_trip\_advisor\_review and if I get it right, it is a library which does all these NLP tasks (without any help from TF or Pytorch (at least from the user perspective)). It seems very efficient and would save me a lot of time if I could use it instead of reimplementing it.
+\end{loggentry}
+
+\begin{loggentry}{07.05.18}{\texttt{string} library, more on spaCy}
+I discovered the \href{https://docs.python.org/2/library/string.html}{string library} which seems to contain plenty of useful utilities encapsulated in classes or constants. For instance \texttt{string.punctuation} is a string containing all the \textbf{punctuation symbols concatenated}:\\
+\begin{verbatim}
+'!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
+\end{verbatim}
+It was used in the \href{https://www.analyticsvidhya.com/blog/2017/04/natural-language-processing-made-easy-using-spacy-%e2%80%8bin-python/}{Analytics Vidhya tutorial about spacy} to \textbf{remove punctation from texts during the tokenization}.
+
+I looked again at \textbf{spaCy}, using in particular this tutorial:\\
+\url{https://www.analyticsvidhya.com/blog/2017/04/natural-language-processing-made-easy-using-spacy-%e2%80%8bin-python/}\\
+(this page
+\url{https://spacy.io/usage/linguistic-features}
+was quite useful to get the details).\\ 
+I list here what I understood from it when going through the tutorial:
+\begin{itemize}
+\item Using this library and its ``models" (for instance \texttt{en} as in \texttt{nlp = spacy.load("en")}) we can create objects from a string (which contains a text). Upon creation of this object, the text is parsed into token and sentences, tokens get various kinds of (predefined) labels/tags, entities are identified and assigned to some (predefined) labels/tags. All these quantities are stored as attributes of the object created (the type is \texttt{spacy.tokens.doc.Doc}) and can then easily be accessed.
+\item I have the impression that there are two ways to load a model:
+\begin{verbatim}
+nlp = spacy.load("en")
+\end{verbatim}
+and
+\begin{verbatim}
+from spacy.lang.en import English
+parser = English()
+\end{verbatim}
+\item It performs dependency parsing on the tokens (I'm not very familiar with this yet).
+\item If I understand it well, some models have been pretrained and are automatically used in order to create these objects.
+\item One can train his own model on his own data set:\\
+\url{https://spacy.io/usage/training}\\
+\item It offers visualization tools:\\
+\url{https://spacy.io/usage/visualizers}\\
+\end{itemize}
+This tutorial might also be good even if it dates from 2015:\\
+\url{http://nicschrading.com/project/Intro-to-NLP-with-spaCy/}\\
+\end{loggentry}
+
+\begin{loggentry}{17.05.18}{\texttt{eval}, and \texttt{ast.literal\_eval}, Regular expressions, \texttt{repr}}
+I learned a bit about the \texttt{eval} command on Stack overflow:\\
+\href{https://stackoverflow.com/questions/9383740/what-does-pythons-eval-do#9383764}{Stackoverflow: What does pythons eval do?}\\
+and also about \texttt{ast.literal\_eval} which seems to be a safer version of \texttt{eval} (which should actually be avoided) here:\\
+\href{https://stackoverflow.com/questions/15197673/using-pythons-eval-vs-ast-literal-eval#15197698}{Stackoverflow: Using python's eval() vs ast.literal\_eval()?}\\
+I encountered it in the notebook from the NLP coursera course ``week1-MultilabelClassification", when we want to transform a string containing ``\texttt{['php', 'mysql']}" into a python list, containing \texttt{'php'} and  \texttt{'mysql'}.\\
+
+I learned a bit about \textbf{regular expressions} here:\\
+\url{https://www.regular-expressions.info/quickstart.html}\\
+and how to use it in python here:\\
+\url{https://docs.python.org/3.5/library/re.html#re.sub}\\
+and in particular there:\\
+\url{https://docs.python.org/3.5/howto/regex.html#regex-howto}\\
+
+Nikos showed me how to \textbf{print the value of a string to see it clearly}. One has to use \texttt{repr}, which prints it as it is really (one see the spaces before and after, the backslashes used to protect a symbol and so on).
+\end{loggentry}
+
+\begin{loggentry}{18.05.18}{\texttt{string.strip}, \texttt{scipy.sparse}}
+The \texttt{strip} method of strings can be used to remove white spaces (by default) or any other characters possibly present at the beginning and end of a string. It is used in the notebook of the first week of coursera's course on NLP.\\
+
+In the notebook of the first week of the NLP coursera's course, I discovered \texttt{scipy.sparse} which is the scipy class for \textbf{storing efficiently sparse matrices}. This can be useful for instance when one uses a bag of word method to represent a text in a numerical form. An interesting comment in the notebook is that sklearn algorithms can only work with \href{https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.csr_matrix.html#scipy.sparse.csr_matrix}{csr matrices}.\\
+\end{loggentry}
+
+\begin{loggentry}{19.05.18}{Scikit-learn \texttt{TfidfVectorizer} tool for TF-IDF bag-of-word creation}
+I learn how to build a bag of word dataset with tf-idf scores out of a list of strings with this tool from sklearn:\\
+\url{http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html}\\
+It was used in the first notebook of the NLP coursera course.
+\end{loggentry}
+
+\begin{loggentry}{24.05.18}{Scikit-learn tool for multi-label encoding}
+I discovered this tool for creating a binary vector out of a list of label (typically the response variable a multi-label classification problem).
+\end{loggentry}
+
+\begin{loggentry}{25.05.18}{F1-score for binary or multilabel classification}
+In the notebook of the first week of the coursera NLP course, I (re)discovered a useful metric to judge binary or multilabel classification, namely the F1-score which has a nice scikit-learn implementation:\\
+\url{http://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html}\\
+\end{loggentry}
+
+\begin{loggentry}{31.05.18}{Meaning in of \texttt{main}, underscore in Python}
+I learned a bit about the meaning of the \texttt{main} API there:\\
+\url{https://stackoverflow.com/questions/4041238/why-use-def-main#4041253}\\
+and there\\
+\url{https://stackoverflow.com/questions/419163/what-does-if-name-main-do}\\
+It allows one to differentiate two usages of a .py script: the first is to execute the script, let say script1.py, (the part which will be put in the core of the \texttt{main} function), and the second is import it as a module from another script, let say script2.py, to be able to use some functions defined in script1.py.\\
+I learned about \textbf{the meaning of the underscore \_} in Python there:\\
+\url{https://hackernoon.com/understanding-the-underscore-of-python-309d1a029edc}
+\end{loggentry}
+
+\begin{loggentry}{02.06.18}{Creating dictionaries dynamically}
+I read about \texttt{collections.defaultdict} there:\\
+\href{https://stackoverflow.com/questions/5900578/how-does-collections-defaultdict-work}{Stack Overflow: How does collections.defaultdict work?}\\
+which allow to create dictionaries dynamically.
+\end{loggentry}
+
+\begin{loggentry}{05.07.18}{Adding a dimension to an array}
+I stumbled upon \texttt{numpy.newaxis} which allow to transform a 1D array into a 2D one, a 2D one into a 3D one etc... There is a nice explanation here:\\
+\href{https://stackoverflow.com/questions/29241056/how-does-numpy-newaxis-work-and-when-to-use-it#29241239}{Stack Overflow: How does numpy.newaxis work and when to use it?}\\
+It has an equivalent in TensorFlow called \texttt{tf.newaxis}.
+\end{loggentry}
+
+\begin{loggentry}{03.08.18}{Unpacking with asterisk}
+I learned another way to use the asterisk. I saw this first in the notebook of week 3 assignment of the NLP course:
+\begin{verbatim}
+for line in validation[:3]:
+    q, *examples = line
+    print(q, *examples[:3])
+\end{verbatim}
+and I found an explanation here:\\
+\url{https://medium.com/understand-the-python/understanding-the-asterisk-of-python-8b9daaa4a558}\\
+\end{loggentry}
+
+\begin{loggentry}{06.08.18}{Reading lists from text with \texttt{ast.literal\_eval}}\\
+In the notebook of week 1 of the NLP class, I came across \texttt{ast.literal\_eval} which is explained here:\\
+\url{https://docs.python.org/3.5/library/ast.html#ast.literal_eval}\\
+It allows one to create a python object out of a string like ``['php', 'mysql']" (here we would create a list containing some strings which represent labels).
+\end{loggentry}
+
+\begin{loggentry}{09.08.18}{Difference between \& and \texttt{and}}
+I found out that there is a difference between \& and \texttt{and}. This page explains it:\\
+\href{https://stackoverflow.com/questions/22646463/difference-between-and-boolean-vs-bitwise-in-python-why-difference-i#22647006}{Difference between and boolean vs bitwise in python}\\
+The conclusion seems good to keep in mind:\\
+\begin{itemize}
+\item If you are not dealing with arrays and are not performing math manipulations of integers, you probably want \texttt{and}.
+\item If you have vectors of truth values that you wish to combine, use numpy with \&.
+\end{itemize}
+\end{loggentry}
+
+\begin{loggentry}{15.08.18}{'xsrf' argument missing from POST, modifying variables inside functions}
+I had already encountered the following problem: suddenly the message
+\begin{verbatim}
+'_xsrf' argument missing from POST
+\end{verbatim}
+appears in the right corner of my jupyter notebook and I cannot save anything anymore. In fact it happened because I deleted my cookies.\\
+
+This post on Stack Overflow made me realize plenty of things:\\
+\href{https://stackoverflow.com/questions/575196/why-can-a-function-modify-some-arguments-as-perceived-by-the-caller-but-not-oth}{Why can a function modify some arguments as perceived by the caller but not others?}\\
+In particular one can modify a variable (or more specifically the value to which a name is referencing) defined outside the function with methods, typically:\\
+\begin{verbatim}
+my_l.append(4)
+\end{verbatim}
+but if we use inside the function something like
+\begin{verbatim}
+my_l = [2, 4]
+\end{verbatim}
+then we create a new variable/name which will disappear outside of the function.\\
+This page:\\
+\url{https://docs.python.org/3/reference/executionmodel.html#resolution-of-names}\\
+explains why if one uses something like
+\begin{verbatim}
+a = 0
+def f(x):
+    b = a
+    a = a + x
+    return((a, b))
+f(10)
+\end{verbatim}
+returns an error of the type
+\begin{verbatim}
+UnboundLocalError: local variable 'a' referenced before assignment
+\end{verbatim}
+To avoid this, the simplest is to pass a as a parameter to the function.\\
+This answer also explains these stories of mutable and immutable objects, which are related to the question of changing the value of a variable inside a function:\\
+\href{https://stackoverflow.com/questions/8056130/immutable-vs-mutable-types#8059504}{Immutable vs mutable}\\
+
+\end{loggentry}
+
+\begin{loggentry}{19.08.18}{Reading csv files with Python, Counters in Python}
+I read this interesting blog about how to access .csv files in python:\\
+\url{https://medium.com/district-data-labs/simple-csv-data-wrangling-with-python-3496aa5d0a5e}\\
+There are a couple of interesting points:\\
+\begin{enumerate}
+\item Better to encapsulate the reading of the data into a function or a class.
+\item Loading dataframes with pandas or numpy is not memory efficient, so should be avoided for big data frames.
+\item Encoding issues and a library to avoid problems.
+\item Using \href{https://docs.python.org/3/library/collections.html#collections.namedtuple}{namedtuple} to create new immutable types to represent the events/row. It looks like using a dictionary to represent a row but the difference is that one cannot change the entries (immutable type) and it is more memory efficient (faster access and three times memory to store it).
+\item ``how to serialize CSV data with Avro so that the data is stored not only in a compact format but with its schema as well". From what I understand, he present a better way to save the data than .csv file (more efficient from the memory perspective) and keeps information about the meaning of the different columns.
+\end{enumerate}
+
+I learned about \textbf{counters in python} here:\\
+\url{https://www.pythonforbeginners.com/collection/python-collections-counter}\\
+
+\end{loggentry}
+
+\begin{loggentry}{11.09.18}{(Multiple) Class Inheritance with \texttt{super().\_\_init\_\_()}}
+I read this tutorial about \textbf{inheritance} in Python:\\
+\url{https://www.python-course.eu/python3_inheritance.php}\\
+I then read this second tutorial about \textbf{multiple inheritance} in Python:\\
+\url{https://www.python-course.eu/python3_multiple_inheritance.php}\\
+and learned the meaning of 
+\begin{verbatim}
+super().__init__()
+\end{verbatim}
+which appears (for instance) in sgdr.py of fastai.
+\end{loggentry}
+
+\begin{loggentry}{14.09.18}{Debugging with \texttt{pdb}}
+I learned the basics of debugging with \texttt{pdb} by reading this page:\\
+\url{https://pythonconquerstheuniverse.wordpress.com/2009/09/10/debugging-in-python/}\\
+It seems that the main purpose (or the most common one) is to display the value of some variables at some point of the execution.\\
+(I encountered it in a \href{https://github.com/sgugger/Deep-Learning/blob/master/Using%20the%20callback%20system%20in%20fastai.ipynb}{tutorial about callbacks in fastai}.\\
+
+\end{loggentry}
+
+\section{Questions}
+\begin{enumerate}
+\item If I want to check that the arguments received by a function are of the appropriate type and throw an error if they aren't how do I do?
+\end{enumerate}
+
+\end{document}
+
+
+
+

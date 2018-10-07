@@ -1,0 +1,973 @@
+
+
+%% See "book", "report", "letter" for other types of document.
+\documentclass[11pt,a4paper]{article}
+%\documentclass[11pt,a4paper]{article} % use larger type; default would be 10pt
+
+%% Packages
+\usepackage{lipsum} % to get some dummy text
+\usepackage[utf8]{inputenc} % set input encoding 
+%\usepackage[francais]{babel} %accens aigus acceptés dans le texte
+\usepackage{hyperref} % for web links
+\usepackage{amssymb, amsmath, amsfonts} % symbols math (\mathbb etc...).
+\usepackage{geometry} % for page dimensions, landscape, format
+\usepackage{fancyhdr}
+\usepackage{enumerate} % to be able to determine the style of the enumeration
+%\usepackage[toc,page]{appendix} % For appendices
+%\usepackage[final]{pdfpages} % to include a pdf
+
+%% Definition of the environment for a diary
+\newenvironment{loggentry}[2]% date, heading
+{\noindent\textbf{#1}\hspace{1cm}$\mathbf{\sim}$\text{ }\textbf{#2}\\}{\vspace{0.5cm}}
+
+%% Page dimensions, landscape format
+%\geometry{legalpaper, margin=1in} % c.f. doc package geometry
+
+%% Headers and footers
+%% This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{1pt} % customise the layout...
+\lhead{}\chead{}\rhead{Aritz Bercher}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%% Shortcuts
+\newcommand{\R}{\mathbb{R}}
+
+%% Title
+
+\title{My little progresses in Computer Science, Machine Learning, Artificial Intelligence, etc...}
+\author{Aritz Bercher}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This will be a diary containing a short summary of what I did every day of this fifth semester of master at ETH. I intend to learn programming and get some applicable skill in Machine Learning and Data Science. This will also help me gathering information found here and there.
+\end{abstract}
+
+\tableofcontents
+
+\section{Journal}
+
+\begin{loggentry}{05.10.17}{Starting with Linux, python, anaconda and jupyter notebook}
+	Creation of this diary. Two weeks ago I started studying a bit how linux works, in particular how to use the console. The slides and documentation provided by TheAlternative was very useful in order to make the first steps. Since a couple of days I try to assimilate the bases of Python. At first I was a bit puzzled by the fact that Python needs an interpreter and not a compiler (the difference is quite well explained in the book of Charles Severance p.8). I'm still a bit confused by the notions of Python virtual environment and in which way it differs from a virtual machine. I found a nice explanation there:\\
+\url{https://blog.docker.com/2016/03/containers-are-not-vms/}\\
+but it seems to be a reading a bit too advanced for my current knowledge. I started by installing Anaconda and it seems to be one of the easiest way to begin using Python.\\
+I was a bit confused at the beginning before I had the following understanding of programming. First we write a script in a text file (generally inside a IDE) and then use a compiler (by pressing on a button in the IDE for instance) which translates it into some machine language and gives it to the CPU. And because of this I was failing to see how it could be done in several ways and what could be a virtual environment. Now I see it a bit differently. I see Python as a bunch of files (which include all the packages that we add little by little) describing a function which is called when we use \texttt{python arguments} in the terminal. So having a virtual environment is just telling to the computer ``now when I say \texttt{python} in the terminal, I want you to use these files there".\\
+It seems there is no standard editor for python script. I've been recommended to use jupyter notebook, pycharm and sublime. At first jupyter notebook didn't behave how I wanted. When I was in a virtual environment with python 2 installed and launched jupyter notebook from the command line, I was only able to create python 3 kernel. The problem was that I had not installed the package jupyter notebook in this virtual environment so it was going back to the root (the python installed ``normally" on my linux) to find it. But then I installed the package jupyter notebook in all my virtual environment and it solved the problem.
+Today I learned what \textbf{encoding} and \textbf{unicode} is here:\\
+\url{https://www.w3.org/International/questions/qa-what-is-encoding}\\
+I learned a bit about \textbf{list}, \textbf{tuples} and \textbf{dictionaries} (globally data structures) here:\\
+\url{https://docs.python.org/3.6/tutorial/datastructures.html#dictionaries}\\
+and a bit about \textbf{class} and \textbf{methods} here:\\
+\url{http://networkstatic.net/python-tutorial-classes-objects-methods-init-and-simple-examples/}\\
+I also discovered the keyword \texttt{pass} which is explained here:\\
+\url{https://stackoverflow.com/questions/13886168/how-to-use-the-pass-statement-in-python}\\
+I also had difficulty to change the language of the dictionary of texmaker but I found the solution here (although it is supposed to be for windows):\\
+\url{http://www.swisswuff.ch/wordpress/?p=166}\\
+\end{loggentry}
+
+\begin{loggentry}{06.10.17}{yield, iterables, generators, with}
+I learned a bit about the keyword \texttt{yield}, \textbf{iterables} and \textbf{generators} here:\\
+\url{https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do}\\
+As I'm trying to create a python script to download songs from internet and that \texttt{youtube\_dl} seems to be the right command to this in python, I tried to read this page:\\
+\url{https://github.com/rg3/youtube-dl/blob/master/README.md#embedding-youtube-dl}\\
+But for this I needed to understand what the keyword \texttt{with} was. I found several links:\\
+\url{https://stackoverflow.com/questions/1369526/what-is-the-python-keyword-with-used-for#11783672}\\
+\url{https://stackoverflow.com/questions/3012488/what-is-the-python-with-statement-designed-for}\\
+\url{effbot.org/zone/python-with-statement.htm}\\
+\url{https://docs.python.org/release/2.5.2/lib/typecontextmanager.html}
+\url{https://www.python.org/dev/peps/pep-0343/}\\
+But these pages require already a good basic knowledge of python so I didn't get everything.\\
+I learned here how to update firefox:\\
+\url{https://askubuntu.com/questions/681312/how-to-update-firefox-on-ubuntu}\\
+\end{loggentry}
+
+\begin{loggentry}{07.10.17}{vim, key binding with xbindkey, and linux permissions}
+I found a nice tutorial on vim which start's with basics:\\\
+\href{https://www.linux.com/learn/vim-101-beginners-guide-vim}{Tutorial for vim}\\
+There is something which really annoys me. In linux I cannot use Ctrl+Alt+$<$ to get the backslash. So I will try to follow the indications on this page (first answer):\\
+\url{https://unix.stackexchange.com/questions/84707/how-can-i-make-ctrl-alt-act-like-alt-gr-in-ubuntu}\\
+and this pages:\\
+\url{https://wiki.archlinux.org/index.php/Xbindkeys}\\
+\url{https://www.linux.com/news/start-programs-pro-xbindkeys}\\
+While doing this I had to copy some files and I tried to do it in the terminal but I got the permission denied and I had to look again at this topic of permission. The toolkit v1 from slide 50 reminded me what ``." and ``.." was. Concerning permissions, this page is quite good:\\
+\url{https://www.linux.com/learn/understanding-linux-file-permissions}\\
+and this one is even better:\\
+\url{https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Step_by_Step_Guide/s1-navigating-ownership.html}\\
+Unfortunately it didn't work. I really tried to follow the first link up there\\
+(\url{https://unix.stackexchange.com/questions/84707/how-can-i-make-ctrl-alt-act-like-alt-gr-in-ubuntu}\\)\\
+but it didn't work. 
+More precisely here is what I did
+\begin{enumerate}[1)]
+\item I installed what was needed with the command\\
+\texttt{sudo apt-get install xbindkeys xvkbd}
+\item I copied one of the examples in the folder \texttt{/usr/share/doc/xbindkeys/examples} and into my \texttt{home} directory and called it \texttt{xbindkeysrc}. At this point I don't know if I should not put a dot before the name as seem to appear in the main tutorial.
+\item I found the name associated to the combination of keys using the command\\
+\texttt{xbindkeys -k}
+\item I edited this file and added the lines\\
+\texttt{"xvkbd -xsendevent -text '$\backslash$[backslash]'"}\\
+\texttt{m:0xc + c:94}\\
+\texttt{Control+Alt + less}
+\item I entered the command \\
+\texttt{xbindkeys -f ~/.xbindkeysrc}
+\item Seeing that it wasn't working I tried to execute directly the command \\
+\texttt{"xvkbd -xsendevent -text '$\backslash$[backslash]'"}\\
+But this produces some warnings and error so I suspect that the command doesn't work.\\
+I think that someone posted a question on stack exchange for the same problem:\\
+\url{https://askubuntu.com/questions/158112/xvkbd-broken-with-warnings/211495}
+\end{enumerate}
+\end{loggentry}
+
+\begin{loggentry}{08.10.17}{Adding a password to jupyter notebook and various possibilities of bash}
+I would like to get rid of this page appearing each time I start a jupyter notebook where I have to insert the password. I found this page which might tell me how to do it:\\
+\url{https://jupyter-notebook.readthedocs.io/en/stable/public_server.html}\\
+but as I didn't find this jupyter folder, I wanted to use the command \texttt{find} but and as I would like to filter out all the ``permission denied" errors, I read this page:\\
+\url{https://unix.stackexchange.com/questions/42841/how-to-skip-permission-denied-errors-when-running-find-in-linux#42842}\\
+I wasn't sure what was the symbol $|$ for but I found it p.14 of the bashguide pdf given by TheAlternative.\\
+I also found out what a symbolic link is there:\\
+\url{https://kb.iu.edu/d/abbe}\\
+As I didn't find the config file I created one as indicated and I received this message from the console indicating where the configuration file for jupyter was put:
+\begin{verbatim}
+Writing default config to: /home/aritz/.jupyter/jupyter_notebook_config.py
+\end{verbatim}
+Even though I created this passord when I was inside the virtual environment my\_python35 it seems that now when I enter the command \texttt{jupyter notebook} in this environment or on the normal one I'm directed to a page where I need to enter the password I chose (and no longer copy paste the code appearing in the terminal or clicking on the link appearing in the terminal).\\
+Concerning youtube\_dl I give up the idea of using it with python as it is completely buggy. I will instead look at the bash version which is in the bash exercise tutorial provided by TheAlternative.\\
+The files bashguide and bash exercises provided by TheAlternative are very well done. I have the impression it gives most of the required knowledge in order to work alone. I learned the following things:\\
+\begin{enumerate}
+\item How to make executable scripts (using $\texttt{chmod}$) for instance.
+\item I also understood that the tilde symbol $\sim$ (which appears often at the beginning of path names) designates the directory of the user (\texttt{/home/aritz/} in my case).
+\item I learned about environment variables which allow the user to execute commands and somehow helps with the general configuration of the computer.
+\item There is an exercise in the bash exercise file to create a directory where we can put all our scripts such that we can execute them from everywhere (or more precisely in every directory descendant of $\sim$).
+\item Looking at these exercises I realized that a backslash in a bash script is just a line breaker.
+\end{enumerate}
+\end{loggentry}
+
+\begin{loggentry}{09.10.17}{First bash script and youtube-dl}
+I started reading the example in the bash exercise document of TheAlternative for youtube-dl. First I tried to understand what the \texttt{curl} command is and how it is used in the exercise. This lead me to learn a few things on the following topics related to how internet works:
+\begin{enumerate}
+\item protocols like http
+\item URI and URL
+\item POST request and web forms:\\
+\url{https://en.wikipedia.org/wiki/POST_(HTTP)}
+\end{enumerate}
+I felt a bit overwhelmed by the man page of youtube-dl so I looked at this video:\\
+\url{https://www.youtube.com/watch?v=1IFNHcs56ss}\\
+and tried to reproduce what the guy was doing. But when I tried to do 
+\begin{verbatim}
+youtube-dl -F https://www.youtube.com/watch?v=pYt0Nwt_oNI
+\end{verbatim}
+I got an error. I looked online and I found this link:\\
+\url{https://github.com/rg3/youtube-dl/issues/4232}\\
+I uninstalled youtube-dl and reinstalled it using the following the ``manual installation instructions" given here:\\
+\url{https://github.com/rg3/youtube-dl/blob/master/README.md#how-do-i-update-youtube-dl}\\
+but the first time it didn't work and I got the same error. I looked again online and all websites seemed to indicate that this error was appearing when one was using an outdated version of the utility. So I tried again to uninstall and reinstall and it worked. Maybe it is because I was in a conda virtual environment that I left (but I find it strange since I thought these virtual environments concerned only python). Or maybe it is because I used another window for bash... I don't really know. Strangely I don't find the man page for youtube-dl anymore. Maybe it was only in the outdated version. I found a page online:\\
+\url{http://manpages.ubuntu.com/manpages/precise/man1/youtube-dl.1.html}\\
+But I'm not sure if it is recent or not. Anyway one can always find help by typing \texttt{youtube-dl --help}.\\
+I read that it's better to put .sh at the end of all bash script (easier to find then).\\
+I created a script called \texttt{downloading\_songs\_youtube\_bash.sh} which for now only downloads the audio associated the youtube video. I failed to implement options because I don't know how to access the url of the youtube webpage once I treated the video.\\
+\textbf{Edit:} Actually it is explained in the bashguide how to parse options (p.13).\\
+There is actually one script which does more or less the same as what I would like to do but for google chrome instead of firefox:\\
+\href{http://brezular.com/2017/08/12/downloading-youtube-videos-from-links-saved-in-google-chrome-bookmarks/}{Downloading youtube videos from bookmarks with Google Chrome}\\
+\end{loggentry}
+
+\begin{loggentry}{11.10.17}{CIL and matrix factorization}
+I found this page for the course CIL given last spring which enumerates 3 projects:\\
+\href{http://da.inf.ethz.ch/teaching/2017/CIL/project.php}{CIL: Projects}\\
+But it looks like it's closed now.\\
+I started reading the lecture notes of the CIL class. It has applications to \href{https://en.wikipedia.org/wiki/Inpainting}{Inpainting}, \href{https://en.wikipedia.org/wiki/Collaborative_filtering}{Collaborative filtering}, and \href{https://en.wikipedia.org/wiki/Image_compression}{Image compression}. The main theoretical goal is to find ways to effectuate matrix factorization (approximation) efficiently, as many problems come down to this.\\
+Roman sent me a link to a one of his projects on GitHub where he used python and youtube\_dl:\\
+\href{http://nbviewer.jupyter.org/github/rlyapin/video_summarization/blob/master/video_summarization_with_dl_embeddings_%28part_II%29.ipynb}{Roman: video summerization youtube dl embeddings}.
+\end{loggentry}
+
+\begin{loggentry}{12.10.17}{Vectorized operations in Python: lists, Creating and manipulating matrices with NumPy, Comprehension lists, asterisk, zip, and other tools}
+I started looking at the exercises of the course CIL. Everything which follows comes more or less from the first exercise sheet of CIL. I learned a few command to use NumPy objects and methods with the exercise sheet 1.
+The library NumPy seems to provide the basic tool to do array manipulation and vectorized operations which are computationally lighter for python that using for loops. If I understood well what is written here:\\
+\url{https://stackoverflow.com/questions/11077023/what-are-the-differences-between-pandas-and-numpyscipy-in-python#11077215}\\
+NumPy provides the basis and pandas some more advanced tools.\\
+Comprehension lists seems the tool to do a lot of vectorized operations, or to apply a function iteratively to entry of one or more lists. It is presented here:\\
+\url{https://docs.python.org/2/tutorial/datastructures.html#list-comprehensions}\\
+I learned about the zip function. Somehow, it inverses the dimensions in a list. 
+\url{https://stackoverflow.com/questions/13704860/zip-lists-in-python#13704903}\\
+The exercise 1 instruction sheet contains a list of basic vectorized operations and the associated commands in python.\\
+I learned useful informations about the use of asterisk in order to take a list as input, and expand it into actual positional arguments in the function call, or deal with extra argument in a function, here:\\
+\url{https://stackoverflow.com/questions/5239856/foggy-on-asterisk-in-python}\\
+and there:\\
+\url{https://stackoverflow.com/questions/400739/what-does-asterisk-mean-in-python}\\
+The last exercise was nice. It consisted in computing for some points in $\R^2$ their likelihood depending on two different Gaussian model assumption and assigning each point to the most likely model.
+\end{loggentry}
+
+\begin{loggentry}{13.10.17}{First glance at neural networks}
+I started looking at the slides of the course on Deep Learning. 
+\end{loggentry}
+
+\begin{loggentry}{14.10.17}{More arrays with NumPy, more on theoretical foundations of neural networks algorithms}
+I found this nice tutorial to use NumPy:\\
+\href{https://docs.scipy.org/doc/numpy-dev/user/quickstart.html}{Tutorial for NumPy}\\
+and learned how to manipulate these arrays. I read the second lecture notes of Deep Learning, and learned a bit about Recurrent and MaxOut neural networks. It was quite theoretical, mostly approximation theory.
+\end{loggentry}
+
+\begin{loggentry}{15.10.17}{Beginning of first ML project}
+I think I should decide a naming convention for my files and directories. I think I will always try to put Capital letters at the beginning of the name of a folder and lower case for files.\\
+There is a nice explanation of what this SSH encryption is here:\\
+\href{https://www.digitalocean.com/community/tutorials/understanding-the-ssh-encryption-and-connection-process}{Understandin the SSH encryption and connection process}\\
+I also started the first project of the course Machine Learning of ETH.\\
+\end{loggentry}
+
+\begin{loggentry}{16.10.17}{ML project, trying to get started:  Sumatra, Scikitlearn}
+I kept trying to do this ML project but there are plenty of things to get familiar with before being able to start like Sumatra and Scikitlearn (c.f. journal project ML1 for more details). I came across this page which gives a very good introduction to machine learning and how to use python for it:\\
+\href{http://scikit-learn.org/stable/tutorial/basic/tutorial.html}{basic tutorial on scikit learn}\\
+\end{loggentry}
+
+\begin{loggentry}{17.10.17}{Python coding guideline, Python modules and packages, python classes and metaclasses}
+I found this general guideline for python coding style:\\
+\url{https://www.python.org/dev/peps/pep-0008/}\\
+I learned a few things concerning python packages and modules in these two webpages:\\
+\href{https://stackoverflow.com/questions/9048518/importing-packages-in-python#9049246}{importing subpackages}\\
+\href{https://stackoverflow.com/questions/7948494/whats-the-difference-between-a-python-module-and-a-python-package#7948672}{difference module and packages}\\
+For more informations about modules and packages this page looks very detailed:\\
+\url{https://docs.python.org/2/tutorial/modules.html}\\
+Concerning the Scikit-learn part of the project we are encouraged to read the following webpages:\\
+\href{http://scikit-learn.org/stable/developers/contributing.html#coding-guidelines}{coding guidlines}\\
+\href{http://scikit-learn.org/stable/developers/contributing.html#apis-of-scikit-learn-objects}{APIs of scikit-learn objects}\\
+\href{http://scikit-learn.org/stable/developers/contributing.html#rolling-your-own-estimator}{rolling your own estimator}\\
+I think I start seeing why we use this scikit-learn. This story of fit, fit transform etc... is described in the ``API's of scikit-learn objects" section. If I get it right, the organizers of the project want us all to use the same kind of syntax with the function/method/API that we use in our code.\\
+I found another good website for python documentation:
+\url{http://www.pythonforbeginners.com/basics}\\
+And in particular for docstrings:\\
+\href{http://www.pythonforbeginners.com/basics/python-docstrings/}{docstrings}\\
+I will put all good tutorials for python in the latex file ``how to use python".\\
+This two webpages explain in a complementary way what a python signature is (more or less):\\
+\href{https://stackoverflow.com/questions/2322736/what-is-the-difference-between-function-declaration-and-signature#2323005}{difference between function declaration and signature}\\
+\href{https://stackoverflow.com/questions/2677185/how-can-i-read-a-functions-signature-including-default-argument-values#2677263}{how to read the signature of a function}\\
+There's a beginning of information concerning API's here:\\
+\url{https://wiki.python.org/moin/API}\\
+I found an interesting page about classes and magic methods here:\\
+\href{https://www.python-course.eu/python3_magic_methods.php}{magic methods and operator overloading}\\
+I also found this great webpage about objects, classes, and metaclasses in python:\\
+\url{https://stackoverflow.com/questions/100003/what-is-a-metaclass-in-python#6581949}
+\end{loggentry}
+
+\begin{loggentry}{18.10.17}{More on scikit-learn}
+The organizers published a very helpful sequence of slide which I called 
+\begin{verbatim}
+final_submission_instructions
+\end{verbatim}
+which explains a bit better how to use this scikit-learn framework.
+\end{loggentry}
+
+\begin{loggentry}{19.10.17}{Trying to follow the instructions provided for the ML project, git, pipeline, quit frozen sublime, gitlab}
+The command to launch sublime text from the console is \texttt{subl}, but if sublime text gets frozen (which happened today) the command to close it is:
+\begin{verbatim}
+sudo killall sublime_text
+\end{verbatim}
+I mangaged to add a shortcut to sublime text in order to be able to comment and uncomment several lines at the same time with ctrl+T following this guideline:\\
+\href{https://stackoverflow.com/questions/11598840/keyboard-shortcut-to-comment-lines-in-sublime-text-2}{stackoverflow}\\
+Here is a nice tutorial about git and plenty of more in depth references at the end:\\
+\url{http://rogerdudler.github.io/git-guide/}
+Otherwise I finished following the instructions given by in the file called ``final submission instructions". I really didn't do much as everything was implemented but I got a bit an idea of what these different tools are. There are still plenty of things I need to figure out (see my ml project journal for more details).\\
+Concerning scikit-learn pipeline, I found these two pages which seem very good:\\
+\url{https://stackoverflow.com/questions/33091376/python-what-is-exactly-sklearn-pipeline-pipeline#33094099}
+and
+\url{http://scikit-learn.org/stable/auto_examples/model_selection/grid_search_text_feature_extraction.html}\\
+There is also a presentation of gitlab here:\\
+\href{https://docs.gitlab.com/ee/user/project/members/index.html#request-access-to-a-project}{Introduction to gitlab}
+\end{loggentry}
+
+\begin{loggentry}{24.10.17}{Flake8, Submitting my code for ML project 1}
+I will try to submit my code (even though it is exactly what the tutors gave us as a model). I ran the command \texttt{flake8} and corrected what was pointed out. It seems to indicate style errors (like additional spaces at the end of a line) in order to obtain a code which follows some standards. Here is a webpage which introduces it well:\\
+\href{https://medium.com/python-pandemonium/what-is-flake8-and-why-we-should-use-it-b89bd78073f2}{Flake8}
+\end{loggentry}
+
+\begin{loggentry}{26.10.17}{Advanced Computational Statistics webpage, Scikit-Learn tutorial, Support Vector Machine algo}
+I've been catching up the lectures of Deep Learning but it's fairly theoretical. This morning I had the course of Meinshausen about hidden Markov chains and he showed us a nice simulation of a drone which would have to guess its position in a maze. I should try to reproduce the algo in python. He said he would put his R script on the website (which can be found here:\\
+\url{http://stat.ethz.ch/lectures/as17/adv-comp-stats.php}).\\
+I started to read the first scikit-learn tutorial:\\
+\url{http://scikit-learn.org/stable/tutorial/basic/tutorial.html}
+and I stumbled upon the "Support Vector Machine" algorithm described here:\\
+\href{https://en.wikipedia.org/wiki/Support_vector_machine}{support vector machine}
+which is strongly related to the kernel trick explained by Buhmann (which can be explained here:
+\href{https://en.wikipedia.org/wiki/Kernel_method}{Kernel method}
+)\\
+I also learned about perceptron (algorithm) already met in the ETH Deep Learning class:\\
+\url{https://en.wikipedia.org/wiki/Perceptron},\\
+and the kernel perceptron method:\\
+\url{https://en.wikipedia.org/wiki/Perceptron}\\
+This last article gives a good introduction and intuition of the Kernel method.\\
+But the choice of the kernel is probably very difficult and requires certainly some very good insight.\\
+\end{loggentry}
+
+\begin{loggentry}{27.10.17}{Stamtish in linux, and parsing option in bash script}
+%%% map ctrl+alt to altgr linux
+%%% xmodmap -e 'keycode 108=Alt_L Control_L'
+Today I went to a ``Stamtish" of ``The alternative" to try to fix two issues:\\
+\begin{enumerate}
+\item  using Ctrl+alt+less to obtain a backslahs
+\item the pointer keeps jumping when I type because I touch the edge of the touchepad involuntarily.
+\end{enumerate}
+To solve the first problem the closest thing we found was the command
+\begin{verbatim}
+xmodmap -e 'keycode 108=Alt_L Control_L'
+\end{verbatim}
+but it doesn't really work since then altgr doesn't anything anymore. And it's temporary meaning it disappears each time I log out. To make it permanent, Leonid Block told me I should include the line in my profile file (somewhere in the home directory I guess).\\
+For the second problem, I could maybe change the position of the top right edge of my touchpad looking at thispage:\\
+\url{https://www.x.org/archive/X11R7.5/doc/man/man4/synaptics.4.html}\\
+Beside, I went through the documentation of the alternative and I saw that in the bashguide that there is a way to actually a tutorial to parse option (p.13).\\
+I looked again at the tutorial with xbindkey mentionned above but it looks like the command
+\begin{verbatim}
+xvkbd -xsendevent -text '\[backslash]'
+\end{verbatim}
+itself produces errors. From what I read online, it seems to be a general problem. I should post a question on stack-exchange
+\end{loggentry}
+
+\begin{loggentry}{28.10.17}{Making your own templates for anki cards}
+With the help of the anki online manual:\\
+\href{https://apps.ankiweb.net/docs/manual.html}{Anki manual}\\
+I found how to make my type of cards, and I created a new type of cards called ``Type answer" where I have to type the answer to the question. This will be handy to memorize programming commands. The steps are
+\begin{enumerate}[1)]
+\item In the Deck menu click on the button ``Add".
+\item In the window appearing click on the button corresponding to the type.
+\item In the window appearing click on the button ``Manage".
+\item In the window appearing click on the button ``Add".
+\item In the window appearing select ``Clone:Basic".
+\item In the window appearing type the name of your new deck.
+\item Go back to the Deck menu and select Browse. In the column to the left, select the newly created card type template.
+\item Select a card and press the ``Cards..." button and edit the template.
+\end{enumerate}
+\end{loggentry}
+
+\begin{loggentry}{30.10.17}{Trying to use typebox in Anki, creating templates for Anki cards, a bit more of Scikit-learn}
+I tried to create templates with Anki where one can type an answer on several lines but a priori it's not possible. I found an add-on online (\href{https://ankiweb.net/shared/info/1135197346}{here}) which is supposed to solve this issue but it doesn't work. I will post a question on this forum:\\
+\url{https://anki.tenderapp.com/welcome}\\
+as soon as I will have received the email to confirm my new account.\\ 
+With Latex, I received an error 
+\begin{verbatim}
+! Package babel Error: You haven't defined the language french yet.
+\end{verbatim}
+which was most likely due to the babel package for a file that I had duplicated from windows which worked on windows. Deleting the .aux file solved the issue.\\
+I kept reading the scikit-learn tutorial. It refreshed my knowledge about logistic regression. I also learned that:\\
+``For many estimators, including the SVMs, having datasets with unit standard deviation for each feature is important to get good prediction."\\
+It also seems that these kernel estimators are very important.
+\end{loggentry}
+
+\begin{loggentry}{02.11.17}{Cross-validation and renormalization}
+I spent the last day studying the tutorial of scikit-learn and in particular how to do cross-validation with python. It seems I obtained very different results for the exercise with diabetes, depending if I shuffle the observations in the data set or not. Next thing I should look at is the normalization of variables. I found this nice topic on Quora:
+\href{https://www.quora.com/How-does-normalization-of-data-help-in-Machine-Learning}{Quora: normalization in machine learning}.
+It seems to be very important.
+\end{loggentry}
+
+\begin{loggentry}{03.11.17}{Difference between Machine Learning and Probabilistic Artificial Intelligence}
+I think I understood the fundamental difference between the topics covered in ETH Machine Learning and  in ETH Probabilistic Artificial Intelligence. In both cases we are interested in making inference and estimating probabilities or distribution. But in the first case, we have very little idea of how the observed features are related to the response variable. For instance the relation between the values of the voxels (pixels in 3D) of an MRI image and the state of the brain. In the second case we have a clear idea of the causal relations between the different variables (observed or hidden) that we have (for instance the example of the alarm-burglary-earthquake-neighbors system), and we can use this knowledge about this structure (often represented by a graph) in order to do some inference or estimation. I also think that in the first case, we assume to have a lot of data, whereas in the second, I guess we need less (maybe even not at all). Also as Sid (Sidarta from ML) pointed out, these kind of Bayesian networks might be useful for designing some robots or systems. But for raw data analysis, it's what we see in ML which seems more appropriate.\\
+I started looking at an example in the scikit-learn documentation on how to use pipeline but I'm a bit confused by the variables h and w. Maybe it is height and width. Each observation is a matrix instead of a vector. After looking at the set, the data is given in two forms: either in \texttt{lfw\_people.data} where each observation is a vector of lentght 1850, or in \texttt{lfw\_people.image} where each observation is $37\times 50$ matrix.
+\end{loggentry}
+
+\begin{loggentry}{04.11.17}{Principal Component Analysis (PCA) and Singular Value Decomposition}
+PCA comes again and again, so I think I should try to learn it properly. I quickly reviewed what I had already seen in the first lecture of CIL. This being said I'm not use that it is exactly the PCA, since it's called SVD (Singular Value Decomposition). I read this very interesting page which gives a good explanation of the two different quantities and their relations:\\
+\href{https://stats.stackexchange.com/questions/134282/relationship-between-svd-and-pca-how-to-use-svd-to-perform-pca#134283}{Stack Exchange: PCA and SVD}\\
+I should later I'll look at this page of sk-learn:\\
+\href{http://scikit-learn.org/stable/modules/decomposition.html#pca}{sk-learn: PCA}
+\end{loggentry}
+
+\begin{loggentry}{06.11.17}{Beginning of second project of ML course}
+I started yesterday the second project in machine learning. I found this nice scikit learn cheat sheet which explains which algorithm use when:\\
+\href{http://scikit-learn.org/stable/tutorial/machine_learning_map/index.html}{sk-learn cheat sheet}
+\end{loggentry}
+
+\begin{loggentry}{16.11.17}{ML second project and interesting links for sklearn classification}
+I've been working on the second project of the course Machine Learning which is about classification, with the special feature that the response variables are probabilities to belong to one of four categories instead of being the actual category (c.f. the journal for this project for details).\\
+I found this link which could be useful and is part of a global course on machine learning I think:\\
+\href{https://www.datarobot.com/blog/classification-with-scikit-learn/}{Classification with scikit learn}
+\end{loggentry}
+
+\begin{loggentry}{18.11.17}{Features selection and preprocessing}
+I found this explanation for git commit and git push:\\
+\href{https://stackoverflow.com/questions/2745076/what-are-the-differences-between-git-commit-and-git-push}{Stack Overflow: difference git commit git push}\\
+I found this blog for preprocessing:\\
+\href{http://blog.datadive.net/selecting-good-features-part-i-univariate-selection/}{blog about feature selection and preprocessing}
+\end{loggentry}
+
+\begin{loggentry}{19.11.17}{Nikos recommendation for deep learning}
+Nikos recommended me two links for deep learning:\\
+\href{https://allenai.github.io/bi-att-flow/}{BiDAF}\\
+\href{https://github.com/kentonl/e2e-coref}{GitHub: e2e-coref}\\
+\end{loggentry}
+
+\begin{loggentry}{22.11.17}{Code Submission in my ML project and Git GitHub Tutorial}
+I submitted the code for the second project of machine learning and then I started reading this (so far very good) tutorial:\\
+\href{https://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1/}{Git and GitHub for beginners}
+\end{loggentry}
+
+\begin{loggentry}{23.11.17}{More on Git and GitHub}
+I'm trying to follow the instructions on the link cited above. But there is a first issue: I have a local username and password for git inside the repository of my second project of ML, as we can see in this copy paste of my shell:
+\begin{verbatim}
+aritz@geronimoT460p:~(...)/ml-project$ git config --list
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://gitlab.vis.ethz.ch/vwegmayr/ml-project.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+user.email=abercher@student.ethz.ch
+user.name=11-810-736
+remote.submission.url=git@gitlab.vis.ethz.ch:vwegmayr/ml-project.git
+remote.submission.fetch=+refs/heads/*:refs/remotes/submission/*
+\end{verbatim}
+Then from what I understood there is a mechanism of encryption for the files shared between my computer and the servers of GitHub or GitLab which relies on an ``ssh key". Concerning ssh keys, I read this:\\
+\href{https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key}{git and SSH}\\
+I added my ssh key to GitHub following these instructions:\\
+\href{https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/}{Adding a new ssh key to your github account}\\
+If I understood right what's written on this page:\\
+\href{https://stackoverflow.com/questions/17756753/where-do-the-settings-in-my-git-configuration-come-from}{Stack Overflow: Where dod the settings in my git configuration come from?}\\
+I think that the global settings are overwritten by the local ones. The result is strange. When I look at the config inside the repository of the project, I have two user.name and user.email:
+\begin{verbatim}
+aritz@geronimoT460p:~$ git config --list
+user.name=abercher
+user.email=abercher@outlook.com
+aritz@geronimoT460p:~$ cd Documents/(...)/ml-project/
+aritz@geronimoT460p:~/(...)/ml-project$ git config --list
+user.name=abercher
+user.email=abercher@outlook.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://gitlab.vis.ethz.ch/vwegmayr/ml-project.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+user.email=abercher@student.ethz.ch
+user.name=11-810-736
+remote.submission.url=git@gitlab.vis.ethz.ch:vwegmayr/ml-project.git
+remote.submission.fetch=+refs/heads/*:refs/remotes/submission/*
+\end{verbatim}
+But it seems that the local ones prevail:
+\begin{verbatim}
+aritz@geronimoT460p:~/(...)/ml-project$ git config user.name
+11-810-736
+aritz@geronimoT460p:~/(...)/ml-project$ git config user.email
+abercher@student.ethz.ch
+\end{verbatim}
+I started reading this page (second page of the previous tutorial):\\
+\href{https://readwrite.com/2013/10/02/github-for-beginners-part-2/}{GitHub for beginners part 2}\\
+The part in the tutorial where I do my first git push didn't work. I  tried to follow the instructions given in the error message:\\
+\begin{verbatim}
+git config --global push.default matching
+\end{verbatim}
+but it produced again an error when I tried (again) to do 
+\begin{verbatim}
+git push
+\end{verbatim}
+so instead I followed some instructions found on this page:\\
+\href{https://stackoverflow.com/questions/23528761/no-refs-in-common-and-none-specified-doing-nothing#25062493}{Stack Overflow: no refs in common and non specified doing nothing}\\
+i.e. I entered\\
+\begin{verbatim}
+git push origin master
+\end{verbatim}
+and it worked.
+\end{loggentry}
+
+\begin{loggentry}{25.11.17}{Quora list machine learning algorithms}
+I found this question and answer on Quora, about what are the important machine learning algorithms:\\
+\href{https://www.quora.com/What-are-some-machine-learning-algorithms-that-you-should-always-have-a-strong-understanding-of-and-why}{Quora: list ML algo}\\
+It seems to be quite complete and could be use in order to find some ideas of algo to use.
+\end{loggentry}
+
+\begin{loggentry}{26.11.17}{Performance of different algorithms}
+With this second project of ML, I have the impression that in some cases, different algorithms and approaches can yield very similar results. In a way, it looks like there is an amount of true information which can be learned and then it's probably more about how we preprocess the data and make good use of cross-validation to tune the parameters than about picking one approach or the other.
+\end{loggentry}
+
+\begin{loggentry}{27.11.17}{XGBoost}
+Some student posted on plazza a link for multi-label classification:\\
+\href{https://www.analyticsvidhya.com/blog/2017/08/introduction-to-multi-label-classification/}{multi-label-classification}\\
+The blog seem to contain plenty of information for ML.\\
+I also learned about XGBoost which seems to be some libraries to use trees intensively:\\
+\href{https://www.quora.com/What-is-xgboost}{Quora: What is XGBoost}
+\end{loggentry}
+
+\begin{loggentry}{04.12.17}{Reservoir algorithm}
+I wanted to use an algorithm which samples k lines at random from an array with more than k lines (in order to reduce the unbalance of my data set of the project of ML 3). So I looked online and this is called Reservoir algorithm. It turns out to be related to big data. I found several interesting links. This one explains the idea quite well:\\
+\href{https://stackoverflow.com/questions/12732982/design-a-storage-algorithm/12733515#12733515}{Stack overflow: design a storage algorithm}\\
+And this one gives a simple implementation:\\
+\href{https://stackoverflow.com/questions/2612648/reservoir-sampling}{Stack overflow: reservoir sampling}
+\end{loggentry}
+
+\begin{loggentry}{17.12.17}{Detecting seasonality in time series}
+All these previous days I've been working on the third project of machine learning where we have to classify these electro cardiograms (ECG) signals. Discussing with Nicola, I realized that I should have looked at tools of time series earlier like autocorrelation. I stumbled upon a nice explanation of how to detect seasonality inside a time series here:\\
+\href{https://stats.stackexchange.com/questions/16117/what-method-can-be-used-to-detect-seasonality-in-data#16169}{stack exchange: detect seasonality}
+\end{loggentry}
+
+\begin{loggentry}{31.12.17}{End of ML project on ECG, Beginning of fast AI course on Deep Learning}
+The semester ended a bit more than a week ago, and with it the last project of ML on ECG. My best idea was to reconstruct the signals on its zero part by duplicating the non-zero part and using (local) auto-correlation to find the length/duration of one heart-beat and the regularity of the signal. What I did wrong was to give up too early on finding some existing tools for the task. I didn't include key-words like python library in my google searches.\\
+I started yesterday an online course called fast AI recommended by Roman, about Deep Learning:\\
+\url{http://www.fast.ai/}.
+\end{loggentry}
+
+\begin{loggentry}{02.01.17}{KDE, KDE Plasma, Kubuntu, Copy-paste only with selection, Wine}
+As I was looking for some informations concerning keybard short-cuts to open a terminal in case my graphical interface crashes, I tried to understand a bit more about KDE, Kubuntu, etc... In fact KDE is the name of a community developing open and free soft-ware (\href{https://en.wikipedia.org/wiki/KDE}{Wiki: KDE}), kubuntu ``is an official flavour of the Ubuntu operating system which uses the KDE Plasma Desktop instead of the Unity graphical environment" (as explained here: \href{https://en.wikipedia.org/wiki/Kubuntu}{Wiki: kubuntu}).\\
+I also learned that one can do copy paste by selecting the part we want to copy and then using the middle button to paste.\\
+I found the forum \href{https://www.kubuntuforums.net/forum.php}{kubuntuforums.net} which seems to contain plenty of nice informations.\\
+I learned about the existence of Wine ``a free and open-source compatibility layer that aims to allow computer programs (application software and computer games) developed for Microsoft Windows to run on Unix-like operating systems".\\
+I asked these two questions on kubuntuforums.net:\\
+\url{https://www.kubuntuforums.net/showthread.php/72832-Can-t-find-help-button-in-Dolphin?p=408556#post408556}\\
+\url{https://www.kubuntuforums.net/showthread.php/72833-Launching-a-terminal-if-GUI-crashes?p=408560#post408560}
+\end{loggentry}
+
+\begin{loggentry}{03.01.17}{Use console in linux when GUI crashes}
+Some one told me on kubuntuforums.net that one can use Ctrl+Alt+F6 to get a text console at any time. Then I have to log in with my username aritz. And to get out it is Ctrl+Alt+F7. Another person told me how to enable the short-cut to have be able to start a terminal with Ctrl+Alt+t
+
+I installed Skype and used my outlook account to log in, but it doesn't seem to be the same as my previous account.
+\end{loggentry}
+
+\begin{loggentry}{15.01.18}{Usefulness of loss function}
+At the end of the notebook of the first lesson of the course on deep learning (part 1 v1) of fast.ai, they explain why one should look at a loss function and not only the accuracy. Basically, the accuracy of a method  doesn't take in account how certain the algorithm was about its predictions. A loss function may encapsulate this better.
+\end{loggentry}
+
+\begin{loggentry}{20.01.18}{Coming back to downloading songs from youtube}
+I came back to my first project which was to download the songs of the youtube page that I bookmarked. I looked again at this page:\\
+\href{https://github.com/rg3/youtube-dl/blob/master/README.md#embedding-youtube-dl}{github: embedding youtube-dl}\\
+and it looks like what I though was a command for python is a command line for the bash, that we can embed in a python script.\\
+I downloaded plenty of songs using the command:\\
+\begin{verbatim}
+youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=XXeu2dYnw88"
+\end{verbatim}
+The last one was ``The first station - Gangsta".
+\end{loggentry}
+
+\begin{loggentry}{23.01.18}{Downloading more songs from youtube, Recommendations of Roman}
+I downloaded plenty of songs using the command:\\
+\begin{verbatim}
+youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=XXeu2dYnw88"
+\end{verbatim}
+The last one was ``Debussy - Rêverie - YouTube".\\
+Roman recommended several resources to me.
+\begin{itemize}
+\item A news aggregator for machine learning: \url{https://news.ycombinator.com/}
+\item A course quite theoretical: \url{https://sites.google.com/view/deep-rl-bootcamp/lectures}
+\end{itemize}
+\end{loggentry}
+
+\begin{loggentry}{26.01.18}{Downloading more songs from youtube}
+I downloaded a few more songs from my bookmarks with the command
+\begin{verbatim}
+youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=XXeu2dYnw88"
+\end{verbatim}
+The last one was ``Clint Eastwood" from Gorillaz.
+\end{loggentry}
+
+\begin{loggentry}{08.02.18}{Trying to extend my kubuntu partion, creating a live key, reinstalling everything}
+As I announced it in my linux journal, I wanted to increase the size of my linux partition but it didn't go as smoothly as I expected and it took me a week and a half. When I tried to move my kubuntu partition a problem occured and my whole kubuntu partition was corrupted. I had to delete it and recreate it. The main steps (that I remember were):\\
+\begin{enumerate}
+\item Create the usb live key. There was a command with \texttt{dd} for this. But one has to be SUPER CAREFUL and use the right disc name otherwise one can wipe out the content of another partition.
+\item Connect my windows activation to my outlook email account to be able to always redownload Windows if necessary. I also did an .iso file for linux that I put on my hard drive.
+\item Whithin Windows shrink as much as possible the Windows session. Doing it via KDE partition manager might be dangerous for Windows.
+\item After changing the priorities in the bios to have my live usb key first I could start a ``testing session of kubuntu". Whithin it, using KDE partition manager, I could delete the problematic partition containing kubuntu, delete linux swap. After that I created 4 new partitions:
+\begin{enumerate}
+\item 25GiB for root partition, format ext4
+\item 160GiB for the home partion, format ext4
+\item 4GiB for the swap partion, format linuxswap
+\item 20GiB for a backup partition, format ext4
+\end{enumerate}
+\item Then I followed the instructions of the installer on the live key.
+\item I had to give the priority to the UEFI mode in the bios (the priority was given to the Legacy mode previously).
+\item Update grub with
+\begin{verbatim}
+sudo update-grub
+\end{verbatim}
+\end{enumerate}
+This wouldn't have been possible without the help of the poeple on kubuntuforums.net and this specific tread:\\
+\href{https://www.kubuntuforums.net/showthread.php/72976-Decreasing-windows-partition-s-size-and-increasing-kubuntu-partition-s-size}{kubuntuforums: Decreasing windows partion's size and increasing kubuntu partion's size}\\
+mr\_raider also gave me this link concerning the switch between graphical card:\\
+\url{http://ubuntuhandbook.org/index.php/2016/04/switch-intel-nvidia-graphics-ubuntu-16-04/}\\
+I followed the instructions but when I use the NVidia one, I have some glitches. There is a little square of text which keeps appearing next to the mouse pointer. For now I use the intel one.\\
+I also had to reinstall everything and change the settings. The fisrt thing I had to do was to make everything look bigger. For this there are two things to change in the setting: font > font (make it 192), and display and monitor > display configuration (scale display).\\
+Following the advice of Qqmike I entered 
+\begin{verbatim}
+sudo efibootmgr -v
+\end{verbatim}
+in the terminal and saved the output inside a file I called efibootmgr.\\
+
+Concerning the BIOS and the UEFI, I learned that the BIOS is an old software and that UEFI is the new ``firmware" which is more recent and generally better. But it seems that if UEFI isn't able to boot because it doesn't find ``EFI Service Partition to boot from" then it goes back to BIOS mode. There is a tread on quora about this:\\
+\href{https://www.quora.com/What-is-the-difference-between-UEFI-and-Legacy-Mode-which-we-need-to-choose-while-installing-the-OS}{Quora: difference UEFI and Legacy Mode}
+\end{loggentry}
+
+\begin{loggentry}{12.02.18}{Fixing the problem with little rectangle appearing near the pointer of the mouse}
+There was an annoying little rectangle which kept appearing near the pointer of my mouse, but I found the solution here:\\
+\url{https://bugs.launchpad.net/ubuntu/+source/nvidia-graphics-drivers-384/+bug/1684240}\\
+which is:\\
+``My workaroud for this Problem: Go to KDE System Settings -> Display and Monitor -> Compositor (left side) -> set "Rendering Backend" to XRender"\\
+and it worked for me as well.
+\end{loggentry}
+
+\begin{loggentry}{13.02.18}{Getting more familiar with Kaggle, Titanic example}
+I looked a bit at the titanic example of Kaggle here:\\
+\href{https://www.kaggle.com/c/titanic}{Kaggle: titanic}\\
+I learned a bit about \textbf{kernels}.\\
+\end{loggentry}
+
+\begin{loggentry}{14.02.18}{Changing texmaker dictionary, extracting some pages of a .pdf file}
+Since I reinstalled kubuntu, I don't have french dictionary for texmaker anymore. So I went into my Windows partition and sent myself an email with the dictionaries. Then I had to make them writable and readable with
+\begin{verbatim}
+sudo chmod o+w fr_FR.dic
+\end{verbatim}
+The French dictionary works but then it turned out that the English dictionaries are not working anymore.\\
+I followed this tutorial:\\
+\url{http://www.swisswuff.ch/wordpress/?p=166}\\
+but it didn't work. If the ``hyph" type dictionary, there is no correction at all, and with en\_us.dic, everything is underline in read.\\
+Then I followed the instructions on this page:\\
+\url{https://copiancestral.wordpress.com/2012/02/13/texmaker-error-cant-open-the-dictionary/}\\
+and moved both the .dic and .aff to the folder
+\begin{verbatim}
+/usr/share/myspell/dicts
+\end{verbatim}
+(like I had done before) and made both the .dic and .aff readable writable and executable with \texttt{chmod} (as above) and after changing the dictionary, it works!\\
+
+I used \texttt{pdftk} in the terminal to extract a specific page of a .pdf file and make a file out of it with the command:\\
+\begin{verbatim}
+pdftk Brochure_for_students_New.pdf cat 13 output Brochure_dfine_page_New.pdf
+\end{verbatim}
+\end{loggentry}
+
+\begin{loggentry}{15.02.18}{Reinstalling sublime text}
+I reinstalled sublime text following this guideline:\\
+\url{https://www.sublimetext.com/docs/3/linux_repositories.html}
+\end{loggentry}
+
+\begin{loggentry}{19.02.18}{One-hot-encoding vs label encoding}
+I learned a bit about one hot vector \textbf{representation vs label encoding representation} here:
+\href{https://datascience.stackexchange.com/questions/9777/one-hot-vector-representation-vs-label-encoding-for-categorical-variables#9778}{stack exchange: one hot vector representation vs label encoding representation}
+\end{loggentry}
+
+\begin{loggentry}{20.02.18}{Reinstalling Cisco Anyconnect/ETH VPN}
+I reinstalled the Cisco Anyconnect tool following the indications given there:\\
+\url{https://www.ethz.ch/content/dam/ethz/associates/services/Service/IT-Services/files/service-desk/guides/vpn-en.pdf}
+\end{loggentry}
+
+\begin{loggentry}{25.02.18}{SQL servers, Relational database, Management system, problems with youtube-dl}
+I learned a bit about SQL servers here:\\
+\url{https://www.databasejournal.com/features/mssql/article.php/3769211/What-is-SQL-Server.htm}\\
+I tried to download songs from youtube with
+\begin{verbatim}
+youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=vXyRJBuoPrQ"
+\end{verbatim}
+but I ran into trouble. I uninstalled youtube-dl and reinstalled it following the instructions on \href{https://github.com/rg3/youtube-dl/blob/master/README.md#bugs}{the github page of the program}. But it failed. I posted a question on kubuntuforums:\\
+\href{https://www.kubuntuforums.net/showthread.php/73129-youtube-dl-not-found?p=411253#post411253}{kubuntuforums: youtube-dl not found}\\
+\end{loggentry}
+
+\begin{loggentry}{26.02.18}{Solving the problem with youtube-dl}
+With the help of the guys of kubuntuforums I discovered that I had youtube-dl in an old conda environment (my\_python35). After deleting I ran
+\begin{verbatim}
+youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=CKBRgeFGENI"
+\end{verbatim}
+and it worked! I downloaded a few more songs. The last one was Eminem - Business.
+\end{loggentry}
+
+\begin{loggentry}{05.03.18}{Downloading more songs from youtube}
+I downloaded more songs from youtube with the command
+\begin{verbatim}
+youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=dX3k_QDnzHE"
+\end{verbatim}
+The last one I downloaded was ``M83 'Midnight City' Official video - YouTube"
+\end{loggentry}
+
+\begin{loggentry}{12.03.18}{Solving the French babel issue for latex}
+I had a problem with scripts which were previously working on windows. Somehow the option
+\begin{verbatim}
+\usepackage[french]{babel}
+\end{verbatim}
+but I found the solution to my problem here:\\
+\href{https://tex.stackexchange.com/questions/139700/package-babel-error-unknown-option-francais}{stackexchange: package babel error unknown option francais}\\
+Then I just had to install a package with the command line:\\
+\begin{verbatim}
+sudo apt install texlive-lang-french
+\end{verbatim}
+and it worked again.
+\end{loggentry}
+
+\begin{loggentry}{12.03.18}{Downloading more songs from youtube}
+I downloaded more songs from youtube with the command
+\begin{verbatim}
+youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=dX3k_QDnzHE"
+\end{verbatim}
+The last one I downloaded was ``Tom Jones - I'll Never Fall In Love Again"
+\end{loggentry}
+
+\begin{loggentry}{14.03.18}{Trying to download pycharm, Recurrent Neural Networks, Starting a journal for the theoretical aspects of machine learning}
+I went on the website from pycharm and applied for a student license. But after I agreed to the term of agreements and made a JetBrain account, I still arrive on this page:
+\url{https://www.jetbrains.com/pycharm/download/#section=linux}\\
+I don't know which version to choose. I will ask Nikos.
+
+I read this introduction to \textbf{Recurrent Neural Networks in NLP}, and their applications to \textbf{Language Modeling and Generating Test}, \textbf{Machine Translation}, \textbf{Speech Recognition}, \textbf{Generating Image Descriptions} (when coupled with some CNN):\\
+\url{http://www.wildml.com/2015/09/recurrent-neural-networks-tutorial-part-1-introduction-to-rnns/}\\
+I also read this page on Long Short Term Memory (LSTM) networks:\\
+\url{https://colah.github.io/posts/2015-08-Understanding-LSTMs/}\\
+which is a very successful special case of RNN.\\
+I created a journal for the \textbf{theoretical aspects of machine learning}.
+\end{loggentry}
+
+\begin{loggentry}{16.03.18}{Connecting to eth network}
+To connect to the ``eth" wifi, I downloaded a small document (called ``wlan-eth.pdf") which contains the required information. The username I had to use was abercher@student.ethz.ch and the password is the same as for connecting to the VPN.
+\end{loggentry}
+
+\begin{loggentry}{20.03.18}{Starting a journal for Pytorch}
+I created a new journal, which is dedicated to \textbf{Pytorch}.
+\end{loggentry}
+
+\begin{loggentry}{23.03.18}{Installing pycharm}
+I installed pycharm by first entering in the terminal
+\begin{verbatim}
+tar -xvzf pycharm-professional-2017.3.4.tar.gz
+\end{verbatim}
+and then executed \texttt{pycharm.sh} with
+\begin{verbatim}
+./pycharm.sh
+\end{verbatim}
+Then I had to choose a few option (I didn't add the VIM plugin) and a window opened where I can choose between\\
+\begin{itemize}
+\item Create new project
+\item Open
+\item Check out from version control
+\end{itemize}
+\end{loggentry}
+
+\begin{loggentry}{03.04.18}{Downloading more songs from youtube, Starting a jounral for TensorFlow}
+I downloaded a couple of new songs from youtube, the last one being ``In my Bed" of Kid Francescoli, with
+\begin{verbatim}
+youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=WdS_VdblFtk"
+\end{verbatim}
+I created a new journal for \textbf{TensorFlow}.
+\end{loggentry}
+
+\begin{loggentry}{14.04.18}{Downloading more songs from youtube}
+I downloaded a couple more songs from youtube. The last one is ``Asleep" from the Smiths. I used
+\begin{verbatim}
+youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=6dPGV0cols4"
+\end{verbatim}
+\end{loggentry}
+
+\begin{loggentry}{29.04.18}{Downloading more songs from youtube}
+I downloaded a couple more songs from youtube. The last one is ``One more light" from the Linkin Park. I used
+\begin{verbatim}
+youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=3kaUvGSLMew"
+\end{verbatim}
+\end{loggentry}
+
+\begin{loggentry}{01.05.18}{Downloading more songs from youtube}
+I downloaded a couple more songs from youtube. The last one is ``Run boy run" from the Woodkid. I used
+\begin{verbatim}
+youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=lmc21V-zBq0"
+\end{verbatim}
+\end{loggentry}
+
+\begin{loggentry}{02.05.18}{Starting a journal for chat bots}
+I created a new journal, which is dedicated to \textbf{chat bots}.
+\end{loggentry}
+
+\begin{loggentry}{03.05.18}{Log-space}
+Looking at this Pytorch tutorial:\\
+\url{https://pytorch.org/tutorials/beginner/nlp/advanced_tutorial.html}\\
+I stumbled upon the definition of \textbf{Log-space reduction}:\\
+\href{https://en.wikipedia.org/wiki/Log-space_reduction}{Wiki: Log-space reduction}\\
+but didn't understand it very well because my knowledge in complexity theory is quite small.
+\end{loggentry}
+
+\begin{loggentry}{04.05.18}{Sentiment analysis with Pytorch}
+I started a project where I will try to do sentiment analysis with Pytorch for IMDB reviews (like in the notebook of fastai).
+\end{loggentry}
+
+\begin{loggentry}{06.05.18}{Downloading more songs from youtube}
+I downloaded a couple more songs from youtube. The last one was ``I apologize" by Bobby Vinton. I used
+\begin{verbatim}
+youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=KzOHin0D8no"
+\end{verbatim}
+\end{loggentry}
+
+\begin{loggentry}{15.05.18}{NLP coursera course}
+I started a \textbf{coursera course on NLP}:\\
+\url{https://www.coursera.org/learn/language-processing/lecture/XZtoZ/hashing-trick-in-spam-filtering}\\
+and a journal for it.\\
+\end{loggentry}
+
+\begin{loggentry}{16.05.18}{Hash functions}
+I learned a bit about \textbf{hashing function} on wikipedia:\\
+\url{https://en.wikipedia.org/wiki/Hash_function}\\
+\end{loggentry}
+
+\begin{loggentry}{17.05.18}{Vi vs Vim, Vi and Sublime text}
+Nikos told me that he was using Vim on the top of Pycharm. I was wondering if I could do the same with Sublime text. I discovered that \textbf{Vim is not the same as Vi} here:\\
+\url{https://askubuntu.com/questions/418396/what-is-the-difference-between-vi-and-vim#418413}\\
+and that one can use Vi inside sublime text, as explained here:\\
+\url{https://www.sublimetext.com/docs/2/vintage.html}\\
+
+\end{loggentry}
+
+\begin{loggentry}{19.05.18}{Downloading more songs from youtube}
+I downloaded a couple more songs from youtube. The last one was ``Note blanche" by N'to. I used
+\begin{verbatim}
+youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=6fpQtKP92BI"
+\end{verbatim}
+\end{loggentry}
+
+\begin{loggentry}{22.05.18}{Downloading more songs from youtube}
+I downloaded a couple more songs from youtube. The last one was ``My love" by Kovac. I used
+\begin{verbatim}
+youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=6fpQtKP92BI"
+\end{verbatim}
+\end{loggentry}
+
+\begin{loggentry}{13.06.18}{Doing back-ups, using rsync, transforming a Linux USB live key into a normal USB key}
+I read this tutorial:\\
+\url{https://www.howtogeek.com/135533/how-to-use-rsync-to-backup-your-data-on-linux/}\\
+The beginning explains how to do backups on a hard drive and it seems quite easy. I tested it and it works.\\
+
+I transformed the Linux live key I had made to reinstall linux back into a normal USB key that I can use for file transfer following the indications of the users of Kubuntuforum:\\
+\url{https://www.kubuntuforums.net/showthread.php/73778-Erasing-a-Linux-live-key?p=416481#post416481}\\
+\end{loggentry}
+
+\begin{loggentry}{28.06.18}{Downloading more songs}
+I downloaded more songs from youtube using
+\begin{verbatim}
+youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=XFkzRNyygfk"
+\end{verbatim}
+The last one was Creep from Radiohead.
+\end{loggentry}
+
+\begin{loggentry}{27.07.18}{Downloading more songs from youtube}
+I downloaded more songs from youtube using
+\begin{verbatim}
+youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=sOcP3i-zm-s"
+\end{verbatim}
+The last one was Vision One from Röyksopp
+\end{loggentry}
+
+\begin{loggentry}{08.08.18}{Unit tests, Websites to prepare coding interviews}
+I read a bit about ``\textbf{unit tests}" here:\\
+\href{https://stackoverflow.com/questions/652292/what-is-unit-testing-and-how-do-you-do-it#652382}{Stack Overflow: What is unit testing and how do you do it?}\\
+
+Nikos also gave me these three website as references to \textbf{practice coding for interviews}:\\
+\begin{itemize}
+\item \url{https://leetcode.com}
+\item \url{https://www.geeksforgeeks.org/}
+\item \url{https://www.hackerrank.com/}
+\end{itemize}
+
+Actually, one has to pay to see the solutions. I will take a subscription for a month for leetcode.com but I need to remember to unsubscribe:\\
+\url{https://leetcode.com/subscription/}\\
+it even looks like if I unsubscribe now, I can still use it for a month.\\
+
+\end{loggentry}
+
+\begin{loggentry}{16.08.18}{New projects, ideas of different things I should do}
+I need to prepare for the next coding interviews I will have. It seems that there are different things I can do:\\
+\begin{enumerate}
+\item In order to prepare for the challenge of Oto.ai, it would be good to make a little project where I would have to tackle a task that I don't know very well and deal with new data. For this I thought that a little project with audio signal could be good. I could put myself in real conditions and give myself a day to do the best I can. Roman gave me the idea of trying to remove noise from audio signals recording voices.
+\item I could try to find websites giving realistic challenges (not just algorithmic ones).
+\item I could try to learn Vim as it could help me being faster.
+\item I could try to look at this co-occurence thing as it seems to be a good unsupervised technique and I know nothing about it.
+\end{enumerate}
+
+I also downloaded songs (using my new bash script data\_downloader.sh). The last one was ``Here she comes again" of Röyksopp.
+\end{loggentry}
+
+\begin{loggentry}{14.07.18}{Creating new Anki template for coding}
+Using the advice given on \href{http://anki.tenderapp.com/discussions/add-ons/11600-default-indentation-in-power-format-pack-add-on}{this page} together with what I had saved in this journal on the 28.10.17, I created a new template for my Anki cards, which is aligned on the left. This is much more readable as it preserves the indentation (more or less).
+\end{loggentry}
+
+\begin{loggentry}{05.09.18}{Downloading Swing songs}
+I downloaded some swing Songs with
+\begin{verbatim}
+youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=TOPSETBUgvQ"
+\end{verbatim}
+the last one being from Louis Prima, Swing, Swing, Swing
+\end{loggentry}
+
+\begin{loggentry}{08.09.18}{Downloading more songs}
+I downloaded some new songs
+\begin{verbatim}
+youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=TOPSETBUgvQ"
+\end{verbatim}
+the last one being Harlem Shuffle
+\end{loggentry}
+
+\begin{loggentry}{20.09.18}{Downloading more songs}
+I downloaded some new songs
+\begin{verbatim}
+youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=TOPSETBUgvQ"
+\end{verbatim}
+the last one being Booty Swing of Parov Stellar
+\end{loggentry}
+
+
+\section{Knowledge I need to gain}
+
+\subsection{Knowledge in deep learning I need to gain}
+\begin{itemize}
+\item I should learn how to use \textbf{transfer learning} with DL. This is used with Pytorch in Fast.ai.
+\item I should learn to use \textbf{Torchtext} for NLP. This tutorial:\\
+\url{http://anie.me/On-Torchtext/}\\
+could be a good start.
+\item I should learn how to use the \textbf{learning rate finder} used in Fast.ai.
+\end{itemize}
+
+\subsection{Other things I need to learn}
+\begin{enumerate}
+\item I should improve my basic python skills. \href{https://leetcode.com/problemset/all/}{leetCode} could be a helpful website.
+\item I should know a bit of \texttt{spark} (I could start \href{https://www.kdnuggets.com/2015/11/introduction-spark-python.html}{here})
+\item I should be able to do a bit of \texttt{bash} scripting
+\item I should learn to use VIM editor and add it to pycharm.
+\item I would like to improve my Software engineer skills. This page gives some hints on how to do it for free:\\
+\href{https://www.wikihow.com/Learn-How-to-Be-a-Software-Engineer-for-Free#}{WikiHow: How to be a Sofware Engineer for free}
+\end{enumerate}
+
+\section{Ideas of things to do}
+\begin{enumerate}
+\item 21.11.17 Sid told me that the course Data Mining is very interesting, and that the projects are very interesting.
+\item 21.11.17 There are the tutorial on deep learning that Roman recommended to me. I should look at it. Maybe I can also try to do a project on Kaggle.
+\item 20.12.17 There is a course on Coursera from Andrew Ng on deep learning. I'd like to look at it.
+\item I could maybe read the introduction and the abstract of each chapter of the book Artificial Intelligence of Russel.
+\item Maybe I should do all the bash exercises given by TheAlternative
+\item I should find a way to manipulate files and directories, either with bash or with python (or both).
+\item 25.01.18 I would like to look at these adversarial neural networks. Yann LeCun was quite enthusiastic about it in his talk.
+\item 16.08.18 I would like to learn how to do this embeddings using co-occurrences like in Word2Vec. Maybe I could use the Rossman dataset from fastai.
+\item 16.08.18 Roman told me I could try to remove noise from a signal recording the voice of someone, as a project.
+\end{enumerate}
+
+\section{Questions}
+\begin{enumerate}
+\item 03.11.17 When do I use Bayesian inference in real life?
+\item 06.11.17 If we normalize de data $X$ what should we do with the response variable $y$? And how do we do prediction on a new sample $x_new$? 
+\end{enumerate}
+
+\section{LeetCode Problems I looked at}
+
+Here is a list of the problem from leetcode.com I looked at:
+\begin{itemize}
+\item 1. Two sums
+\item 167. Two Sum II - Input array is sorted
+\item 653. Two Sum IV - Input is a BST
+\item 7. Reverse Integer
+\item 190. Reverse Bits
+\item 490. The Maze
+\item 3. Longest Substring Without Repeating Characters
+\item 159. Longest Substring with At Most Two Distinct Characters
+\item 505. The Maze II
+\item 695. Max Area of Island
+\item 38. Count and Say
+\item 271. Encode and Decode Strings
+\item 10. Regular Expression Matching
+\item 6. ZigZag Conversion
+\item 310. Minimum Height Trees
+\item 663. Equal Tree Partition
+\item 563. Binary Tree Tilt
+\item 101. Symmetric Tree
+\item 114. Flatten Binary Tree to Linked List
+\item 94. Binary Tree Inorder Traversal
+\item 199. Binary Tree Right Side View
+\end{itemize}
+
+\end{document}
+
+

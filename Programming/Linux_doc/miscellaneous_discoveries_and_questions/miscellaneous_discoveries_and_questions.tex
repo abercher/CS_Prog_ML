@@ -1,0 +1,279 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+%% See "book", "report", "letter" for other types of document.
+\documentclass[11pt,a4paper]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding 
+
+%\usepackage[francais]{babel} %accens aigus acceptés dans le texte
+\usepackage{hyperref} % for web links
+\usepackage{amssymb, amsmath, amsfonts} % symbols math (\mathbb etc...).
+
+%% Indent and jump line size
+%\setlength\parskip{-1.0 pt}  % sert à régler la taille des saut à la ligne
+%\setlength\parindent{1.0 pt} % set length of indents
+
+%% Page dimensions, landscape format
+%\usepackage{geometry}
+%\geometry{legalpaper, landscape, margin=2in}
+% to choose the size of each margin, headers and more c.f.
+% https://www.sharelatex.com/learn/Page_size_and_margins
+
+%% Headers and footers
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{1pt} % customise the layout...
+\lhead{}\chead{}\rhead{Aritz Bercher}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+
+\title{Miscellaneous discoveries and questions\\ Linux}
+\author{Aritz Bercher}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This is a small document where I try to regroup basic knowledge I gained about Linux. I will gather solutions to problem I encountered and usefull tips and tricks I learned.
+\end{abstract}
+
+\section{Downloading music from youtube}
+It seems that there exists a command (\texttt{youtube-dl}) to download the videos from youtube. One would then have to extract the mp3 file. There's actually an option to do it automatically.
+
+\section{Connecting to EDUROAM}
+First, there are two passwords that we use in ETH: the ``mail password" used for instance for the eth mail box and the network password, used for instance when connecting to the VPN client. To connect to EDUROAM, one needs the second. The usename is ``abercher@ethz.ch".\\
+When we open the menu in the connection editor for EDUROAM, in the section Wifi Security, one has to choose
+\begin{enumerate}
+\item Security: WPA and WPA2 Enterprise
+\item Autentification: Protected EAP (PEAP)
+\item PEAP version: automatic
+\item Inner authentification MSCHAPv2
+\item Username: abercher@ethz.ch
+\item Password: (network password)
+\end{enumerate}
+
+\section{BASH}
+bash is a shell. It allows its user to communicate with the machine, to navigate in the file system, and most importantly (I think) to combine several programs\slash applications to (for instance) redirect the input of a program to another program. We can automate procedure on linux by writing scripts for bash. In some cases (if one has to work with servers for instance), one has access only to a console, so it is good to know how to use it.
+
+\section{Support}
+Here is a list of useful websites I found here and there:
+\begin{enumerate}
+\item linux.com
+\item linux.org
+\item howtoforge
+\item tldp.org
+\item linux-tutorial.info
+\item ubuntu
+\item \href{https://www.kubuntuforums.net/forum.php}{kubuntuforums.net}
+\end{enumerate}
+
+\section{Problems with updating Linux}
+When I clicked on the little icone on the right of the toolbar which indicates possible updates and tried to do the updates, I received error messages, but when I use the konsole, it went just fine and now the little icone in the graphical interface indicates that the system is up to date.
+
+\section{usb keys}
+To access the content of a usb key (and more generally to use any device connected to a linux machine if I understood right), one has to ``mount" the device on a point of the tree of the directories of our machine. I found a very good guide on\\ \url{https://linuxconfig.org/howto-mount-usb-drive-in-linux}.
+One little detail to be able to unmount it (command umount) the current working directory shouldn't be one in the ``newly added" part of our directory structure (in the example \slash media\slash usb-drive for instance but \slash media is fine).\\
+But if I'm not wrong, it is done (at least for kubuntu) automatically at another place (\slash media \slash aritz), and one can proceed as with windows.
+
+\section{Vim}
+vim is presented as a very efficient text editor but at first I wasn't sure what was so great about it. I think, it is important because the entire linux system seems to rely on ``configuration files" which are text files (if I'm not mistaken), and in order to be able to flexibly modify our configuration and use the power and flexibility of linux, one has to modify these files. I found this nice video on youtube:\\
+\url{https://www.youtube.com/watch?v=ImK_dHPOTIE}\\
+I just discussed with Nikos and it seems that there are two other aspects that I didn't know. First it runs in the terminal, which means we don't need a graphical interface to use it, and as in some cases we don't have any graphical interface(if we connect to a server, or a remote computer for instance), vim is very handy. Second, contains plenty of commands to make some text editing operation very easily.
+
+\section{Latex}
+I have texmaker, but when I tried to run again some .tex files I had, I obtained error messages of the style
+\begin{verbatim}
+***.sty not found
+\end{verbatim}
+I looked online and after having entered in the console
+\begin{verbatim}
+sudo apt install texlive-math-extra
+\end{verbatim}
+it worked fine.
+
+\section{Using Cisco AnyConect to use ETH's network}
+In installed Cisco AnyConnect following the instructions there:\\
+\url{https://www.ethz.ch/content/dam/ethz/associates/services/Service/IT-Services/files/service-desk/guides/vpn-en.pdf}\\
+and the network to connect to is: \texttt{sslvpn.ethz.ch/}.
+
+\section{Informations about my linux version and my computer specifications}
+I found this nice page on kubuntuforums.net:\\
+\href{https://www.kubuntuforums.net/showthread.php/47924-gt-gt-gt-PLEASE-READ-BEFORE-POSTING-IN-HELP-THE-NEW-GUY-lt-lt-lt}{kubuntuforums.net: read before posting in help the new guy}\\
+where it is explained that before asking a question, one should give informations about its machine and how to get this information. I discovered that we can find a lot of these kind of infos in the utility called KInfocenter which is already pre-installed.
+I will write here all these informations once and for all.\\
+\begin{enumerate}
+\item Kubuntu release
+\begin{verbatim}
+aritz@geronimoT460p:~$ cat /etc/lsb-release | grep DISTRIB_RELEASE=
+DISTRIB_RELEASE=16.04
+\end{verbatim}
+\item KDE Plasma Version: 5.5.5 
+\item Qt Version: 5.5.1
+\item Kernel version: 4.4.0-104-generic
+\item OS-type 64-bit
+\item Grub version: Version: 0.97-29ubuntu68
+\item Other operating system windows 10
+\item Laptop: Lenovo T460p
+\item CPU: 8 x Intel Core i7-6700HQ CPU @ 2.60GHz
+\item GPU: when I type the recommended command I obtain:
+\begin{verbatim}
+~$ lspci | grep aphic
+00:02.0 VGA compatible controller: Intel Corporation Skylake Integrated Graphics (rev 06)
+\end{verbatim}
+but according to I'm supposed to have: Nvidia GeForce 940MX + Intel HD 530.
+\item RAM: 16 GB
+\item Hard Drives: 512 GB SSD S-ATA 
+\item Optical Drives: ?
+\end{enumerate}
+and in one bloc it gives:
+\begin{verbatim}
+Kubuntu release: 16.04
+KDE Plasma Version: 5.5.5
+Qt Version: 5.5.1
+Kernel version: 4.4.0-104-generic
+OS-type 64-bit
+Grub version: Version: 0.97-29ubuntu68
+Other operating system: windows 10
+Laptop: Lenovo T460p
+CPU: Quad core Intel Core i7-6700HQ (-HT-MCP-) cache: 6144 KB
+GPU: I have two cards:
+	Card-1: Intel Skylake Integrated Graphics 
+	Card-2: NVIDIA GM108M [GeForce 940MX] 
+RAM: 16 GB
+Hard Drives: 512 GB SSD S-ATA 		
+\end{verbatim}
+Someone on Kubuntuforums. also recommended me to use the command
+\begin{verbatim}
+inxi -Fxz
+\end{verbatim}
+which works very well and provides a lot of infos.
+
+\section{Dolphin}
+To display the menu bar inside Dolphin, one has to click on Control and then select Show Menubar. To come back to the previous display mode, go in Setting and unthick Show Menubar. Alternatively Ctrl+M works to display and hide the menu bar.
+
+\section{Installing, updating, upgrading, and removing software packages on Ubuntu}
+From what I understood, the main tool to do all this in Ubuntu is a CLI command called APT for Advanced Package Tool (see here: \href{https://en.wikipedia.org/wiki/APT_(Debian)}{Wiki: APT}). Build on the top of it, there are some GUI tools like synaptic, muon, or discover, which may be useful if some package installation is a bit complicated or if we just want to browse trough the existing packages for a specific task without having a particular name in mind.\\
+
+There is a nice and simple explanation of how apt works here:\\
+\href{https://help.ubuntu.com/lts/serverguide/apt.html}{help.ubuntu: apt}\\
+and here is the man page with a description of all the main options:\\
+\href{http://manpages.ubuntu.com/manpages/zesty/man8/apt.8.html}{manpages.ubuntu: apt.8}\\
+I also found this nice page:\\
+\href{https://askubuntu.com/questions/222348/what-does-sudo-apt-get-update-do#222352}{askubuntu: What does sudo apt-get update do?}\\
+where I learned about the command
+\begin{verbatim}
+apt-get dist-upgrade
+\end{verbatim}
+or its apt equivalent:
+\begin{verbatim}
+apt full-upgrade
+\end{verbatim}
+There are some nice slides in file called 16HS-Toolkit-v1.pdf of The Alternative (slide 58).\\
+
+There is this page which gives good instructions in order to find some software packages:\\
+\href{https://askubuntu.com/questions/160897/how-do-i-search-for-available-packages-from-the-command-line}{askubuntu: how do I search for available packages from the command line?}\\
+
+Concerning the GUI tools, one can also use \textbf{synaptic} or \textbf{Muon} (I think that this one is more natural for KDE Plasma from what I understood) which provides a graphical interface to use APT and much more. Here is a nice page to understand it:\\
+\href{https://www.quora.com/What-is-%E2%80%9Csynaptic%E2%80%9D-in-Ubuntu#}{Quora: What is synaptic}\\
+and a more detailed and technical one:\\
+\href{https://apps.ubuntu.com/cat/applications/synaptic/}{ask.ubuntu: synaptic}\\
+From what I understand, for my purpose, using APT in the terminal or synaptic gives equivalent result. Maybe synaptic is even better since it also `` inform you about dependencies (additional packages required by the software package you have chosen) as well as conflicts with other packages that are already installed on your system".\\
+I think APT is more useful when we want to use a script to configure a computer (or several ones).\\
+There is also \textbf{discover} which works seems to be doing the same as synaptic but I found it to be a bit buggy.\\
+This pages gives a lot of additional useful explanations:\\
+\href{https://www.howtogeek.com/191245/beginner-geek-how-to-install-software-on-linux/}{howtogeek: how to install software on linux (GUI)}
+and\\
+\href{https://www.howtogeek.com/63997/how-to-install-programs-in-ubuntu-in-the-command-line/}{howtogeek: how to install programs in ubuntu in the command line}\\
+It looks like when synaptic (or maybe discover) is open, I cannot install things with apt from the command line.
+\\
+
+I also asked a question on kubuntuforums about the difference between the GUI tools like synaptic and muon, and the CLI tool APT, and also concerning the updates of the system itself:\\
+\href{https://www.kubuntuforums.net/showthread.php/72837-Questions-concerning-updates?p=408616#post408616}{kubuntuforum: Questions concerning updates}\\
+and I obtained two very nice answers.\\
+
+It should be noted that upgrading the system itself (going from Kubuntu 16.04 to Kubuntu 17.10 is something different which is not handled by apt).
+
+\section{Basic Linux navigation and file management}
+To remove a directory and its content, I found this page quite helpful:\\
+\url{https://www.cyberciti.biz/faq/delete-or-remove-a-directory-linux-command/}
+To copy files or directories, I found this page quite helpful:\\
+\url{https://www.cyberciti.biz/faq/copy-command/}
+And more a link for more general basic linux navigation and file management:\\
+\href{https://www.digitalocean.com/community/tutorials/basic-linux-navigation-and-file-management}{digitalocean: basic linux navigation and file management}\\
+
+\section{Questions}
+\begin{enumerate}
+\item How to change the keyboard in such a way that we can use ctrl+Alt as AltGr? I also would like to be able to use Window+D to reduce all open windows. I tried to use xbindkey but it didn't work. See my diary for more details.
+\item When I open a pdf from the console using the command\\
+\texttt{okular mypdf.pdf \&}, how do I close it from the console?
+\item In the 16HS bashguide.pdf I fail to use grep to find a file. This being said I can still do it using the command \\
+\texttt{ls -a | grep 'miau.sh'}.
+\item I tried the command\\
+\texttt{sed 's/hello/hi' miau.sh} in my test directory but I get an error.
+\item In the console, how to move several files which are in the same directory without repeating the whole name each time? I tried to use curly brackets but it failed.
+\item How do I open a file with sublime from the command line? It seems that the command \texttt{sublime} doesn't exist.
+\item With sublime, everything is super small, I had to change the size of the font to 20. But the name of the tab is still too small. I found someone who answered this question on the web:\\
+\url{https://askubuntu.com/questions/718737/sublime-text-3-everything-is-so-small}\\
+but I don't understand what he or she means by ``the dash".\\
+I think it corresponds in KDE to the little research bar in the start menu. If I enter ``Display" (the capital D is important) I find ``Display configuration" and if one presses on the button ``Scale Display" one accesses a new menu and after changing the scale we get a better general look. This being said the name of the tabls in Sublime are still very small but it's not too disturbing. One could also lower the resolution to solve these issue (also in ``Display Configuration".\\
+\item I have a problem with the babel library to use french in texmaker (in my ``code" file for instance). It was working perfectly well on windows but produces an error on linux. I found a topic on stack exchange:\\
+\url{https://tex.stackexchange.com/questions/139700/package-babel-error-unknown-option-francais}\\
+but failed to solve my issue.
+\item I don't know how to parse my option for my youtube downloader file. I tried to imitate the exercise and its solution provided by TheAlternative but failed.
+\item How to apply an executable script iteratively over some files in a local folder?
+\item It seems that the internal pdf viewer of texmaker doesn't update automatically anymore when I use quick build. It was the case before but it changed, I don't know why. Now it's changing again (so the pdf viewer updates the document displayed). Actually it depends on the file! For my ML project 2 journal, it doesn't update, but for my python journal (and the current document) it does...
+\end{enumerate}
+
+\end{document} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

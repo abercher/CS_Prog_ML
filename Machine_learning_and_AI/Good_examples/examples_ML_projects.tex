@@ -1,0 +1,76 @@
+
+%% article for article size, book for book size documents
+\documentclass[11pt,a4paper]{article} % use larger type; default would be 10pt
+
+%% Packages
+
+\usepackage[utf8]{inputenc} % set input encoding 
+%\usepackage[francais]{babel} %accens aigus acceptés dans le texte
+\usepackage{hyperref} % for web links
+\usepackage{amssymb, amsmath, amsfonts} % symbols math (\mathbb etc...).
+\usepackage{geometry}
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\usepackage{enumerate} % to be able to determine the style of the enumeration
+\usepackage[toc,page]{appendix} % For appendices
+\usepackage[final]{pdfpages} % to include a pdf
+
+%% Page dimensions, landscape format
+
+\geometry{margin=1in}
+%\geometry{legalpaper, landscape, margin=2in}
+
+
+%% Headers and footers
+
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{1pt} % customise the layout...
+\lhead{}\chead{}\rhead{Aritz Bercher}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%% Personal shortcuts
+
+\renewcommand{\epsilon}{\varepsilon}%%%%%% pour redéfinir une commande qui existe déjà
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+
+%% Title
+
+\title{Latex Template for mathematics}
+\author{Aritz Bercher}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+I will try to gather here some good examples of notebooks or codes for machine learning projects that I found, which could help me in the future.
+\end{abstract}
+
+\section{Data exploration/visualisation}
+There is a good kernel on Kaggle which shows how to correlates different features with a binary variable here:\\
+\url{https://www.kaggle.com/startupsci/titanic-data-science-solutions}
+
+\section{Computer vision, Image recognition}
+
+\subsection{Binary classification}
+The cats vs dogs example of the course fast ai (see notebook1) is good, although it uses only the tools of the fastai library. I have it on my computer (11.02.18).
+
+\subsection{Multilabel classification}
+The example coming from the Kaggle Planet Competition (\href{https://www.kaggle.com/c/planet-understanding-the-amazon-from-space}{kaggle: planet understanding the amazon from space}) is a good example. There is a notebook made available by Kaggle to get started with it (\href{https://www.kaggle.com/robinkraft/getting-started-with-the-data-now-with-docs}{found here}). It shows how to
+\begin{enumerate}
+\item manipulate the data initially provided as a .csv table, transform the label into binary variables
+\item print coocurence matrix
+\item normalize the image channels to a reference color curve (change mean and variance of the pixel to match some value defined by the mean and variance of the pixels of already treated pictures).
+\end{enumerate}
+
+
+
+\end{document} 
+
+
+

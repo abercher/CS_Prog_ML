@@ -1,0 +1,14 @@
+# !/ bin / bash
+query = " $@ "
+# get youtube search results page
+4
+# search for links that contain ' watch \? v = ' f o l l o w e d by 11 c h a r a c t e r s
+# take the first one
+ytid = $ ( \
+curl -s -- data - urlencode " search_query = $query " https :// www . youtube . com / results| grep - oE ' watch \? v =.{11} ' \
+| head -n 1 \
+)
+\
+echo " $ytid "
+youtube - dl -f bestaudio-o " %( title ) s_ %( id ) s .%( ext ) s " " https :// www . youtube . com / $ytid "
+

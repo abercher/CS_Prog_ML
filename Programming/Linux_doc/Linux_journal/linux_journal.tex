@@ -1,0 +1,317 @@
+
+
+%% See "book", "report", "letter" for other types of document.
+\documentclass[11pt,a4paper]{article}
+%\documentclass[11pt,a4paper]{article} % use larger type; default would be 10pt
+
+%% Packages
+\usepackage{lipsum} % to get some dummy text
+\usepackage[utf8]{inputenc} % set input encoding 
+%\usepackage[francais]{babel} %accens aigus acceptés dans le texte
+\usepackage{hyperref} % for web links
+\usepackage{amssymb, amsmath, amsfonts} % symbols math (\mathbb etc...).
+\usepackage{geometry} % for page dimensions, landscape, format
+\usepackage{fancyhdr}
+\usepackage{enumerate} % to be able to determine the style of the enumeration
+%\usepackage[toc,page]{appendix} % For appendices
+%\usepackage[final]{pdfpages} % to include a pdf
+
+%% Definition of the environment for a diary
+\newenvironment{loggentry}[2]% date, heading
+{\noindent\textbf{#1}\hspace{1cm}$\mathbf{\sim}$\text{ }\textbf{#2}\\}{\vspace{0.5cm}}
+
+
+%% Page dimensions, landscape format
+%\geometry{legalpaper, margin=1in} % c.f. doc package geometry
+
+
+%% Headers and footers
+%% This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{1pt} % customise the layout...
+\lhead{}\chead{}\rhead{Aritz Bercher}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%% Title
+
+\title{Linux journal}
+\author{Aritz Bercher}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+I will gather here my discoveries and inquiries concerning Linux. I already made a similar document but here it will be structured by date and not by theme and it will help me keep track of everything I did (even what didn't work).
+\end{abstract}
+
+\begin{loggentry}{07.10.17}{vim, key binding with xbindkey, and linux permissions}
+I found a nice tutorial on vim which start's with basics:\\\
+\href{https://www.linux.com/learn/vim-101-beginners-guide-vim}{Tutorial for vim}\\
+There is something which really annoys me. In linux I cannot use Ctrl+Alt+$<$ to get the backslash. So I will try to follow the indications on this page (first answer):\\
+\url{https://unix.stackexchange.com/questions/84707/how-can-i-make-ctrl-alt-act-like-alt-gr-in-ubuntu}\\
+and this pages:\\
+\url{https://wiki.archlinux.org/index.php/Xbindkeys}\\
+\url{https://www.linux.com/news/start-programs-pro-xbindkeys}\\
+While doing this I had to copy some files and I tried to do it in the terminal but I got the permission denied and I had to look again at this topic of permission. The toolkit v1 from slide 50 reminded me what ``." and ``.." was. Concerning permissions, this page is quite good:\\
+\url{https://www.linux.com/learn/understanding-linux-file-permissions}\\
+and this one is even better:\\
+\url{https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Step_by_Step_Guide/s1-navigating-ownership.html}\\
+Unfortunately it didn't work. I really tried to follow the first link up there\\
+(\url{https://unix.stackexchange.com/questions/84707/how-can-i-make-ctrl-alt-act-like-alt-gr-in-ubuntu}\\)\\
+but it didn't work. 
+More precisely here is what I did
+\begin{enumerate}[1)]
+\item I installed what was needed with the command\\
+\texttt{sudo apt-get install xbindkeys xvkbd}
+\item I copied one of the examples in the folder \texttt{/usr/share/doc/xbindkeys/examples} and into my \texttt{home} directory and called it \texttt{xbindkeysrc}. At this point I don't know if I should not put a dot before the name as seem to appear in the main tutorial.
+\item I found the name associated to the combination of keys using the command\\
+\texttt{xbindkeys -k}
+\item I edited this file and added the lines\\
+\texttt{"xvkbd -xsendevent -text '$\backslash$[backslash]'"}\\
+\texttt{m:0xc + c:94}\\
+\texttt{Control+Alt + less}
+\item I entered the command \\
+\texttt{xbindkeys -f ~/.xbindkeysrc}
+\item Seeing that it wasn't working I tried to execute directly the command \\
+\texttt{"xvkbd -xsendevent -text '$\backslash$[backslash]'"}\\
+But this produces some warnings and error so I suspect that the command doesn't work.\\
+I think that someone posted a question on stack exchange for the same problem:\\
+\url{https://askubuntu.com/questions/158112/xvkbd-broken-with-warnings/211495}
+\end{enumerate}
+\end{loggentry}
+
+\begin{loggentry}{02.01.18}{KDE, KDE Plasma, Kubuntu, Copy-paste only with selection, Wine}
+As I was looking for some informations concerning keybard short-cuts to open a terminal in case my graphical interface crashes, I tried to understand a bit more about KDE, Kubuntu, etc... In fact KDE is the name of a community developing open and free soft-ware (\href{https://en.wikipedia.org/wiki/KDE}{Wiki: KDE}), kubuntu ``is an official flavour of the Ubuntu operating system which uses the KDE Plasma Desktop instead of the Unity graphical environment" (as explained here: \href{https://en.wikipedia.org/wiki/Kubuntu}{Wiki: kubuntu}).\\
+I also learned that one can do copy paste by selecting the part we want to copy and then using the middle button to paste.\\
+I found the forum \href{https://www.kubuntuforums.net/forum.php}{kubuntuforums.net} which seems to contain plenty of nice informations.\\
+I learned about the existence of Wine ``a free and open-source compatibility layer that aims to allow computer programs (application software and computer games) developed for Microsoft Windows to run on Unix-like operating systems".\\
+I asked these two questions on kubuntuforums.net:\\
+\url{https://www.kubuntuforums.net/showthread.php/72832-Can-t-find-help-button-in-Dolphin?p=408556#post408556}\\
+\url{https://www.kubuntuforums.net/showthread.php/72833-Launching-a-terminal-if-GUI-crashes?p=408560#post408560}
+\end{loggentry}
+
+\begin{loggentry}{03.01.18}{Opening terminal if GUI crashes, Installing, upgrading, and removing software packages, Finding informations about my machine with inxi}
+Some one told me on kubuntuforums.net that one can use Ctrl+Alt+F6 to get a text console at any time. Then I have to log in with my username aritz. And to get out it is Ctrl+Alt+F7. Another person told me how to enable the short-cut to have be able to start a terminal with Ctrl+Alt+t.\\
+\\
+I tried to refresh my memory concerning the way we install and remove software packages on Linux. I put the result of my research in a special section of my other latex file about linux: miscellaneous discoveries and question.
+In order to find information about one's machine and system, it is enough to enter in the terminal the command
+\begin{verbatim}
+inxi -Fxz
+\end{verbatim}
+I learned a bit more about \textbf{Linux distributions} (see here: \href{https://en.wikipedia.org/wiki/Linux_distribution}{Wiki: Linux distribution}) such as \href{https://en.wikipedia.org/wiki/Fedora_(operating_system)}{Fedora}, \href{https://en.wikipedia.org/wiki/Debian}{Debian}, or \href{https://en.wikipedia.org/wiki/Ubuntu_(operating_system)}{Ubuntu}, which are different operating systems based on a ``linux kernel" (I didn't dig much for this last part but the name gives some intuition). I also learned about \textbf{desktop environment} (here for instance: \href{https://en.wikipedia.org/wiki/Desktop_environment}{Wiki: Desktop environment}). The one I use is called KDE plasma (see here: \href{https://en.wikipedia.org/wiki/KDE#Plasma_Workspaces}{Wiki: KDE Plasma}), but there are others like GNOME and Unity (this last one is used by Ubuntu). For the relation between GNOME and Unity, this link game me a beginning of answer:\\
+\href{https://askubuntu.com/questions/333237/difference-between-unity-and-gnome#526867}{askubuntu: difference unity gnome}\\
+\end{loggentry}
+
+\begin{loggentry}{04.01.18}{Normal releases and Long Term Support releases}
+I realized that going from Kubuntu 16.04 to Kubuntu 17.10 means upgrading the operating system itself (and not only the packages), and this is not done automatically. I learned about \textbf{normal releases} and \textbf{Long Term Support releases} here:\\
+\href{https://askubuntu.com/questions/16366/whats-the-difference-between-a-long-term-support-release-and-a-normal-release}{askubuntu: difference between long term support release and normal release}\\
+\end{loggentry}
+
+\begin{loggentry}{05.01.18}{Removing directories or copying files in the terminal, and file management in Linux}
+I had to refresh my memories about how to navigate in the terminal, copy files, remove directories. I did a section for this in my other latex file dedicated to linux.\\
+
+I tried again to use xbindkeys to have Ctrl + Alt + less to give me a backslash. Here is what I did.
+\begin{enumerate}
+\item I purged xbindkeys, removed the remaining config files, and reinstalled it.
+\item I copied an example of config file for xbindkeys into my home folder with the command
+\begin{verbatim}
+cp /usr/share/doc/xbindkeys/examples/xbindkeysrc ~/.xbindkeysrc
+\end{verbatim}
+\item I edited the file with vim by adding
+\begin{verbatim}
+## Control + Alt + less returns a backslash
+"xvkbd -xsendevent -text '\[backslash]'"
+  m:0x4 + c:37 + m:0x8 + c:64 + m:0x0 + c:94
+  Control + Control_L + Alt + Alt_L + less
+\end{verbatim}
+\item I entered
+\begin{verbatim}
+xbindkeys -f ~/.xbindkeysrc
+\end{verbatim}
+in my ~ folder.
+\end{enumerate}
+\end{loggentry}
+
+\begin{loggentry}{06.01.18}{Trying to get this f***ing backslash}
+I posted a question concerning my backslash problem:\\
+\href{https://www.kubuntuforums.net/showthread.php/72847-Trying-to-use-xbindkeys?p=408761#post408761}{kubuntuforums: Trying to use xbindkeys}
+\end{loggentry}
+
+\begin{loggentry}{07.01.18}{Futher trial with backslash and question about the graphical cards}
+Today I tried to do one of the thing advised by chimak111 on kubuntuforums but it didn't completely work. I can do backslashes in firefox or anki but not in the terminal or firefox.\\
+Following one comment in this page:
+
+I found a command to print in the terminal infos about the graphical cards that I have:
+\begin{verbatim}
+aritz@geronimoT460p:~$ lspci -k | grep -E -A2 -i 'VGA|3D'
+00:02.0 VGA compatible controller: Intel Corporation Skylake Integrated Graphics (rev 06)
+        Subsystem: Lenovo Skylake Integrated Graphics
+        Kernel driver in use: i915_bpo
+--
+02:00.0 3D controller: NVIDIA Corporation GM108M [GeForce 940MX] (rev a2)
+        Kernel driver in use: nvidia
+        Kernel modules: nvidiafb, nouveau, nvidia_384_drm, nvidia_384
+\end{verbatim}
+I posted a question on kubuntuforums:\\
+\href{https://www.kubuntuforums.net/showthread.php/72857-Trying-to-switch-from-one-graphic-card-to-the-other?p=408816#post408816}{kubuntuforums: Trying to switch from one graphic card to the other}
+\end{loggentry}
+
+\begin{loggentry}{08.01.17}{Switching graphic cards}
+Some people answered on the forum: 
+\begin{itemize}
+\item oshunluvr recommended me \href{https://wiki.ubuntu.com/Bumblebee#Installation}{Bumblebee}
+\item Grey Geek suggested the following: ``Install the nvidia-378 or 384 driver and the programs it recommends. It will cause your DE to default to NVidia but it offers a GUI interface that allows you to switch between Nouveau and NVidia.".
+\end{itemize}
+In fact I realized that there is a GUI tool called NVIDIA X Server Settings which allows to switch. I think I will use it.
+\end{loggentry}
+
+\begin{loggentry}{09.01.18}{How to find help for kubuntu}
+jpenguin on kubuntuforums, advised me to always look for ``*buntu CLI tutorials"
+\end{loggentry}
+
+\begin{loggentry}{10.01.18}{Find memory size of a directory with CLI}
+Today I struggled to find what was taking so much memory in my linux partition. From one side, one can find the total size of a directory and its content with the following command:\\
+\begin{verbatim}
+du -hs /home/aritz/Documents/CS_Programming_Machine_Learning/
+\end{verbatim}
+the output looks like
+\begin{verbatim}
+33G     /home/aritz/Documents/CS_Programming_Machine_Learning/
+\end{verbatim}
+To have the list of every file and subdirectories inside the current directory, with their total size, use the command:
+\begin{verbatim}
+du -ha
+\end{verbatim}
+If one uses
+\begin{verbatim}
+ls -la
+\end{verbatim}
+the size of the subdirectories doesn't contain the size of their contents...\\
+\end{loggentry}
+
+\begin{loggentry}{21.01.18}{Rhythmbox}
+I used Rhythmbox to put music on my I pod and it works like a charm.\\
+\textbf{Edit (25.02.18):} I reinstalled Rhythmbox following this guideline:\\
+\url{https://www.linuxhelp.com/how-to-install-rhythmbox-in-ubuntu-16-04/}\\
+
+\end{loggentry}
+
+\begin{loggentry}{22.01.18}{rpm, alien}
+I learned a bit about Red hat package management (rpm) here:\\
+\href{https://en.wikipedia.org/wiki/Rpm_(software)}{Wiki: rpm}\\
+I learned about alien here:\\
+\url{https://help.ubuntu.com/community/RPM/AlienHowto}\\
+and here:\\
+\url{https://wiki.debian.org/Alien}\\
+I installed both.
+\end{loggentry}
+
+\begin{loggentry}{29.01.18}{Compression in Linux, trying to increase the size of my linux partition}
+It seems that there are different ways to compress files in linux. This page gives a good overview of the different tools:\\
+\url{https://www.plothost.com/kb/compress-decompress-linux/}\\
+It also looks like tar is not a compression format, according to this page:\\
+\href{https://superuser.com/questions/173756/which-is-more-efficient-tar-or-zip-compression-what-is-the-difference-between#173757}{superuser: which is more efficient tar or zip compression and what is the differentce between them?}\\
+I decided that I was going to increase the size of my Linux partition. First I need to make backups of both my windows and my linux system. I did it for windows and now I would like to do the same for linux. I'm actually impressed by the size of the home directory: 32GB. The anaconda directory alone is more than 10GB.
+\end{loggentry}
+
+\begin{loggentry}{17.02.18}{getopts tutorial (bash option parsing), output of a bash script and exit code}
+I found this nice tutorial about the bash option parsing with \texttt{getopts}:\\
+\url{http://wiki.bash-hackers.org/howto/getopts_tutorial}\\
+I'm still a bit confused by the difference between the exit code and the output of a script. I guess the ``normal output" is what is directed to the stdout and goes a priori in the terminal. The exit code is something which is only used when we want to check that a script ran normally.
+\end{loggentry}
+
+\begin{loggentry}{25.02.18}{Reinstalling rhythmbox}
+I reinstalled Rhythmbox following this guideline:\\
+\url{https://www.linuxhelp.com/how-to-install-rhythmbox-in-ubuntu-16-04/}\\
+But now it seems that I can't import songs... I found this page:\\
+\href{https://askubuntu.com/questions/617816/rhythmbox-doesnt-add-import-mp3s-from-music-on-ubuntu-gnome-15-04#618148}{askubuntu: rhythmbox doesn't add import mpt3s from music on ubuntu gnome}\\
+I tried the recommended
+\begin{verbatim}
+rm ~/.local/share/rhythmbox/rhythmdb.xml
+\end{verbatim}
+but it didn't work. Then I tried to use
+\begin{verbatim}
+sudo apt-get install ubuntu-restricted-extras
+\end{verbatim}
+but it opened a kind of blue window inside the shell about some license agreement that I didn't know how to exit. Finally I closed the shell but the sudo seems to have kept running and after when I tried to use sudo I obtained an error message (the same as \href{https://askubuntu.com/questions/15433/unable-to-lock-the-administration-directory-var-lib-dpkg-is-another-process#102084}{here}). I restarted my computer.\\
+Then here is what I did:
+\begin{verbatim}
+aritz@aritz-ThinkPad-T460p:~$ sudo apt-get install ubuntu-restricted-extras
+E: dpkg was interrupted, you must manually run 'sudo dpkg --configure -a' to correct the problem. 
+aritz@aritz-ThinkPad-T460p:~$ ^C
+aritz@aritz-ThinkPad-T460p:~$ sudo dpkg --configure -a
+\end{verbatim}
+and then I entered
+\begin{verbatim}
+sudo apt-get install ubuntu-restricted-extras
+\end{verbatim}
+again and had the same window appearing. This time I googled the problem and found this page:\\
+\href{https://askubuntu.com/questions/16225/how-can-i-accept-the-microsoft-eula-agreement-for-ttf-mscorefonts-installer}{askubuntu: How can I accept the microsoft Eula Agreement for ttf-mscorefonts-installer}\\
+I did what was indicated and accepted the license term of agreement (even though I'm sure I didn't do it before I had to reinstall linux).\\
+But it looks like Rhythmbox still doesn't see my files. I uninstalled all the things I installed for Rhythmbox including Rhythmbox itself and I reinstalled it using a simple:
+\begin{verbatim}
+sudo apt install rhythmbox
+\end{verbatim}
+and this time it imports music without problem...\\
+But then I tried to use \texttt{youtube-dl} but ran into trouble:
+\begin{verbatim}
+aritz@aritz-ThinkPad-T460p:~/Music/Youtube_Songs$ youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=Mwx3RvDWvDM"
+[youtube] Mwx3RvDWvDM: Downloading webpage
+[youtube] Mwx3RvDWvDM: Downloading video info webpage
+[youtube] Mwx3RvDWvDM: Extracting video information
+WARNING: unable to extract uploader nickname
+ERROR: Signature extraction failed: Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/youtube_dl/extractor/youtube.py", line 905, in _decrypt_signature
+    video_id, player_url, s
+  File "/usr/lib/python2.7/dist-packages/youtube_dl/extractor/youtube.py", line 797, in _extract_signature_function
+    raise ExtractorError('Cannot identify player %r' % player_url)
+ExtractorError: Cannot identify player u'/yts/jsbin/player-vflSVCOgl/en_US/base.js'; please report this issue on https://yt-dl.org/bug . Make sure you are using the latest version; see  https://yt-dl.org/update  on how to update. Be sure to call youtube-dl with the --verbose flag and include its complete output.
+ (caused by ExtractorError(u"Cannot identify player u'/yts/jsbin/player-vflSVCOgl/en_US/base.js'; please report this issue on https://yt-dl.org/bug . Make sure you are using the latest version; see  https://yt-dl.org/update  on how to update. Be sure to call youtube-dl with the --verbose flag and include its complete output.",)); please report this issue on https://yt-dl.org/bug . Make sure you are using the latest version; see  https://yt-dl.org/update  on how to update. Be sure to call youtube-dl with the --verbose flag and include its complete output.
+\end{verbatim}
+I did a 
+\begin{verbatim}
+sudo upgrade youtube-dl
+\end{verbatim}
+which took a lot of time (and I'm worried I shouldn't have done it), but the thing still didn't work. I realized that there is a specific way of installing youtube dl (I justed used sudo apt install):\\
+\url{https://github.com/rg3/youtube-dl/blob/master/README.md#installation}
+so I will uninstall everything and try to reinstall following the guideline up there.
+\end{loggentry}
+
+\begin{loggentry}{03.04.18}{Task Manager}
+To open the task manager in Kubuntu 16.04, press Ctrl and Esc at the same time.
+\end{loggentry}
+
+
+\section{To Do}
+\begin{enumerate}
+\item I wonder what this ssh thing is. I thought it was something to assert one's identity when communicating with some other computer (like in the ML project). At some point in the slides from The Alternative it is written that Sandro gave a course on it. I probably have it on my computer. There is a mention of it in this page where they talk about synaptic:\\
+\url{https://askubuntu.com/questions/160897/how-do-i-search-for-available-packages-from-the-command-line}
+\item I should look at this Btrfs that GreyGeek recommended me here:\\
+\href{https://www.kubuntuforums.net/showthread.php/72837-Questions-concerning-updates?p=408673#post408673}{kubuntuforums: Questions concerning updates}
+\item I need to check this:\\
+\href{https://www.kubuntuforums.net/showthread.php/72847-Trying-to-use-xbindkeys?p=408761#post408761}{kubuntuforums: Trying to use xbindkeys}
+\item I need to read this:\\
+\href{http://ubuntuhandbook.org/index.php/2016/04/switch-intel-nvidia-graphics-ubuntu-16-04/}{ubuntuhandbook: switch intel nvidia graphics ubuntu 16.04}
+\end{enumerate}
+
+\section{Questions}
+\begin{enumerate}
+\item I don't understand how to use synaptic. Where are the packages I need to update? What is this S tab which is cut in the rectangle in the left upper part of the window?
+\end{enumerate}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
