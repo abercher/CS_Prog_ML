@@ -199,7 +199,9 @@ which explains that there is a better criterion that the ``impurity decrease" ca
 \begin{loggentry}{14.06.18}{Encoder-decoder}
 I read this Quora page about \textbf{encoder decoder Network}:\\
 \url{https://www.quora.com/What-is-an-Encoder-Decoder-in-Deep-Learning}\\
-because I wanted to understand something in the ``lesson4-imdb" notebook of fastai (see entry of the 15.06.18 of the fastai journal, for details).
+because I wanted to understand something in the ``lesson4-imdb" notebook of fastai (see entry of the 15.06.18 of the fastai journal, for details).\\
+\textbf{Edit (12.10.18):} From what I understand an encoder-decoder is just a way to go from one initial representation which is the input of the encoder (for instance a sequence of bag of word vectors) to an intermediate one which is both the output of the encoder and the input of the decoder (for instance a vector) and then to a third one (which is for instance a sequence of words). Autoencoders are just NN which are typically stacks fully connected layers which have to predict their (cathegorical) input. By keeping only the first layers, we build a useful way to represent the data in a low dimensional space (and we build this way an encoder). One can have a CNN as encoder and RNN as decoder as explained in the link above.\\
+
 \end{loggentry}
 
 \begin{loggentry}{15.06.18}{Simple but efficient models for sentiment analysis}
