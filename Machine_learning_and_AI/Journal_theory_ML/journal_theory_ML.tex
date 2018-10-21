@@ -65,7 +65,8 @@ PCA comes again and again, so I think I should try to learn it properly. I quick
 I read these two pages of a same tutorial on the \textbf{Skip-gram} model:\\
 \url{http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/}\\
 \url{http://mccormickml.com/2017/01/11/word2vec-tutorial-part-2-negative-sampling/}\\
-\textbf{Edit (27.07.18):} The skip-gram model is also presented in the coursera mook on NLP, in a quite different way.
+\textbf{Edit (27.07.18):} The skip-gram model is also presented in the coursera mook on NLP, in a quite different way.\\
+\textbf{Edit (21.10.18):} Basically, the skip-gram model does the following: it builds a neural network to predict for a given word, its context. The input is a one-hot encoded vector representing a word and the output is a vector of probability of size equal to the size of the vocabulary (let's call it $n$) indicating the probability of having any word as neighbor. The embeddings are obtained by taking the intermediary layer (which has no activation function and can be seen as matrix of size $n\times 300$ (if the embedding dimension is $300$)).
 \end{loggentry}
 
 \begin{loggentry}{14.03.18}{Recurrent Neural Networks (RNN), Long Short Term Memory (LSTM)}
@@ -137,7 +138,7 @@ I found this \textbf{nice blog (mainly) about NLP}:\\
 \end{loggentry}
 
 \begin{loggentry}{01.05.18}{TF-IBF, and Latent-Dirichelet-Allocation}
-Roman mentioned \textbf{tf-idf}, \textbf{Latent-Dirichelet-Allocation}, HMM, as a classical alternative too NN models, which should be used as benchmarks to measure the success of the NN models.\\
+Roman mentioned \textbf{tf-idf}, \textbf{Latent-Dirichelet-Allocation}, HMM, as a classical alternative to NN models, which should be used as benchmarks to measure the success of the NN models.\\
 From the wikipédia page for tf-idf:\\
 \href{https://en.wikipedia.org/wiki/Tf-idf}{Wiki: tf-idf}\\
 this tf-idf seems to be used in order to find among a given set of documents, which ones are relevant for a specific query (``the brown cow") for instance. It gives a score to each document.\\
@@ -257,6 +258,14 @@ This link also gives some instructions to tune an XGBoost model:\\
 This paper explains how \textbf{StarSpace} is working:\\
 \url{https://arxiv.org/abs/1709.03856}\\
 I had encountered it already when doing duplicate detection in the NLP coursera course. It seems to be a way to build some custom embeddings. I found again a reference to it on \href{https://medium.com/rasa-blog/supervised-word-vectors-from-scratch-in-rasa-nlu-6daf794efcd8}{this page} explaining how the TensorFlow embedding pipeline of RasaNLU works.
+
+\end{loggentry}
+
+\begin{loggentry}{21.10.18}{Parallel SGD computation with Hogwild and others}
+
+I read the beginning of this page concerning \textbf{asynchronous stochastic gradient descent algorithm} performed with \textbf{Hogwild}:\\
+\url{https://srome.github.io/Async-SGD-in-Python-Implementing-Hogwild!/}\\
+which offers also some sample code in python to implement it. At the end of the article, the author points out to other methods.\\
 
 \end{loggentry}
 
