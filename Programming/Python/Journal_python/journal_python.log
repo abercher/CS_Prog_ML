@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  19 OCT 2018 09:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  15 NOV 2018 09:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1358,16 +1358,16 @@ s / tl _ nlu _ core / blob / master / tests /
  []
 
 [29]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1059.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1068.
  [30]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1059.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1068.
  (./journal_python.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1059.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1059.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1068.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1068.
 
 Package rerunfilecheck Info: File `journal_python.out' has not changed.
 (rerunfilecheck)             Checksum: 62DF57AEDCE5E2D203B4054E12637A5F;137.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1059.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1068.
  ) 
 Here is how much of TeX's memory you used:
  6343 strings out of 494880
@@ -1390,10 +1390,10 @@ sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 >
-Output written on journal_python.pdf (30 pages, 234791 bytes).
+Output written on journal_python.pdf (30 pages, 236092 bytes).
 PDF statistics:
- 463 PDF objects out of 1000 (max. 8388607)
- 413 compressed objects within 5 object streams
+ 464 PDF objects out of 1000 (max. 8388607)
+ 414 compressed objects within 5 object streams
  45 named destinations out of 1000 (max. 500000)
  25 words of extra memory for PDF output out of 10000 (max. 10000000)
 

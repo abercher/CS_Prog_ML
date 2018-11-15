@@ -1051,6 +1051,15 @@ and one can find an example from Bilyana there:\\
 \url{https://ghe.exm-platform.com/Telepathy-Labs/tl_nlu_core/blob/master/tests/test_featurizers.py}\\
 \end{loggentry}
 
+\begin{loggentry}{15.11.18}{How to make a (real) copy of a dict}
+In order to copy a dictionary and have its content independent from the content of the original one, one should use the \texttt{copy} library as in
+\begin{verbatim}
+import copy
+dict2 = copy.deepcopy(dict1)
+\end{verbatim}
+the other solutions showed on \href{https://stackoverflow.com/questions/2465921/how-to-copy-a-dictionary-and-only-edit-the-copy#2465932}{this stack overflow post} do not work for nested dictonaries.
+\end{loggentry}
+
 \section{Questions}
 \begin{enumerate}
 \item If I want to check that the arguments received by a function are of the appropriate type and throw an error if they aren't how do I do?
