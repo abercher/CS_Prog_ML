@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  29 NOV 2018 13:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  30 NOV 2018 15:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1248,126 +1248,142 @@ Underfull \hbox (badness 10000) in paragraph at lines 878--880
  []
 
 
-Overfull \hbox (34.13156pt too wide) in paragraph at lines 885--891
+Underfull \hbox (badness 10000) in paragraph at lines 881--883
+
+ []
+
+
+Overfull \hbox (172.11247pt too wide) in paragraph at lines 884--886
+[]$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 47638877 /
+ using-[]phrasematcher-[]in-[]spacy-[]to-[]find-[]multiple-[]match-[]types$[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 884--886
+
+ []
+
+
+Overfull \hbox (34.13156pt too wide) in paragraph at lines 889--895
 \OT1/cmr/m/n/10.95 I en-coun-tered it in the note-book from the NLP cours-era c
 ourse ``week1-MultilabelClassification",
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 885--891
+Underfull \hbox (badness 10000) in paragraph at lines 889--895
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 892--898
+Underfull \hbox (badness 10000) in paragraph at lines 896--902
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 902--904
+Underfull \hbox (badness 10000) in paragraph at lines 906--908
 
  []
 
-
-Overfull \hbox (17.00314pt too wide) in paragraph at lines 905--907
+[25]
+Overfull \hbox (17.00314pt too wide) in paragraph at lines 909--911
 []\OT1/cmr/m/n/10.95 In the note-book of the first week of the NLP cours-era's 
 course, I dis-cov-ered \OT1/cmtt/m/n/10.95 scipy.sparse
  []
 
-[25]
-Overfull \hbox (19.14659pt too wide) in paragraph at lines 908--913
+
+Overfull \hbox (19.14659pt too wide) in paragraph at lines 912--917
 []$\OT1/cmtt/m/n/10.95 http : / / scikit-[]learn . org / stable / modules / gen
 erated / sklearn . feature _ extraction .
  []
 
 
-Overfull \hbox (7.64922pt too wide) in paragraph at lines 918--922
+Overfull \hbox (7.64922pt too wide) in paragraph at lines 922--926
 []$\OT1/cmtt/m/n/10.95 http : / / scikit-[]learn . org / stable / modules / gen
 erated / sklearn . metrics . f1 _ score .
  []
 
 
-Overfull \hbox (9.64922pt too wide) in paragraph at lines 923--932
+Overfull \hbox (9.64922pt too wide) in paragraph at lines 927--936
 []$\OT1/cmtt/m/n/10.95 https : / / hackernoon . com / understanding-[]the-[]und
 erscore-[]of-[]python-[]309d1a029edc$[]
  []
 
 [26]
-Overfull \hbox (102.62822pt too wide) in paragraph at lines 952--955
+Overfull \hbox (102.62822pt too wide) in paragraph at lines 956--959
 []$\OT1/cmtt/m/n/10.95 https : / / medium . com / understand-[]the-[]python / u
 nderstanding-[]the-[]asterisk-[]of-[]python-[]8b9daaa4a558$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 956--961
+Underfull \hbox (badness 10000) in paragraph at lines 960--965
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 962--966
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 977--978
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 979--982
+Underfull \hbox (badness 10000) in paragraph at lines 966--970
 
  []
 
 [27]
-Overfull \hbox (13.8979pt too wide) in paragraph at lines 989--993
+Underfull \hbox (badness 10000) in paragraph at lines 981--982
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 983--986
+
+ []
+
+
+Overfull \hbox (13.8979pt too wide) in paragraph at lines 993--997
 []$\OT1/cmtt/m/n/10.95 https : / / docs . python . org / 3 / reference / execut
 ionmodel . html # resolution-[]of-[]names$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1005--1008
+Underfull \hbox (badness 10000) in paragraph at lines 1009--1012
 
  []
 
 
-Overfull \hbox (91.63084pt too wide) in paragraph at lines 1011--1016
+Overfull \hbox (91.63084pt too wide) in paragraph at lines 1015--1020
 []$\OT1/cmtt/m/n/10.95 https : / / medium . com / district-[]data-[]labs / simp
 le-[]csv-[]data-[]wrangling-[]with-[]python-[]3496aa5d0a5e$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1011--1016
+Underfull \hbox (badness 10000) in paragraph at lines 1015--1020
 
  []
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 1023--1025
+Underfull \hbox (badness 10000) in paragraph at lines 1027--1029
 
  []
 
 
-Overfull \hbox (36.89265pt too wide) in paragraph at lines 1040--1046
+Overfull \hbox (36.89265pt too wide) in paragraph at lines 1044--1050
 []$\OT1/cmtt/m/n/10.95 https : / / pythonconquerstheuniverse . wordpress . com 
 / 2009 / 09 / 10 / debugging-[]in-[]python/$[] 
  []
 
 
-Overfull \hbox (8.14922pt too wide) in paragraph at lines 1047--1053
+Overfull \hbox (8.14922pt too wide) in paragraph at lines 1051--1057
 []$\OT1/cmtt/m/n/10.95 https : / / ghe . exm-[]platform . com / Telepathy-[]Lab
 s / tl _ nlu _ core / blob / master / tests /
  []
 
 [29]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1075.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1079.
  [30]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1075.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1079.
  (./journal_python.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1075.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1075.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1079.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1079.
 
 Package rerunfilecheck Info: File `journal_python.out' has not changed.
 (rerunfilecheck)             Checksum: 62DF57AEDCE5E2D203B4054E12637A5F;137.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1075.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1079.
  ) 
 Here is how much of TeX's memory you used:
  6343 strings out of 494880
@@ -1390,10 +1406,10 @@ sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 >
-Output written on journal_python.pdf (30 pages, 236714 bytes).
+Output written on journal_python.pdf (30 pages, 237155 bytes).
 PDF statistics:
- 466 PDF objects out of 1000 (max. 8388607)
- 416 compressed objects within 5 object streams
+ 467 PDF objects out of 1000 (max. 8388607)
+ 417 compressed objects within 5 object streams
  45 named destinations out of 1000 (max. 500000)
  25 words of extra memory for PDF output out of 10000 (max. 10000000)
 
