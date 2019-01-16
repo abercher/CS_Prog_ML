@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  30 NOV 2018 15:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  16 JAN 2019 16:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -861,12 +861,6 @@ Overfull \hbox (12.8979pt too wide) in paragraph at lines 397--397
  []
 
 [11]
-Overfull \hbox (3.03934pt too wide) in paragraph at lines 417--428
-[]$\OT1/cmtt/m/n/10.95 https : / / docs . python . org / 2 / tutorial / datastr
-uctures . html # the-[]del-[]statement$[] \OT1/cmr/m/n/10.95 I
- []
-
-
 Overfull \hbox (90.63084pt too wide) in paragraph at lines 439--458
 []$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 24816237 /
  ipython-[]notebook-[]clear-[]cell-[]output-[]in-[]code #
@@ -1406,7 +1400,7 @@ sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 >
-Output written on journal_python.pdf (30 pages, 237155 bytes).
+Output written on journal_python.pdf (30 pages, 237064 bytes).
 PDF statistics:
  467 PDF objects out of 1000 (max. 8388607)
  417 compressed objects within 5 object streams
