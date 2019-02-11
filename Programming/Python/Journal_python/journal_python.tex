@@ -55,6 +55,15 @@ In this section I will try to list some useful resources (mainly websites) to lo
 \item A website quite beginner friendly: \url{https://www.python-course.eu/python3_course.php}
 \end{itemize}
 
+\section{Good coding practive}
+\begin{itemize}
+\item When opening or saving a file, it is good to specify the encoding.
+\item When accessing the value of a key which may not exist of a dictionary, the \texttt{get} method is the right way:
+\begin{verbatim}
+entities = message.get("entities", [])
+\end{verbatim}
+\end{itemize}
+
 \section{Journal}
 
 \begin{loggentry}{05.10.17}{Starting with python, anaconda and jupyter notebook}
@@ -1069,6 +1078,16 @@ I learned how to \textbf{produce or filter warnings} in a python script, on this
 \url{https://pymotw.com/2/warnings/}\\
 and this one gives the full documentation:\\
 \url{https://docs.python.org/3/library/warnings.html#module-warnings}\\
+\end{loggentry}
+
+\begin{loggentry}{11.02.19}{Log files for Python}
+
+I came accross this tutorial teaching how to use \textbf{logs in Python}:\\
+\url{https://fangpenlin.com/posts/2012/08/26/good-logging-practice-in-python/}\\
+and this one also seemed good:
+\url{https://logmatic.io/blog/python-logging-with-json-steroids/}\\
+I should read them entirely when I'll have the time/need for it.
+
 \end{loggentry}
 
 \section{Questions}
