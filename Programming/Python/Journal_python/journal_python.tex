@@ -1097,8 +1097,17 @@ I find this part particularly instructive:\\
 
 
 \begin{loggentry}{27.03.19}{Unit test with pytest, subprocess module}
-I read this tutorial introducing \textbf{pytest}:\\
+
+It seems that there are several \textbf{testing tools in python}. I discovered unittest and pytest. I read this good tutorial about \textbf{unittest}:\\
+\url{https://pythontesting.net/framework/unittest/unittest-introduction/}\\
+
+I read this short tutorial introducing \textbf{pytest}:\\
 \url{https://semaphoreci.com/community/tutorials/testing-python-applications-with-pytest}\\
+Followed by this more complete tutorial, also about pytest (containing links to many other tutorials about testing):\\
+\url{https://pythontesting.net/framework/pytest/pytest-introduction/}\\
+
+From what I understand, pytest is easier to use and more general than unittest (since one can use scripts developed with unittest in the pytest framework). But they aren't that different. What is important to know is that the names of the test scripts should start by `test\_' (without the slash), that the name of the test function/methods should also start by `test\_', the name of the test classes should start with `Test', as explained here:\\
+\url{https://pythontesting.net/framework/pytest/pytest-introduction/#discovery}\\
 
 I also read about software API/CLI adapters here:\\
 \url{https://pythontesting.net/strategy/software-api-cli-interface-adapters/}\\
