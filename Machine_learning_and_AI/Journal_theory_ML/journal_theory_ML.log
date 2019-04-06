@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.15)  23 MAR 2019 10:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.15)  6 APR 2019 13:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -800,15 +800,25 @@ ice-[]business / understanding-[]hintons-[]capsule-[]networks-[]part-[]ii-[]how
 -[]capsules-[]work-[]153b6ade9f66$[] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 309.
+
+Underfull \hbox (badness 10000) in paragraph at lines 310--311
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--314
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 317.
 [10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 309.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 317.
  (./journal_theory_ML.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 309.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 309.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 317.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 317.
 Package rerunfilecheck Info: File `journal_theory_ML.out' has not changed.
 (rerunfilecheck)             Checksum: BC67E1F4DA276B48E257E2DFA8ABAFDB;93.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 309.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 317.
  ) 
 Here is how much of TeX's memory you used:
  6219 strings out of 493029
@@ -829,10 +839,10 @@ ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 tt10.pfb>
-Output written on journal_theory_ML.pdf (10 pages, 164205 bytes).
+Output written on journal_theory_ML.pdf (10 pages, 164334 bytes).
 PDF statistics:
- 170 PDF objects out of 1000 (max. 8388607)
- 145 compressed objects within 2 object streams
+ 171 PDF objects out of 1000 (max. 8388607)
+ 146 compressed objects within 2 object streams
  13 named destinations out of 1000 (max. 500000)
  17 words of extra memory for PDF output out of 10000 (max. 10000000)
 
