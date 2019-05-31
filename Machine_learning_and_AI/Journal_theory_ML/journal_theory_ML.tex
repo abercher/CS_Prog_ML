@@ -314,6 +314,22 @@ Rolland presented a paper called \textbf{Multi-Task Deep Neural Network for NLP}
 
 \end{loggentry}
 
+
+\begin{loggentry}{31.05.19}{Attention, Transformer, and Bert}
+
+I started reading this very well illustrated tutorials:
+\begin{itemize}
+\item \textbf{Attention:} \url{https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/}
+\item \textbf{Transformer:} \url{http://jalammar.github.io/illustrated-transformer/}
+\item \textbf{BERT:} \url{http://jalammar.github.io/illustrated-bert/}
+\end{itemize}
+A few comments:
+\begin{itemize}
+\item In the Attention tutorial, in the illustration called Neural Machine Translation, the pink output of the Dense layer after the first unit of the RNN (1) is not exactly the same as the input of the second unit of the RNN (2) even if they are depicted in the same way. Most likely (1) is a vector giving probabilities for each word in the vocabulary, whereas (2) is a (fixed) embedding for the word found using (1).
+\end{itemize}
+
+\end{loggentry}
+
 \end{document}
 
 
