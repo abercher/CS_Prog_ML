@@ -1,0 +1,108 @@
+
+
+%% See "book", "report", "letter" for other types of document.
+\documentclass[11pt,a4paper]{article} % use larger type; default would be 10pt
+
+%% Packages
+
+\usepackage[utf8]{inputenc} % set input encoding 
+%\usepackage[francais]{babel} %accens aigus acceptés dans le texte
+\usepackage{hyperref} % for web links
+\usepackage{amssymb, amsmath, amsfonts} % symbols math (\mathbb etc...).
+\usepackage{geometry} % for page dimensions, landscape, format
+\usepackage{fancyhdr}
+\usepackage{enumerate} % to be able to determine the style of the enumeration
+\usepackage[toc,page]{appendix} % For appendices
+\usepackage[final]{pdfpages} % to include a pdf
+
+
+%% Page dimensions, landscape format
+%\geometry{legalpaper, landscape, margin=2in} % c.f. doc package geometry
+
+
+%% Headers and footers
+%% This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{1pt} % customise the layout...
+\lhead{}\chead{}\rhead{Aritz Bercher}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%% Title
+
+\title{Virtual assistant design}
+\author{Aritz Bercher}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+In this documents, I will try to gather some ideas about the design of a virtual assistant. The goal is both to assess the current architecture and abilities of our bot, to explore what we could change, improve, and what existing tools we could use.
+\end{abstract}
+
+\section{Limitation differences with humans}
+
+\begin{enumerate}
+\item (17.05.19) A bot doesn't seem to have \textbf{general knowledge of the world}. If something goes out of its domain, it has no clue what to do, and can't even try to guess what this new topic is about. It would be great if it could 1) relate every OOD query to a wikipedia page 2) depending on the topic have a different reaction.
+\item (17.05.19) A bot isn't able to \textbf{learn from feedbacks/corrections on the spot}. So it will repetitively do the same mistakes in a conversation. Maybe one could add an intent ``correction" and when this comes up, one would ask for more details and depending on the answer, change the policy used.
+\item (09.05.19) In a conversation with a real human, a person will sometimes mention some vaguely related facts, just for the pleasure of speaking, in parentheses or even by orienting the conversation toward a brand new topic. Our bot only reacts to requests. We could improve that by adding the possibility for the bot to detect potential additional topics of interest of the user depending on information he or she gave, without having the user ask for it. So \textbf{proactive instead of only responsive}.
+\item (08.05.19) I get the feeling that a bot can \textbf{focus only on one task at the time} and keep track of only one topic. What if I want to make a parenthesis and come back to the first topic later?
+\item (08.05.19) I don't see any \textbf{reasoning} in our app. Every decision seems to be based on a hard coded procedure. But what is exactly reasoning? There seem to be models like ESIM to be able to deduce if a sentence is a consequence of a previous sentence. But this is a limited kind of reasoning. Can we do more? Can we use machine learning to determine when to use reasoning?
+\item (08.05.19) The bot's \textbf{general behavior/responses will always be the same from one user to the other} and from one session to the other. It would be nice if it was keeping track of its previous interactions and that it behavior evolved. A bot which would have to do some recommendation task could after a while suggest something different from the current tastes (predicted using a recommander system) of the user.
+\item (08.05.19) A bot is \textbf{always polite and servile}. People generally don't react well to rude requests or comment. These should be handled.
+\end{enumerate}
+
+
+
+\end{document} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
