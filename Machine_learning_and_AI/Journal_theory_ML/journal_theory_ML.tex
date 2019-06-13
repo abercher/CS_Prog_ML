@@ -326,6 +326,7 @@ I started reading this very well illustrated tutorials:
 A few comments:
 \begin{itemize}
 \item In the Attention tutorial, in the illustration called Neural Machine Translation, the pink output of the Dense layer after the first unit of the RNN (1) is not exactly the same as the input of the second unit of the RNN (2) even if they are depicted in the same way. Most likely (1) is a vector giving probabilities for each word in the vocabulary, whereas (2) is a (fixed) embedding for the word found using (1).
+\item Unlike in the attention tutorial, the model of the Transformer, doesn't seem to use LSTMs. It has a different component called \textbf{self-attention layer}, which doesn't seem (a priori) to process input with an order. This is somehow completed by adding to the initial input some vectors indicating the position of the words. The architecture of these models are explained in detail in the paper.
 \end{itemize}
 
 \end{loggentry}
