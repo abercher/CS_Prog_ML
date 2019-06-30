@@ -52,6 +52,7 @@ I find the topic of chat bots and virtual assistants really cool. I will try to 
 
 In this section, I will try to list current limitations that the bots seem to have. Typically things that humans would do right but that bots do wrong:
 \begin{enumerate}
+\item (30.06.19) Virtual assistants aren't able to \textbf{recognize the mood of the user} and adapt their behaviour in consequence.
 \item (17.05.19) A bot doesn't seem to have \textbf{general knowledge of the world}. If something goes out of its domain, it has no clue what to do, and can't even try to guess what this new topic is about. It would be great if it could 1) relate every OOD query to a wikipedia page 2) depending on the topic have a different reaction.
 \item (17.05.19) A bot isn't able to \textbf{learn from feedbacks/corrections on the spot}. So it will repetitively do the same mistakes in a conversation. Maybe one could add an intent ``correction" and when this comes up, one would ask for more details and depending on the answer, change the policy used.
 \item (09.05.19) In a conversation with a real human, a person will sometimes mention some vaguely related facts, just for the pleasure of speaking, in parentheses or even by orienting the conversation toward a brand new topic. Our bot only reacts to requests. We could improve that by adding the possibility for the bot to detect potential additional topics of interest of the user depending on information he or she gave, without having the user ask for it. So \textbf{proactive instead of only responsive}.
@@ -149,6 +150,32 @@ the guys of Kurzgesagt explain what are the different stages of consciousness. T
 
 \end{loggentry}
 
+\begin{loggentry}{30.06.19}{Trying to install Rasa}
+
+I tried to install Rasa but I had problems. I couldn't train models because I kept receiving the error
+\begin{verbatim}
+No module named 'tensorflow.keras'
+\end{verbatim}
+when I was entering
+\begin{verbatim}
+rasa init --no-prompt
+\end{verbatim}
+(which triggers the training with the basic data which is downloaded).\\
+The error seems to be due to the fact that I was using python 3.5 instead of python 3.7. I had initially created the environment using
+\begin{verbatim}
+conda create -n Rasa python=3.5 pip
+\end{verbatim}
+The problem disappeared when I used 
+\begin{verbatim}
+conda create -n Rasa python=3.7
+\end{verbatim}
+instead.
+
+I tried it and it works.\\
+
+\textbf{Next:} I need to find some good data set.
+
+\end{loggentry}
 
 \end{document}
 
