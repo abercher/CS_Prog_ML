@@ -1140,6 +1140,52 @@ Roman showed me this page which gives an introduction to \textbf{request} the li
 
 \end{loggentry}
 
+
+\begin{loggentry}{05.07.19}{Asynchronous programming}
+
+I stumbled upon this piece of code in processor.py from Rasa  (1.1.4):
+\begin{verbatim}
+    async def handle_message(
+        self, message: UserMessage
+    ) -> Optional[List[Dict[Text, Any]]]:
+        """Handle a single message with this processor."""
+
+        # preprocess message if necessary
+        tracker = await self.log_message(message)
+        if not tracker:
+            return None
+
+        await self._predict_and_execute_next_action(message, tracker)
+        # save tracker state to continue conversation from this state
+        self._save_tracker(tracker)
+
+        if isinstance(message.output_channel, CollectingOutputChannel):
+            return message.output_channel.messages
+        else:
+return None
+\end{verbatim}
+(found here:\\
+\url{https://github.com/RasaHQ/rasa/blob/master/rasa/core/processor.py})\\
+
+Because of this, I learned a bit about \textbf{asynchronous programming}. I read this wikipedia page:\\
+\url{https://en.wikipedia.org/wiki/Asynchronous_communication}\\
+
+I read this page which explains \textbf{what is asynchronous programming}:\\
+\url{https://www.quora.com/What-is-asynchronous-programming}\\
+
+I read this page which explains the \textbf{difference between asynchronous programming and parallel programming}:\\
+\url{https://stackoverflow.com/questions/6133574/how-to-articulate-the-difference-between-asynchronous-and-parallel-programming#6133756}\\
+
+Then I read this page which gives an \textbf{overview of asynchronous programming in python}:\\
+\url{https://medium.com/@nhumrich/asynchronous-python-45df84b82434}\\
+(but there were several parts which were a bit unclear even if the overall quality of the explanations is good).
+
+Finally I read this tutorial which gives some examples of the \texttt{asyncio} library (the one at the end seem to have a problem because when I execute the script in a terminal, it doesn't exit):\\ \url{https://stackabuse.com/python-async-await-tutorial/}\\
+
+
+
+\end{loggentry}
+
 \section{Questions}
 \begin{enumerate}
 \item If I want to check that the arguments received by a function are of the appropriate type and throw an error if they aren't how do I do?
