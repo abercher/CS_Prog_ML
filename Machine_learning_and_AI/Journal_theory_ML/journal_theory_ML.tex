@@ -327,12 +327,14 @@ I started reading this very well illustrated tutorials:
 Since there is a lot to say abou each model, I will split this entry into sections that I will complete little by little.
 
 
-\section{Neural Machine Translation Model (Mechanics of Seq2seq Models With Attention}
+\section{Neural Machine Translation Model (Mechanics of Seq2seq Models With Attention)}
 
 \begin{itemize}
 \item In the sequence to sequence translation with attention model, the input is a sequence (of words in English for instance) and the output is another sequence (of words in French for instance), not necessarily of the same length.
 \item In the tutorial about sequence to sequence translation with attention model, in the illustration called Neural Machine Translation, the pink output of the Dense layer after the first unit of the RNN (1) is not exactly the same as the input of the second unit of the RNN (2) even if they are depicted in the same way. Most likely (1) is a vector giving probabilities for each word in the vocabulary, whereas (2) is a (fixed) embedding for the word found using (1).
 \item In the tutorial about sequence to sequence translation with attention model, I guess that the attention coefficients are probably computed in a similar way as in the Transformer tutorial.
+\item \textbf{Edit (06.08.19):} I found this other page which explains with more details the attention mechanism:\\
+\url{https://distill.pub/2016/augmented-rnns/#attentional-interfaces}
 \end{itemize}
 
 
@@ -409,11 +411,16 @@ the Read The Web project is also mentioned:\\
 \end{loggentry}
 
 
-\begin{loggentry}{30.07.19}{Lambda Calculus}
+\begin{loggentry}{30.07.19}{Lambda Calculus, Haskell and Category, Homotopy Type Theory}
 
 I read part of this wikipedia page on \textbf{Lambda Calculus}:\\
 \url{https://en.wikipedia.org/wiki/Lambda_calculus}\\
-what I get out of it is that you can write a sequence of operation on a given type of input using this formalism. The specific low-level operations that one performs can be arbitrary (I guess) as long as there are preliminary set. I think that this formalism can be used to write trees or grammar trees (Bilyana had explained me something like this with map-reduced).
+what I get out of it is that you can write a sequence of operation on a given type of input using this formalism. The specific low-level operations that one performs can be arbitrary (I guess) as long as there are preliminary set. I think that this formalism can be used to write trees or grammar trees (Bilyana had explained me something like this with map-reduced).\\
+
+I met a man called Declan, working for the UK government who told me that \textbf{Category Theory} can be used with \href{https://en.wikipedia.org/wiki/Haskell_%28programming_language%29}{Haskell} a ``purefly functional programming language". He explained me that a map function can be seen as a functor. Here is a stack overflow page about the link between category theory and haskell:\\
+\url{https://stackoverflow.com/questions/57128213/what-concept-in-category-theory-can-be-used-to-represent-a-typeclass}\\
+Declan also mentioned \textbf{homotopy type theory}:\\
+\url{https://en.wikipedia.org/wiki/Homotopy_type_theory}
 
 \end{loggentry}
 
