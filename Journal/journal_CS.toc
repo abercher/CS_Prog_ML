@@ -2,7 +2,8 @@
 \contentsline {section}{\numberline {2}Knowledge I need to gain}{28}{section.2}
 \contentsline {subsection}{\numberline {2.1}Knowledge in deep learning I need to gain}{28}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Python libraries I should learn}{28}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Other things I need to learn}{29}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.3}Tasks I should perform faster}{29}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Other things I need to learn}{29}{subsection.2.4}
 \contentsline {section}{\numberline {3}Ideas of things to do}{29}{section.3}
 \contentsline {section}{\numberline {4}Questions}{30}{section.4}
 \contentsline {section}{\numberline {5}LeetCode Problems I looked at}{30}{section.5}
