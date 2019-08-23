@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  7 AUG 2019 12:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  23 AUG 2019 10:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -732,16 +732,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 189--190
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 198.
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 206.
 [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 198.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 206.
  (./journal_chat_bots_and_virtual_assistants.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 198.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 198.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 206.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 206.
 Package rerunfilecheck Info: File `journal_chat_bots_and_virtual_assistants.out
 ' has not changed.
 (rerunfilecheck)             Checksum: 5F5397E42AB7C956BD0E5236EFE9D169;209.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 198.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 206.
  ) 
 Here is how much of TeX's memory you used:
  6261 strings out of 494880
@@ -758,11 +763,11 @@ ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on journal_chat_bots_and_virtual_assistants.pdf (5 pages, 112203
+Output written on journal_chat_bots_and_virtual_assistants.pdf (5 pages, 112569
  bytes).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
+ 117 PDF objects out of 1000 (max. 8388607)
+ 101 compressed objects within 2 object streams
  32 named destinations out of 1000 (max. 500000)
  25 words of extra memory for PDF output out of 10000 (max. 10000000)
 
