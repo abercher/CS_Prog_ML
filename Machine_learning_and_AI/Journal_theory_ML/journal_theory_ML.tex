@@ -48,10 +48,14 @@ In this journal, I will try to gather good references (mainly webpages) about so
 
 \section{Useful Resources}
 \begin{itemize}
-\item I found this blog by Tobias Sterbak, which seem to cover a lot of advanced topic in machine learning/deep learning, natural language processing, and computer vision with both theory and implementation aspects treated:\\
+\item I found this \textbf{blog} by Tobias Sterbak, which seem to cover a lot of \textbf{advanced topic in machine learning/deep learning, natural language processing, and computer vision} with both theory and implementation aspects treated:\\
 \url{https://www.depends-on-the-definition.com/classify-toxic-comments-on-wikipedia/}
-\item There is this coursera mook about NLP:\\
+\item There is this \textbf{coursera mook about NLP}:\\
 \url{https://www.coursera.org/learn/language-processing}
+\item There is this \textbf{repo} from Sebastian Ruder which keeps track of the \textbf{best models for many NLP tasks}:\\
+\url{https://github.com/sebastianruder/NLP-progress}
+\item There is this \textbf{review} by two guys from Microsoft and one from Google about the \textbf{state of the art in Conversational AI} (as of 13.12.18):\\
+\url{https://arxiv.org/pdf/1809.08267.pdf}
 \end{itemize}
 
 \section{Journal}
@@ -327,23 +331,25 @@ I started reading this very well illustrated tutorials:
 Since there is a lot to say abou each model, I will split this entry into sections that I will complete little by little.
 
 
-\section{Neural Machine Translation Model (Mechanics of Seq2seq Models With Attention}
+\section{Neural Machine Translation Model (Mechanics of Seq2seq Models With Attention)}
 
 \begin{itemize}
 \item In the sequence to sequence translation with attention model, the input is a sequence (of words in English for instance) and the output is another sequence (of words in French for instance), not necessarily of the same length.
 \item In the tutorial about sequence to sequence translation with attention model, in the illustration called Neural Machine Translation, the pink output of the Dense layer after the first unit of the RNN (1) is not exactly the same as the input of the second unit of the RNN (2) even if they are depicted in the same way. Most likely (1) is a vector giving probabilities for each word in the vocabulary, whereas (2) is a (fixed) embedding for the word found using (1).
 \item In the tutorial about sequence to sequence translation with attention model, I guess that the attention coefficients are probably computed in a similar way as in the Transformer tutorial.
+\item \textbf{Edit (06.08.19):} I found this other page which explains with more details the attention mechanism:\\
+\url{https://distill.pub/2016/augmented-rnns/#attentional-interfaces}
 \end{itemize}
 
 
 \section{The Transformer}
 
 \begin{itemize}
-\item In the tutorial about the Transformer, the input is a sequence and the output is a sequence (like in the sequence to sequence translation with attention tutorial).
+\item In the tutorial about the Transformer, the \textbf{input} is a sequence and the \textbf{output} is a sequence (like in the sequence to sequence translation with attention tutorial).
 \item Unlike in the attention tutorial, the model of the Transformer, doesn't seem to use LSTMs. Instead the encoder layers receive a list of vectors of fixed length (this is a hyper parameter and I guess that padding is used) containing all the input as once, and outputs a list of vectors containing all its output at once. It has a component called \textbf{self-attention layer}, which doesn't seem (a priori) to process input with an order. The function which takes this list as input takes the whole list, i.e. it is not repeatedly applied to every vector in the list individually. Indeed this self-attention mechanism uses every element of the input least to compute each element of the output list. In order to help the model better learning to make use of the relative positioning of the elements of the input sequence, each initial input word/object vector is concatenating with another vector encoding only the position of the word/object.
 \item Looking at this Transformer encoder, one thing which wasn't clear to me at first was how we can take a sentence of length $n$ and output a sentence of size different from $n$. When we use an LSTM like int the sequence to sequence translation with attention model, it is clear since we can let run the decoder as long as it hasn't predicted the ``stop" character (which is added to the end of each sentence of the training data). In the case of the Transformer, I guess that a sequence cannot be longer than the predefined fixed size of the list of vector given as input to the self-attention layer, but that discarding the elements of the output list which will be predicted as padding elements, we can have shorter sentences.
 \item I think that the reason why some layers are considered to be part of the Encoder and some of the Decoder is because the one in the Decoder only receive the output of the last layer of the Encoder.
-\item In the Transfomer model, I don't understand very well what has been done with the Decoder. They explain that attention can be computed only on previous inputs. From what understand, if I use the notation of the tutorial $q_m * k_n$ is set to $-\infty$ if $n>m$.
+\item In the Transfomer model, I don't understand very well what has been done with the Decoder. I have the impression that at the decoder level, there are two attention mechanism used: one where ``he queries come from the previous decoder layer,and the memory keys and values come from the output of the encoder" (p.5 of ``Attention is all you need") and one (self-attention layer) where ``all of the keys, valuesand queries come from the same place, in this case, the output of the previous layer in the (decoder)" (p.5 of ``Attention is all you need"). For the first type of attention every output of the encoder is used, but for the self-attention layer, they explain that attention can be computed only on previous inputs. From what understand, if I use the notation of the tutorial $q_m * k_n$ is set to $-\infty$ if $n>m$. This implies than the the weight for this position is 0 after we take the soft-max. My question is: is that differentiable?
 \item In the paper , there is a very intresting remark about \textbf{long-term dependency}:
 ``The third is the \textbf{path length between long-range dependencies in the network}. Learning long-range dependencies is a key challenge in many sequence transduction tasks. One key factor affecting the ability to learn such dependencies is the length of the paths forward and backward signals have to traverse in the network. The shorter these paths between any combination of positions in the input and output sequences, the easier it is to learn long-range dependencies. Hence we also compare the maximum path length between any two input and output positions in networks composed of the different layer types."
 \item In the Transformer architecture there is a layer called \textbf{``encoder-decoder attention" layer} which is not self-attention, and which ``helps the decoder focus on appropriate places in the input sequence" but this part is not explained in ``the illustrated Transformer". In the paper ``Attention is all you need" they don't explain it but they make a reference to some other papers.
@@ -406,6 +412,19 @@ I read in the description of the \href{https://coinnlp.github.io/}{COIN (EMNLP 1
 the Read The Web project is also mentioned:\\
 \url{http://rtw.ml.cmu.edu/rtw/}
 
+\end{loggentry}
+
+
+\begin{loggentry}{30.07.19}{Lambda Calculus, Haskell and Category, Homotopy Type Theory}
+
+I read part of this wikipedia page on \textbf{Lambda Calculus}:\\
+\url{https://en.wikipedia.org/wiki/Lambda_calculus}\\
+what I get out of it is that you can write a sequence of operation on a given type of input using this formalism. The specific low-level operations that one performs can be arbitrary (I guess) as long as there are preliminary set. I think that this formalism can be used to write trees or grammar trees (Bilyana had explained me something like this with map-reduced).\\
+
+I met a man called Declan, working for the UK government who told me that \textbf{Category Theory} can be used with \href{https://en.wikipedia.org/wiki/Haskell_%28programming_language%29}{Haskell} a ``purefly functional programming language". He explained me that a map function can be seen as a functor. Here is a stack overflow page about the link between category theory and haskell:\\
+\url{https://stackoverflow.com/questions/57128213/what-concept-in-category-theory-can-be-used-to-represent-a-typeclass}\\
+Declan also mentioned \textbf{homotopy type theory}:\\
+\url{https://en.wikipedia.org/wiki/Homotopy_type_theory}
 
 \end{loggentry}
 
