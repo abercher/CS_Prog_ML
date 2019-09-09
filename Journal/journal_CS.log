@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  3 SEP 2019 15:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  9 SEP 2019 11:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1187,27 +1187,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 1017--1018
  []
 
 [28] [29]
-Overfull \hbox (5.78084pt too wide) in paragraph at lines 1077--1079
+Overfull \hbox (5.78084pt too wide) in paragraph at lines 1078--1080
 []$\OT1/cmtt/m/n/10.95 https : / / github . com / NileshGule / Ebooks / blob / 
 master / The % 20Clean % 20Coder %
  []
 
 [30] [31]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1126.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1127.
  [32]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1126.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1127.
  (./journal_CS.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1126.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1126.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1127.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1127.
 
 Package rerunfilecheck Info: File `journal_CS.out' has not changed.
 (rerunfilecheck)             Checksum: 5325182BEFB4743D3CE874AAE4CCE10E;590.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1126.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1127.
  ) 
 Here is how much of TeX's memory you used:
- 6360 strings out of 494880
- 87939 string characters out of 6179600
- 278155 words of memory out of 5000000
+ 6361 strings out of 494880
+ 87946 string characters out of 6179600
+ 277155 words of memory out of 5000000
  9518 multiletter control sequences out of 15000+600000
  12785 words of font info for 49 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
@@ -1223,10 +1223,10 @@ ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbo
 ls/msbm10.pfb>
-Output written on journal_CS.pdf (32 pages, 221078 bytes).
+Output written on journal_CS.pdf (32 pages, 221142 bytes).
 PDF statistics:
- 504 PDF objects out of 1000 (max. 8388607)
- 454 compressed objects within 5 object streams
- 113 named destinations out of 1000 (max. 500000)
+ 505 PDF objects out of 1000 (max. 8388607)
+ 455 compressed objects within 5 object streams
+ 114 named destinations out of 1000 (max. 500000)
  73 words of extra memory for PDF output out of 10000 (max. 10000000)
 
