@@ -56,6 +56,8 @@ In this journal, I will try to gather good references (mainly webpages) about so
 \url{https://github.com/sebastianruder/NLP-progress}
 \item There is this \textbf{review} by two guys from Microsoft and one from Google about the \textbf{state of the art in Conversational AI} (as of 13.12.18):\\
 \url{https://arxiv.org/pdf/1809.08267.pdf}
+\item (17.09.19) I found this blog which provides both \textbf{theoretical explanations and implementation tutorials for NLP models}:\\
+\url{https://mlexplained.com/2019/}
 \end{itemize}
 
 \section{Journal}
@@ -441,9 +443,13 @@ which adapts the concept of Transformer to see it as a way to embed a fully conn
 
 \begin{loggentry}{17.09.19}{Introduction to XLNet}
 
-I started reading this article which introduces XLNet:\\
+I started reading this article which introduces \textbf{XLNet}:\\
 \url{https://mlexplained.com/2019/06/30/paper-dissected-xlnet-generalized-autoregressive-pretraining-for-language-understanding-explained/}\\
-That made me ask myself the following question: how are exactly concatenated the intermediate hidden outputs of the previous layers with the hidden outputs of the current layers? I guess that instead of having n different (customized) word embeddings, we have 2n, but that one computes new vectors only for the n new (the n old are only used to compute keys and values).
+That made me ask myself the following question: how are exactly concatenated the intermediate hidden outputs of the previous layers with the hidden outputs of the current layers? I guess that instead of having n different (customized) word embeddings, we have 2n, but that one computes new vectors only for the n new (the n old are only used to compute keys and values).\\
+The key points I take out of this are:
+\begin{enumerate}
+\item XLNet is based on \textbf{Transformer XL}. This uses a recurring structure to \textbf{get rid of the limitation on the size of the input} of the vanilla Transformer. It also replaces the mask mechanism by \textbf{Permutation Language Modeling}. The ability to parallelize the computation of the prediction for each input token is lost but some problems (masks do not appear at testing time, predictions for two masks tokens are independent) are resolved. It is not absolutely clear to me if the authors of XLNet are using Transformer XL as such or only take inspiration from it.
+\end{enumerate}
 
 \end{loggentry}
 
