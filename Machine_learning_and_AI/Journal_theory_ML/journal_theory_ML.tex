@@ -354,6 +354,7 @@ Since there is a lot to say abou each model, I will split this entry into sectio
 ``The third is the \textbf{path length between long-range dependencies in the network}. Learning long-range dependencies is a key challenge in many sequence transduction tasks. One key factor affecting the ability to learn such dependencies is the length of the paths forward and backward signals have to traverse in the network. The shorter these paths between any combination of positions in the input and output sequences, the easier it is to learn long-range dependencies. Hence we also compare the maximum path length between any two input and output positions in networks composed of the different layer types."
 \item In the Transformer architecture there is a layer called \textbf{``encoder-decoder attention" layer} which is not self-attention, and which ``helps the decoder focus on appropriate places in the input sequence" but this part is not explained in ``the illustrated Transformer". In the paper ``Attention is all you need" they don't explain it but they make a reference to some other papers.
 \item The Transformer model seems to appear in the paper Attention is all you need, but the idea of using it as a basis for leveraging an unsupervised-learning task (language modeling) and then fine-tuning it for other specific tasks appear in a model called Improving language understanding by Generative pre-training from OpenAI.
+\item One of the strength of the Transformer, is that the predictions for the different masks tokens can be done in \textbf{parallel}.
 \end{itemize}
 
 
@@ -435,6 +436,14 @@ Joram presented this paper:\\
 \url{https://arxiv.org/pdf/1905.08407.pdf}
 which adapts the concept of Transformer to see it as a way to embed a fully connected graph and transforms, layer after layer, in the encoder the representation of it nodes. In the described case the inputs are the list of token in a natural language sentence, and a list of possible entities (with possible overlaps or wrong entities), and the output is a query for a graph data base (the graph is given). One of the key ideas is to compute differently the attention depending on the two types of nodes (for which the attention is computed).
 
+\end{loggentry}
+
+
+\begin{loggentry}{17.09.19}{Introduction to XLNet}
+
+I started reading this article which introduces XLNet:\\
+\url{https://mlexplained.com/2019/06/30/paper-dissected-xlnet-generalized-autoregressive-pretraining-for-language-understanding-explained/}\\
+That made me ask myself the following question: how are exactly concatenated the intermediate hidden outputs of the previous layers with the hidden outputs of the current layers? I guess that instead of having n different (customized) word embeddings, we have 2n, but that one computes new vectors only for the n new (the n old are only used to compute keys and values).
 
 \end{loggentry}
 
