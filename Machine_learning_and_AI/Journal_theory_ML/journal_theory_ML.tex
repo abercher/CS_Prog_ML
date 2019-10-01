@@ -372,7 +372,8 @@ with the difference that they use the Transformer architecture instead of the LS
 \url{https://arxiv.org/pdf/1801.10198.pdf}\\
 (c.f. p.5). They explain there that they use only the decoder part. This makes me wonder what happens with the encoder-decoder attention sub-layer. Where are the queries computed from? Do we use the vectors of the previous decoder layer? Or do we remove the encoder-decoder attention sub-layers? If we remove them, why do we  say that this is the decoder part and not the encoder part? Is it because we keep the mask thing (which is actually modified in this paper \textit{Generating Wikipedia by summarizing long sequences} and replaced by two alternatives)? But coming back to using the transformer to get good embeddings, I don't understand why we would keep the masks if we want to generate embeddings. On the opposite, we would like that every token gets enriched by the whole context. Personally I would train the encoder together with the decoder, and then use only the encoder... It isn't clear at all in the \textit{Improving language understanding by Generative pre-training} article where the explanation is very shallow. I guess I should look at the implementation. I could look at it on the website paper with code:\\
 \url{https://github.com/openai/finetune-transformer-lm}\\
-but unfortunately it is in tensorflow which is a pain in the as.
+but unfortunately it is in tensorflow which is a pain in the ass.\\
+\textbf{Edit (25.09.19):} Joram explained me that actually, what is used is indeed just the decoder part but the layers don't have the encoder-decoder attention sublayers. They keep the mask because it forces the model to have the ``auto-regressive" property, so in a sense, to predict one word after the other.
 \item One of the strength of the Transformer, is that the predictions for the different masks tokens can be done in \textbf{parallel}.
 \end{itemize}
 
