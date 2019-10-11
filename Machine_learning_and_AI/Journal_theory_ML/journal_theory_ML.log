@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  9 OCT 2019 10:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  11 OCT 2019 14:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -837,137 +837,152 @@ q
  []
 
 [11] [12]
+Overfull \hbox (10.2137pt too wide) in paragraph at lines 368--380
+\OT1/cmr/m/n/10.95 French trans-la-tion, but the idea of us-ing it as a ba-sis 
+for lever-ag-ing an \OT1/cmr/bx/n/10.95 unsupervised-
+ []
+
+
 Overfull \hbox (112.25722pt too wide) in paragraph at lines 368--380
 []$\OT1/cmtt/m/n/10.95 https : / / s3-[]us-[]west-[]2 . amazonaws . com / opena
 i-[]assets / research-[]covers / language-[]unsupervised /
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 386--388
-
+Overfull \hbox (10.14613pt too wide) in paragraph at lines 380--381
+[]\OT1/cmr/m/n/10.95 In the pa-per \OT1/cmr/m/it/10.95 Im-prov-ing Lan-guage Un
+-der-stand-ing by Gen-er-a-tive Pre-Training \OT1/cmr/m/n/10.95 (\OT1/cmr/bx/n/
+10.95 GPT\OT1/cmr/m/n/10.95 ),
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 401--402
+Underfull \hbox (badness 10000) in paragraph at lines 407--408
 
  []
 
-
-Overfull \hbox (376.31654pt too wide) in paragraph at lines 403--409
+[15]
+Overfull \hbox (376.31654pt too wide) in paragraph at lines 409--415
 []$\OT1/cmtt/m/n/10.95 http : / / mlexplained . com / 2018 / 01 / 10 / an-[]int
 uitive-[]explanation-[]of-[]why-[]batch-[]normalization-[]really-[]works-[]norm
 alization-[]in-[]deep-[]learning-[]part-[]1/$[] 
  []
 
 
-Overfull \hbox (323.07835pt too wide) in paragraph at lines 403--409
+Overfull \hbox (323.07835pt too wide) in paragraph at lines 409--415
 []$\OT1/cmtt/m/n/10.95 https : / / mlexplained . com / 2018 / 01 / 13 / weight-
 []normalization-[]and-[]layer-[]normalization-[]explained-[]normalization-[]in-
 []deep-[]learning-[]part-[]2/$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 403--409
+Underfull \hbox (badness 10000) in paragraph at lines 409--415
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--414
+Underfull \hbox (badness 10000) in paragraph at lines 419--420
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 415--417
+Underfull \hbox (badness 10000) in paragraph at lines 421--423
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--422
+Underfull \hbox (badness 10000) in paragraph at lines 427--428
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 428--429
+Underfull \hbox (badness 10000) in paragraph at lines 434--435
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 430--434
-
- []
-
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 438--439
+Underfull \hbox (badness 10000) in paragraph at lines 436--440
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 448--449
+Underfull \hbox (badness 10000) in paragraph at lines 444--445
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 454--455
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 450--453
+Underfull \hbox (badness 10000) in paragraph at lines 456--459
 
  []
 
 
-Overfull \hbox (236.84804pt too wide) in paragraph at lines 454--458
+Overfull \hbox (236.84804pt too wide) in paragraph at lines 460--464
 []$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 57128213 /
  what-[]concept-[]in-[]category-[]theory-[]can-[]be-[]used-[]to-[]represent-[]a
 -[]typeclass$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 462--463
+Underfull \hbox (badness 10000) in paragraph at lines 468--469
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 471--472
+Underfull \hbox (badness 10000) in paragraph at lines 477--478
 
  []
 
-[16]
-Overfull \hbox (350.8218pt too wide) in paragraph at lines 473--478
+
+Overfull \hbox (350.8218pt too wide) in paragraph at lines 479--484
 []$\OT1/cmtt/m/n/10.95 https : / / mlexplained . com / 2019 / 06 / 30 / paper-[
 ]dissected-[]xlnet-[]generalized-[]autoregressive-[]pretraining-[]for-[]languag
 e-[]understanding-[]explained/$[] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 484.
 [17]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 484.
+Underfull \hbox (badness 10000) in paragraph at lines 490--491
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 502.
+[18]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 502.
  (./journal_theory_ML.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 484.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 484.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 502.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 502.
 Package rerunfilecheck Info: File `journal_theory_ML.out' has not changed.
 (rerunfilecheck)             Checksum: EC72BF0FC38813CA52B2A23B475FA0EB;423.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 484.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 502.
  ) 
 Here is how much of TeX's memory you used:
- 6263 strings out of 494880
- 87265 string characters out of 6179600
+ 6264 strings out of 494880
+ 87272 string characters out of 6179600
  276086 words of memory out of 5000000
  9510 multiletter control sequences out of 15000+600000
  12834 words of font info for 48 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 28i,11n,43p,2187b,452s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,10n,43p,2187b,452s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-tt10.pfb>
-Output written on journal_theory_ML.pdf (17 pages, 197937 bytes).
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
+b>
+Output written on journal_theory_ML.pdf (18 pages, 212695 bytes).
 PDF statistics:
- 259 PDF objects out of 1000 (max. 8388607)
- 226 compressed objects within 3 object streams
- 27 named destinations out of 1000 (max. 500000)
+ 270 PDF objects out of 1000 (max. 8388607)
+ 234 compressed objects within 3 object streams
+ 28 named destinations out of 1000 (max. 500000)
  57 words of extra memory for PDF output out of 10000 (max. 10000000)
 

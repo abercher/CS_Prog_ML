@@ -274,7 +274,7 @@ This link also gives some instructions to tune an XGBoost model:\\
 This paper explains how \textbf{StarSpace} is working:\\
 \url{https://arxiv.org/abs/1709.03856}\\
 I had encountered it already when doing duplicate detection in the NLP coursera course. It seems to be a way to build some custom embeddings. I found again a reference to it on \href{https://medium.com/rasa-blog/supervised-word-vectors-from-scratch-in-rasa-nlu-6daf794efcd8}{this page} explaining how the TensorFlow embedding pipeline of RasaNLU works.\\
-\textbf{Edit (08.10.18):} I looked at the paper again. The main idea is that depending on the task, we define a set of (discrete) features (for text classification, the features would be all words into a fixed English dictionary, and document labels), and then we train embedding for these features. Then we define ``entities" as bag of features. A text to classify would have as features the words it contains, and the document labels would have only one feature each, the feature corresponding to the given labels. Then one trains the features embeddings using a special loss function based on similarity, and positive/negative examples. Later we can try for a new text to classify it by looking at the labels which have an embedding similar to the embedding of the new document (obtained by summing the embedings of the words it contains). One other application is to try to \textbf{predict relations in a graph}. I was thinking that it's kind of pointless since one can query the graph, but then I realized that it could be used to \textbf{guess relations which aren't explicitly encoded in the graph}, if the graph is big enough and contains some recurring structure.
+\textbf{Edit (08.10.19):} I looked at the paper again. The main idea is that depending on the task, we define a set of (discrete) features (for text classification, the features would be all words into a fixed English dictionary, and document labels), and then we train embedding for these features. Then we define ``entities" as bag of features. A text to classify would have as features the words it contains, and the document labels would have only one feature each, the feature corresponding to the given labels. Then one trains the features embeddings using a special loss function based on similarity, and positive/negative examples. Later we can try for a new text to classify it by looking at the labels which have an embedding similar to the embedding of the new document (obtained by summing the embedings of the words it contains). One other application is to try to \textbf{predict relations in a graph}. I was thinking that it's kind of pointless since one can query the graph, but then I realized that it could be used to \textbf{guess relations which aren't explicitly encoded in the graph}, if the graph is big enough and contains some recurring structure.
 
 \end{loggentry}
 
@@ -367,7 +367,7 @@ Since there is a lot to say abou each model, I will split this entry into sectio
 ``The third is the \textbf{path length between long-range dependencies in the network}. Learning long-range dependencies is a key challenge in many sequence transduction tasks. One key factor affecting the ability to learn such dependencies is the length of the paths forward and backward signals have to traverse in the network. The shorter these paths between any combination of positions in the input and output sequences, the easier it is to learn long-range dependencies. Hence we also compare the maximum path length between any two input and output positions in networks composed of the different layer types."
 \item The Transformer model presented in the tutorial mentioned above appeared in the paper \textit{Attention is all you need} here:\\
 \url{https://arxiv.org/pdf/1706.03762.pdf}\\
-but the idea of using it as a basis for leveraging an \textbf{unsupervised-learning task (language modeling)} and then fine-tuning it for other specific tasks appear in a paper called \textit{Improving language understanding by Generative pre-training} from OpenAI, here:\\
+where there is no language modeling task and where the goal is to do English-to-French translation, but the idea of using it as a basis for leveraging an \textbf{unsupervised-learning task (language modeling)} and then fine-tuning it for other specific tasks appear in a paper called \textit{Improving language understanding by Generative pre-training} (\textbf{GPT}) from OpenAI, here:\\
 \url{https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf}\\
 They actually explain in this paper, that their approach (training in an unsupervised manner a model for language modeling and fine-tuning in a supervised manner for a specific NLP task) is very close to ULMFit presented by Howard and Ruder, here:\\
 \url{https://arxiv.org/pdf/1801.06146.pdf}\\
@@ -377,6 +377,8 @@ with the difference that they use the Transformer architecture instead of the LS
 \url{https://github.com/openai/finetune-transformer-lm}\\
 but unfortunately it is in tensorflow which is a pain in the ass.\\
 \textbf{Edit (25.09.19):} Joram explained me that actually, what is used is indeed just the decoder part but the layers don't have the encoder-decoder attention sublayers. They keep the mask because it forces the model to have the ``auto-regressive" property, so in a sense, to predict one word after the other.
+\item In the paper \textit{Improving Language Understanding by Generative Pre-Training} (\textbf{GPT}), they present the idea of pretraining a transformer-like model on language modeling. I guess that for an input sequence there is an output sequence where output with label $k$ is the predicted $k+1$ input token, and since there are mask layers, input $k+1$ and following cannot be used to compute the value of output $k$. But all tokens are predicted at the same time.
+\item From what I understand, unlike in ELMo, only the output of the last transfromer layer is used as input for the downstream task.
 \item One of the strength of the Transformer, is that the predictions for the different masks tokens can be done in \textbf{parallel}.
 \end{itemize}
 
@@ -385,14 +387,18 @@ but unfortunately it is in tensorflow which is a pain in the ass.\\
 
 ELMo is one of the ancestors of BERT. From what I understood, BERT is a kind of ELMo where the LSTM has been replaced by a Transformer. The paper is here:\\
 \url{https://arxiv.org/pdf/1802.05365.pdf}\\
+\textbf{Edit (10.10.19):} I read it again and the idea is simple: create contextual embeddings for each input token of a sentence by taking linear combination of the output of the different layers of a multi-layer bi-lstm pretrained on language modeling task.\\
+The language modeling task goes like this: there are to LSTMs, a forward one and a backward one. In order to train the model to produce a vector embedding for token $i$, the first $i-1$ tokens are passed recursively to the $L$-layers LSTM, and parallely, tokens $i+1$, $i+2$, ..., $n$ are passed recursively (starting by the last) to the $L$-layer backward LSTM. The output vecors of both are then fed to a feed forward network with last layer having output size equal to the size of the dictionary. Finally a soft-max layer is applied, and Cross-Entropy loss is used as a loss function to determine if the prediction was good or not.\\
+The input is a sentence of token and the output is a sequence of vectors (embeddings). Actually all intermediary layers of the bi-lstm can be used to create the final embeddings using a learned linear combination of them. The weights of the linear combination depend on the downstream task and are chosen during fine-tuning.\\
+I think that there won't be any problem of model learning to copy the input because the forward lstm and the backward lstm stay separate, and receive different inputs. The second layer of the forward lstm doesn't see the out put of the first layer of backward lstm.
 
 
 \section{BERT}
 
 \begin{itemize}
-\item BERT seem to a priori be a sequence to sequence translation model in the sense that it takes a sequence as input and output a sequence of vectors. I guess that the length of both input and output sequence is fixed and that padding is used. In order to turn it into a classifier, the authors add a first [CLS] symbol at the beginning of the input sequence. The first vector in the output sequence is then used to predict the class (with an additional simple feed-forward network with soft-max).
-\item BERT seems to rely on ELMo LSTM, which task is Language modeling. It takes a sequence of words like ``Let's stick to" and has to predict the next word. So the input is a sequence of symbols/words (or words embedding) and the output is a vector of length of the dictionary assigning probabilities to each possible symbol. Unlike the Transformer, this uses LSTMs.
-\item ULMI-Fit seems to be the thing which allows one to use a model which builds a language model for other tasks like classification.
+\item BERT seems to a priori be a sequence to sequence translation model in the sense that it takes a sequence as input and output a sequence of vectors. I guess that the length of both input and output sequence is fixed and that padding is used. In order to turn it into a classifier, the authors add a first [CLS] symbol at the beginning of the input sequence. The first vector in the output sequence is then used to predict the class (with an additional simple feed-forward network with soft-max).
+\item I think that like GPT, BERT uses only the output of its last layer for the downstream task (I think that this is what is meant by ``BERT and OpenAI GPT are fine-tuning approaches, while ELMo is a feature-based approach".
+\item In the way it is used, BERT is similar to ELMo and GPT, but tries to take strengths from both models: it uses (decoder) transformer blocks like GPT, but doesn't stick to forward language modeling like GPT (so is closer to ELMo in this sense). In GPT, the self-attention layers can use only input at positions $1, \dots, i-1$ to predict the output at position $i$. If the self-attention layer was allowed to use the inputs of position $1, \dots, i-1$ and $i+1, \dots, n$ in order to predict the output for position $i$, then the next layer could indirectly ``see" the input of the first layer at position $i$ by looking at the output of the first layer at positions different from $i$. In order to avoid this problem, $15\%$ of the input tokens are randomly replaced by a special MASK token, and the loss is only computed for the prediction of these tokens (the prediction should match the original token).
 \end{itemize}
 
 \end{loggentry}
@@ -477,6 +483,18 @@ The key points I take out of this are:
 \begin{enumerate}
 \item XLNet is based on \textbf{Transformer XL}. This uses a recurring structure to \textbf{get rid of the limitation on the size of the input} of the vanilla Transformer. It also replaces the mask mechanism by \textbf{Permutation Language Modeling}. The ability to parallelize the computation of the prediction for each input token is lost but some problems (masks do not appear at testing time, predictions for two masks tokens are independent) are resolved. It is not absolutely clear to me if the authors of XLNet are using Transformer XL as such or only take inspiration from it.
 \end{enumerate}
+
+\end{loggentry}
+
+
+\begin{loggentry}{10.10.19}{Loss function for classification: Cross Entropy}
+
+I came back to the topic of the loss function since it's a crucial point when it comes to the training of these NN (using SGD). I read this interesting post:\\
+\url{https://rdipietro.github.io/friendly-intro-to-cross-entropy-loss/}\\
+which explains that cross-entropy is related to the idea of compressing information and also to the idea of likelihood, which makes it a good loss function. If there are $n$ examples the loss will be
+$$
+-\sum_{i=1}^n\log (\mathbb{P}\left( \left\lbrace \text{prediction for sample }i =\text{ground truth for sample }i\right\rbrace \right)
+$$
 
 \end{loggentry}
 
