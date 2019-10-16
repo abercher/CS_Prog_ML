@@ -492,10 +492,42 @@ The key points I take out of this are:
 
 I came back to the topic of the loss function since it's a crucial point when it comes to the training of these NN (using SGD). I read this interesting post:\\
 \url{https://rdipietro.github.io/friendly-intro-to-cross-entropy-loss/}\\
-which explains that cross-entropy is related to the idea of compressing information and also to the idea of likelihood, which makes it a good loss function. If there are $n$ examples the loss will be
+which explains that cross-entropy is related to the idea of \textbf{compressing information} and also to the idea of \textbf{likelihood}, which makes it a good loss function. If there are $n$ examples the loss will be
 $$
 -\sum_{i=1}^n\log (\mathbb{P}\left( \left\lbrace \text{prediction for sample }i =\text{ground truth for sample }i\right\rbrace \right)
 $$
+
+\end{loggentry}
+
+
+\begin{loggentry}{15.10.19}{ERNIE and ERNIE 2.0}
+
+I started reading the paper about \textbf{ERNIE 2.0} coming from Baidu:\\
+\url{https://arxiv.org/abs/1907.12412}\\
+For this I had to look at the first version of ERNIE:\\
+\url{https://arxiv.org/pdf/1904.09223.pdf}\\
+What I get from ERNIE is that replace the masking procedure of BERT by more sophisticated ones. First, there are \textbf{several pretraining-task}, all \textbf{similar to word prediction}, that they regroup under the name of \textbf{knowledge integration}. The first one (\textbf{Basic-Level Masking}) is similar to what's done in BERT. The second (\textbf{Phrase-Level Masking}) consists in masking (logically coherent) parts of sentences. And the third one (\textbf{Entity-Level Masking}) consists in masking entire entities. But then one obviously needs more than simple text. One needs tagged text for entities, and a tool to cut (in a good way) parts of sentences. Let's note that all these tasks were performed on English and \textbf{Chinese} as well.\\
+ERNIE 2.0 generalize the idea by adding new pretraining tasks. They are split in 3 categories:
+\begin{enumerate}
+\item \textbf{Word-aware}
+\begin{itemize}
+\item Knowledge Masking Task (this covers all 3 original tasks of ERNIE 1.0)
+\item Capitalization Prediction Task
+\item Token-Document Relation Prediction Task
+\end{itemize}
+\item \textbf{Structure-aware}
+\begin{itemize}
+\item Sentence Reordering Task
+\item Sentence Distance Task
+\end{itemize}
+\item \textbf{Semantic-aware}
+\begin{itemize}
+\item Discourse Relation Task
+\item Information Retrieval (IR) Relevance Task
+\end{itemize}
+\end{enumerate}
+The Information Retrieval Relevance Task is based on a dataset created by Baidu search engine.\\
+
 
 \end{loggentry}
 
