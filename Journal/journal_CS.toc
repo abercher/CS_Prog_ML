@@ -5,5 +5,5 @@
 \contentsline {subsection}{\numberline {2.3}Tasks I should perform faster}{30}{subsection.2.3}
 \contentsline {subsection}{\numberline {2.4}Other things I need to learn}{30}{subsection.2.4}
 \contentsline {section}{\numberline {3}Ideas of things to do}{31}{section.3}
-\contentsline {section}{\numberline {4}Questions}{32}{section.4}
+\contentsline {section}{\numberline {4}Questions}{31}{section.4}
 \contentsline {section}{\numberline {5}LeetCode Problems I looked at}{32}{section.5}
