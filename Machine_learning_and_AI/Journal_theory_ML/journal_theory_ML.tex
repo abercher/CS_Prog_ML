@@ -128,6 +128,7 @@ I learned a bit about \textbf{constituency parser} here:\\
 I read this introduction to \textbf{Conditional Random Fields (CRF)}:\\
 \url{http://blog.echen.me/2012/01/03/introduction-to-conditional-random-fields/}\\
 But this page doesn't mention any neural network.\\
+\textbf{Edit (28.10.19):} The first thing to understand is that the goal is to assign a probability to a sequence of tags for a sequence of items (typically a sequence of words), and its strength comes from the fact that it tries to compute the \textbf{joined} probability of these items (in the specific given order).\\
 I read the description of the \textbf{Viterbi algorithm} on wikipedia:\\
 \href{https://en.wikipedia.org/wiki/Viterbi_algorithm}{Wiki: Viterbi algorithm}\\
 From what I understood, it is just a kind of ``dynamic programming" algorithm where instead of computing the probability of every possible sequence, we first find for each possible stae the most likely sequence of length 2 finishing by this state, then use it in order to find the most likely sequence of length 3 finishing by every possible state and so on.\\
