@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  9 OCT 2019 10:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  29 OCT 2019 10:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -838,754 +838,754 @@ atistical _ inference / model _ selection .
  []
 
 [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 344--352
+Underfull \hbox (badness 10000) in paragraph at lines 344--353
 
  []
 
 [10]
-Overfull \hbox (12.02492pt too wide) in paragraph at lines 369--374
+Overfull \hbox (12.02492pt too wide) in paragraph at lines 370--375
 \OT1/cmr/m/n/10.95 To re-shape an ar-ray into ar-ray of ar-rays (blocks) there 
 is a com-mand called \OT1/cmtt/m/n/10.95 view[]as[]blocks\OT1/cmr/m/n/10.95 .
  []
 
 
-Overfull \hbox (71.38478pt too wide) in paragraph at lines 382--392
+Overfull \hbox (71.38478pt too wide) in paragraph at lines 383--393
 []$\OT1/cmtt/m/n/10.95 https : / / docs . scipy . org / doc / numpy-[]1 . 13 . 
 0 / reference / arrays . indexing . html # detailed-[]notes$[] 
  []
 
 
-Overfull \hbox (12.8979pt too wide) in paragraph at lines 406--406
+Overfull \hbox (12.8979pt too wide) in paragraph at lines 407--407
 []\OT1/cmtt/m/n/10.95 ModuleNotFoundError                       Traceback (most
  recent call last)[] 
  []
 
 [11] [12]
-Overfull \hbox (90.63084pt too wide) in paragraph at lines 448--467
+Overfull \hbox (90.63084pt too wide) in paragraph at lines 449--468
 []$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 24816237 /
  ipython-[]notebook-[]clear-[]cell-[]output-[]in-[]code #
  []
 
 
-Overfull \hbox (89.63084pt too wide) in paragraph at lines 448--467
+Overfull \hbox (89.63084pt too wide) in paragraph at lines 449--468
 []$\OT1/cmtt/m/n/10.95 https : / / github . com / hardikvasa / google-[]images-
 []download / blob / master / google-[]images-[]download .
  []
 
 
-Overfull \hbox (22.14659pt too wide) in paragraph at lines 448--467
+Overfull \hbox (22.14659pt too wide) in paragraph at lines 449--468
 []$\OT1/cmtt/m/n/10.95 http : / / forums . fast . ai / t / dogs-[]vs-[]cats-[]l
 essons-[]learned-[]share-[]your-[]experiences /
  []
 
 
-Overfull \hbox (108.3769pt too wide) in paragraph at lines 468--479
+Overfull \hbox (108.3769pt too wide) in paragraph at lines 469--480
 []$\OT1/cmtt/m/n/10.95 http : / / www . jesshamrick . com / 2011 / 05 / 18 / an
 -[]introduction-[]to-[]classes-[]and-[]inheritance-[]in-[]python/$[] 
  []
 
 [13]
-Overfull \hbox (36.89265pt too wide) in paragraph at lines 485--489
+Overfull \hbox (36.89265pt too wide) in paragraph at lines 486--490
 []$\OT1/cmtt/m/n/10.95 https : / / pythonconquerstheuniverse . wordpress . com 
 / 2009 / 09 / 10 / debugging-[]in-[]python/$[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 490--493
+Underfull \hbox (badness 10000) in paragraph at lines 491--494
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 494--496
+Underfull \hbox (badness 10000) in paragraph at lines 495--497
 
  []
 
 [14]
-Overfull \hbox (12.8979pt too wide) in paragraph at lines 525--530
+Overfull \hbox (12.8979pt too wide) in paragraph at lines 526--531
 []$\OT1/cmtt/m/n/10.95 https : / / groups . google . com / a / continuum . io /
  forum / # ! topic / anaconda / XZN2YqTTBBA$[] 
  []
 
 
-Overfull \hbox (120.37428pt too wide) in paragraph at lines 537--543
+Overfull \hbox (120.37428pt too wide) in paragraph at lines 538--544
 []$\OT1/cmtt/m/n/10.95 https : / / towardsdatascience . com / a-[]quick-[]intro
 duction-[]to-[]the-[]pandas-[]python-[]library-[]f1b678f34673$[] 
  []
 
 
-Overfull \hbox (80.13347pt too wide) in paragraph at lines 555--563
+Overfull \hbox (80.13347pt too wide) in paragraph at lines 556--564
 []$\OT1/cmtt/m/n/10.95 http : / / www . blog . pythonlibrary . org / 2010 / 09 
 / 04 / python-[]101-[]how-[]to-[]open-[]a-[]file-[]or-[]program/$[] 
  []
 
 [15]
-Overfull \hbox (120.37428pt too wide) in paragraph at lines 571--587
+Overfull \hbox (120.37428pt too wide) in paragraph at lines 572--588
 []$\OT1/cmtt/m/n/10.95 https : / / towardsdatascience . com / a-[]quick-[]intro
 duction-[]to-[]the-[]pandas-[]python-[]library-[]f1b678f34673$[] 
  []
 
 
-Overfull \hbox (108.3769pt too wide) in paragraph at lines 571--587
+Overfull \hbox (108.3769pt too wide) in paragraph at lines 572--588
 []$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 14734533 /
  how-[]to-[]access-[]pandas-[]groupby-[]dataframe-[]by-[]key #
  []
 
 
-Overfull \hbox (72.88478pt too wide) in paragraph at lines 571--587
+Overfull \hbox (72.88478pt too wide) in paragraph at lines 572--588
 []$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 39755981 /
  explain-[]how-[]pandas-[]dataframe-[]join-[]works #
  []
 
 
-Overfull \hbox (1.40053pt too wide) in paragraph at lines 571--587
+Overfull \hbox (1.40053pt too wide) in paragraph at lines 572--588
 []$\OT1/cmtt/m/n/10.95 https : / / chrisalbon . com / python / data _ wrangling
  / pandas _ join _ merge _ dataframe/$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 588--592
+Underfull \hbox (badness 10000) in paragraph at lines 589--593
 
  []
 
 [16]
-Overfull \hbox (225.59935pt too wide) in paragraph at lines 603--603
+Overfull \hbox (225.59935pt too wide) in paragraph at lines 604--604
 []  \OT1/cmtt/m/n/10.95 Stored in directory: /home/aritz/.cache/pip/wheels/b9/c
 c/6a/e92386a68ce853f545c7122f5af60bad31709a48747cc07443[] 
  []
 
 
-Overfull \hbox (18.64659pt too wide) in paragraph at lines 620--633
+Overfull \hbox (18.64659pt too wide) in paragraph at lines 621--634
 []$\OT1/cmtt/m/n/10.95 https : / / docs . scipy . org / doc / scipy / reference
  / generated / scipy . integrate . odeint .
  []
 
 
-Overfull \hbox (124.62297pt too wide) in paragraph at lines 620--633
+Overfull \hbox (124.62297pt too wide) in paragraph at lines 621--634
 []$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 40832798 /
  solve-[]ordinary-[]differential-[]equations-[]using-[]scipy$[]
  []
 
 [17]
-Overfull \hbox (21.10733pt too wide) in paragraph at lines 634--640
+Overfull \hbox (21.10733pt too wide) in paragraph at lines 635--641
 \OT1/cmr/bx/n/10.95 26.02.18 $[]$[]Pandas DataFrame and Se-ries, Numpy Date-tim
 es and Timedeltas 
  []
 
 
-Overfull \hbox (42.14134pt too wide) in paragraph at lines 641--648
+Overfull \hbox (42.14134pt too wide) in paragraph at lines 642--649
 []$\OT1/cmtt/m/n/10.95 https : / / pandas . pydata . org / pandas-[]docs / stab
 le / generated / pandas . DataFrame . rolling .
  []
 
 
-Overfull \hbox (190.35854pt too wide) in paragraph at lines 649--658
+Overfull \hbox (190.35854pt too wide) in paragraph at lines 650--659
 []$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 31593201 /
  pandas-[]iloc-[]vs-[]ix-[]vs-[]loc-[]explanation-[]how-[]are-[]they-[]differen
 t #
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 692--694
+Underfull \hbox (badness 10000) in paragraph at lines 693--695
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 695--696
+Underfull \hbox (badness 10000) in paragraph at lines 696--697
 
  []
 
 [19]
-Overfull \hbox (30.14397pt too wide) in paragraph at lines 701--705
+Overfull \hbox (30.14397pt too wide) in paragraph at lines 702--706
 []$\OT1/cmtt/m/n/10.95 https : / / en . wikibooks . org / wiki / Python _ Progr
 amming / Lists # List _ creation _ shortcuts$[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 729--733
+Underfull \hbox (badness 10000) in paragraph at lines 730--734
 
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 736--737
+Underfull \hbox (badness 10000) in paragraph at lines 737--738
 
  []
 
 
-Overfull \hbox (137.12035pt too wide) in paragraph at lines 771--775
+Overfull \hbox (137.12035pt too wide) in paragraph at lines 772--776
 []$\OT1/cmtt/m/n/10.95 https : / / www . analyticsvidhya . com / blog / 2017 / 
 04 / natural-[]language-[]processing-[]made-[]easy-[]using-[]spacy-[] %
  []
 
 [21]
-Overfull \hbox (307.33229pt too wide) in paragraph at lines 778--781
+Overfull \hbox (307.33229pt too wide) in paragraph at lines 779--782
 []$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 40189744 /
  should-[]i-[]use-[]pip-[]or-[]pip3-[]to-[]install-[]python3-[]packages-[]insid
 e-[]of-[]a-[]virtual-[]environ$[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 778--781
+Underfull \hbox (badness 10000) in paragraph at lines 779--782
 
  []
 
 
-Overfull \hbox (122.12297pt too wide) in paragraph at lines 784--784
+Overfull \hbox (122.12297pt too wide) in paragraph at lines 785--785
 []\OT1/cmtt/m/n/10.95 pip 10.0.1 from /home/aritz/anaconda3/envs/mypy36/lib/pyt
 hon3.6/site-packages/pip (python 3.6)[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 793--794
+Underfull \hbox (badness 10000) in paragraph at lines 794--795
 
  []
 
 
-Overfull \hbox (185.35854pt too wide) in paragraph at lines 823--823
+Overfull \hbox (185.35854pt too wide) in paragraph at lines 824--824
 []\OT1/cmtt/m/n/10.95 Requirement already satisfied (use --upgrade to upgrade):
  spacy in /usr/local/lib/python2.7/dist-packages[] 
  []
 
 
-Overfull \hbox (254.34279pt too wide) in paragraph at lines 823--823
+Overfull \hbox (254.34279pt too wide) in paragraph at lines 824--824
 []\OT1/cmtt/m/n/10.95 Requirement already satisfied (use --upgrade to upgrade):
  numpy>=1.7 in /usr/lib/python2.7/dist-packages (from spacy)[] 
  []
 
 
-Overfull \hbox (357.81917pt too wide) in paragraph at lines 823--823
+Overfull \hbox (357.81917pt too wide) in paragraph at lines 824--824
 []\OT1/cmtt/m/n/10.95 Requirement already satisfied (use --upgrade to upgrade):
  murmurhash<0.29,>=0.28 in /usr/local/lib/python2.7/dist-packages (from spacy)[
 ] 
  []
 
 
-Overfull \hbox (329.07573pt too wide) in paragraph at lines 823--823
+Overfull \hbox (329.07573pt too wide) in paragraph at lines 824--824
 []\OT1/cmtt/m/n/10.95 Requirement already satisfied (use --upgrade to upgrade):
  cymem<1.32,>=1.30 in /usr/local/lib/python2.7/dist-packages (from spacy)[] 
  []
 
 
-Overfull \hbox (352.07048pt too wide) in paragraph at lines 823--823
+Overfull \hbox (352.07048pt too wide) in paragraph at lines 824--824
 []\OT1/cmtt/m/n/10.95 Requirement already satisfied (use --upgrade to upgrade):
  preshed<2.0.0,>=1.0.0 in /usr/local/lib/python2.7/dist-packages (from spacy)[]
  
  []
 
 
-Overfull \hbox (352.07048pt too wide) in paragraph at lines 823--823
+Overfull \hbox (352.07048pt too wide) in paragraph at lines 824--824
 []\OT1/cmtt/m/n/10.95 Requirement already satisfied (use --upgrade to upgrade):
  thinc<6.11.0,>=6.10.1 in /usr/local/lib/python2.7/dist-packages (from spacy)[]
  
  []
 
 
-Overfull \hbox (334.82442pt too wide) in paragraph at lines 823--823
+Overfull \hbox (334.82442pt too wide) in paragraph at lines 824--824
 []\OT1/cmtt/m/n/10.95 Requirement already satisfied (use --upgrade to upgrade):
  plac<1.0.0,>=0.9.6 in /usr/local/lib/python2.7/dist-packages (from spacy)[] 
  []
 
 
-Overfull \hbox (271.58885pt too wide) in paragraph at lines 823--823
+Overfull \hbox (271.58885pt too wide) in paragraph at lines 824--824
 []\OT1/cmtt/m/n/10.95 Requirement already satisfied (use --upgrade to upgrade):
  pathlib in /usr/local/lib/python2.7/dist-packages (from spacy)[] 
  []
 
 
-Overfull \hbox (294.5836pt too wide) in paragraph at lines 823--823
+Overfull \hbox (294.5836pt too wide) in paragraph at lines 824--824
 []\OT1/cmtt/m/n/10.95 Requirement already satisfied (use --upgrade to upgrade):
  ujson>=1.35 in /usr/local/lib/python2.7/dist-packages (from spacy)[] 
  []
 
 
-Overfull \hbox (311.82967pt too wide) in paragraph at lines 823--823
+Overfull \hbox (311.82967pt too wide) in paragraph at lines 824--824
 []\OT1/cmtt/m/n/10.95 Requirement already satisfied (use --upgrade to upgrade):
  dill<0.3,>=0.2 in /usr/local/lib/python2.7/dist-packages (from spacy)[] 
  []
 
 
-Overfull \hbox (317.57835pt too wide) in paragraph at lines 823--823
+Overfull \hbox (317.57835pt too wide) in paragraph at lines 824--824
 []\OT1/cmtt/m/n/10.95 Requirement already satisfied (use --upgrade to upgrade):
  regex==2017.4.5 in /usr/local/lib/python2.7/dist-packages (from spacy)[] 
  []
 
 [22]
-Overfull \hbox (392.3113pt too wide) in paragraph at lines 823--823
+Overfull \hbox (392.3113pt too wide) in paragraph at lines 824--824
 []\OT1/cmtt/m/n/10.95 Requirement already satisfied (use --upgrade to upgrade):
  wrapt in /usr/local/lib/python2.7/dist-packages (from thinc<6.11.0,>=6.10.1->s
 pacy)[] 
  []
 
 
-Overfull \hbox (472.79292pt too wide) in paragraph at lines 823--823
+Overfull \hbox (472.79292pt too wide) in paragraph at lines 824--824
 []\OT1/cmtt/m/n/10.95 Requirement already satisfied (use --upgrade to upgrade):
  tqdm<5.0.0,>=4.10.0 in /usr/local/lib/python2.7/dist-packages (from thinc<6.11
 .0,>=6.10.1->spacy)[] 
  []
 
 
-Overfull \hbox (461.29555pt too wide) in paragraph at lines 823--823
+Overfull \hbox (461.29555pt too wide) in paragraph at lines 824--824
 []\OT1/cmtt/m/n/10.95 Requirement already satisfied (use --upgrade to upgrade):
  cytoolz<0.9,>=0.8 in /usr/local/lib/python2.7/dist-packages (from thinc<6.11.0
 ,>=6.10.1->spacy)[] 
  []
 
 
-Overfull \hbox (432.55211pt too wide) in paragraph at lines 823--823
+Overfull \hbox (432.55211pt too wide) in paragraph at lines 824--824
 []\OT1/cmtt/m/n/10.95 Requirement already satisfied (use --upgrade to upgrade):
  six<2.0.0,>=1.10.0 in /usr/lib/python2.7/dist-packages (from thinc<6.11.0,>=6.
 10.1->spacy)[] 
  []
 
 
-Overfull \hbox (415.30605pt too wide) in paragraph at lines 823--823
+Overfull \hbox (415.30605pt too wide) in paragraph at lines 824--824
 []\OT1/cmtt/m/n/10.95 Requirement already satisfied (use --upgrade to upgrade):
  termcolor in /usr/local/lib/python2.7/dist-packages (from thinc<6.11.0,>=6.10.
 1->spacy)[] 
  []
 
 
-Overfull \hbox (444.04948pt too wide) in paragraph at lines 823--823
+Overfull \hbox (444.04948pt too wide) in paragraph at lines 824--824
 []\OT1/cmtt/m/n/10.95 Requirement already satisfied (use --upgrade to upgrade):
  msgpack-python in /usr/local/lib/python2.7/dist-packages (from thinc<6.11.0,>=
 6.10.1->spacy)[] 
  []
 
 
-Overfull \hbox (478.54161pt too wide) in paragraph at lines 823--823
+Overfull \hbox (478.54161pt too wide) in paragraph at lines 824--824
 []\OT1/cmtt/m/n/10.95 Requirement already satisfied (use --upgrade to upgrade):
  msgpack-numpy==0.4.1 in /usr/local/lib/python2.7/dist-packages (from thinc<6.1
 1.0,>=6.10.1->spacy)[] 
  []
 
 
-Overfull \hbox (541.77718pt too wide) in paragraph at lines 823--823
+Overfull \hbox (541.77718pt too wide) in paragraph at lines 824--824
 []\OT1/cmtt/m/n/10.95 Requirement already satisfied (use --upgrade to upgrade):
  toolz>=0.8.0 in /usr/local/lib/python2.7/dist-packages (from cytoolz<0.9,>=0.8
 ->thinc<6.11.0,>=6.10.1->spacy)[] 
  []
 
 
-Overfull \hbox (7.14922pt too wide) in paragraph at lines 823--823
+Overfull \hbox (7.14922pt too wide) in paragraph at lines 824--824
 []\OT1/cmtt/m/n/10.95 You should consider upgrading via the 'pip install --upgr
 ade pip' command.[] 
  []
 
 
-Overfull \hbox (501.53636pt too wide) in paragraph at lines 834--834
+Overfull \hbox (501.53636pt too wide) in paragraph at lines 835--835
 []\OT1/cmtt/m/n/10.95 /home/aritz/anaconda3/envs/mypy36/bin/python: Error while
  finding module specification for 'spacy.en.download' (ModuleNotFoundError: No 
 module named 'spacy.en')[] 
  []
 
 
-Overfull \hbox (137.12035pt too wide) in paragraph at lines 839--841
+Overfull \hbox (137.12035pt too wide) in paragraph at lines 840--842
 []$\OT1/cmtt/m/n/10.95 https : / / www . analyticsvidhya . com / blog / 2017 / 
 04 / natural-[]language-[]processing-[]made-[]easy-[]using-[]spacy-[] %
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 839--841
+Underfull \hbox (badness 10000) in paragraph at lines 840--842
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 842--843
+Underfull \hbox (badness 10000) in paragraph at lines 843--844
 
  []
 
 
-Overfull \hbox (125.62297pt too wide) in paragraph at lines 844--853
+Overfull \hbox (125.62297pt too wide) in paragraph at lines 845--854
 []$\OT1/cmtt/m/n/10.95 https : / / blog . thedataincubator . com / 2016 / 04 / 
 nltk-[]vs-[]spacy-[]natural-[]language-[]processing-[]in-[]python/$[] 
  []
 
 
-Overfull \hbox (12.8979pt too wide) in paragraph at lines 844--853
+Overfull \hbox (12.8979pt too wide) in paragraph at lines 845--854
 []$\OT1/cmtt/m/n/10.95 https : / / www . reddit . com / r / LanguageTechnology 
 / comments / 69xbkc / question _ spacy _
  []
 
 [23]
-Overfull \hbox (137.12035pt too wide) in paragraph at lines 854--858
+Overfull \hbox (137.12035pt too wide) in paragraph at lines 855--859
 []$\OT1/cmtt/m/n/10.95 https : / / www . analyticsvidhya . com / blog / 2017 / 
 04 / natural-[]language-[]processing-[]made-[]easy-[]using-[]spacy-[] %
  []
 
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 859.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 860.
 
-Underfull \hbox (badness 10000) in paragraph at lines 859--861
+Underfull \hbox (badness 10000) in paragraph at lines 860--862
 
  []
 
 
-Overfull \hbox (137.12035pt too wide) in paragraph at lines 866--872
+Overfull \hbox (137.12035pt too wide) in paragraph at lines 867--873
 []$\OT1/cmtt/m/n/10.95 https : / / www . analyticsvidhya . com / blog / 2017 / 
 04 / natural-[]language-[]processing-[]made-[]easy-[]using-[]spacy-[] %
  []
 
 
-Overfull \hbox (3.65483pt too wide) in paragraph at lines 873--874
+Overfull \hbox (3.65483pt too wide) in paragraph at lines 874--875
 []\OT1/cmr/m/n/10.95 Using this li-brary and its ``mod-els" (for in-stance \OT1
 /cmtt/m/n/10.95 en \OT1/cmr/m/n/10.95 as in \OT1/cmtt/m/n/10.95 nlp = spacy.loa
 d("en")\OT1/cmr/m/n/10.95 )
  []
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 885--887
+Underfull \hbox (badness 10000) in paragraph at lines 886--888
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 887--889
+Underfull \hbox (badness 10000) in paragraph at lines 888--890
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 890--892
+Underfull \hbox (badness 10000) in paragraph at lines 891--893
 
  []
 
 
-Overfull \hbox (172.11247pt too wide) in paragraph at lines 893--895
+Overfull \hbox (172.11247pt too wide) in paragraph at lines 894--896
 []$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 47638877 /
  using-[]phrasematcher-[]in-[]spacy-[]to-[]find-[]multiple-[]match-[]types$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 893--895
+Underfull \hbox (badness 10000) in paragraph at lines 894--896
 
  []
 
 
-Overfull \hbox (34.13156pt too wide) in paragraph at lines 898--904
+Overfull \hbox (34.13156pt too wide) in paragraph at lines 899--905
 \OT1/cmr/m/n/10.95 I en-coun-tered it in the note-book from the NLP cours-era c
 ourse ``week1-MultilabelClassification",
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 898--904
+Underfull \hbox (badness 10000) in paragraph at lines 899--905
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 905--911
+Underfull \hbox (badness 10000) in paragraph at lines 906--912
 
  []
 
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 915--917
+Underfull \hbox (badness 10000) in paragraph at lines 916--918
 
  []
 
 
-Overfull \hbox (17.00314pt too wide) in paragraph at lines 918--920
+Overfull \hbox (17.00314pt too wide) in paragraph at lines 919--921
 []\OT1/cmr/m/n/10.95 In the note-book of the first week of the NLP cours-era's 
 course, I dis-cov-ered \OT1/cmtt/m/n/10.95 scipy.sparse
  []
 
 
-Overfull \hbox (19.14659pt too wide) in paragraph at lines 921--926
+Overfull \hbox (19.14659pt too wide) in paragraph at lines 922--927
 []$\OT1/cmtt/m/n/10.95 http : / / scikit-[]learn . org / stable / modules / gen
 erated / sklearn . feature _ extraction .
  []
 
 
-Overfull \hbox (7.64922pt too wide) in paragraph at lines 931--935
+Overfull \hbox (7.64922pt too wide) in paragraph at lines 932--936
 []$\OT1/cmtt/m/n/10.95 http : / / scikit-[]learn . org / stable / modules / gen
 erated / sklearn . metrics . f1 _ score .
  []
 
 [26]
-Overfull \hbox (9.64922pt too wide) in paragraph at lines 936--945
+Overfull \hbox (9.64922pt too wide) in paragraph at lines 937--946
 []$\OT1/cmtt/m/n/10.95 https : / / hackernoon . com / understanding-[]the-[]und
 erscore-[]of-[]python-[]309d1a029edc$[]
  []
 
 
-Overfull \hbox (102.62822pt too wide) in paragraph at lines 965--968
+Overfull \hbox (102.62822pt too wide) in paragraph at lines 966--969
 []$\OT1/cmtt/m/n/10.95 https : / / medium . com / understand-[]the-[]python / u
 nderstanding-[]the-[]asterisk-[]of-[]python-[]8b9daaa4a558$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 969--974
+Underfull \hbox (badness 10000) in paragraph at lines 970--975
 
  []
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 975--979
+Underfull \hbox (badness 10000) in paragraph at lines 976--980
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 990--991
+Underfull \hbox (badness 10000) in paragraph at lines 991--992
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 992--995
+Underfull \hbox (badness 10000) in paragraph at lines 993--996
 
  []
 
 
-Overfull \hbox (13.8979pt too wide) in paragraph at lines 1002--1006
+Overfull \hbox (13.8979pt too wide) in paragraph at lines 1003--1007
 []$\OT1/cmtt/m/n/10.95 https : / / docs . python . org / 3 / reference / execut
 ionmodel . html # resolution-[]of-[]names$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1018--1021
+Underfull \hbox (badness 10000) in paragraph at lines 1019--1022
 
  []
 
 [28]
-Overfull \hbox (91.63084pt too wide) in paragraph at lines 1024--1029
+Overfull \hbox (91.63084pt too wide) in paragraph at lines 1025--1030
 []$\OT1/cmtt/m/n/10.95 https : / / medium . com / district-[]data-[]labs / simp
 le-[]csv-[]data-[]wrangling-[]with-[]python-[]3496aa5d0a5e$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1024--1029
+Underfull \hbox (badness 10000) in paragraph at lines 1025--1030
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1036--1038
+Underfull \hbox (badness 10000) in paragraph at lines 1037--1039
 
  []
 
 
-Overfull \hbox (36.89265pt too wide) in paragraph at lines 1053--1059
+Overfull \hbox (36.89265pt too wide) in paragraph at lines 1054--1060
 []$\OT1/cmtt/m/n/10.95 https : / / pythonconquerstheuniverse . wordpress . com 
 / 2009 / 09 / 10 / debugging-[]in-[]python/$[] 
  []
 
 [29]
-Overfull \hbox (8.14922pt too wide) in paragraph at lines 1060--1066
+Overfull \hbox (8.14922pt too wide) in paragraph at lines 1061--1067
 []$\OT1/cmtt/m/n/10.95 https : / / ghe . exm-[]platform . com / Telepathy-[]Lab
 s / tl _ nlu _ core / blob / master / tests /
  []
 
 
-Overfull \hbox (119.37428pt too wide) in paragraph at lines 1076--1085
+Overfull \hbox (119.37428pt too wide) in paragraph at lines 1077--1086
 []$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 2052390 / 
 manually-[]raising-[]throwing-[]an-[]exception-[]in-[]python #
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1086--1087
+Underfull \hbox (badness 10000) in paragraph at lines 1087--1088
 
  []
 
 
-Overfull \hbox (69.7099pt too wide) in paragraph at lines 1088--1098
+Overfull \hbox (69.7099pt too wide) in paragraph at lines 1089--1099
 \OT1/cmr/m/n/10.95 and this one also seemed good: []$\OT1/cmtt/m/n/10.95 https 
 : / / logmatic . io / blog / python-[]logging-[]with-[]json-[]steroids/$[] 
  []
 
 
-Overfull \hbox (61.3874pt too wide) in paragraph at lines 1088--1098
+Overfull \hbox (61.3874pt too wide) in paragraph at lines 1089--1099
 []$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 9595009 / 
 python-[]warnings-[]warn-[]vs-[]logging-[]warning$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1088--1098
+Underfull \hbox (badness 10000) in paragraph at lines 1089--1099
 
  []
 
 [30]
-Underfull \hbox (badness 10000) in paragraph at lines 1102--1103
+Underfull \hbox (badness 10000) in paragraph at lines 1103--1104
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1104--1106
+Underfull \hbox (badness 10000) in paragraph at lines 1105--1107
 
  []
 
 
-Overfull \hbox (60.8874pt too wide) in paragraph at lines 1107--1111
+Overfull \hbox (60.8874pt too wide) in paragraph at lines 1108--1112
 []$\OT1/cmtt/m/n/10.95 https : / / semaphoreci . com / community / tutorials / 
 testing-[]python-[]applications-[]with-[]pytest$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1107--1111
+Underfull \hbox (badness 10000) in paragraph at lines 1108--1112
 
  []
 
 
-Overfull \hbox (1.90053pt too wide) in paragraph at lines 1112--1114
+Overfull \hbox (1.90053pt too wide) in paragraph at lines 1113--1115
 []$\OT1/cmtt/m/n/10.95 https : / / pythontesting . net / framework / pytest / p
 ytest-[]introduction / #discovery$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1112--1114
+Underfull \hbox (badness 10000) in paragraph at lines 1113--1115
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1115--1119
+Underfull \hbox (badness 10000) in paragraph at lines 1116--1120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1123--1124
+Underfull \hbox (badness 10000) in paragraph at lines 1124--1125
 
  []
 
 
-Overfull \hbox (203.85591pt too wide) in paragraph at lines 1125--1127
+Overfull \hbox (203.85591pt too wide) in paragraph at lines 1126--1128
 []$\OT1/cmtt/m/n/10.95 https : / / medium . com / @ageitgey / learn-[]how-[]to-
 []use-[]static-[]type-[]checking-[]in-[]python-[]3-[]6-[]in-[]10-[]minutes-[]12
 c86d72677b$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1125--1127
+Underfull \hbox (badness 10000) in paragraph at lines 1126--1128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1131--1132
+Underfull \hbox (badness 10000) in paragraph at lines 1132--1133
 
  []
 
 [31]
-Overfull \hbox (114.6256pt too wide) in paragraph at lines 1133--1135
+Overfull \hbox (114.6256pt too wide) in paragraph at lines 1134--1136
 []$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 1523427 / 
 what-[]is-[]the-[]common-[]header-[]format-[]of-[]python-[]files$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1139--1140
+Underfull \hbox (badness 10000) in paragraph at lines 1140--1141
 
  []
 
 
-Overfull \hbox (173.86116pt too wide) in paragraph at lines 1150--1150
+Overfull \hbox (173.86116pt too wide) in paragraph at lines 1151--1151
 []\OT1/cmtt/m/n/10.95 url = 'http://{}:{}/answer_from_text/{}/{}'.format(api_ho
 st, api_port, quoted_question, quoted_context)[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1159--1160
+Underfull \hbox (badness 10000) in paragraph at lines 1160--1161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1182--1184
+Underfull \hbox (badness 10000) in paragraph at lines 1183--1185
 
  []
 
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1187
+Underfull \hbox (badness 10000) in paragraph at lines 1186--1188
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1188--1190
+Underfull \hbox (badness 10000) in paragraph at lines 1189--1191
 
  []
 
 
-Overfull \hbox (293.33492pt too wide) in paragraph at lines 1191--1193
+Overfull \hbox (293.33492pt too wide) in paragraph at lines 1192--1194
 []$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 6133574 / 
 how-[]to-[]articulate-[]the-[]difference-[]between-[]asynchronous-[]and-[]paral
 lel-[]programming #
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1191--1193
+Underfull \hbox (badness 10000) in paragraph at lines 1192--1194
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1198--1199
+Underfull \hbox (badness 10000) in paragraph at lines 1199--1200
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1204--1205
+Underfull \hbox (badness 10000) in paragraph at lines 1205--1206
 
  []
 
 
-Overfull \hbox (104.12822pt too wide) in paragraph at lines 1206--1208
+Overfull \hbox (104.12822pt too wide) in paragraph at lines 1207--1209
 []$\OT1/cmtt/m/n/10.95 https : / / medium . com / python-[]pandemonium / what-[
 ]is-[]flake8-[]and-[]why-[]we-[]should-[]use-[]it-[]b89bd78073f2$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1212--1213
+Underfull \hbox (badness 10000) in paragraph at lines 1213--1214
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1220--1221
+Underfull \hbox (badness 10000) in paragraph at lines 1221--1222
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1222--1223
+Underfull \hbox (badness 10000) in paragraph at lines 1223--1224
 
  []
 
 
-Overfull \hbox (84.88216pt too wide) in paragraph at lines 1224--1226
+Overfull \hbox (84.88216pt too wide) in paragraph at lines 1225--1227
 []$\OT1/cmtt/m/n/10.95 https : / / medium . com / @krishnaregmi / pipenv-[]vs-[
 ]virtualenv-[]vs-[]conda-[]environment-[]3dde3f6869ed$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1224--1226
+Underfull \hbox (badness 10000) in paragraph at lines 1225--1227
 
  []
 
 [33]
-Underfull \hbox (badness 10000) in paragraph at lines 1230--1231
+Underfull \hbox (badness 10000) in paragraph at lines 1231--1232
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1237--1238
+Underfull \hbox (badness 10000) in paragraph at lines 1238--1239
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1245--1246
+Underfull \hbox (badness 10000) in paragraph at lines 1246--1247
 
  []
 
 
-Overfull \hbox (128.62297pt too wide) in paragraph at lines 1247--1249
+Overfull \hbox (128.62297pt too wide) in paragraph at lines 1248--1250
 []$\OT1/cmtt/m/n/10.95 https : / / www . quora . com / How-[]do-[]you-[]make-[]
 a-[]requirements-[]txt-[]file-[]for-[]Python-[]Is-[]the-[]version-[]needed$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1247--1249
+Underfull \hbox (badness 10000) in paragraph at lines 1248--1250
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1253--1254
+Underfull \hbox (badness 10000) in paragraph at lines 1254--1255
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1276.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1277.
 [34]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1276.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1277.
  (./journal_python.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1276.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1276.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1277.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1277.
 
 Package rerunfilecheck Info: File `journal_python.out' has not changed.
 (rerunfilecheck)             Checksum: D5214FDFB4BF422C90E2B3213D8496A5;241.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1276.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1277.
  ) 
 Here is how much of TeX's memory you used:
  6352 strings out of 494880
@@ -1608,7 +1608,7 @@ sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 >
-Output written on journal_python.pdf (34 pages, 249439 bytes).
+Output written on journal_python.pdf (34 pages, 249490 bytes).
 PDF statistics:
  523 PDF objects out of 1000 (max. 8388607)
  469 compressed objects within 5 object streams
