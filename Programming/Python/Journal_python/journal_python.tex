@@ -1245,8 +1245,25 @@ Rolland showed me this page where one can copy a good \textbf{.gitignore} for py
 
 \begin{loggentry}{07.10.19}{How to write good python requirements.txt}
 
-I found this Quora answer pretty nice, concerning ways to write requirements.txt:\\
+I found this Quora answer pretty nice, concerning ways to write \textbf{requirements.txt}:\\
 \url{https://www.quora.com/How-do-you-make-a-requirements-txt-file-for-Python-Is-the-version-needed}\\
+
+\textbf{Edit (01.11.19):} I found these two links which give some insight concerning the way requirements files are done, and what are the \textbf{different ways one can list required libraries} depending on the type of libraries:\\
+\url{https://pip.readthedocs.io/en/1.1/requirements.html}\\
+\url{https://pip-python3.readthedocs.io/en/latest/reference/pip_install.html#vcs-support}\\
+In particular I understood that when a package is on the pypi (list of python packages available for everyone and light enough to be put there), we can just put something like\\
+\begin{verbatim}
+Keras==2.2.4
+\end{verbatim}
+whereas if it is a heavy package, it will have to be downloaded from another source, and could look like this\\
+\begin{verbatim}
+https://github.com/keras-team/keras-contrib/archive/e1574a16f0156dd9557fe62a1c5a39e37bd656c6.tar.gz
+\end{verbatim}
+and if its some private library in a private repos, then it will look like
+\begin{verbatim}
+git+https://ghe.exm-platform.com/MyPrivateRepo/my_project.git@master#egg=my_project
+\end{verbatim}
+
 
 \end{loggentry}
 
