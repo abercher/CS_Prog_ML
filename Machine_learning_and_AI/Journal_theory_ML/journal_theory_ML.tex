@@ -46,6 +46,8 @@
 In this journal, I will try to gather good references (mainly webpages) about some Machine Learning (and in particular Deep Learning and Natural Language Processing) algorithms as well as some personal thoughts on the subject. The aim of this journal is to keep gather in a same place the \textit{theory} of Machine Learning
 \end{abstract}
 
+\tableofcontents
+
 \section{Useful Resources}
 \begin{itemize}
 \item I found this \textbf{blog} by Tobias Sterbak, which seem to cover a lot of \textbf{advanced topic in machine learning/deep learning, natural language processing, and computer vision} with both theory and implementation aspects treated:\\
@@ -345,7 +347,7 @@ I started reading this very well illustrated tutorials:
 Since there is a lot to say abou each model, I will split this entry into sections that I will complete little by little.
 
 
-\section{Neural Machine Translation Model (Mechanics of Seq2seq Models With Attention)}
+\subsection{Neural Machine Translation Model (Mechanics of Seq2seq Models With Attention)}
 
 \begin{itemize}
 \item In the sequence to sequence translation with attention model, the input is a sequence (of words in English for instance) and the output is another sequence (of words in French for instance), not necessarily of the same length.
@@ -356,7 +358,7 @@ Since there is a lot to say abou each model, I will split this entry into sectio
 \end{itemize}
 
 
-\section{The Transformer}
+\subsection{The Transformer}
 
 \begin{itemize}
 \item In the tutorial about the Transformer, the \textbf{input} is a sequence and the \textbf{output} is a sequence (like in the sequence to sequence translation with attention tutorial).
@@ -384,7 +386,7 @@ but unfortunately it is in tensorflow which is a pain in the ass.\\
 \end{itemize}
 
 
-\section{ELMo}
+\subsection{ELMo}
 
 ELMo is one of the ancestors of BERT. From what I understood, BERT is a kind of ELMo where the LSTM has been replaced by a Transformer. The paper is here:\\
 \url{https://arxiv.org/pdf/1802.05365.pdf}\\
@@ -394,7 +396,7 @@ The input is a sentence of token and the output is a sequence of vectors (embedd
 I think that there won't be any problem of model learning to copy the input because the forward lstm and the backward lstm stay separate, and receive different inputs. The second layer of the forward lstm doesn't see the out put of the first layer of backward lstm.
 
 
-\section{BERT}
+\subsection{BERT}
 
 \begin{itemize}
 \item BERT seems to a priori be a sequence to sequence translation model in the sense that it takes a sequence as input and output a sequence of vectors. I guess that the length of both input and output sequence is fixed and that padding is used. In order to turn it into a classifier, the authors add a first [CLS] symbol at the beginning of the input sequence. The first vector in the output sequence is then used to predict the class (with an additional simple feed-forward network with soft-max).
@@ -435,8 +437,9 @@ I learned here the difference between \textbf{inductive learning} and \textbf{tr
 
 \begin{loggentry}{19.07.19}{Ressources for semantic parsing}
 
-This paper (that I haven't read yet) gives a \textbf{good overview of semantic parsing}:\\
+This paper (that I haven't read yet) gives a \textbf{good historical overview of semantic parsing}:\\
 \url{https://arxiv.org/pdf/1812.10037.pdf}\\
+\textbf{Edit (06.11.19):} I read the section 2, ``Related Work". It's indeed quite detailed but I would need to read the papers mentioned there to really have an overview.
 and this paper gives a good introduction to \textbf{logic based formalism}, \textbf{Graph based formalism}, which can both be used for semantic parsing:\\
 \url{https://openreview.net/pdf?id=HylaEWcTT7}\\
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  28 OCT 2019 09:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  6 NOV 2019 15:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -645,15 +645,19 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 44.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 51.
+(./journal_theory_ML.toc)
+\tf@toc=\write4
+\openout4 = `journal_theory_ML.toc'.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 53.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 51.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 53.
 
-Overfull \hbox (66.76772pt too wide) in paragraph at lines 51--53
+Overfull \hbox (66.76772pt too wide) in paragraph at lines 53--55
 []$\OT1/cmtt/m/n/10.95 https : / / www . depends-[]on-[]the-[]definition . com 
 / classify-[]toxic-[]comments-[]on-[]wikipedia/$[] 
  []
@@ -661,15 +665,9 @@ Overfull \hbox (66.76772pt too wide) in paragraph at lines 51--53
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (26.89528pt too wide) in paragraph at lines 80--87
+Overfull \hbox (26.89528pt too wide) in paragraph at lines 82--89
 []$\OT1/cmtt/m/n/10.95 http : / / mccormickml . com / 2017 / 01 / 11 / word2vec
 -[]tutorial-[]part-[]2-[]negative-[]sampling/$[] 
- []
-
-
-Overfull \hbox (120.37428pt too wide) in paragraph at lines 88--95
-[]$\OT1/cmtt/m/n/10.95 http : / / www . wildml . com / 2015 / 09 / recurrent-[]
-neural-[]networks-[]tutorial-[]part-[]1-[]introduction-[]to-[]rnns/$[] 
  []
 
 
@@ -679,308 +677,308 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2]
-Overfull \hbox (15.96548pt too wide) in paragraph at lines 125--144
+Overfull \hbox (120.37428pt too wide) in paragraph at lines 90--97
+[]$\OT1/cmtt/m/n/10.95 http : / / www . wildml . com / 2015 / 09 / recurrent-[]
+neural-[]networks-[]tutorial-[]part-[]1-[]introduction-[]to-[]rnns/$[] 
+ []
+
+[3]
+Overfull \hbox (15.96548pt too wide) in paragraph at lines 127--146
 \OT1/cmr/bx/n/10.95 02.04.18 $[]$[]Constituency parser, Con-di-tional Ran-dom F
 ields (CRS), Viterbi
  []
 
 
-Overfull \hbox (9.14922pt too wide) in paragraph at lines 125--144
+Overfull \hbox (9.14922pt too wide) in paragraph at lines 127--146
 []$\OT1/cmtt/m/n/10.95 http : / / blog . echen . me / 2012 / 01 / 03 / introduc
 tion-[]to-[]conditional-[]random-[]fields/$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--144
+Underfull \hbox (badness 10000) in paragraph at lines 127--146
 
  []
 
-[3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 157--163
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 159--165
 
  []
 
-[5]
-Overfull \hbox (14.8979pt too wide) in paragraph at lines 192--197
+[5] [6]
+Overfull \hbox (14.8979pt too wide) in paragraph at lines 194--199
 []$\OT1/cmtt/m/n/10.95 http : / / togelius . blogspot . com / 2018 / 05 / empir
 icism-[]and-[]limits-[]of-[]gradient . html$[] 
  []
 
-[6]
-Overfull \hbox (20.14659pt too wide) in paragraph at lines 205--210
+
+Overfull \hbox (20.14659pt too wide) in paragraph at lines 207--212
 []$\OT1/cmtt/m/n/10.95 https : / / machinelearningmastery . com / gentle-[]intr
 oduction-[]backpropagation-[]time/$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--218
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 219--223
+Underfull \hbox (badness 10000) in paragraph at lines 221--225
 
  []
 
 [7]
-Overfull \hbox (84.88216pt too wide) in paragraph at lines 238--242
+Overfull \hbox (84.88216pt too wide) in paragraph at lines 240--244
 []$\OT1/cmtt/m/n/10.95 https : / / www . oreilly . com / learning / perform-[]s
 entiment-[]analysis-[]with-[]lstms-[]using-[]tensorflow$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--242
+Underfull \hbox (badness 10000) in paragraph at lines 240--244
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 264--267
+Underfull \hbox (badness 10000) in paragraph at lines 266--269
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--270
+Underfull \hbox (badness 10000) in paragraph at lines 270--272
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 273--274
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 282--283
+Underfull \hbox (badness 10000) in paragraph at lines 275--276
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 284--287
+Underfull \hbox (badness 10000) in paragraph at lines 284--285
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--291
+Underfull \hbox (badness 10000) in paragraph at lines 286--289
 
  []
 
 
-Overfull \hbox (162.1151pt too wide) in paragraph at lines 292--297
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
+
+ []
+
+
+Overfull \hbox (162.1151pt too wide) in paragraph at lines 294--299
 []$\OT1/cmtt/m/n/10.95 https : / / medium . com / snips-[]ai / ntm-[]lasagne-[]
 a-[]library-[]for-[]neural-[]turing-[]machines-[]in-[]lasagne-[]2cdce6837315$[]
  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--297
+Underfull \hbox (badness 10000) in paragraph at lines 294--299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--302
+Underfull \hbox (badness 10000) in paragraph at lines 303--304
 
  []
 
 
-Overfull \hbox (10.14922pt too wide) in paragraph at lines 303--305
+Overfull \hbox (10.14922pt too wide) in paragraph at lines 305--307
 []$\OT1/cmtt/m/n/10.95 https : / / stackabuse . com / levenshtein-[]distance-[]
 and-[]text-[]similarity-[]in-[]python/$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 313--317
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--315
+Underfull \hbox (badness 10000) in paragraph at lines 321--322
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--320
-
- []
-
-
-Overfull \hbox (335.07573pt too wide) in paragraph at lines 321--324
+Overfull \hbox (335.07573pt too wide) in paragraph at lines 323--326
 []$\OT1/cmtt/m/n/10.95 https : / / medium . com / ai % C2 % B3-[]theory-[]pract
 ice-[]business / understanding-[]hintons-[]capsule-[]networks-[]part-[]ii-[]how
 -[]capsules-[]work-[]153b6ade9f66$[] 
  []
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 328--329
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--332
+Underfull \hbox (badness 10000) in paragraph at lines 332--334
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--337
+Underfull \hbox (badness 10000) in paragraph at lines 338--339
 
  []
 
 
-Overfull \hbox (305.95074pt too wide) in paragraph at lines 340--341
+Overfull \hbox (305.95074pt too wide) in paragraph at lines 342--343
 \OT1/cmr/bx/n/10.95 At-ten-tion): []$\OT1/cmtt/m/n/10.95 https : / / jalammar .
  github . io / visualizing-[]neural-[]machine-[]translation-[]mechanics-[]of-[]
 seq2seq-[]models-[]with-[]attention/$[] 
  []
 
-
-Overfull \hbox (8.65758pt too wide) in paragraph at lines 348--348
-[]\OT1/cmr/bx/n/14.4 Neural Ma-chine Trans-la-tion Model (Me-chan-ics of Seq2se
-q
- []
-
 [11] [12]
-Overfull \hbox (10.2137pt too wide) in paragraph at lines 369--381
+Overfull \hbox (10.2137pt too wide) in paragraph at lines 371--383
 \OT1/cmr/m/n/10.95 French trans-la-tion, but the idea of us-ing it as a ba-sis 
 for lever-ag-ing an \OT1/cmr/bx/n/10.95 unsupervised-
  []
 
 
-Overfull \hbox (112.25722pt too wide) in paragraph at lines 369--381
+Overfull \hbox (112.25722pt too wide) in paragraph at lines 371--383
 []$\OT1/cmtt/m/n/10.95 https : / / s3-[]us-[]west-[]2 . amazonaws . com / opena
 i-[]assets / research-[]covers / language-[]unsupervised /
  []
 
 [13]
-Overfull \hbox (10.14613pt too wide) in paragraph at lines 381--382
+Overfull \hbox (10.14613pt too wide) in paragraph at lines 383--384
 []\OT1/cmr/m/n/10.95 In the pa-per \OT1/cmr/m/it/10.95 Im-prov-ing Lan-guage Un
 -der-stand-ing by Gen-er-a-tive Pre-Training \OT1/cmr/m/n/10.95 (\OT1/cmr/bx/n/
 10.95 GPT\OT1/cmr/m/n/10.95 ),
  []
 
 [14] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 409--410
+Underfull \hbox (badness 10000) in paragraph at lines 411--412
 
  []
 
 
-Overfull \hbox (376.31654pt too wide) in paragraph at lines 411--417
+Overfull \hbox (376.31654pt too wide) in paragraph at lines 413--419
 []$\OT1/cmtt/m/n/10.95 http : / / mlexplained . com / 2018 / 01 / 10 / an-[]int
 uitive-[]explanation-[]of-[]why-[]batch-[]normalization-[]really-[]works-[]norm
 alization-[]in-[]deep-[]learning-[]part-[]1/$[] 
  []
 
 
-Overfull \hbox (323.07835pt too wide) in paragraph at lines 411--417
+Overfull \hbox (323.07835pt too wide) in paragraph at lines 413--419
 []$\OT1/cmtt/m/n/10.95 https : / / mlexplained . com / 2018 / 01 / 13 / weight-
 []normalization-[]and-[]layer-[]normalization-[]explained-[]normalization-[]in-
 []deep-[]learning-[]part-[]2/$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--417
+Underfull \hbox (badness 10000) in paragraph at lines 413--419
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--422
+Underfull \hbox (badness 10000) in paragraph at lines 423--424
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 423--425
+Underfull \hbox (badness 10000) in paragraph at lines 425--427
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 429--430
+Underfull \hbox (badness 10000) in paragraph at lines 431--432
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 436--437
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 438--442
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 446--447
+Underfull \hbox (badness 10000) in paragraph at lines 438--439
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 456--457
+Underfull \hbox (badness 10000) in paragraph at lines 440--445
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 458--461
+Underfull \hbox (badness 10000) in paragraph at lines 449--450
 
  []
 
 
-Overfull \hbox (236.84804pt too wide) in paragraph at lines 462--468
+Underfull \hbox (badness 10000) in paragraph at lines 459--460
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 461--464
+
+ []
+
+
+Overfull \hbox (236.84804pt too wide) in paragraph at lines 465--471
 []$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 57128213 /
  what-[]concept-[]in-[]category-[]theory-[]can-[]be-[]used-[]to-[]represent-[]a
 -[]typeclass$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 462--468
+Underfull \hbox (badness 10000) in paragraph at lines 465--471
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 472--473
+Underfull \hbox (badness 10000) in paragraph at lines 475--476
+
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 484--485
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 481--482
-
- []
-
-
-Overfull \hbox (350.8218pt too wide) in paragraph at lines 483--488
+Overfull \hbox (350.8218pt too wide) in paragraph at lines 486--491
 []$\OT1/cmtt/m/n/10.95 https : / / mlexplained . com / 2019 / 06 / 30 / paper-[
 ]dissected-[]xlnet-[]generalized-[]autoregressive-[]pretraining-[]for-[]languag
 e-[]understanding-[]explained/$[] 
  []
 
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 494--495
+
+Underfull \hbox (badness 10000) in paragraph at lines 497--498
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 506--507
+Underfull \hbox (badness 10000) in paragraph at lines 509--510
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 532--533
+Underfull \hbox (badness 10000) in paragraph at lines 535--536
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 538.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 541.
 [19]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 538.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 541.
  (./journal_theory_ML.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 538.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 538.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 541.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 541.
 Package rerunfilecheck Info: File `journal_theory_ML.out' has not changed.
-(rerunfilecheck)             Checksum: EC72BF0FC38813CA52B2A23B475FA0EB;423.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 538.
+(rerunfilecheck)             Checksum: C698EA9FF81D8963CC4F5D05200A3DB1;479.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 541.
  ) 
 Here is how much of TeX's memory you used:
- 6268 strings out of 494880
- 87297 string characters out of 6179600
- 277086 words of memory out of 5000000
- 9510 multiletter control sequences out of 15000+600000
- 12834 words of font info for 48 fonts, out of 8000000 for 9000
+ 6273 strings out of 494880
+ 87410 string characters out of 6179600
+ 277089 words of memory out of 5000000
+ 9511 multiletter control sequences out of 15000+600000
+ 13141 words of font info for 49 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 28i,10n,43p,2187b,452s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,11n,43p,2187b,452s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
@@ -994,10 +992,10 @@ amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 ti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
 b>
-Output written on journal_theory_ML.pdf (19 pages, 215512 bytes).
+Output written on journal_theory_ML.pdf (19 pages, 216771 bytes).
 PDF statistics:
- 282 PDF objects out of 1000 (max. 8388607)
- 245 compressed objects within 3 object streams
- 32 named destinations out of 1000 (max. 500000)
+ 291 PDF objects out of 1000 (max. 8388607)
+ 254 compressed objects within 3 object streams
+ 33 named destinations out of 1000 (max. 500000)
  57 words of extra memory for PDF output out of 10000 (max. 10000000)
 
