@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  12 NOV 2019 09:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  15 NOV 2019 15:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -653,48 +653,18 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 55.
+ [1
 
-Overfull \hbox (103.12822pt too wide) in paragraph at lines 62--79
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (103.12822pt too wide) in paragraph at lines 64--81
 []$\OT1/cmtt/m/n/10.95 http : / / networkstatic . net / python-[]tutorial-[]cla
 sses-[]objects-[]methods-[]init-[]and-[]simple-[]examples/$[] 
  []
 
 
-Overfull \hbox (68.1361pt too wide) in paragraph at lines 62--79
+Overfull \hbox (68.1361pt too wide) in paragraph at lines 64--81
 []$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 13886168 /
  how-[]to-[]use-[]the-[]pass-[]statement-[]in-[]python$[] 
- []
-
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (3.90053pt too wide) in paragraph at lines 80--95
-[]$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 231767 / w
-hat-[]does-[]the-[]yield-[]keyword-[]do$[] 
- []
-
-
-Overfull \hbox (20.14659pt too wide) in paragraph at lines 80--95
-[]$\OT1/cmtt/m/n/10.95 https : / / github . com / rg3 / youtube-[]dl / blob / m
-aster / README . md # embedding-[]youtube-[]dl$[] 
- []
-
-
-Overfull \hbox (73.88478pt too wide) in paragraph at lines 80--95
-[]$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 1369526 / 
-what-[]is-[]the-[]python-[]keyword-[]with-[]used-[]for #
- []
-
-
-Overfull \hbox (102.62822pt too wide) in paragraph at lines 80--95
-[]$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 3012488 / 
-what-[]is-[]the-[]python-[]with-[]statement-[]designed-[]for$[] 
- []
-
-
-Overfull \hbox (3.83386pt too wide) in paragraph at lines 80--95
-[]$\OT1/cmtt/m/n/10.95 https : / / docs . python . org / release / 2 . 5 . 2 / 
-lib / typecontextmanager . html$[] []$https : / /
  []
 
 
@@ -704,209 +674,234 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2]
-Overfull \hbox (139.12035pt too wide) in paragraph at lines 96--112
+Overfull \hbox (3.90053pt too wide) in paragraph at lines 82--97
+[]$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 231767 / w
+hat-[]does-[]the-[]yield-[]keyword-[]do$[] 
+ []
+
+
+Overfull \hbox (20.14659pt too wide) in paragraph at lines 82--97
+[]$\OT1/cmtt/m/n/10.95 https : / / github . com / rg3 / youtube-[]dl / blob / m
+aster / README . md # embedding-[]youtube-[]dl$[] 
+ []
+
+
+Overfull \hbox (73.88478pt too wide) in paragraph at lines 82--97
+[]$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 1369526 / 
+what-[]is-[]the-[]python-[]keyword-[]with-[]used-[]for #
+ []
+
+
+Overfull \hbox (102.62822pt too wide) in paragraph at lines 82--97
+[]$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 3012488 / 
+what-[]is-[]the-[]python-[]with-[]statement-[]designed-[]for$[] 
+ []
+
+
+Overfull \hbox (3.83386pt too wide) in paragraph at lines 82--97
+[]$\OT1/cmtt/m/n/10.95 https : / / docs . python . org / release / 2 . 5 . 2 / 
+lib / typecontextmanager . html$[] []$https : / /
+ []
+
+
+Overfull \hbox (139.12035pt too wide) in paragraph at lines 98--114
 []$\OT1/cmtt/m/n/10.95 https : / / unix . stackexchange . com / questions / 847
 07 / how-[]can-[]i-[]make-[]ctrl-[]alt-[]act-[]like-[]alt-[]gr-[]in-[]ubuntu$[]
  
  []
 
 
-Overfull \hbox (1.90053pt too wide) in paragraph at lines 96--112
+Overfull \hbox (1.90053pt too wide) in paragraph at lines 98--114
 []$\OT1/cmtt/m/n/10.95 https : / / access . redhat . com / documentation / en-[
 ]US / Red _ Hat _ Enterprise _ Linux / 4 /
  []
 
 
-Overfull \hbox (143.3787pt too wide) in paragraph at lines 96--112
+Overfull \hbox (143.3787pt too wide) in paragraph at lines 98--114
 \OT1/cmr/m/n/10.95 ([]$\OT1/cmtt/m/n/10.95 https : / / unix . stackexchange . c
 om / questions / 84707 / how-[]can-[]i-[]make-[]ctrl-[]alt-[]act-[]like-[]alt-[
 ]gr-[]in-[]ubuntu$[] 
  []
 
 [3]
-Overfull \hbox (12.3602pt too wide) in paragraph at lines 124--129
+Overfull \hbox (12.3602pt too wide) in paragraph at lines 126--131
 []$\OT1/cmtt/m/n/10.95 https : / / askubuntu . com / questions / 158112 / xvkbd
 -[]broken-[]with-[]warnings / 211495$[] 
  []
 
 
-Overfull \hbox (224.85066pt too wide) in paragraph at lines 132--141
+Overfull \hbox (224.85066pt too wide) in paragraph at lines 134--143
 []$\OT1/cmtt/m/n/10.95 https : / / unix . stackexchange . com / questions / 428
 41 / how-[]to-[]skip-[]permission-[]denied-[]errors-[]when-[]running-[]find-[]i
 n-[]linux #
  []
 
 
-Overfull \hbox (7.14922pt too wide) in paragraph at lines 143--143
+Overfull \hbox (7.14922pt too wide) in paragraph at lines 145--145
 []\OT1/cmtt/m/n/10.95 Writing default config to: /home/aritz/.jupyter/jupyter_n
 otebook_config.py[] 
  []
 
 
-Overfull \hbox (6.31851pt too wide) in paragraph at lines 144--148
+Overfull \hbox (6.31851pt too wide) in paragraph at lines 146--150
 \OT1/cmr/m/n/10.95 Even though I cre-ated this pas-sord when I was in-side the 
 vir-tual en-vi-ron-ment my[]python35
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--148
+Underfull \hbox (badness 10000) in paragraph at lines 146--150
 
  []
 
 [4]
-Overfull \hbox (56.13872pt too wide) in paragraph at lines 170--183
+Overfull \hbox (56.13872pt too wide) in paragraph at lines 172--185
 []$\OT1/cmtt/m/n/10.95 https : / / github . com / rg3 / youtube-[]dl / blob / m
 aster / README . md # how-[]do-[]i-[]update-[]youtube-[]dl$[] 
  []
 
 [5]
-Overfull \hbox (218.60197pt too wide) in paragraph at lines 193--209
+Overfull \hbox (218.60197pt too wide) in paragraph at lines 195--211
 []$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 11077023 /
  what-[]are-[]the-[]differences-[]between-[]pandas-[]and-[]numpyscipy-[]in-[]py
 thon #
  []
 
 
-Overfull \hbox (7.64922pt too wide) in paragraph at lines 193--209
+Overfull \hbox (7.64922pt too wide) in paragraph at lines 195--211
 []$\OT1/cmtt/m/n/10.95 https : / / docs . python . org / 2 / tutorial / datastr
 uctures . html # list-[]comprehensions$[] 
  []
 
 
-Overfull \hbox (21.14659pt too wide) in paragraph at lines 193--209
+Overfull \hbox (21.14659pt too wide) in paragraph at lines 195--211
 []$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 400739 / w
 hat-[]does-[]asterisk-[]mean-[]in-[]python$[] 
  []
 
 [6] [7]
-Overfull \hbox (11.93214pt too wide) in paragraph at lines 232--260
+Overfull \hbox (11.93214pt too wide) in paragraph at lines 234--262
 \OT1/cmr/bx/n/10.95 17.10.17 $[]$[]Python cod-ing guide-line, Python mod-ules a
 nd pack-ages, python
  []
 
 
-Overfull \hbox (21.99442pt too wide) in paragraph at lines 232--260
+Overfull \hbox (21.99442pt too wide) in paragraph at lines 234--262
 \OT1/cmr/m/n/10.95 I found an-other good web-site for python doc-u-men-ta-tion:
  []$\OT1/cmtt/m/n/10.95 http : / / www . pythonforbeginners .
  []
 
 
-Overfull \hbox (3.90053pt too wide) in paragraph at lines 232--260
+Overfull \hbox (3.90053pt too wide) in paragraph at lines 234--262
 []$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 100003 / w
 hat-[]is-[]a-[]metaclass-[]in-[]python #
  []
 
 [8]
-Overfull \hbox (125.12297pt too wide) in paragraph at lines 274--286
+Overfull \hbox (125.12297pt too wide) in paragraph at lines 276--288
 []$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 33091376 /
  python-[]what-[]is-[]exactly-[]sklearn-[]pipeline-[]pipeline #
  []
 
 
-Overfull \hbox (1.41414pt too wide) in paragraph at lines 274--286
+Overfull \hbox (1.41414pt too wide) in paragraph at lines 276--288
 \OT1/cmtt/m/n/10.95 33094099$[] \OT1/cmr/m/n/10.95 and []$\OT1/cmtt/m/n/10.95 h
 ttp : / / scikit-[]learn . org / stable / auto _ examples / model _ selection /
 
  []
 
 
-Overfull \hbox (1.15106pt too wide) in paragraph at lines 292--309
+Overfull \hbox (1.15106pt too wide) in paragraph at lines 294--311
 \OT1/cmr/bx/n/10.95 26.10.17 $[]$[]Advanced Com-pu-ta-tional Statis-tics web-pa
 ge, Scikit-Learn tu-
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 310--315
+Underfull \hbox (badness 10000) in paragraph at lines 312--317
 
  []
 
 [10] [11] [12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 462--465
+Underfull \hbox (badness 10000) in paragraph at lines 464--467
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 472--475
+Underfull \hbox (badness 10000) in paragraph at lines 474--477
 
  []
 
 [14] [15]
-Overfull \hbox (73.88478pt too wide) in paragraph at lines 517--526
+Overfull \hbox (73.88478pt too wide) in paragraph at lines 519--528
 []$\OT1/cmtt/m/n/10.95 https : / / www . kubuntuforums . net / showthread . php
  / 72832-[]Can-[]t-[]find-[]help-[]button-[]in-[]Dolphin ?
  []
 
 
-Overfull \hbox (84.88216pt too wide) in paragraph at lines 517--526
+Overfull \hbox (84.88216pt too wide) in paragraph at lines 519--528
 []$\OT1/cmtt/m/n/10.95 https : / / www . kubuntuforums . net / showthread . php
  / 72833-[]Launching-[]a-[]terminal-[]if-[]GUI-[]crashes ?
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 537--542
-
- []
-
 [16]
-Overfull \hbox (162.36378pt too wide) in paragraph at lines 544--544
+Underfull \hbox (badness 10000) in paragraph at lines 539--544
+
+ []
+
+
+Overfull \hbox (162.36378pt too wide) in paragraph at lines 546--546
 []\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
 https://www.youtube.com/watch?v=XXeu2dYnw88"[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--550
+Underfull \hbox (badness 10000) in paragraph at lines 550--552
 
  []
 
 
-Overfull \hbox (162.36378pt too wide) in paragraph at lines 552--552
+Overfull \hbox (162.36378pt too wide) in paragraph at lines 554--554
 []\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
 https://www.youtube.com/watch?v=XXeu2dYnw88"[] 
  []
 
 
-Overfull \hbox (7.57198pt too wide) in paragraph at lines 557--558
+Overfull \hbox (7.57198pt too wide) in paragraph at lines 559--560
 []\OT1/cmr/m/n/10.95 A course quite the-o-ret-i-cal: []$\OT1/cmtt/m/n/10.95 htt
 ps : / / sites . google . com / view / deep-[]rl-[]bootcamp /
  []
 
 
-Overfull \hbox (162.36378pt too wide) in paragraph at lines 565--565
+Overfull \hbox (162.36378pt too wide) in paragraph at lines 567--567
 []\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
 https://www.youtube.com/watch?v=XXeu2dYnw88"[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 569--572
+Underfull \hbox (badness 10000) in paragraph at lines 571--574
 
  []
 
 [17]
-Overfull \hbox (79.13347pt too wide) in paragraph at lines 589--596
+Overfull \hbox (79.13347pt too wide) in paragraph at lines 591--598
 []$\OT1/cmtt/m/n/10.95 http : / / ubuntuhandbook . org / index . php / 2016 / 0
 4 / switch-[]intel-[]nvidia-[]graphics-[]ubuntu-[]16-[]04/$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 599--600
+Underfull \hbox (badness 10000) in paragraph at lines 601--602
 
  []
 
-
-Overfull \hbox (14.3979pt too wide) in paragraph at lines 605--612
+[18]
+Overfull \hbox (14.3979pt too wide) in paragraph at lines 607--614
 []$\OT1/cmtt/m/n/10.95 https : / / bugs . launchpad . net / ubuntu / +source / 
 nvidia-[]graphics-[]drivers-[]384 / +bug /
  []
 
-[18]
-Overfull \hbox (84.38216pt too wide) in paragraph at lines 624--631
+
+Overfull \hbox (84.38216pt too wide) in paragraph at lines 626--633
 []$\OT1/cmtt/m/n/10.95 https : / / copiancestral . wordpress . com / 2012 / 02 
 / 13 / texmaker-[]error-[]cant-[]open-[]the-[]dictionary/$[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 634--635
-
  []
 
 
@@ -914,229 +909,234 @@ Underfull \hbox (badness 10000) in paragraph at lines 636--637
 
  []
 
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 638--639
 
-Overfull \hbox (24.39528pt too wide) in paragraph at lines 639--639
+ []
+
+
+Overfull \hbox (24.39528pt too wide) in paragraph at lines 641--641
 []\OT1/cmtt/m/n/10.95 pdftk Brochure_for_students_New.pdf cat 13 output Brochur
 e_dfine_page_New.pdf[] 
  []
 
-[19]
-Overfull \hbox (24.89528pt too wide) in paragraph at lines 652--656
+
+Overfull \hbox (24.89528pt too wide) in paragraph at lines 654--658
 []$\OT1/cmtt/m/n/10.95 https : / / www . ethz . ch / content / dam / ethz / ass
 ociates / services / Service / IT-[]Services /
  []
 
 
-Overfull \hbox (77.63347pt too wide) in paragraph at lines 657--661
+Overfull \hbox (77.63347pt too wide) in paragraph at lines 659--663
 []$\OT1/cmtt/m/n/10.95 https : / / www . databasejournal . com / features / mss
 ql / article . php / 3769211 / What-[]is-[]SQL-[]Server .
  []
 
 
-Overfull \hbox (162.36378pt too wide) in paragraph at lines 663--663
+Overfull \hbox (162.36378pt too wide) in paragraph at lines 665--665
 []\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
 https://www.youtube.com/watch?v=vXyRJBuoPrQ"[] 
  []
 
 
-Overfull \hbox (162.36378pt too wide) in paragraph at lines 672--672
+Overfull \hbox (162.36378pt too wide) in paragraph at lines 674--674
 []\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
 https://www.youtube.com/watch?v=CKBRgeFGENI"[] 
  []
 
-
-Overfull \hbox (162.36378pt too wide) in paragraph at lines 680--680
-[]\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
-https://www.youtube.com/watch?v=dX3k_QDnzHE"[] 
- []
-
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 689--692
-
- []
-
-
-Overfull \hbox (162.36378pt too wide) in paragraph at lines 702--702
+Overfull \hbox (162.36378pt too wide) in paragraph at lines 682--682
 []\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
 https://www.youtube.com/watch?v=dX3k_QDnzHE"[] 
  []
 
 
-Overfull \hbox (120.37428pt too wide) in paragraph at lines 711--718
+Underfull \hbox (badness 10000) in paragraph at lines 691--694
+
+ []
+
+
+Overfull \hbox (162.36378pt too wide) in paragraph at lines 704--704
+[]\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
+https://www.youtube.com/watch?v=dX3k_QDnzHE"[] 
+ []
+
+
+Overfull \hbox (120.37428pt too wide) in paragraph at lines 713--720
 []$\OT1/cmtt/m/n/10.95 http : / / www . wildml . com / 2015 / 09 / recurrent-[]
 neural-[]networks-[]tutorial-[]part-[]1-[]introduction-[]to-[]rnns/$[] 
  []
 
 
-Overfull \hbox (42.94337pt too wide) in paragraph at lines 719--722
+Overfull \hbox (42.94337pt too wide) in paragraph at lines 721--724
 \OT1/cmr/m/n/10.95 which con-tains the re-quired in-for-ma-tion. The user-name 
 I had to use was abercher@student.ethz.ch
  []
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 736--737
+Underfull \hbox (badness 10000) in paragraph at lines 738--739
 
  []
 
 
-Overfull \hbox (162.36378pt too wide) in paragraph at lines 748--748
+Overfull \hbox (162.36378pt too wide) in paragraph at lines 750--750
 []\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
 https://www.youtube.com/watch?v=WdS_VdblFtk"[] 
  []
 
 
-Overfull \hbox (162.36378pt too wide) in paragraph at lines 756--756
+Overfull \hbox (162.36378pt too wide) in paragraph at lines 758--758
 []\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
 https://www.youtube.com/watch?v=6dPGV0cols4"[] 
  []
 
 
-Overfull \hbox (162.36378pt too wide) in paragraph at lines 763--763
+Overfull \hbox (162.36378pt too wide) in paragraph at lines 765--765
 []\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
 https://www.youtube.com/watch?v=3kaUvGSLMew"[] 
  []
 
-
-Overfull \hbox (162.36378pt too wide) in paragraph at lines 770--770
+[22]
+Overfull \hbox (162.36378pt too wide) in paragraph at lines 772--772
 []\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
 https://www.youtube.com/watch?v=lmc21V-zBq0"[] 
  []
 
-[22]
-Overfull \hbox (162.36378pt too wide) in paragraph at lines 793--793
+
+Overfull \hbox (162.36378pt too wide) in paragraph at lines 795--795
 []\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
 https://www.youtube.com/watch?v=KzOHin0D8no"[] 
  []
 
 
-Overfull \hbox (136.12035pt too wide) in paragraph at lines 796--801
+Overfull \hbox (136.12035pt too wide) in paragraph at lines 798--803
 []$\OT1/cmtt/m/n/10.95 https : / / www . coursera . org / learn / language-[]pr
 ocessing / lecture / XZtoZ / hashing-[]trick-[]in-[]spam-[]filtering$[] 
  []
 
 
-Overfull \hbox (50.89003pt too wide) in paragraph at lines 807--812
+Overfull \hbox (50.89003pt too wide) in paragraph at lines 809--814
 []$\OT1/cmtt/m/n/10.95 https : / / askubuntu . com / questions / 418396 / what-
 []is-[]the-[]difference-[]between-[]vi-[]and-[]vim #
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 807--812
+Underfull \hbox (badness 10000) in paragraph at lines 809--814
 
  []
 
 [23]
-Overfull \hbox (162.36378pt too wide) in paragraph at lines 819--819
+Overfull \hbox (162.36378pt too wide) in paragraph at lines 821--821
 []\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
 https://www.youtube.com/watch?v=6fpQtKP92BI"[] 
  []
 
 
-Overfull \hbox (162.36378pt too wide) in paragraph at lines 826--826
+Overfull \hbox (162.36378pt too wide) in paragraph at lines 828--828
 []\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
 https://www.youtube.com/watch?v=6fpQtKP92BI"[] 
  []
 
 
-Overfull \hbox (40.39265pt too wide) in paragraph at lines 829--833
+Overfull \hbox (40.39265pt too wide) in paragraph at lines 831--835
 []$\OT1/cmtt/m/n/10.95 https : / / www . howtogeek . com / 135533 / how-[]to-[]
 use-[]rsync-[]to-[]backup-[]your-[]data-[]on-[]linux/$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 829--833
+Underfull \hbox (badness 10000) in paragraph at lines 831--835
 
  []
 
 
-Overfull \hbox (21.14659pt too wide) in paragraph at lines 834--837
+Overfull \hbox (21.14659pt too wide) in paragraph at lines 836--839
 []$\OT1/cmtt/m/n/10.95 https : / / www . kubuntuforums . net / showthread . php
  / 73778-[]Erasing-[]a-[]Linux-[]live-[]key ?
  []
 
 
-Overfull \hbox (162.36378pt too wide) in paragraph at lines 842--842
+Overfull \hbox (162.36378pt too wide) in paragraph at lines 844--844
 []\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
 https://www.youtube.com/watch?v=XFkzRNyygfk"[] 
  []
 
 
-Overfull \hbox (162.36378pt too wide) in paragraph at lines 850--850
+Overfull \hbox (162.36378pt too wide) in paragraph at lines 852--852
 []\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
 https://www.youtube.com/watch?v=sOcP3i-zm-s"[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 854--857
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 858--859
+Underfull \hbox (badness 10000) in paragraph at lines 856--859
 
  []
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 865--868
+Underfull \hbox (badness 10000) in paragraph at lines 860--861
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 871--874
+Underfull \hbox (badness 10000) in paragraph at lines 867--870
 
  []
 
 
-Overfull \hbox (162.36378pt too wide) in paragraph at lines 891--891
-[]\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
-https://www.youtube.com/watch?v=TOPSETBUgvQ"[] 
- []
+Underfull \hbox (badness 10000) in paragraph at lines 873--876
 
-
-Overfull \hbox (162.36378pt too wide) in paragraph at lines 899--899
-[]\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
-https://www.youtube.com/watch?v=TOPSETBUgvQ"[] 
  []
 
 [25]
-Overfull \hbox (162.36378pt too wide) in paragraph at lines 907--907
+Overfull \hbox (162.36378pt too wide) in paragraph at lines 893--893
 []\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
 https://www.youtube.com/watch?v=TOPSETBUgvQ"[] 
  []
 
 
-Overfull \hbox (162.36378pt too wide) in paragraph at lines 921--921
+Overfull \hbox (162.36378pt too wide) in paragraph at lines 901--901
+[]\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
+https://www.youtube.com/watch?v=TOPSETBUgvQ"[] 
+ []
+
+
+Overfull \hbox (162.36378pt too wide) in paragraph at lines 909--909
+[]\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
+https://www.youtube.com/watch?v=TOPSETBUgvQ"[] 
+ []
+
+
+Overfull \hbox (162.36378pt too wide) in paragraph at lines 923--923
 []\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
 https://www.youtube.com/watch?v=hw3d9KTYHIE"[] 
  []
 
 
-Overfull \hbox (56.13872pt too wide) in paragraph at lines 925--930
+Overfull \hbox (56.13872pt too wide) in paragraph at lines 927--932
 []$\OT1/cmtt/m/n/10.95 https : / / github . com / rg3 / youtube-[]dl / blob / m
 aster / README . md # how-[]do-[]i-[]update-[]youtube-[]dl$[] 
  []
 
-
-Overfull \hbox (167.36378pt too wide) in paragraph at lines 939--943
+[26]
+Overfull \hbox (167.36378pt too wide) in paragraph at lines 941--945
 []$\OT1/cmtt/m/n/10.95 https : / / www . kubuntuforums . net / showthread . php
  / 74794-[]Can-[]t-[]transfer-[]songs-[]from-[]Rhythmbox-[]to-[]iPod-[]5-[]gen 
 ?
  []
 
-[26]
-Overfull \hbox (162.36378pt too wide) in paragraph at lines 948--948
+
+Overfull \hbox (162.36378pt too wide) in paragraph at lines 950--950
 []\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
 https://www.youtube.com/watch?v=8nGhHL6Dhok"[] 
  []
 
 
-Overfull \hbox (108.8769pt too wide) in paragraph at lines 952--960
+Overfull \hbox (108.8769pt too wide) in paragraph at lines 954--962
 []$\OT1/cmtt/m/n/10.95 https : / / medium . com / factory-[]mind / regex-[]tuto
 rial-[]a-[]simple-[]cheatsheet-[]by-[]examples-[]649dc1c3f285$[] 
  []
 
 
-Overfull \hbox (532.53111pt too wide) in paragraph at lines 962--966
+Overfull \hbox (532.53111pt too wide) in paragraph at lines 964--968
 []$\OT1/cmtt/m/n/10.95 https : / / www . joelonsoftware . com / 2003 / 10 / 08 
 / the-[]absolute-[]minimum-[]every-[]software-[]developer-[]absolutely-[]positi
 vely-[]must-[]know-[]about-[]unicode-[]and-[]character-[]sets-[]no-[]excuses/$[
@@ -1144,163 +1144,149 @@ vely-[]must-[]know-[]about-[]unicode-[]and-[]character-[]sets-[]no-[]excuses/$[
  []
 
 
-Overfull \hbox (162.36378pt too wide) in paragraph at lines 971--971
+Overfull \hbox (162.36378pt too wide) in paragraph at lines 973--973
 []\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
 https://www.youtube.com/watch?v=hw3d9KTYHIE"[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 976--977
+Underfull \hbox (badness 10000) in paragraph at lines 978--979
+
+ []
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 985--986
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 983--984
-
- []
-
-
-Overfull \hbox (162.36378pt too wide) in paragraph at lines 988--988
+Overfull \hbox (162.36378pt too wide) in paragraph at lines 990--990
 []\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
 https://www.youtube.com/watch?v=8nGhHL6Dhok"[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 994--995
-
- []
-
-[27]
-Underfull \hbox (badness 10000) in paragraph at lines 1013--1017
+Underfull \hbox (badness 10000) in paragraph at lines 996--997
 
  []
 
 
-Overfull \hbox (162.36378pt too wide) in paragraph at lines 1024--1024
+Underfull \hbox (badness 10000) in paragraph at lines 1015--1019
+
+ []
+
+
+Overfull \hbox (162.36378pt too wide) in paragraph at lines 1028--1028
 []\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
 https://www.youtube.com/watch?v=hw3d9KTYHIE"[] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1029--1030
-
- []
-
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 1038--1039
+Underfull \hbox (badness 10000) in paragraph at lines 1033--1034
 
  []
 
 
-Overfull \hbox (7.14922pt too wide) in paragraph at lines 1043--1043
+Underfull \hbox (badness 10000) in paragraph at lines 1042--1043
+
+ []
+
+
+Overfull \hbox (7.14922pt too wide) in paragraph at lines 1047--1047
 []\OT1/cmtt/m/n/10.95 file:///home/aritz/Music/Youtube_Songs/You Make My Dreams
  (Remastered).mp3[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1050--1051
+Underfull \hbox (badness 10000) in paragraph at lines 1054--1055
 
  []
 
 
-Overfull \hbox (230.09935pt too wide) in paragraph at lines 1052--1055
+Overfull \hbox (230.09935pt too wide) in paragraph at lines 1056--1059
 []$\OT1/cmtt/m/n/10.95 https : / / towardsdatascience . com / solving-[]machine
 -[]learnings-[]last-[]mile-[]problem-[]for-[]operational-[]decisions-[]65e9f44d
 82b$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1059--1060
+Underfull \hbox (badness 10000) in paragraph at lines 1063--1064
 
  []
 
 
-Overfull \hbox (0.15184pt too wide) in paragraph at lines 1061--1064
+Overfull \hbox (0.15184pt too wide) in paragraph at lines 1065--1068
 []$\OT1/cmtt/m/n/10.95 https : / / nordicapis . com / what-[]is-[]the-[]differe
 nce-[]between-[]an-[]api-[]and-[]an-[]sdk/$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1068--1069
+Underfull \hbox (badness 10000) in paragraph at lines 1072--1073
 
  []
 
 
-Overfull \hbox (92.13084pt too wide) in paragraph at lines 1070--1072
+Overfull \hbox (92.13084pt too wide) in paragraph at lines 1074--1076
 []$\OT1/cmtt/m/n/10.95 https : / / www . cloudamqp . com / blog / 2015-[]05-[]1
 8-[]part1-[]rabbitmq-[]for-[]beginners-[]what-[]is-[]rabbitmq .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1070--1072
+Underfull \hbox (badness 10000) in paragraph at lines 1074--1076
+
+ []
+
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 1082--1083
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1078--1079
+Underfull \hbox (badness 10000) in paragraph at lines 1091--1092
 
  []
 
-[29] [30]
-Overfull \hbox (5.78084pt too wide) in paragraph at lines 1125--1127
+[30]
+Overfull \hbox (5.78084pt too wide) in paragraph at lines 1137--1139
 []$\OT1/cmtt/m/n/10.95 https : / / github . com / NileshGule / Ebooks / blob / 
 master / The % 20Clean % 20Coder %
  []
 
 [31] [32]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1190.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1202.
  [33]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1190.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1202.
  (./journal_CS.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1190.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1190.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1202.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1202.
 
-
-
-Package rerunfilecheck Warning: File `journal_CS.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `journal_CS.out':
-(rerunfilecheck)             Before: 5325182BEFB4743D3CE874AAE4CCE10E;590
-(rerunfilecheck)             After:  9146EAD50763ADF1E7CE766591E0075B;641.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1190.
+Package rerunfilecheck Info: File `journal_CS.out' has not changed.
+(rerunfilecheck)             Checksum: 9146EAD50763ADF1E7CE766591E0075B;641.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1202.
  ) 
 Here is how much of TeX's memory you used:
- 6366 strings out of 494880
- 88011 string characters out of 6179600
+ 6363 strings out of 494880
+ 87966 string characters out of 6179600
  278155 words of memory out of 5000000
- 9518 multiletter control sequences out of 15000+600000
+ 9519 multiletter control sequences out of 15000+600000
  12785 words of font info for 49 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 28i,10n,43p,1182b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsection.2.4} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.3} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.2} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.1} has been referenced but does not ex
-ist, replaced by a fixed one
-
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols
-/msbm10.pfb>
-Output written on journal_CS.pdf (33 pages, 224963 bytes).
+ 28i,11n,43p,1182b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbo
+ls/msbm10.pfb>
+Output written on journal_CS.pdf (33 pages, 225870 bytes).
 PDF statistics:
- 525 PDF objects out of 1000 (max. 8388607)
- 474 compressed objects within 5 object streams
- 119 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 529 PDF objects out of 1000 (max. 8388607)
+ 478 compressed objects within 5 object streams
+ 115 named destinations out of 1000 (max. 500000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
