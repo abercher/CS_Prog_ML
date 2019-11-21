@@ -534,6 +534,19 @@ ERNIE 2.0 generalize the idea by adding new pretraining tasks. They are split in
 \end{enumerate}
 The Information Retrieval Relevance Task is based on a dataset created by Baidu search engine.\\
 
+\end{loggentry}
+
+
+\begin{loggentry}{21.11.19}{Recurrent Neural Network Grammars}
+
+I read this paper which introduces a new neural architecture called \textbf{Recurrent Neural Network Grammar (RNNG)}:\\
+\url{https://arxiv.org/pdf/1602.07776.pdf}\\
+It can be used for two tasks: random generation of English sentences with an associated parse tree, creation of parse tree for a sentence. Given an input sentence, the model recursively chooses a sequence of actions among ``opening a non terminal node" (meaning creating a new subtree), \textbf{SHIFT}, and \textbf{REDUCE} (see p.2 of the paper for details). Recurrent Neural Network are used at each step to encode the current state of the algorithm, and the next action is predicted using this state (made of three vectors) with a simple one layer NN (see section 4.1).\\
+The authors this paper of facebook:\\
+\url{https://www.aclweb.org/anthology/D18-1300.pdf}\\
+present an annotation system which goes beyond the simple intent and slots paradigm, with annotation being a kind of tree over the sentence. The tree structure comes with the benefit of clearly decomposing the general order to give to the computer into sub task, making the task of designing the DM somehow easier. The RNNG presented above perform very well to create these trees. facebook provides both an implementation as well as an annotated data set:\\
+\url{https://pytext.readthedocs.io/en/master/hierarchical_intent_slot_tutorial.html}\\
+
 
 \end{loggentry}
 
