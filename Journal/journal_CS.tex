@@ -57,6 +57,8 @@ This will be a diary containing a short summary of what I did every day of this 
 It covers a broad range of topics. I might learn a log by simply trying to understand these posts.
 \item I found this page which gathers many good online resources for an \textbf{introduction to web development}:\\
 \url{https://www.fullstackpython.com/web-development.html}
+\item Rishu told me that one can use \textbf{severs for free} on this website:\\
+\url{https://www.heroku.com/}
 \end{itemize}
 
 \section{Journal}
@@ -1067,7 +1069,7 @@ It rests on a Bayesian approach. Conclusions are really interesting. One the con
 
 I downloaded some new songs with
 \begin{verbatim}
-file:///home/aritz/Music/Youtube_Songs/You Make My Dreams (Remastered).mp3
+youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=hw3d9KTYHIE"
 \end{verbatim}
 
 The last one was "If you seek Amy" of Britney.
@@ -1138,6 +1140,18 @@ From what I understand a grammar is a pattern matching a set of strings. If we p
 \end{loggentry}
 
 
+\begin{loggentry}{04.12.19}{Download more songs}
+
+I downloaded some new songs with
+\begin{verbatim}
+youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=hw3d9KTYHIE"
+\end{verbatim}
+
+He last song I downloaded was Everybody's fool of Evanescence.\\
+
+\end{loggentry}
+
+
 \section{Knowledge I need to gain}
 
 \subsection{Knowledge in deep learning I need to gain}
@@ -1193,6 +1207,7 @@ I should also look at the different books used to prepare for google interview (
 
 \section{Ideas of things to do}
 \begin{enumerate}
+\item (16.12.19) I read in Via that so far it's not possible to generate the shape of snow flakes with computers. I don't know exactly what is meant by this but it would be interesting to look at this problem. Maybe one could use some random fractals.
 \item (29.10.19) Something awesome to do would be to have a computer with to which you could communicate by using both the voice and gestures.
 \item (22.10.19) I could try to do a notebook for \textbf{style transfer}.
 \item 03.09.19 It would be good to create a \textbf{service} that I would put \textbf{into a server inside a docker}, and query it from my computer.
