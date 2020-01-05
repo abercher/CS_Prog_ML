@@ -1289,7 +1289,30 @@ It is supposed to be simple to use.\\
 \url{https://www.twilio.com/blog/2016/12/getting-started-with-sanic-the-asynchronous-uvloop-based-web-framework-for-python-3-5.html}\\
 Note that at the moment where I write this, python 3.5 is not enough (unlike what is written in the tutorial) and at python 3.6 is the minimum required.\\
 I also read this page from the sanic doc which explains how to configure your server:\\
-\url{https://sanic.readthedocs.io/en/latest/sanic/config.html}
+\url{https://sanic.readthedocs.io/en/latest/sanic/config.html}\\
+
+\textbf{Edit (05.01.20):} From what I understand, one of the main things that sanic does is to map predefined types of http requests (by default, I think that it is assumed to be a GET request, which just means that the client tries to access some data from the server) to some python functions which do an action when a client sends the given request. The mapping is done using decorators. Here is a simple example where the server is then run locally (I'm still confused about how to run a server and where to run it):
+\begin{verbatim}
+from sanic import Sanic
+from sanic.response import text
+
+
+app = Sanic()
+
+
+@app.route("/")
+async def hello(request):
+    return text("Hello World!")
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8000)
+\end{verbatim}
+Note that there exists other similar decorators, like \texttt{@app.get} or \texttt{@app.post} which are wrappers for \texttt{@app.route} with methods argument taking the corresponding value like:
+\begin{verbatim}
+@app.route('/get', methods=['GET'], host='example.com')
+async def get_handler(request):
+    return text('GET request - {}'.format(request.args))
+\end{verbatim}
 
 \end{loggentry}
 
