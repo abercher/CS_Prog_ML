@@ -539,7 +539,7 @@ The Information Retrieval Relevance Task is based on a dataset created by Baidu 
 \end{loggentry}
 
 
-\begin{loggentry}{21.11.19}{Recurrent Neural Network Grammars}
+\begin{loggentry}{21.11.19}{Recurrent Neural Network Grammars, Building a Neural Semantic Parser from a Domain Ontology}
 
 I read this paper which introduces a new neural architecture called \textbf{Recurrent Neural Network Grammar (RNNG)}:\\
 \url{https://arxiv.org/pdf/1602.07776.pdf}\\
@@ -549,6 +549,9 @@ The authors this paper of facebook:\\
 present an annotation system which goes beyond the simple intent and slots paradigm, with annotation being a kind of tree over the sentence. The tree structure comes with the benefit of clearly decomposing the general order to give to the computer into sub task, making the task of designing the DM somehow easier. The RNNG presented above perform very well to create these trees. facebook provides both an implementation as well as an annotated data set:\\
 \url{https://pytext.readthedocs.io/en/master/hierarchical_intent_slot_tutorial.html}\\
 
+\textbf{Edit (09.01.20):} I had a quick look at this paper:\\
+\url{https://arxiv.org/pdf/1812.10037.pdf}\\
+which intends to \textbf{build a neural semantic parser from a Domain Ontology}. I have the impression that it bares some similarity with the above approach, but I didn't dig enough into the details to fully understand. It can generate some natural language queries data from an already existing ontology, and it can also create a tree representation of a query in natural language. I'm not sure to understand exactly what the different steps of the tree generation are, and I haven't read how they are chosen. I just know that it's using NN, so it is kind of similar to the above method.
 
 \end{loggentry}
 
