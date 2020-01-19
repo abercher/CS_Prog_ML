@@ -86,7 +86,8 @@ I read these two pages of a same tutorial on the \textbf{Skip-gram} model:\\
 \url{http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/}\\
 \url{http://mccormickml.com/2017/01/11/word2vec-tutorial-part-2-negative-sampling/}\\
 \textbf{Edit (27.07.18):} The skip-gram model is also presented in the coursera mook on NLP, in a quite different way.\\
-\textbf{Edit (21.10.18):} Basically, the skip-gram model does the following: it builds a neural network to predict for a given word, its context. The input is a one-hot encoded vector representing a word and the output is a vector of probability of size equal to the size of the vocabulary (let's call it $n$) indicating the probability of having any word as neighbor. The embeddings are obtained by taking the intermediary layer (which has no activation function and can be seen as matrix of size $n\times 300$ (if the embedding dimension is $300$)).
+\textbf{Edit (21.10.18):} Basically, the skip-gram model does the following: it builds a neural network to predict for a given word, its context. The input is a one-hot encoded vector representing a word and the output is a vector of probability of size equal to the size of the vocabulary (let's call it $n$) indicating the probability of having any word as neighbor. The embeddings are obtained by taking the intermediary layer (which has no activation function and can be seen as matrix of size $n\times 300$ (if the embedding dimension is $300$)).\\
+\textbf{Edit (19.01.2020):} This is the technique used by \textbf{Word2Vec}.
 \end{loggentry}
 
 \begin{loggentry}{14.03.18}{Recurrent Neural Networks (RNN), Long Short Term Memory (LSTM)}
@@ -116,6 +117,17 @@ but I didn't find it so good when it comes to explaining what character embeddin
 I read this page about \textit{GloVe}:\\
 \url{https://nlp.stanford.edu/projects/glove/}\\
 I think it is just a library doing this word embedding. It looks like the fundamental ideas are the same as for Word2Vec, i.e. train a model to predict co-occurrence of words (and then use the weights obtained as your embeddings).\\
+\textbf{Edit (19.01.2020):} Actually even if the idea is a bit the same, and in both cases we build word vectors using co-occurances, the technique is different. In Word2Vec one uses a neural network to predict one word randomly selected in a window around a given word, with a neural network having only one hidden layer. The hidden layer is used as the embedding matrix. In GloVe one uses a matrix of co-occurence of the words in the corpus and use matrix factorization and dimensionality reduction techniques to produce embeddings. If I got it right, let say that we have
+$$
+M = A \Sigma B
+$$
+and can approximate it keeping only the first $300$ features in the diagonal of $\Sigma$, by taking
+$$
+M' = A' \Sigma' B'
+$$
+then we can use the $A'$ as our embedding matrix.\\
+For GloVe, this page seems to give a nice explanation (but I haven't read it yet):\\
+\url{https://blog.acolyer.org/2016/04/22/glove-global-vectors-for-word-representation/}\\
 The I read this page:\\
 \href{https://www.analyticsvidhya.com/blog/2017/07/word-representations-text-classification-using-fasttext-nlp-facebook/}{analyticsvidhya.com: Word representations-text classification using Fasttext (an NLP library from facebook)}\\
 The introduction explains quite well what \textbf{character embedding} is and what are its advantages compared to classical (i.e. Word2Vec already mentioned above) word embedding techniques. Then it dives into how to use this library. Maybe I should try to use it on the data set from fastai.
