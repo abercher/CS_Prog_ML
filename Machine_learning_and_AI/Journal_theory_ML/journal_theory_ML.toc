@@ -2,6 +2,6 @@
 \contentsline {section}{\numberline {2}Specific technical questions which should be answered}{2}{section.2}
 \contentsline {section}{\numberline {3}Journal}{2}{section.3}
 \contentsline {subsection}{\numberline {3.1}Neural Machine Translation Model (Mechanics of Seq2seq Models With Attention)}{12}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}The Transformer}{12}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.2}The Transformer}{13}{subsection.3.2}
 \contentsline {subsection}{\numberline {3.3}ELMo}{15}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}BERT}{15}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.4}BERT}{16}{subsection.3.4}
