@@ -565,6 +565,7 @@ Joram presented this paper:\\
 \url{https://arxiv.org/pdf/1912.02164.pdf}\\
 which aims at doing text generation using a LM based on GPT2, with the possibility of deciding \textbf{which model topic is going to be the main theme of the generated text}.\\
 According to the paper, this approach requires less training (maybe even no additional training) than the classical approach consisting in fine-tuning the language model on specific data associated to the given topic. It seems to be somehow related to what is done with style transfer in image processing.\\
+The key idea was to use some implementation of hugging face for GPT2 (this implementation was introduced for optimization reasons), and before predicting what is the $k+1$ word, one update the activation values (and not the attention weight (this is a trick similar to the one used in transfer learning in image processing)) of the $k$ first words by using back propagation with regards to another loss function, not related to linear modeling but to topic prediction)
 
 \end{loggentry}
 

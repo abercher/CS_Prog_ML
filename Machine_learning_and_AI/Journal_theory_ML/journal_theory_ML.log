@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  14 JAN 2020 16:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  15 JAN 2020 09:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -994,21 +994,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 562--563
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 564--568
-
- []
-
 [20]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 572.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 573.
  [21]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 572.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 573.
  (./journal_theory_ML.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 572.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 572.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 573.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 573.
 Package rerunfilecheck Info: File `journal_theory_ML.out' has not changed.
 (rerunfilecheck)             Checksum: C698EA9FF81D8963CC4F5D05200A3DB1;479.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 572.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 573.
  ) 
 Here is how much of TeX's memory you used:
  6275 strings out of 494880
@@ -1031,7 +1026,7 @@ amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 ti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
 b>
-Output written on journal_theory_ML.pdf (21 pages, 220506 bytes).
+Output written on journal_theory_ML.pdf (21 pages, 221060 bytes).
 PDF statistics:
  307 PDF objects out of 1000 (max. 8388607)
  268 compressed objects within 3 object streams
