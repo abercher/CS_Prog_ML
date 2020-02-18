@@ -91,7 +91,7 @@ I read these two pages of a same tutorial on the \textbf{Skip-gram} model:\\
 \end{loggentry}
 
 \begin{loggentry}{14.03.18}{Recurrent Neural Networks (RNN), Long Short Term Memory (LSTM)}
-I read this introduction to \textbf{Recurrent Neural Networks in NLP}, and their applications to \textbf{Language Modeling and Generating Test}, \textbf{Machine Translation}, \textbf{Speech Recognition}, \textbf{Generating Image Descriptions} (when coupled with some CNN):\\
+I read this introduction to \textbf{Recurrent Neural Networks in NLP}, and their applications to \textbf{Language Modeling and Generating Text}, \textbf{Machine Translation}, \textbf{Speech Recognition}, \textbf{Generating Image Descriptions} (when coupled with some CNN):\\
 \url{http://www.wildml.com/2015/09/recurrent-neural-networks-tutorial-part-1-introduction-to-rnns/}\\
 I also read this page on \textbf{Long Short Term Memory (LSTM)} networks:\\
 \url{https://colah.github.io/posts/2015-08-Understanding-LSTMs/}\\
@@ -192,6 +192,8 @@ In the notebook of the exercise of the first week, I (re)discovered the notion o
 \href{https://en.wikipedia.org/wiki/F1_score}{Wiki: F1 score}
 which is a useful metric for binary or multi-label classification.\\
 I also came back on the notion of \textbf{ROC curve}. I was confuse at first because, I had the impression that if we were doing binary classification (I guess we can generalize this discussion easily to multi-label classification) and we have just the predicted class of a model for a given set of data, there is only one True Positive Rate (TPR) and one False Positive Rate (FPR) to compute. But actually, we don't use the predicted classes but the \textit{scores} output by the model, i.e. for each sample the probability to belong to each one of the two classes. Then we can consider for each $c\in [0,1]$, the samples for which the probability to be in the second class is above c, to be ``positive" and the other samples to be ``negative", and then compare to the true labels. And this way we can compute this ROC curve.\\
+\textbf{Edit (18.02.20):} I read this page which explains how to generalize metrics such as \textbf{precision} or \textbf{recall} to \textbf{multi-label} classification:\\
+\url{https://stackoverflow.com/questions/9004172/precision-recall-for-multiclass-multilabel-classification}
 \end{loggentry}
 
 \begin{loggentry}{29.05.18}{More about NLP}
