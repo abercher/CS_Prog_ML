@@ -592,6 +592,18 @@ I stumbled upon the topic of \textbf{Neural Architecture Search} which seems to 
 \url{https://en.wikipedia.org/wiki/Neural_architecture_search}\\
 but I didn't get much out of it.
 
+\end{loggentry}
+
+
+\begin{loggentry}{15.03.20}{Doc2Vec}
+
+In this post I sumbled upon \textbf{Doc2Vec}:\\
+\url{https://medium.com/towards-artificial-intelligence/multi-label-text-classification-using-scikit-multilearn-case-study-with-stackoverflow-questions-768cb487ad12}\\
+I found the explanation given here:\\
+\url{https://medium.com/wisio/a-gentle-introduction-to-doc2vec-db3e8c0cce5e}\\
+not very satisfying because it's not clear at all how embeddings would be created for \textbf{new paragraphs}. For Word2Vec the vocabulary is fixed before the training so how could we use the same method but allow having new paragraphs? The trick is that it's not the same kind of training. As explained in the paper:\\
+\url{https://cs.stanford.edu/~quocle/paragraph_vector.pdf}\\
+at inference (which is here means when we want to use our model to generate embeddings for new paragraphs), one actually does the same kind of back-propagation training as during the initial training, except that one can only update the weights of the vector of the paragraph (this is all we care about, and the word vectors have been trained in the initial phase of the training).
 
 \end{loggentry}
 
