@@ -594,6 +594,16 @@ but I didn't get much out of it.
 \end{loggentry}
 
 
+\begin{loggentry}{19.03.20}{AWD-LSTM}
+
+I read this article about \textbf{AWD LSTM}:\\
+\url{https://yashuseth.blog/2018/09/12/awd-lstm-explanation-understanding-language-model/}\\
+
+from what I understand, the big changes are: drop out is done at the level of the weights (the one connecting the hidden layers), and there is a variant of SGD used for optimization. The first thing prevents over-fitting (from what is explained, I understand that it's more appropriate than classical drop-out for RNN), and the second helps better optimizing the weights. The task described was language modeling.
+
+\end{loggentry}
+
+
 \end{document}
 
 
