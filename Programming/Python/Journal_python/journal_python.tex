@@ -1410,7 +1410,9 @@ def register(
 I didn't find any good explanation of what a sanic blueprint is but it seems to be a concept appearing in many web application framework, and I found some documentation about the \textbf{flask} blueprints:\\
 \url{http://exploreflask.com/en/latest/blueprints.html}\\
 From I understand, the role of a flask (and probably sanic) app object is to map a request made at a certain url (the two together form a \textbf{route} from what I understand) to a python function. \textbf{Blueprints} help mapping a group of similar request to a same function. For instance if several URLs have a the same prefix (facebook/profile/pictures.html and facebook/profile/friends) we might want to put them in a similar blueprint.\\
-The concept of \textbf{view} comes also frequently. From what I understand it is a python function associated to a route.
+The concept of \textbf{view} comes also frequently. From what I understand it is a python function associated to a route.\\
+
+I also learned about \textbf{Web Server Gateway Interface (WSGI)} which is something specific to python but related to web application.\\
 
 \end{loggentry}
 
