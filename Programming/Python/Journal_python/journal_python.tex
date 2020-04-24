@@ -1388,6 +1388,32 @@ It includes
 \end{loggentry}
 
 
+\begin{loggentry}{24.04.20}{Fask and Blueprints}
+
+Since a while I'm trying to understand the concept of \textbf{blueprints} which is implemented in the sanic library used by rasa. Here is the piece of code inside rasa/core/channels/channel.py where it appears:
+\begin{verbatim}
+def register(
+    input_channels: List["InputChannel"], app: Sanic, route: Optional[Text]
+) -> None:
+    async def handler(*args, **kwargs):
+        await app.agent.handle_message(*args, **kwargs)
+
+    for channel in input_channels:
+        if route:
+            p = urljoin(route, channel.url_prefix())
+        else:
+            p = None
+        app.blueprint(channel.blueprint(handler), url_prefix=p)
+
+    app.input_channels = input_channels
+\end{verbatim}
+I didn't find any good explanation of what a sanic blueprint is but it seems to be a concept appearing in many web application framework, and I found some documentation about the \textbf{flask} blueprints:\\
+\url{http://exploreflask.com/en/latest/blueprints.html}\\
+From I understand, the role of a flask (and probably sanic) app object is to map a request made at a certain url to a python function. Blueprints help mapping a group of similar request to a same function.
+
+\end{loggentry}
+
+
 \section{Questions}
 \begin{enumerate}
 \item If I want to check that the arguments received by a function are of the appropriate type and throw an error if they aren't how do I do?
