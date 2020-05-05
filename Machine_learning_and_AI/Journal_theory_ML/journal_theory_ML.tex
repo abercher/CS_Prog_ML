@@ -87,7 +87,9 @@ I read these two pages of a same tutorial on the \textbf{Skip-gram} model:\\
 \url{http://mccormickml.com/2017/01/11/word2vec-tutorial-part-2-negative-sampling/}\\
 \textbf{Edit (27.07.18):} The skip-gram model is also presented in the coursera mook on NLP, in a quite different way.\\
 \textbf{Edit (21.10.18):} Basically, the skip-gram model does the following: it builds a neural network to predict for a given word, its context. The input is a one-hot encoded vector representing a word and the output is a vector of probability of size equal to the size of the vocabulary (let's call it $n$) indicating the probability of having any word as neighbor. The embeddings are obtained by taking the intermediary layer (which has no activation function and can be seen as matrix of size $n\times 300$ (if the embedding dimension is $300$)).\\
-\textbf{Edit (19.01.2020):} This is the technique used by \textbf{Word2Vec}.
+\textbf{Edit (19.01.20):} This is the technique used by \textbf{Word2Vec}.\\
+\textbf{Edit (05.05.20):} This article explains how to use Word2Vec to \textbf{build a recommendation System} and provides a detailed python implementation of it:\\
+\url{https://www.analyticsvidhya.com/blog/2019/07/how-to-build-recommendation-system-word2vec-python/}
 \end{loggentry}
 
 \begin{loggentry}{14.03.18}{Recurrent Neural Networks (RNN), Long Short Term Memory (LSTM)}
