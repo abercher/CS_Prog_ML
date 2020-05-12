@@ -1,5 +1,5 @@
 \contentsline {section}{\numberline {1}Useful resources}{1}{section.1}
 \contentsline {section}{\numberline {2}Good coding practice}{2}{section.2}
 \contentsline {section}{\numberline {3}Journal}{2}{section.3}
-\contentsline {section}{\numberline {4}Questions}{38}{section.4}
-\contentsline {section}{\numberline {5}Useful How-Tos}{38}{section.5}
+\contentsline {section}{\numberline {4}Questions}{40}{section.4}
+\contentsline {section}{\numberline {5}Useful How-Tos}{40}{section.5}

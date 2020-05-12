@@ -1419,6 +1419,79 @@ Here is the docstring of the \texttt{Blueprint} class of the \textbf{sanic} libr
 ``In *Sanic* terminology, a **Blueprint** is a logical collection of URLs that perform a specific set of tasks which can be identified by a unique name."\\
 
 
+\end{loggentry}
+
+
+\begin{loggentry}{12.05.20}{Custom Word2Vec embedding with gensim}
+
+I created some custom word embeddings with \textbf{gensim}.\\
+An important note is that it was recommended to install \textbf{cython} in the python environment to make the training efficient.\\
+
+The \textbf{preprocessing}, is actually not necessarily trivial. Steps like removing stop words and punctuation on the sentences which will be used as training material for the Word2Vec are meaningful if one wants to use embedding vectors for similarity measures but not necessarily if one wants to feed the word vectors to a model making some more complex task than finding what is similar to what. Lemmatization is also something good for word similarity but not necessarily for the rest. It might be also useful to replace alpha-numerical quantities by something tokens which do not vary (replace phone numbers by phone\_number for instance).\\
+This page give me some good indications:\\
+\url{https://www.quora.com/Why-should-punctuation-be-removed-in-Word2vec}\\
+Here is the pipeline I used pipeline:
+\begin{enumerate}
+\item Lower case text
+\item Replace entity values by entity types
+\item Split into sentences
+\item Remove punctuation
+\item Remove stop words
+\item Lemmatize
+\item Map remaining sequences of numbers to "number\_"
+\end{enumerate}
+
+Using the following links:\\
+\url{https://machinelearningmastery.com/develop-word-embeddings-python-gensim/}\\
+\url{https://www.analyticsvidhya.com/blog/2019/07/how-to-build-recommendation-system-word2vec-python/}\\
+\url{https://radimrehurek.com/gensim/models/word2vec.html}\\
+
+I wrote this little \textbf{script to train} the Word2Vec model and find words similar to a given one:
+\begin{verbatim}
+import os
+import json
+from gensim.models import Word2Vec
+from gensim.test.utils import get_tmpfile
+
+
+
+def main():
+    # Load sentences and split them into seperate tokens
+    training_sentences_fn = os.path.join(os.getcwd(), 'word_emb_training_sentences.json')
+    with open(training_sentences_fn, mode='r', encoding='utf-8') as f:
+        sentences = json.load(f)
+
+    path = get_tmpfile("word2vec.model")
+
+    # Train model
+    model = Word2Vec(size=100, window=5, min_count=3, workers=4, seed=666)
+
+    model.build_vocab(sentences, progress_per=200)
+
+    model.train(sentences, total_examples=model.corpus_count,
+                epochs=10, report_delay=1)
+
+    model.save("word2vec.model")
+
+    model.init_sims(replace=True)
+
+    print(model)
+
+    vector = model.wv['replace']
+
+    most_similar = model.similar_by_vector(vector, topn=7)[1:]
+
+    new_ms = []
+    for j in most_similar:
+        pair = (j[0], j[1])
+        new_ms.append(pair)
+
+    print(new_ms)
+
+
+if __name__ == '__main__':
+    main()
+\end{verbatim}
 
 \end{loggentry}
 
