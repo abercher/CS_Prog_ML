@@ -1493,6 +1493,38 @@ if __name__ == '__main__':
     main()
 \end{verbatim}
 
+\textbf{Edit (26.05.20):} If one wants to use these embeddings to find sentences (in a data set of sentences (most likely the same used for training the Word2Vec model)), one can either do the computation "manually" using \texttt{sklearn.metrics.pairwise.cosine\_similarity} and some sorting algorithm, or use another tool from gensim: \texttt{gensim.similarities.SoftCosineSimilarity}. In this second case, the code looks like this:
+\begin{verbatim}
+word_vectors_fn = os.path.join(os.getcwd(), 'vectors.kv')
+    word_vectors = KeyedVectors.load(word_vectors_fn, mmap='r')
+
+    similarity_index = WordEmbeddingSimilarityIndex(word_vectors)
+    similarity_matrix = SparseTermSimilarityMatrix(similarity_index, dictionary)
+
+    query_bow = tfidf[dictionary.doc2bow(query_preprocessed)]
+    index = SoftCosineSimilarity(
+        tfidf[[dictionary.doc2bow(sent) for sent in sentences_li]],
+        similarity_matrix)
+
+    similarities = index[query_bow]
+
+    sim_with_index = [(i, sim) for i, sim in enumerate(similarities)]
+    sim_with_index_sorted = sorted(sim_with_index, reverse=True, key=lambda el: el[1])
+\end{verbatim}
+
+but in both cases it is very \textbf{slow} with one sentence to compare to around 40K sentences it takes around 40 seconds. I found it better to use a simple Bag Of Word with TF-IDF and similar gensim tool for that. The code then looks like
+
+\begin{verbatim}
+    query_bow = tfidf[dictionary.doc2bow(query_preprocessed)]
+
+    index_tmpfile = get_tmpfile("index")
+    index = Similarity(
+        output_prefix=index_tmpfile,
+        corpus=tfidf[[dictionary.doc2bow(sent) for sent in sentences_li]],
+        num_features=len(dictionary))
+
+    similarities = index[query_bow]
+\end{verbatim}
 \end{loggentry}
 
 
