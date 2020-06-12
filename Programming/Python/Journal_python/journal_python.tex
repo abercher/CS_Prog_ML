@@ -1517,9 +1517,8 @@ but in both cases it is very \textbf{slow} with one sentence to compare to aroun
 \begin{verbatim}
     query_bow = tfidf[dictionary.doc2bow(query_preprocessed)]
 
-    index_tmpfile = get_tmpfile("index")
     index = Similarity(
-        output_prefix=index_tmpfile,
+        output_prefix='gensim_shard_file',
         corpus=tfidf[[dictionary.doc2bow(sent) for sent in sentences_li]],
         num_features=len(dictionary))
 
