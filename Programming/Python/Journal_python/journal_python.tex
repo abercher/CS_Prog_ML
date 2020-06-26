@@ -55,6 +55,8 @@ In this section I will try to list some useful resources (mainly websites) to lo
 \item A website quite beginner friendly: \url{https://www.python-course.eu/python3_course.php}
 \item paperswithcode.com present implementation of some AI papers:\\
 \url{https://paperswithcode.com/}
+\item Real Python is a youtube channel containing plenty of cool material to go beyond basic usage:\\
+\url{https://www.youtube.com/channel/UCI0vQvr9aFn27yR6Ej6n5UA}
 \end{itemize}
 
 \section{Good coding practice}
@@ -1528,6 +1530,41 @@ but in both cases it is very \textbf{slow} with one sentence to compare to aroun
 Concerning gensim, these two pages are quite helpful:\\
 \url{https://radimrehurek.com/gensim/similarities/docsim.html#gensim.similarities.docsim.Similarity}\\
 \url{https://github.com/RaRe-Technologies/gensim/blob/develop/docs/notebooks/soft_cosine_tutorial.ipynb}
+
+\end{loggentry}
+
+
+\begin{loggentry}{26.06.20}{\texttt{multiprocessing} library for parallelization, functional programming in python}
+
+I read this short but good tutorial recommended by Aparna about parallelization with python built-in library \texttt{multiprocessing}:\\
+\url{https://dbader.org/blog/python-parallel-computing-in-60-seconds}\\
+
+I started this series of videos about \textbf{functional programming} in python:\\
+\url{https://www.youtube.com/watch?v=xJCPpDlk9_w&list=PLP8GkvaIxJP1z5bu4NX_bFrEInBkAgTMr&index=2&t=0s}\\
+I will write down here some interesting take aways:
+\begin{itemize}
+\item Functional programming uses mainly immutable data structures (data inside them can't be changed). This has the advantage of avoiding conflicts when using parallelization.
+\item In the second video, he presents the function \texttt{filter}. One can do similar things with a list comprehension.
+\item In the third video, he presents the function \texttt{map}. One can do similar things with a list comprehension.
+\item In the forth video, he presents the function \texttt{reduce}. One can do similar things with a list comprehension.
+\item In the forth video, he presents how the multiprocessing library can be used jointly with these 3 functions for parallel programming. I found it particularly well done so I put the link here:\\
+\url{https://www.youtube.com/watch?v=aysceqdGFw8&list=PLP8GkvaIxJP1z5bu4NX_bFrEInBkAgTMr&index=5}
+\item In the last video, he introduce an alternative library to multiprocessing called \texttt{concurrent} and shows that one can easily use both \textbf{multi-process} parallelization (as before) or \textbf{multi-thread} parallalization (like in sanic I guess) with commands as easy as
+\begin{verbatim}
+import concurrent.futures
+
+with concurrent.futures.ProcessPoolExecutor() as executor:
+	result = executor.map(transform, scientists)
+\end{verbatim}
+or
+\begin{verbatim}
+import concurrent.futures
+
+with concurrent.futures.ThreadPoolExecutor() as executor:
+	result = executor.map(transform, scientists)
+\end{verbatim}
+I think that process based parallelization should be used when dealing with many computationally expensive tasks (number crunching) and multi-threading should be used when dealing with programs waiting for a web request to be answered.
+\end{itemize}
 
 \end{loggentry}
 
