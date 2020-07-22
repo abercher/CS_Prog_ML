@@ -119,17 +119,19 @@ it is explained that Rasa developped a way to create a DM using ``interractive l
 \begin{loggentry}{19.03.19}{Article detailing components of a chat bots (with shallow semantic parsing)}
 
 Mijail shared this article:\\
-\url{http://aclweb.org/anthology/D18-2027}\\
+\href{http://aclweb.org/anthology/D18-2027}{Developing Production-Level Conversational Interfaces with Shallow Semantic Parsing}\\
 which presents the general architecture of a virtual assistant, decomposing it into:
 \begin{enumerate}
 \item Intent Classification (Domain Classifier + Intent Classifier)
 \item Entity Recognition
 \item Entity Resolution
-\item Semantic Praser (Entity Role Classifier + Entity Group Parser)
+\item Semantic Parser (Entity Role Classifier + Entity Group Parser)
 \item Question Answerer
 \item Dialogue Manager
 \item Application Manager
 \end{enumerate}
+
+\textbf{Edit (10.08.20):} I rediscovered it. One interesting feature is what they present in the Semantic Parser section. They use dependency parser to either refine the type of an entity (a number can be a quantity or a price for instance) or to group entity together (an entity can be made up of several sub entities (``a plain bagle that's warmed up and with cream cheese"). In Table 1 p.5, they mention several systems for that, one which look relatively simple (Tuned WCFG) which achieves 97.0 \% accuracy in their experiments.
 
 \end{loggentry}
 
