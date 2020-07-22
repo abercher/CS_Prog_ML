@@ -1569,6 +1569,68 @@ I think that process based parallelization should be used when dealing with many
 \end{loggentry}
 
 
+\begin{loggentry}{22.07.20}{Dockerizing a service built with Flask}
+
+I did a little project (I called it Services\_and\_dockers) where I put a toy web service built with Flask inside a docker image.
+
+This tutorial explains how to build a Flask service:\\
+\url{https://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flask}\\
+It explains and illustrate the \textbf{GET}, \textbf{POST}, \textbf{PUT}, and \textbf{DELETE} requests. It gives some context, and touches the topic of security and how to add a protection using usernames and passwords. One has to use curl commands to do these HTTP requests (first because some can't be done simply by entering a uri in the url browser bar and then because with the user password recommendation, it doesn't work anyway without it). Here are examples for the 4 types of commands
+\begin{itemize}
+\item GET
+\begin{verbatim}
+curl -u miguel:python -i http://localhost:5000/todo/api/v1.0/tasks
+\end{verbatim}
+\item POST
+\begin{verbatim}
+curl -u miguel:python -H "Content-Type: application/json" -X POST -d '{"title":"Learn how to use services"}' -i http://localhost:5000/todo/api/v1.0/tasks
+\end{verbatim}
+\item PUT
+\begin{verbatim}
+curl -u miguel:python -H "Content-Type: application/json" -X PUT -d '{"done":true}' -i http://localhost:5000/todo/api/v1.0/tasks/2
+\end{verbatim}
+\item DELETE
+\begin{verbatim}
+curl -u miguel:python -H "Content-Type: application/json" -X DELETE -i http://localhost:5000/todo/api/v1.0/tasks/2
+\end{verbatim}
+\end{itemize}
+The same author did a long series of tutorial about web services with Flask:\\
+\url{https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world}\\
+But one has to pay for it.
+
+I installed Docker following this page:\\
+\url{https://docs.docker.com/engine/install/ubuntu/}\\
+There seem to be a way to make docker easier to use but this involves some security risks:\\
+\url{https://docs.docker.com/engine/security/security/#docker-daemon-attack-surface}\\
+Since I don't understand these risks, I won't do it.
+
+Following this tutorial:\\
+\url{https://towardsdatascience.com/build-your-own-python-restful-web-service-840ed7766832}\\
+I managed to build a docker image running the service of the previous tutorial (the todo list). But I can't access it. I think that it is because the port used by the service is 5000 but that the port of the container which is mapped to the port of my computer (8080) is 8080. I need to find a way to decide how to assign a port.\\
+
+I didn't find the source of this error. I managed to make the exact example of this tutorial\\
+\url{https://towardsdatascience.com/build-your-own-python-restful-web-service-840ed7766832}\\
+work.\\
+
+I managed to solve the problem even if I don't have a complete understanding of what happened. It seems that the solution was to specify the host by modifying the last line of the script:\\
+\begin{verbatim}
+app.run(debug = True, port=8080, host='0.0.0.0')
+\end{verbatim}
+
+And now it works. So the command to build the image was
+\begin{verbatim}
+docker build -t todo_list_service .
+\end{verbatim}
+and the command to run the image was
+\begin{verbatim}
+docker run -p 8080:8080 todo_list_service
+\end{verbatim}
+
+The command to run the service are the same as when it is done locally.
+
+\end{loggentry}
+
+
 \section{Questions}
 \begin{enumerate}
 \item If I want to check that the arguments received by a function are of the appropriate type and throw an error if they aren't how do I do?
