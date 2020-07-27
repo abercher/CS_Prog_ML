@@ -635,6 +635,29 @@ I finished reading the RaKUn paper:\\
 \end{loggentry}
 
 
+\begin{loggentry}{27.07.20}{Adaptative Resonance Theory (ART) Neural Networks, Multi-label classifiers}
+
+While looking at the possible classifiers offered by the python library scikit multli-learn here (see MLARAM):\\
+\url{http://scikit.ml/modelselection.html}\\
+I stumbled upon \textbf{ART models}. It seems to be a family of neural networks. I found some brief overview in these pages:\\
+\url{https://en.wikipedia.org/wiki/Adaptive_resonance_theory}\\
+\url{https://www.geeksforgeeks.org/adaptive-resonance-theory-art/}\\
+\url{https://www.javatpoint.com/artificial-neural-network-adaptive-resonance-theory}\\
+from which I understood that they have the interesting capabilities of \textbf{forming clusters by themselves}, creating new ones if a sample in the training doesn't match any of the previous ones. One apparent weakness (maybe solved by improved versions called TopoART and Hypersphere TopoART according to the wikipedia article cited above) is that the clusters formed depend upon the order in which the samples are fed to the model during training.\\
+I haven't completely understood the architectures of the neural network, and according to wikipedia, the training process is quite unusual (involving differential equations or algebraic equations). I currently don't have the time to dive into the details, but I found two resources which seem to provide detailed explanation. The article accessible here:\\
+an introduction
+\url{https://www.researchgate.net/publication/247749347_Adaptive_Resonance_Theory_ART_An_Introduction}\\
+(I have the pdf on my machine)\\
+an overview of the different extensions and existing implementations:\\
+\url{https://www.sciencedirect.com/science/article/pii/S0893608019302734}\\
+(I have the pdf on my machine under art\_models\_survey.pdf)\\
+
+This page presents plenty of models (and their implementation in the given library) for \textbf{multi-label classification}:\\
+\url{http://scikit.ml/modelselection.html}\\
+
+\end{loggentry}
+
+
 \end{document}
 
 
