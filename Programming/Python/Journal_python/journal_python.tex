@@ -1631,7 +1631,7 @@ The command to run the service are the same as when it is done locally.
 \end{loggentry}
 
 
-\begin{loggentry}{29.07.20}{Why is Python slower than C++}
+\begin{loggentry}{29.07.20}{Why is Python slower than C++, \texttt{cProfile} a library to identify bottlenecks}
 
 I found this article which explains why python is slower than other languages:\\
 \url{https://hackernoon.com/are-your-python-programs-running-slow-heres-how-you-can-make-them-7x-faster-3d6758cd3305}\\
@@ -1640,6 +1640,10 @@ I didn't have the time to read it entirely, but by skimming the text I think I u
 \item Python is slow because of its design. The code is compiled at runtime (I guess it means that the script is transformed into a sequence of instructions readable by the hardware at runtime) unlike C++. But from what I understand this allows for more flexibility in the way types are managed in Python. There seem to be also less start-up delay time with python.
 \item There is a an alternative to the conventional python (PYPI) called \textbf{PYPY} which seem to be a kind of hybrid of Just In Time (JIT like Java for instance) and what is used by the standard python. This is supposed to be around 7.5 times faster but comes with the drawback of having larger start-up delay and not having all libraries compatible with it (Numpy is one of the libraries not compatible with PYPY).
 \end{itemize}
+
+I also stumbled upon this article:\\
+\url{https://towardsdatascience.com/finding-performance-bottlenecks-in-python-4372598b7b2c}
+which introduces \texttt{cProfile}, a python library which computes for a block of code how many times each function (and subfunction) was called and how much time their execution took. It can help \textbf{identifying bad design} (functions which would be called out of a loop for instance) or \textbf{identifying functions taking too much time}.
 
 \end{loggentry}
 
