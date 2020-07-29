@@ -1631,6 +1631,19 @@ The command to run the service are the same as when it is done locally.
 \end{loggentry}
 
 
+\begin{loggentry}{29.07.20}{Why is Python slower than C++}
+
+I found this article which explains why python is slower than other languages:\\
+\url{https://hackernoon.com/are-your-python-programs-running-slow-heres-how-you-can-make-them-7x-faster-3d6758cd3305}\\
+I didn't have the time to read it entirely, but by skimming the text I think I understood that
+\begin{itemize}
+\item Python is slow because of its design. The code is compiled at runtime (I guess it means that the script is transformed into a sequence of instructions readable by the hardware at runtime) unlike C++. But from what I understand this allows for more flexibility in the way types are managed in Python. There seem to be also less start-up delay time with python.
+\item There is a an alternative to the conventional python (PYPI) called \textbf{PYPY} which seem to be a kind of hybrid of Just In Time (JIT like Java for instance) and what is used by the standard python. This is supposed to be around 7.5 times faster but comes with the drawback of having larger start-up delay and not having all libraries compatible with it (Numpy is one of the libraries not compatible with PYPY).
+\end{itemize}
+
+\end{loggentry}
+
+
 \section{Questions}
 \begin{enumerate}
 \item If I want to check that the arguments received by a function are of the appropriate type and throw an error if they aren't how do I do?
