@@ -625,6 +625,7 @@ from what I understand, the big changes are: drop out is done at the level of th
 I finished reading the RaKUn paper:\\
 \url{https://arxiv.org/pdf/1907.06458.pdf}\\
 \begin{itemize}
+\item An edge is built between two tokens if they appear one after the other in the same line (according to the implementation since the paper isn't clear)
 \item The method seems to work better for long documents (see p.10).
 \item The method allows to retrieve expressions made of 1, 2, or 3 tokens.
 \item If 3 tokens are extracted, it might be that they do not appear sequentially in the text (see page 5 and 6).
