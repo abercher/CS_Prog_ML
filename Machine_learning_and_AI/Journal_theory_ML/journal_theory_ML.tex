@@ -620,7 +620,7 @@ from what I understand, the big changes are: drop out is done at the level of th
 \end{loggentry}
 
 
-\begin{loggentry}{16.07.20}{RaKUn for keyword extraction}
+\begin{loggentry}{16.07.20}{keyword extraction: RaKUn, RAKE}
 
 I finished reading the RaKUn paper:\\
 \url{https://arxiv.org/pdf/1907.06458.pdf}\\
@@ -632,6 +632,12 @@ I finished reading the RaKUn paper:\\
 \item By default, keywords extracted are lemmatized.
 \item There is an open source implementation.
 \end{itemize}
+
+\textbf{Edit (06.08.2020):} I read the paper explaining how \textbf{RAKE}, an other method for keyword/keyprhase extraction works:\\
+\url{https://www.aclweb.org/anthology/W04-3252.pdf}\\
+There is an open source python implementation:\\
+\url{https://pypi.org/project/rake-nltk/}\\
+The general idea is that it finds keyphrases (bunch of words next to each other) candidates by splitting the text into chunks using punctuations and stop words as seperator. Then there is are three methods to assign weights to these chunks. None of them are very subtle. The default method (using $deg(w)/freq(w)$) gives preferences to longer chunks. Since the chunks weight are computing by summing weights computed for each one of the words constituting them, one could even use this network load centrality computed in RaKUn.
 
 \end{loggentry}
 
