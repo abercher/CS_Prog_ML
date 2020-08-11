@@ -298,7 +298,9 @@ This link also gives some instructions to tune an XGBoost model:\\
 This paper explains how \textbf{StarSpace} is working:\\
 \url{https://arxiv.org/abs/1709.03856}\\
 I had encountered it already when doing duplicate detection in the NLP coursera course. It seems to be a way to build some custom embeddings. I found again a reference to it on \href{https://medium.com/rasa-blog/supervised-word-vectors-from-scratch-in-rasa-nlu-6daf794efcd8}{this page} explaining how the TensorFlow embedding pipeline of RasaNLU works.\\
-\textbf{Edit (08.10.19):} I looked at the paper again. The main idea is that depending on the task, we define a set of (discrete) features (for text classification, the features would be all words into a fixed English dictionary, and document labels), and then we train embedding for these features. Then we define ``entities" as bag of features. A text to classify would have as features the words it contains, and the document labels would have only one feature each, the feature corresponding to the given labels. Then one trains the features embeddings using a special loss function based on similarity, and positive/negative examples. Later we can try for a new text to classify it by looking at the labels which have an embedding similar to the embedding of the new document (obtained by summing the embedings of the words it contains). One other application is to try to \textbf{predict relations in a graph}. I was thinking that it's kind of pointless since one can query the graph, but then I realized that it could be used to \textbf{guess relations which aren't explicitly encoded in the graph}, if the graph is big enough and contains some recurring structure.
+\textbf{Edit (08.10.19):} I looked at the paper again. The main idea is that depending on the task, we define a set of (discrete) features (for text classification, the features would be all words into a fixed English dictionary, and document labels), and then we train embedding for these features. Then we define ``entities" as bag of features. A text to classify would have as features the words it contains, and the document labels would have only one feature each, the feature corresponding to the given labels. Then one trains the features embeddings using a special loss function based on similarity, and positive/negative examples. Later we can try for a new text to classify it by looking at the labels which have an embedding similar to the embedding of the new document (obtained by summing the embedings of the words it contains). One other application is to try to \textbf{predict relations in a graph}. I was thinking that it's kind of pointless since one can query the graph, but then I realized that it could be used to \textbf{guess relations which aren't explicitly encoded in the graph}, if the graph is big enough and contains some recurring structure.\\
+
+\textbf{Edit (11.08.2020):} Nikos made me realize that using this similarity approach and choosing the class having the highest similarity with the embedding of the input is the same as passing the input through a last linear layer to reshape it to a vector having the length equal to the number of classes and selecting (with softmax for instance) the component having the highest value. It is simply a different way of seeing the same thing.
 
 \end{loggentry}
 
@@ -661,6 +663,14 @@ an overview of the different extensions and existing implementations:\\
 
 This page presents plenty of models (and their implementation in the given library) for \textbf{multi-label classification}:\\
 \url{http://scikit.ml/modelselection.html}\\
+
+\end{loggentry}
+
+
+\begin{loggentry}{11.08.2020}{Rasa DIET classifier}
+
+I looked at this video which introduces quite well the Rasa DIET classifier which does simultaneously intent classification and entity extraction:\\
+\url{https://www.youtube.com/watch?v=vWStcJDuOUk}
 
 \end{loggentry}
 
