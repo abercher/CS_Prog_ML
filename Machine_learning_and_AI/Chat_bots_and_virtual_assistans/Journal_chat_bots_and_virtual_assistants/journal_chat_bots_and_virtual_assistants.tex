@@ -205,6 +205,16 @@ I came across \textbf{Olivia an open-source chat bot}:\\
 \end{loggentry}
 
 
+\begin{loggentry}{22.10.2020}{Task Oriented dialogue as dataflow synthesis}
+
+This paper:\\
+\url{https://arxiv.org/pdf/2009.11423v1.pdf}\\
+presents a kind of task oriented chat bot architecture, with an annotated data set.\\
+The idea is first to transform a user utterance into a structured "program", a string representing \textbf{how to answer the user questions} in a sequence of operations. This is then used to complete a graph representing the whole conversation. The graph enables to answer the question automatically. This helps handling coreferences and exceptions (bad user inputs) in a "natural" way. One of the key observation is that the user utterance "What day of the week is that?" looks much more like the program "dayOfWeek(refer())" than to the complete graph. But going from the program to the completion of the graph is easy. The question of the parsing of the user input remains a big issue for a large domain.
+
+\end{loggentry}
+
+
 \end{document}
 
 
