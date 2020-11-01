@@ -692,6 +692,29 @@ It seems to be accessible in Hugging Face.
 \end{loggentry}
 
 
+\begin{loggentry}{01.11.2020}{Abstract Representation Meaning (AMR), }
+
+I read the beginning of this article about a way to represent English as graphs (\textbf{ARM}):\\
+\url{https://www.aclweb.org/anthology/W13-2322.pdf}\\
+and\\
+here is the \textbf{PENMAN} notation:\\
+\url{https://penman.readthedocs.io/en/latest/notation.html}\\
+One interesting aspect is that there is no pre defined way to parse an English sentence into one of these graphs, even if a priori, there should be only one graph fitting to a given sentence.\\
+
+In the WeCNLP conference, I came across a talk about this paper:\\
+\url{http://ceur-ws.org/Vol-2202/paper4.pdf}\\
+The main tool that they use is called \textbf{locally sensitive hashcodes} or \textbf{kernel hasing}. If one has already a way to turn a text into a vector and a way to compute similarity between these vector, this is a technique to speed up the search for the nearest neighbor of a new input text. Instead of using the similarity on every vector, one represent all the vectors (including the new input vector) by a simpler representation (a binary vector of fixed length, built using these \textbf{hash functions}). For each simplified representation correspond several different vectors (it's not a bijection). Finding the simplified representation in the data the closest to the simplified representation of the incoming vector is computationally less expensive than computing the similarities to all original vectors. Then one computes the similarities using the original vectors corresponding to the closest simplified representation with the original vectors. This is simply a way to speed up the process, by putting vectors into "buckets" and reasoning first on the buckets to discard a majority of them.\\
+Section 3 of this paper:\\
+\href{http://ceur-ws.org/Vol-2202/paper4.pdf}{Dialogue Modeling Via Hash Functions} (I have it on my computer)\\
+and section 5 of this paper:\\
+\href{https://www.cs.princeton.edu/courses/archive/spr04/cos598B/bib/CharikarEstim.pdf}{Similarity Estimation Techniques from RoundingAlgorithms}\\
+give more details.
+
+
+
+\end{loggentry}
+
+
 \end{document}
 
 
