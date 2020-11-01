@@ -708,8 +708,8 @@ Section 3 of this paper:\\
 \href{http://ceur-ws.org/Vol-2202/paper4.pdf}{Dialogue Modeling Via Hash Functions} (I have it on my computer)\\
 and section 5 of this paper:\\
 \href{https://www.cs.princeton.edu/courses/archive/spr04/cos598B/bib/CharikarEstim.pdf}{Similarity Estimation Techniques from RoundingAlgorithms}\\
-give more details.
-
+give more details.\\
+There are several ways to build the has functions. In the paper by this Irina Rish (the one of the presentation) they explain the following approach. If their training data size is $M$, they fix an integer parameter $1\leq \alpha << M$ and then for each hash function (which will produce one bit), they sample at random a dataset of this size, split it in two randomly, and train a binary classifier to distinguish these two subsets. The binary classifier gives the hashing function.
 
 
 \end{loggentry}
