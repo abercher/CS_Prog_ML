@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.15)  3 NOV 2020 21:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.15)  4 NOV 2020 22:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1129,15 +1129,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 697--703
  []
 
 [24]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 718.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 721.
  [25]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 718.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 721.
  (./journal_theory_ML.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 718.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 718.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 721.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 721.
 Package rerunfilecheck Info: File `journal_theory_ML.out' has not changed.
 (rerunfilecheck)             Checksum: C698EA9FF81D8963CC4F5D05200A3DB1;479.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 718.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 721.
  ) 
 Here is how much of TeX's memory you used:
  6255 strings out of 493029
@@ -1160,10 +1160,10 @@ amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 sy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on journal_theory_ML.pdf (25 pages, 244647 bytes).
+Output written on journal_theory_ML.pdf (25 pages, 245415 bytes).
 PDF statistics:
- 361 PDF objects out of 1000 (max. 8388607)
- 316 compressed objects within 4 object streams
+ 362 PDF objects out of 1000 (max. 8388607)
+ 317 compressed objects within 4 object streams
  39 named destinations out of 1000 (max. 500000)
  57 words of extra memory for PDF output out of 10000 (max. 10000000)
 

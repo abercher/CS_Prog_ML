@@ -709,7 +709,10 @@ Section 3 of this paper:\\
 and section 5 of this paper:\\
 \href{https://www.cs.princeton.edu/courses/archive/spr04/cos598B/bib/CharikarEstim.pdf}{Similarity Estimation Techniques from RoundingAlgorithms}\\
 give more details.\\
-There are several ways to build the has functions. In the paper by this Irina Rish (the one of the presentation) they explain the following approach. If their training data size is $M$, they fix an integer parameter $1\leq \alpha << M$ and then for each hash function (which will produce one bit), they sample at random a dataset of this size, split it in two randomly, and train a binary classifier to distinguish these two subsets. The binary classifier gives the hashing function.
+There are several ways to build the has functions. In the paper by this Irina Rish (the one of the presentation) they explain the following approach. If their training data size is $M$, they fix an integer parameter $1\leq \alpha << M$ and then for each hash function (which will produce one bit), they sample at random a dataset of this size, split it in two randomly, and train a binary classifier to distinguish these two subsets. The binary classifier gives the hashing function.\\
+\textbf{Edit (04.11.2020):} I started reading this paper presenting an \textbf{overview of hashing techniques}:\\
+\href{https://jingdongwang2017.github.io/Pubs/LTHSurvey.pdf}{A survey on learning hash}\\
+Section 2 explains how one can use this to speed up \textbf{nearest neighbor} and how one can use it for \textbf{search} (which is not so different). For this second task, the authors distinguish between two techniques \textbf{hash table lookup} and \textbf{hash table ranking}. The first one aims at grouping similar items together into bucket (they get the same hash) and when a query enters, its hash is computed and the bucket with the given hash is used to find the likely neighbors. The second one is to try to use the has as a way to reduce the dimensionality of the original items. Each item is mapped to a different hash but since the dimension is smaller, it is easier to compute the distances.
 
 
 \end{loggentry}
