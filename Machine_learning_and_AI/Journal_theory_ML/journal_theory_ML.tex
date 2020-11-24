@@ -140,7 +140,7 @@ I learned a bit about the \textbf{continuous bag of word} model is used which di
 \href{https://www.quora.com/What-are-the-continuous-bag-of-words-and-skip-gram-architectures}{Quora: What are the continous bag of words and skip-gram architectures?}\\
 \end{loggentry}
 
-\begin{loggentry}{02.04.18}{Constituency parser, Conditional Random Fields (CRS), Viterbi algorithm}
+\begin{loggentry}{02.04.18}{Constituency parser, Conditional Random Fields (CRF), Viterbi algorithm}
 I learned a bit about \textbf{constituency parser} here:\\
 \href{https://stackoverflow.com/questions/10401076/difference-between-constituency-parser-and-dependency-parser}{Stackoverflow: Difference between constituency parser and dependency parser}\\
 I read this introduction to \textbf{Conditional Random Fields (CRF)}:\\
@@ -159,7 +159,9 @@ I also read this page which gives \textbf{an intuition of the Viterbi algorithm}
 Here are the main points: let say we want to use LSTMs without anything else to predict what should be the labels/tags of each word in a sentence. For each input (each word) the LSTM would output a distribution over the possible labels, and we would take its argmax as the predicted label (for a given word). Let say the words are $x_1, x_2,\dots$ and the labels can be taken from a set $S = \lbrace s_1,\dots, s_N \rbrace$. Now, we can see each entry of this vector of probability (of length $N$) as one of the weighted ``feature function" of \href{http://blog.echen.me/2012/01/03/introduction-to-conditional-random-fields/}{this explanation of CRF}. For an word/input $x_i$, entry 2 of the ``hidden state" (I don't really like this terminology because with LSTM, we never know if we are talking of $h_i$ or $C_i$ (following the terminology introduced in \href{https://colah.github.io/posts/2015-08-Understanding-LSTMs/}{this tutorial}) but here I mean $h_i$) outputed by the LSTM is seen as a feature function giving the likelihood of seeing $x_i$ if the tag/label is $s_2$. Then we add some ``transition scores" which are additional feature functions independent from the LSTM and which allows to use the power of usual CRF models.\\
 \textbf{Edit (03.05.18):} Actually, the idea goes beyond superposing the two processes. As I realized in the pytorch tutorial mentioned above, the transition scores/probabilities, are themselves some tensor which are optimized over, when doing backpropagation.\\
 \textbf{Edit (12.10.18):} I guess that both the hidden states produced by the lstm and the transition functions/scores/probabilities can be seen as feature functions, but (and this is where my guess is) the hidden states make use of the information regarding the position in the sentence, whereas the transition functions look at the neighbouring words of the given word. But since the transition functions are also learned, I guess that these special ``CRF" are merely an LSTM with an additional layer of weights on top of it.\\
-
+\textbf{Exit (22.11.2020):} This paper explains one way of using BiLSTM to build a CRF:\\
+\url{https://arxiv.org/pdf/1603.01360.pdf}\\
+(Neural Architectures for Named Entity Recognition)
 \end{loggentry}
 
 \begin{loggentry}{30.04.18}{Chat bots: Tai, Xiaoice, Named entity recognition, A nice blog about NLP}
