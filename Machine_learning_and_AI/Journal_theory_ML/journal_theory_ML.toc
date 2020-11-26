@@ -2,7 +2,7 @@
 \contentsline {section}{\numberline {2}Useful Resources}{1}{section.2}
 \contentsline {section}{\numberline {3}Specific technical questions which should be answered}{2}{section.3}
 \contentsline {section}{\numberline {4}Journal}{2}{section.4}
-\contentsline {subsection}{\numberline {4.1}Neural Machine Translation Model (Mechanics of Seq2seq Models With Attention)}{12}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.1}Neural Machine Translation Model (Mechanics of Seq2seq Models With Attention)}{13}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}The Transformer}{13}{subsection.4.2}
 \contentsline {subsection}{\numberline {4.3}ELMo}{16}{subsection.4.3}
 \contentsline {subsection}{\numberline {4.4}BERT}{16}{subsection.4.4}
