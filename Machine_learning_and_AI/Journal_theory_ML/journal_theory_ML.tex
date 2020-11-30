@@ -747,6 +747,29 @@ It is a loss function which can be used to obtain embeddings such that the simil
 \end{loggentry}
 
 
+\begin{loggentry}{30.11.2020}{Bias-variance trade-off, How to train a neural network}
+
+I found that these two pages explain well how the \textbf{bias-variance trade-off} is related to \textbf{underfitting} and \textbf{overfitting}:\\
+\url{https://www.machinelearningplus.com/machine-learning/bias-variance-tradeoff/}\\
+\url{https://towardsdatascience.com/is-your-model-overfitting-or-maybe-underfitting-an-example-using-a-neural-network-in-python-4faf155398d2}\\
+
+I also found this page which gives a lot of \textbf{concrete recommendations} on how to \textbf{tune a neural network}:\\
+\url{https://www.wandb.com/articles/fundamentals-of-neural-networks}\\
+In particular, it touches topics like:
+\begin{itemize}
+\item How to solve \textbf{vanishing gradients} and \textbf{exploding gradients}, and how this is related to activation functions, weight initialization, batch norm, gradient clipping, early stopping. See section 4.
+\item Different \textbf{activation functions} and when to use which. Plenty of variants of activation functions are quickly introduced like logistic, tanh, ReLU, Leaky ReLU,  ELU, SELU, GELU, PreLU. See section 4.
+\item Different types of \textbf{weight initialization methods} including \textbf{He initialization},  \textbf{LeCun initialization}, and \textbf{Glorot Initialization}. See section 4
+\item \textbf{Batch norm}
+\item \textbf{Dropouts:} Recommended values for different types of neural networks, variants (AlphaDropout)
+\item \textbf{Optimizer:} When to use SGD and when to use its cousins.
+\item \textbf{Learning Rate Scheduling}
+\end{itemize}
+The tutorial also points to plenty of additional material.
+
+\end{loggentry}
+
+
 \end{document}
 
 
