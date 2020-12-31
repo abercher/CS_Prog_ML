@@ -765,7 +765,16 @@ In particular, it touches topics like:
 \item \textbf{Optimizer:} When to use SGD and when to use its cousins.
 \item \textbf{Learning Rate Scheduling}
 \end{itemize}
-The tutorial also points to plenty of additional material.
+The tutorial also points to plenty of additional material.\\
+
+\textbf{Edit (29.12.2020):} I will try to gather here many useful resources and information concerning the training of neural network:
+\begin{itemize}
+\item \textbf{Sebastian Ruder} overview of \textbf{stochastic gradient descent and its variants}:\\
+\url{https://ruder.io/optimizing-gradient-descent/}
+\item A good simple practice is to have a \textbf{validation set} on which we measure the accuracy of the model after each epoch of training. Save the model when this accuracy reaches a maximum (with respect to previous epochs). In addition, one can let the model train as long as the results on the validation set improve, and stop the training when the model hasn't improved for let say 3 epochs (3 is the so called "patience" here). This method is called \textbf{early stopping}.
+\item One can also use the \textbf{cyclic learning rate} update scheme presented in this paper:\\
+\url{https://arxiv.org/pdf/1506.01186.pdf}
+\end{itemize}
 
 \end{loggentry}
 
