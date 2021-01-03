@@ -776,6 +776,30 @@ The tutorial also points to plenty of additional material.\\
 \url{https://arxiv.org/pdf/1506.01186.pdf}
 \end{itemize}
 
+\textbf{Edit (01.01.2021):} I would like to have a clear \textbf{method to tune Neural networks}. I will try to describe it here.
+\begin{enumerate}
+\item Fix a type of model (BOW + logistic regression, GloVe + LSTM, BERT, etc...)
+\item Fix the meta-parameters of the model (number of layers, size of the layers, etc...)
+\item Fix the optimizer
+\item Use the following training schedules:
+\begin{itemize}
+\item For different learning rates (start high): Train the model with the same learning rate for a large number of epochs while monitoring
+\begin{itemize}
+\item Loss on training set
+\item Loss on validation set
+\item Appropriate metric (MSE, Accuracy,...) on validation set
+\end{itemize}
+Look for moment when the loss on validation goes high again as it means that the model is overfitting. Save model when max accuracy/mse on validation is reached. 
+\item \textbf{Annealing learning rate}: Start with high learning rate. Train for a fixed number of epochs with it (5 to 10), then for each new epoch, if the accuracy/mse on validation is not improving divide learning rate by 10 (I add the condition not to update the learning rate twice in a row to avoid having the learning rate shrinking to fast).
+\item \textbf{Cyclical learning rate}: Have the learning rate linearly cycling from a min to a max, going in several steps from one to the other. Probably good to use a burning period with fix learning rate. On can choose the bound using a technique explained in this paper:
+\end{itemize}
+For each of these methods, one can save computation, one can use early stopping (with patience 3 or 4).\\
+In order to see which learning rates range is good, one can use visual inspection with the first method.\\
+If we have limited time for a specific configuration, and we don't want to do an exhaustive search, I would just use annealing with initial learning rate 1, training during 10 epochs, and early stopping.
+\end{enumerate}
+
+Because of time and resource limitations, there is a trade-off between getting the most out of each model architecture (and hence trying plenty of learning rates and learning rate schedules) and trying out a big variety of different models (and hence multiplying the effort dedicated to each one by the number of architecture tried out).
+
 \end{loggentry}
 
 
