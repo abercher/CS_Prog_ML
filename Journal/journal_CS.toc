@@ -1,10 +1,10 @@
-\contentsline {section}{\numberline {1}Useful Resource}{1}{section.1}
-\contentsline {section}{\numberline {2}Journal}{2}{section.2}
-\contentsline {section}{\numberline {3}Knowledge I need to gain}{34}{section.3}
-\contentsline {subsection}{\numberline {3.1}Knowledge in deep learning I need to gain}{34}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Python libraries I should learn}{35}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Tasks I should perform faster}{35}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Other things I need to learn}{35}{subsection.3.4}
-\contentsline {section}{\numberline {4}Ideas of things to do}{36}{section.4}
-\contentsline {section}{\numberline {5}Questions}{37}{section.5}
-\contentsline {section}{\numberline {6}LeetCode Problems I looked at}{37}{section.6}
+\contentsline {section}{\numberline {1}Useful Resource}{1}{section.1}%
+\contentsline {section}{\numberline {2}Journal}{2}{section.2}%
+\contentsline {section}{\numberline {3}Knowledge I need to gain}{35}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Knowledge in deep learning I need to gain}{35}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Python libraries I should learn}{35}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Tasks I should perform faster}{36}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Other things I need to learn}{36}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Ideas of things to do}{37}{section.4}%
+\contentsline {section}{\numberline {5}Questions}{37}{section.5}%
+\contentsline {section}{\numberline {6}LeetCode Problems I looked at}{38}{section.6}%
