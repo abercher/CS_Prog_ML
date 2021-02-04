@@ -411,7 +411,7 @@ with the difference that they use the Transformer architecture instead of the LS
 \url{https://github.com/openai/finetune-transformer-lm}\\
 but unfortunately it is in tensorflow which is a pain in the ass.\\
 \textbf{Edit (25.09.19):} Joram explained me that actually, what is used is indeed just the decoder part but the layers don't have the encoder-decoder attention sublayers. They keep the mask because it forces the model to have the ``auto-regressive" property, so in a sense, to predict one word after the other.\\
-\textbf{Exit (03.02.2021):} This page:\\
+\textbf{Exit (03.02.2021):} This page about \textbf{GPT-2}:\\
 \url{http://jalammar.github.io/illustrated-gpt2/}\\
 confirms what I suspected above: in the \textit{Improving language understanding by Generative pre-training} article, only the decoder part of the transformer is used and the encoder-decoder attention sub-layer is removed.
 \item In the paper \textit{Improving Language Understanding by Generative Pre-Training} (\textbf{GPT}), they present the idea of pretraining a transformer-like model on language modeling. I guess that for an input sequence there is an output sequence where output with label $k$ is the predicted $k+1$ input token, and since there are mask layers, input $k+1$ and following cannot be used to compute the value of output $k$. But all tokens are predicted at the same time.
@@ -827,6 +827,16 @@ Here is another paper doing a review of the topic:\\
 Note that as explained in the third answer to this stack overflow post:\\
 \url{https://stackoverflow.com/questions/49433936/how-to-initialize-weights-in-pytorch}\\
 Pytorch has already some of these initialization techniques used by default by most of their layer types.
+
+\end{loggentry}
+
+
+\begin{loggentry}{04.02.2021}{Improving ASR with GPT2 Language Model}
+
+This article:
+\href{https://arxiv.org/pdf/2002.00750.pdf}{Joint contextual modeling for ASR correction and language understanding}\\
+a lot of approaches to \textbf{correct the ASR output} are presented. Either directly, or citing other papers.
+One simple trick presented in the section ``Statistical and Neural LMs for Re-ranking/Re-scoring" (between p.2 and p.3
 
 \end{loggentry}
 
