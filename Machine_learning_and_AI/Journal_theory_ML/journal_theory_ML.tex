@@ -71,6 +71,8 @@ In this journal, I will try to gather good references (mainly webpages) about so
 \url{https://arxiv.org/list/cs.CL/recent}
 \item Machine Learning Explained: on this website, some important papers are explained in details, and implementation are presented. The focus is on Deep Learning and NLP. For instance XLNet is presented and implemented:\\
 \url{https://mlexplained.com/}
+\item This blog gives some excellent explanations of how complex models like transformers, BERT, GPT3 are working with very good \textbf{illustrations}:\\
+\url{http://jalammar.github.io/}
 \end{itemize}
 
 \section{Specific technical questions which should be answered}
@@ -833,10 +835,21 @@ Pytorch has already some of these initialization techniques used by default by m
 
 \begin{loggentry}{04.02.2021}{Improving ASR with GPT2 Language Model}
 
-This article:
+This article:\\
+
 \href{https://arxiv.org/pdf/2002.00750.pdf}{Joint contextual modeling for ASR correction and language understanding}\\
-a lot of approaches to \textbf{correct the ASR output} are presented. Either directly, or citing other papers.
-One simple trick presented in the section ``Statistical and Neural LMs for Re-ranking/Re-scoring" (between p.2 and p.3
+
+presents a lot of approaches to \textbf{correct the ASR output} are presented. Either directly, or citing other papers.
+One simple trick presented in the section ``Statistical and Neural LMs for Re-ranking/Re-scoring" (between p.2 and p.3), is to use a Language Model coming from GPT2 (by it's architecture it can easily be used to predict for each word in its vocabulary the probability that it is the next word) to compute a score for each ASR suggestion and rerank it.
+
+\end{loggentry}
+
+
+\begin{loggentry}{17.02.2021}{Kaldi ASR tutorial}
+
+Here is a tutorial about Kaldi (ASR):\\
+\url{https://www.eleanorchodroff.com/tutorial/kaldi/index.html}\\
+I didn't read it, and I've been told that it's not completely up to date, but that it gives a good basis.
 
 \end{loggentry}
 

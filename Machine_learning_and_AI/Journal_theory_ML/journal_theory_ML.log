@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  4 FEB 2021 12:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  17 FEB 2021 18:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -665,13 +665,13 @@ Overfull \hbox (66.76772pt too wide) in paragraph at lines 58--60
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (26.89528pt too wide) in paragraph at lines 89--99
+Overfull \hbox (26.89528pt too wide) in paragraph at lines 91--101
 []$\OT1/cmtt/m/n/10.95 http : / / mccormickml . com / 2017 / 01 / 11 / word2vec
 -[]tutorial-[]part-[]2-[]negative-[]sampling/$[] 
  []
 
 
-Overfull \hbox (136.62035pt too wide) in paragraph at lines 89--99
+Overfull \hbox (136.62035pt too wide) in paragraph at lines 91--101
 []$\OT1/cmtt/m/n/10.95 https : / / www . analyticsvidhya . com / blog / 2019 / 
 07 / how-[]to-[]build-[]recommendation-[]system-[]word2vec-[]python/$[]
  []
@@ -683,529 +683,544 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2]
-Overfull \hbox (120.37428pt too wide) in paragraph at lines 100--107
+Overfull \hbox (120.37428pt too wide) in paragraph at lines 102--109
 []$\OT1/cmtt/m/n/10.95 http : / / www . wildml . com / 2015 / 09 / recurrent-[]
 neural-[]networks-[]tutorial-[]part-[]1-[]introduction-[]to-[]rnns/$[] 
  []
 
 [3]
-Overfull \hbox (49.89003pt too wide) in paragraph at lines 134--142
+Overfull \hbox (49.89003pt too wide) in paragraph at lines 136--144
 []$\OT1/cmtt/m/n/10.95 https : / / blog . acolyer . org / 2016 / 04 / 22 / glov
 e-[]global-[]vectors-[]for-[]word-[]representation/$[] 
  []
 
 
-Overfull \hbox (16.89319pt too wide) in paragraph at lines 148--171
+Overfull \hbox (16.89319pt too wide) in paragraph at lines 150--173
 \OT1/cmr/bx/n/10.95 02.04.18 $[]$[]Constituency parser, Con-di-tional Ran-dom F
 ields (CRF), Viterbi
  []
 
 
-Overfull \hbox (9.14922pt too wide) in paragraph at lines 148--171
+Overfull \hbox (9.14922pt too wide) in paragraph at lines 150--173
 []$\OT1/cmtt/m/n/10.95 http : / / blog . echen . me / 2012 / 01 / 03 / introduc
 tion-[]to-[]conditional-[]random-[]fields/$[] 
  []
 
 [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 182--188
+Underfull \hbox (badness 10000) in paragraph at lines 184--190
 
  []
 
 [6]
-Overfull \hbox (164.86378pt too wide) in paragraph at lines 199--207
+Overfull \hbox (164.86378pt too wide) in paragraph at lines 201--209
 []$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 9004172 / 
 precision-[]recall-[]for-[]multiclass-[]multilabel-[]classification$[]
  []
 
 
-Overfull \hbox (14.8979pt too wide) in paragraph at lines 219--224
+Overfull \hbox (14.8979pt too wide) in paragraph at lines 221--226
 []$\OT1/cmtt/m/n/10.95 http : / / togelius . blogspot . com / 2018 / 05 / empir
 icism-[]and-[]limits-[]of-[]gradient . html$[] 
  []
 
 [7]
-Overfull \hbox (20.14659pt too wide) in paragraph at lines 232--237
+Overfull \hbox (20.14659pt too wide) in paragraph at lines 234--239
 []$\OT1/cmtt/m/n/10.95 https : / / machinelearningmastery . com / gentle-[]intr
 oduction-[]backpropagation-[]time/$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--245
+Underfull \hbox (badness 10000) in paragraph at lines 246--247
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 246--250
+Underfull \hbox (badness 10000) in paragraph at lines 248--252
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 253--257
+Underfull \hbox (badness 10000) in paragraph at lines 255--259
 
  []
 
 
-Overfull \hbox (195.10722pt too wide) in paragraph at lines 258--261
+Overfull \hbox (195.10722pt too wide) in paragraph at lines 260--263
 []$\OT1/cmtt/m/n/10.95 https : / / blog . paralleldots . com / data-[]science /
  breakthrough-[]research-[]papers-[]and-[]models-[]for-[]sentiment-[]analysis/$
 []
  []
 
 
-Overfull \hbox (84.88216pt too wide) in paragraph at lines 268--272
+Overfull \hbox (84.88216pt too wide) in paragraph at lines 270--274
 []$\OT1/cmtt/m/n/10.95 https : / / www . oreilly . com / learning / perform-[]s
 entiment-[]analysis-[]with-[]lstms-[]using-[]tensorflow$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--272
+Underfull \hbox (badness 10000) in paragraph at lines 270--274
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 294--297
+Underfull \hbox (badness 10000) in paragraph at lines 296--299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--300
+Underfull \hbox (badness 10000) in paragraph at lines 300--302
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--304
+Underfull \hbox (badness 10000) in paragraph at lines 305--306
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--309
+Underfull \hbox (badness 10000) in paragraph at lines 307--311
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 314--315
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 316--319
+Underfull \hbox (badness 10000) in paragraph at lines 318--321
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 322--323
+Underfull \hbox (badness 10000) in paragraph at lines 324--325
 
  []
 
 
-Overfull \hbox (162.1151pt too wide) in paragraph at lines 324--329
+Overfull \hbox (162.1151pt too wide) in paragraph at lines 326--331
 []$\OT1/cmtt/m/n/10.95 https : / / medium . com / snips-[]ai / ntm-[]lasagne-[]
 a-[]library-[]for-[]neural-[]turing-[]machines-[]in-[]lasagne-[]2cdce6837315$[]
  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--329
+Underfull \hbox (badness 10000) in paragraph at lines 326--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--334
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
 
  []
 
 
-Overfull \hbox (10.14922pt too wide) in paragraph at lines 335--337
+Overfull \hbox (10.14922pt too wide) in paragraph at lines 337--339
 []$\OT1/cmtt/m/n/10.95 https : / / stackabuse . com / levenshtein-[]distance-[]
 and-[]text-[]similarity-[]in-[]python/$[] 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 341--342
+Underfull \hbox (badness 10000) in paragraph at lines 343--344
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 343--347
+Underfull \hbox (badness 10000) in paragraph at lines 345--349
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 351--352
+Underfull \hbox (badness 10000) in paragraph at lines 353--354
 
  []
 
 
-Overfull \hbox (335.07573pt too wide) in paragraph at lines 353--356
+Overfull \hbox (335.07573pt too wide) in paragraph at lines 355--358
 []$\OT1/cmtt/m/n/10.95 https : / / medium . com / ai % C2 % B3-[]theory-[]pract
 ice-[]business / understanding-[]hintons-[]capsule-[]networks-[]part-[]ii-[]how
 -[]capsules-[]work-[]153b6ade9f66$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--361
+Underfull \hbox (badness 10000) in paragraph at lines 362--363
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--364
+Underfull \hbox (badness 10000) in paragraph at lines 364--366
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 368--369
+Underfull \hbox (badness 10000) in paragraph at lines 370--371
 
  []
 
 
-Overfull \hbox (305.95074pt too wide) in paragraph at lines 372--373
+Overfull \hbox (305.95074pt too wide) in paragraph at lines 374--375
 \OT1/cmr/bx/n/10.95 At-ten-tion): []$\OT1/cmtt/m/n/10.95 https : / / jalammar .
  github . io / visualizing-[]neural-[]machine-[]translation-[]mechanics-[]of-[]
 seq2seq-[]models-[]with-[]attention/$[] 
  []
 
 [12] [13] [14]
-Overfull \hbox (10.2137pt too wide) in paragraph at lines 402--417
+Overfull \hbox (10.2137pt too wide) in paragraph at lines 404--419
 \OT1/cmr/m/n/10.95 French trans-la-tion, but the idea of us-ing it as a ba-sis 
 for lever-ag-ing an \OT1/cmr/bx/n/10.95 unsupervised-
  []
 
 
-Overfull \hbox (112.25722pt too wide) in paragraph at lines 402--417
+Overfull \hbox (112.25722pt too wide) in paragraph at lines 404--419
 []$\OT1/cmtt/m/n/10.95 https : / / s3-[]us-[]west-[]2 . amazonaws . com / opena
 i-[]assets / research-[]covers / language-[]unsupervised /
  []
 
 [15]
-Overfull \hbox (10.14613pt too wide) in paragraph at lines 417--418
+Overfull \hbox (10.14613pt too wide) in paragraph at lines 419--420
 []\OT1/cmr/m/n/10.95 In the pa-per \OT1/cmr/m/it/10.95 Im-prov-ing Lan-guage Un
 -der-stand-ing by Gen-er-a-tive Pre-Training \OT1/cmr/m/n/10.95 (\OT1/cmr/bx/n/
 10.95 GPT\OT1/cmr/m/n/10.95 ),
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 448--449
+Underfull \hbox (badness 10000) in paragraph at lines 450--451
 
  []
 
 
-Overfull \hbox (376.31654pt too wide) in paragraph at lines 450--456
+Overfull \hbox (376.31654pt too wide) in paragraph at lines 452--458
 []$\OT1/cmtt/m/n/10.95 http : / / mlexplained . com / 2018 / 01 / 10 / an-[]int
 uitive-[]explanation-[]of-[]why-[]batch-[]normalization-[]really-[]works-[]norm
 alization-[]in-[]deep-[]learning-[]part-[]1/$[] 
  []
 
 
-Overfull \hbox (323.07835pt too wide) in paragraph at lines 450--456
+Overfull \hbox (323.07835pt too wide) in paragraph at lines 452--458
 []$\OT1/cmtt/m/n/10.95 https : / / mlexplained . com / 2018 / 01 / 13 / weight-
 []normalization-[]and-[]layer-[]normalization-[]explained-[]normalization-[]in-
 []deep-[]learning-[]part-[]2/$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 450--456
+Underfull \hbox (badness 10000) in paragraph at lines 452--458
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 460--461
+Underfull \hbox (badness 10000) in paragraph at lines 462--463
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 462--464
+Underfull \hbox (badness 10000) in paragraph at lines 464--466
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 468--469
+Underfull \hbox (badness 10000) in paragraph at lines 470--471
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 475--476
+Underfull \hbox (badness 10000) in paragraph at lines 477--478
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 477--482
+Underfull \hbox (badness 10000) in paragraph at lines 479--484
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 486--487
+Underfull \hbox (badness 10000) in paragraph at lines 488--489
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 496--497
+Underfull \hbox (badness 10000) in paragraph at lines 498--499
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 498--501
+Underfull \hbox (badness 10000) in paragraph at lines 500--503
 
  []
 
 
-Overfull \hbox (236.84804pt too wide) in paragraph at lines 502--508
+Overfull \hbox (236.84804pt too wide) in paragraph at lines 504--510
 []$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 57128213 /
  what-[]concept-[]in-[]category-[]theory-[]can-[]be-[]used-[]to-[]represent-[]a
 -[]typeclass$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 502--508
+Underfull \hbox (badness 10000) in paragraph at lines 504--510
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 512--513
+Underfull \hbox (badness 10000) in paragraph at lines 514--515
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 521--522
+Underfull \hbox (badness 10000) in paragraph at lines 523--524
 
  []
 
 
-Overfull \hbox (350.8218pt too wide) in paragraph at lines 523--528
+Overfull \hbox (350.8218pt too wide) in paragraph at lines 525--530
 []$\OT1/cmtt/m/n/10.95 https : / / mlexplained . com / 2019 / 06 / 30 / paper-[
 ]dissected-[]xlnet-[]generalized-[]autoregressive-[]pretraining-[]for-[]languag
 e-[]understanding-[]explained/$[] 
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 534--535
+Underfull \hbox (badness 10000) in paragraph at lines 536--537
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 546--547
+Underfull \hbox (badness 10000) in paragraph at lines 548--549
 
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 572--573
+Underfull \hbox (badness 10000) in paragraph at lines 574--575
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 577--578
+Underfull \hbox (badness 10000) in paragraph at lines 579--580
 
  []
 
 
-Overfull \hbox (7.14922pt too wide) in paragraph at lines 579--586
+Overfull \hbox (7.14922pt too wide) in paragraph at lines 581--588
 []$\OT1/cmtt/m/n/10.95 https : / / pytext . readthedocs . io / en / master / hi
 erarchical _ intent _ slot _ tutorial .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 579--586
+Underfull \hbox (badness 10000) in paragraph at lines 581--588
 
  []
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 594--595
+Underfull \hbox (badness 10000) in paragraph at lines 596--597
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 605--606
+Underfull \hbox (badness 10000) in paragraph at lines 607--608
 
  []
 
 
-Overfull \hbox (26.39528pt too wide) in paragraph at lines 607--612
+Overfull \hbox (26.39528pt too wide) in paragraph at lines 609--614
 []$\OT1/cmtt/m/n/10.95 https : / / ai . googleblog . com / 2020 / 01 / towards-
 []conversational-[]agent-[]that-[]can . html ?
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 616--617
+Underfull \hbox (badness 10000) in paragraph at lines 618--619
 
  []
 
 
-Overfull \hbox (502.78767pt too wide) in paragraph at lines 618--625
+Overfull \hbox (502.78767pt too wide) in paragraph at lines 620--627
 []$\OT1/cmtt/m/n/10.95 https : / / medium . com / towards-[]artificial-[]intell
 igence / multi-[]label-[]text-[]classification-[]using-[]scikit-[]multilearn-[]
 case-[]study-[]with-[]stackoverflow-[]questions-[]768cb487ad12$[] 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 629--630
+Underfull \hbox (badness 10000) in paragraph at lines 631--632
 
  []
 
 
-Overfull \hbox (67.1361pt too wide) in paragraph at lines 631--633
+Overfull \hbox (67.1361pt too wide) in paragraph at lines 633--635
 []$\OT1/cmtt/m/n/10.95 https : / / yashuseth . blog / 2018 / 09 / 12 / awd-[]ls
 tm-[]explanation-[]understanding-[]language-[]model/$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 631--633
+Underfull \hbox (badness 10000) in paragraph at lines 633--635
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 639--640
+Underfull \hbox (badness 10000) in paragraph at lines 641--642
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 641--643
+Underfull \hbox (badness 10000) in paragraph at lines 643--645
 
  []
 
 [23]
-Overfull \hbox (7.38512pt too wide) in paragraph at lines 661--662
+Overfull \hbox (7.38512pt too wide) in paragraph at lines 663--664
 \OT1/cmr/bx/n/10.95 27.07.20 $[]$[]Adaptative Res-o-nance The-ory (ART) Neu-ral
  Net-works, Multi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 661--662
+Underfull \hbox (badness 10000) in paragraph at lines 663--664
 
  []
 
 
-Overfull \hbox (32.64397pt too wide) in paragraph at lines 663--677
+Overfull \hbox (32.64397pt too wide) in paragraph at lines 665--679
 []$\OT1/cmtt/m/n/10.95 https : / / www . javatpoint . com / artificial-[]neural
 -[]network-[]adaptive-[]resonance-[]theory$[] 
  []
 
 
-Overfull \hbox (2.13144pt too wide) in paragraph at lines 663--677
+Overfull \hbox (2.13144pt too wide) in paragraph at lines 665--679
 \OT1/cmr/m/n/10.95 an in-tro-duc-tion []$\OT1/cmtt/m/n/10.95 https : / / www . 
 researchgate . net / publication / 247749347 _ Adaptive _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 663--677
+Underfull \hbox (badness 10000) in paragraph at lines 665--679
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 678--680
+Underfull \hbox (badness 10000) in paragraph at lines 680--682
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 684--685
+Underfull \hbox (badness 10000) in paragraph at lines 686--687
 
  []
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 692--693
+Underfull \hbox (badness 10000) in paragraph at lines 694--695
 
  []
 
 
-Overfull \hbox (90.63084pt too wide) in paragraph at lines 694--696
+Overfull \hbox (90.63084pt too wide) in paragraph at lines 696--698
 []$\OT1/cmtt/m/n/10.95 https : / / machinelearningmastery . com / padding-[]and
 -[]stride-[]for-[]convolutional-[]neural-[]networks/$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 700--701
+Underfull \hbox (badness 10000) in paragraph at lines 702--703
 
  []
 
 
-Overfull \hbox (85.38216pt too wide) in paragraph at lines 702--705
+Overfull \hbox (85.38216pt too wide) in paragraph at lines 704--707
 []$\OT1/cmtt/m/n/10.95 https : / / kgptalkie . com / distilbert-[]smaller-[]fas
 ter-[]cheaper-[]lighter-[]and-[]ofcourse-[]distilled/$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 709--710
+Underfull \hbox (badness 10000) in paragraph at lines 711--712
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 711--717
+Underfull \hbox (badness 10000) in paragraph at lines 713--719
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 718--734
+Underfull \hbox (badness 10000) in paragraph at lines 720--736
 
  []
 
 [25] [26]
-Underfull \hbox (badness 10000) in paragraph at lines 748--749
+Underfull \hbox (badness 10000) in paragraph at lines 750--751
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 757--758
+Underfull \hbox (badness 10000) in paragraph at lines 759--760
 
  []
 
 
-Overfull \hbox (20.14659pt too wide) in paragraph at lines 759--762
+Overfull \hbox (20.14659pt too wide) in paragraph at lines 761--764
 []$\OT1/cmtt/m/n/10.95 https : / / www . machinelearningplus . com / machine-[]
 learning / bias-[]variance-[]tradeoff/$[] 
  []
 
 
-Overfull \hbox (365.31917pt too wide) in paragraph at lines 759--762
+Overfull \hbox (365.31917pt too wide) in paragraph at lines 761--764
 []$\OT1/cmtt/m/n/10.95 https : / / towardsdatascience . com / is-[]your-[]model
 -[]overfitting-[]or-[]maybe-[]underfitting-[]an-[]example-[]using-[]a-[]neural-
 []network-[]in-[]python-[]4faf155398d2$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--762
+Underfull \hbox (badness 10000) in paragraph at lines 761--764
 
  []
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 775--776
+Underfull \hbox (badness 10000) in paragraph at lines 777--778
 
  []
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 813--814
+Underfull \hbox (badness 10000) in paragraph at lines 815--816
 
  []
 
 
-Overfull \hbox (217.10197pt too wide) in paragraph at lines 815--819
+Overfull \hbox (217.10197pt too wide) in paragraph at lines 817--821
 []$\OT1/cmtt/m/n/10.95 https : / / www . machinecurve . com / index . php / 201
 9 / 09 / 16 / he-[]xavier-[]initialization-[]activation-[]functions-[]choose-[]
 wisely/$[]
  []
 
 [29]
-Underfull \hbox (badness 10000) in paragraph at lines 824--826
+Underfull \hbox (badness 10000) in paragraph at lines 826--828
 
  []
 
 
-Overfull \hbox (49.89003pt too wide) in paragraph at lines 827--830
+Overfull \hbox (49.89003pt too wide) in paragraph at lines 829--832
 []$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 49433936 /
  how-[]to-[]initialize-[]weights-[]in-[]pytorch$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 834--835
+Underfull \hbox (badness 10000) in paragraph at lines 836--837
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 844.
+
+Underfull \hbox (badness 10000) in paragraph at lines 838--839
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 840--841
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 848--849
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 857.
 [30]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 844.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 857.
  (./journal_theory_ML.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 844.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 844.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 857.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 857.
 Package rerunfilecheck Info: File `journal_theory_ML.out' has not changed.
 (rerunfilecheck)             Checksum: D80FC9920CA4F7C574DF29E1E368685A;518.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 844.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 857.
  ) 
 Here is how much of TeX's memory you used:
  6298 strings out of 494880
@@ -1228,10 +1243,10 @@ amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 sy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on journal_theory_ML.pdf (30 pages, 259363 bytes).
+Output written on journal_theory_ML.pdf (30 pages, 259876 bytes).
 PDF statistics:
- 419 PDF objects out of 1000 (max. 8388607)
- 369 compressed objects within 4 object streams
+ 420 PDF objects out of 1000 (max. 8388607)
+ 370 compressed objects within 4 object streams
  56 named destinations out of 1000 (max. 500000)
  65 words of extra memory for PDF output out of 10000 (max. 10000000)
 
