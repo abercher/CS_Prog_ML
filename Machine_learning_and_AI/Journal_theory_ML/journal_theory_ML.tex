@@ -729,7 +729,7 @@ There are several ways to build the has functions. In the paper by this Irina Ri
 \textbf{Edit (04.11.2020):} I started reading this paper presenting an \textbf{overview of hashing techniques}:\\
 \href{https://jingdongwang2017.github.io/Pubs/LTHSurvey.pdf}{A survey on learning hash}\\
 Section 2 explains how one can use this to speed up \textbf{nearest neighbor} and how one can use it for \textbf{search} (which is not so different). For this second task, the authors distinguish between two techniques \textbf{hash table lookup} and \textbf{hash table ranking}. The first one aims at grouping similar items together into bucket (they get the same hash) and when a query enters, its hash is computed and the bucket with the given hash is used to find the likely neighbors. The second one is to try to use the has as a way to reduce the dimensionality of the original items. Each item is mapped to a different hash but since the dimension is smaller, it is easier to compute the distances.\\
-\textbf{Exit (08.11.2020):} I progressed in the reading of the article presented in WeCNLP:\\
+\textbf{Edit (08.11.2020):} I progressed in the reading of the article presented in WeCNLP:\\
 \href{http://ceur-ws.org/Vol-2202/paper4.pdf}{Dialogue modeling via hash functions}\\
 If I get it correctly, here is the \textbf{general idea}:\\
 \begin{enumerate}
@@ -743,6 +743,10 @@ From what they say in the paper, this prediction step is an innovation. So far, 
 They test several types of hash functions and compare their results.\\
 One interesting thing with this approach is that all these hash functions are built using a subset of the training set. So one can choose this subset in order to push the model to learn some features.\\
 At the end of the paper, they present some predicted answers, and these are really not convincing, so this approach has a nice theoretical side, but doesn't deliver perfect results. During the talk, the woman said that it still worked better than some NN based alternatives, but I don't remember them.
+
+\textbf{Edit (23.02.2021):} In this video from SpaCy:\\
+\url{https://www.youtube.com/watch?t=975&v=sqDHBH9IjRU}\\
+at 28:25, it is explained that they are called \textbf{Bloom embeddings}.
 
 \end{loggentry}
 
