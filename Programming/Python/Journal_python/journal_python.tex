@@ -1699,15 +1699,28 @@ I guess that weight initialization becomes really important when playing with de
 \end{loggentry}
 
 
-\begin{loggentry}{23.02.2021}{Fairseq a library for large models}
+\begin{loggentry}{23.02.2021}{Libraries for Transformer-based models and other large models}
 
 I discovered this repo containing pytoch based implementations of plenty of advanced AI models:\\
 \url{https://github.com/pytorch/fairseq}\\
-``Fairseq(-py) is a sequence modeling toolkit that allows researchers and developers to train custom models for translation, summarization, language modeling and other text generation tasks."\\
+``\textbf{Fairseq}(-py) is a sequence modeling toolkit that allows researchers and developers to train custom models for translation, summarization, language modeling and other text generation tasks."\\
 I discovered it in this paper (foot note reference):\\
 \url{https://arxiv.org/pdf/1910.11450.pdf}\\
 
-From what I read in these two pages:\\
+\textbf{Huggingface Transformers} is another library offering a kind of unified set of APIs to use plenty of pre-trained large models, often with implementation both in pytorch and tensorflow:\\
+\url{https://huggingface.co/transformers/pretrained_models.html}\\
+It has good documentation, a forum, and it seems to be popular in both academia and applications.\\
+
+I discovered the library \textbf{simple-transformers}:\\
+\url{https://simpletransformers.ai/about/}\\
+which is a wrapper around Huggingface Transformers. The code can be found in its GitHub:\\
+\url{https://github.com/ThilinaRajapakse/simpletransformers}\\
+I discovered it in this blog:\\
+\url{https://medium.com/the-innovation/asr-rescoring-with-fine-tuned-gpt-70f7f6323565}\\
+and it seems to have many contributors. Maybe it will become something like Keras for Huggingface Transformers.\\
+
+
+From what I read in these two pages about \textbf{comparison} between different libraries/frameworks:\\
 \url{https://towardsdatascience.com/choose-the-right-transformer-framework-for-you-b7c51737d45}\\
 \url{https://www.reddit.com/r/MachineLearning/comments/gj51j3/d_p_allennlp_vs_fairseq_vs_opennmt_vs_huggingface/}\\
 Fairseq is targeting a bit more research than application. In comparison, Huggingface is probably easier to use for real-world applications, even though, I have to say that I'm not sure to know what this concretely means. Maybe it makes it easier to use pre-trained models.
