@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.1.17)  22 APR 2021 12:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.1.17)  22 APR 2021 13:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1763,16 +1763,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 1747--1750
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1773.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1774.
 [47]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1773.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1774.
  (./journal_python.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1773.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1773.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1774.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1774.
 
 Package rerunfilecheck Info: File `journal_python.out' has not changed.
 (rerunfilecheck)             Checksum: D5214FDFB4BF422C90E2B3213D8496A5;241.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1773.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1774.
  ) 
 Here is how much of TeX's memory you used:
  6876 strings out of 483140
