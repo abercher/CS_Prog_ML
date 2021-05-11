@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.1.17)  17 JAN 2021 14:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.24)  11 MAY 2021 13:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -977,34 +977,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 1112--1114
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1120--1121
+Underfull \hbox (badness 10000) in paragraph at lines 1115--1116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1129--1130
+Overfull \hbox (32.64397pt too wide) in paragraph at lines 1117--1123
+[]$\OT1/cmtt/m/n/10.95 https : / / stackoverflow . com / questions / 9077687 / 
+why-[]use-[]celery-[]instead-[]of-[]rabbitmq$[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1127--1128
 
  []
 
 [31]
-Underfull \hbox (badness 10000) in paragraph at lines 1137--1138
+Underfull \hbox (badness 10000) in paragraph at lines 1136--1137
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1146--1147
+Underfull \hbox (badness 10000) in paragraph at lines 1144--1145
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1155--1156
+Underfull \hbox (badness 10000) in paragraph at lines 1153--1154
 
- []
-
-
-Overfull \hbox (162.36378pt too wide) in paragraph at lines 1160--1160
-[]\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
-https://www.youtube.com/watch?v=hw3d9KTYHIE"[] 
  []
 
 
@@ -1013,34 +1013,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 1162--1163
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1167--1168
+Overfull \hbox (162.36378pt too wide) in paragraph at lines 1167--1167
+[]\OT1/cmtt/m/n/10.95 youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s" "
+https://www.youtube.com/watch?v=hw3d9KTYHIE"[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1169--1170
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1177--1178
+Underfull \hbox (badness 10000) in paragraph at lines 1174--1175
 
  []
 
 
-Overfull \hbox (20.14659pt too wide) in paragraph at lines 1179--1183
+Underfull \hbox (badness 10000) in paragraph at lines 1184--1185
+
+ []
+
+[32]
+Overfull \hbox (20.14659pt too wide) in paragraph at lines 1186--1190
 []$\OT1/cmtt/m/n/10.95 https : / / www . learnitguide . net / 2018 / 06 / docke
 rfile-[]explained-[]with-[]examples . html$[] 
  []
 
 
-Overfull \hbox (9.64922pt too wide) in paragraph at lines 1179--1183
+Overfull \hbox (9.64922pt too wide) in paragraph at lines 1186--1190
 []$\OT1/cmtt/m/n/10.95 https : / / www . learnitguide . net / 2018 / 06 / write
 -[]dockerfile-[]to-[]build-[]own-[]images .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1187--1188
-
- []
-
-[32]
-Underfull \hbox (badness 10000) in paragraph at lines 1195--1196
+Underfull \hbox (badness 10000) in paragraph at lines 1194--1195
 
  []
 
@@ -1050,145 +1056,150 @@ Underfull \hbox (badness 10000) in paragraph at lines 1202--1203
  []
 
 
-Overfull \hbox (107.8769pt too wide) in paragraph at lines 1204--1209
+Underfull \hbox (badness 10000) in paragraph at lines 1209--1210
+
+ []
+
+
+Overfull \hbox (107.8769pt too wide) in paragraph at lines 1211--1216
 []$\OT1/cmtt/m/n/10.95 https : / / askubuntu . com / questions / 826646 / backu
 p-[]failed-[]could-[]not-[]understand-[]duplicity-[]version$[] 
  []
 
 
-Overfull \hbox (107.8769pt too wide) in paragraph at lines 1204--1209
+Overfull \hbox (107.8769pt too wide) in paragraph at lines 1211--1216
 []$\OT1/cmtt/m/n/10.95 https : / / askubuntu . com / questions / 826646 / backu
 p-[]failed-[]could-[]not-[]understand-[]duplicity-[]version$[] 
  []
 
 
-Overfull \hbox (696.99174pt too wide) in paragraph at lines 1211--1211
+Overfull \hbox (696.99174pt too wide) in paragraph at lines 1218--1218
 []\OT1/cmtt/m/n/10.95 /home/aritz/anaconda3/bin:/home/aritz/anaconda3/condabin:
 /home/aritz/bin:/home/aritz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin
 :/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1212--1213
+Underfull \hbox (badness 10000) in paragraph at lines 1219--1220
 
  []
 
 
-Overfull \hbox (8.64922pt too wide) in paragraph at lines 1214--1216
+Overfull \hbox (8.64922pt too wide) in paragraph at lines 1221--1223
 []$\OT1/cmtt/m/n/10.95 https : / / www . kubuntuforums . net / showthread . php
  / 76668-[]Backup-[]error-[]Duplicity ?
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1214--1216
+Underfull \hbox (badness 10000) in paragraph at lines 1221--1223
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1221--1222
+Underfull \hbox (badness 10000) in paragraph at lines 1228--1229
 
  []
 
 
-Overfull \hbox (107.3769pt too wide) in paragraph at lines 1223--1226
+Overfull \hbox (107.3769pt too wide) in paragraph at lines 1230--1233
 []$\OT1/cmtt/m/n/10.95 https : / / www . coursera . org / lecture / troubleshoo
 ting-[]debugging-[]techniques / slow-[]web-[]server-[]zXeaB$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1223--1226
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1227--1228
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1232--1233
+Underfull \hbox (badness 10000) in paragraph at lines 1230--1233
 
  []
 
 [33]
-Underfull \hbox (badness 10000) in paragraph at lines 1240--1241
+Underfull \hbox (badness 10000) in paragraph at lines 1234--1235
 
  []
 
 
-Overfull \hbox (226.35066pt too wide) in paragraph at lines 1242--1246
+Underfull \hbox (badness 10000) in paragraph at lines 1239--1240
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1247--1248
+
+ []
+
+
+Overfull \hbox (226.35066pt too wide) in paragraph at lines 1249--1253
 []$\OT1/cmtt/m/n/10.95 https : / / superuser . com / questions / 709702 / how-[
 ]to-[]crawl-[]using-[]wget-[]to-[]download-[]only-[]html-[]files-[]ignore-[]ima
 ges-[]css-[]js$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1242--1246
+Underfull \hbox (badness 10000) in paragraph at lines 1249--1253
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1247--1249
+Underfull \hbox (badness 10000) in paragraph at lines 1254--1256
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1253--1254
+Underfull \hbox (badness 10000) in paragraph at lines 1260--1261
 
  []
 
 
-Overfull \hbox (225.85066pt too wide) in paragraph at lines 1255--1257
+Overfull \hbox (225.85066pt too wide) in paragraph at lines 1262--1264
 []$\OT1/cmtt/m/n/10.95 https : / / www . digitalocean . com / community / tutor
 ials / how-[]to-[]use-[]rsync-[]to-[]sync-[]local-[]and-[]remote-[]directories-
 []on-[]a-[]vps$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1255--1257
+Underfull \hbox (badness 10000) in paragraph at lines 1262--1264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1261--1262
+Underfull \hbox (badness 10000) in paragraph at lines 1268--1269
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1269--1270
+Underfull \hbox (badness 10000) in paragraph at lines 1276--1277
 
  []
 
-
-Overfull \hbox (133.62035pt too wide) in paragraph at lines 1284--1284
+[34]
+Overfull \hbox (133.62035pt too wide) in paragraph at lines 1291--1291
 []\OT1/cmtt/m/n/10.95 aritz@aritz-ThinkPad-T460p:~/Programs/JetBrains/jetbrains
 -toolbox-1.19.7784$ ./jetbrains-toolbox[] 
  []
 
-[34] [35]
-Overfull \hbox (5.78084pt too wide) in paragraph at lines 1328--1330
+[35]
+Overfull \hbox (5.78084pt too wide) in paragraph at lines 1335--1337
 []$\OT1/cmtt/m/n/10.95 https : / / github . com / NileshGule / Ebooks / blob / 
 master / The % 20Clean % 20Coder %
  []
 
-
-Overfull \hbox (222.48228pt too wide) in paragraph at lines 1345--1347
+[36]
+Overfull \hbox (222.48228pt too wide) in paragraph at lines 1352--1354
 []$\OT1/cmtt/m/n/10.95 https : / / blog . paralleldots . com / data-[]science /
  breakthrough-[]research-[]papers-[]and-[]models-[]for-[]sentiment-[]analysis/$
 [] 
  []
 
-[36] [37]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1396.
+[37]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1403.
  [38]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1396.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1403.
  (./journal_CS.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1396.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1396.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1403.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1403.
 
 Package rerunfilecheck Info: File `journal_CS.out' has not changed.
 (rerunfilecheck)             Checksum: 9146EAD50763ADF1E7CE766591E0075B;641.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1396.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1403.
  ) 
 Here is how much of TeX's memory you used:
  6872 strings out of 483140
@@ -1197,23 +1208,23 @@ Here is how much of TeX's memory you used:
  21662 multiletter control sequences out of 15000+600000
  541824 words of font info for 60 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 35i,11n,45p,1182b,484s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/aritz/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600
-pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symb
-ols/msbm10.pfb>
-Output written on journal_CS.pdf (38 pages, 237312 bytes).
+ 35i,11n,45p,1182b,421s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/abercher/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.
+600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/s
+ymbols/msbm10.pfb>
+Output written on journal_CS.pdf (38 pages, 237609 bytes).
 PDF statistics:
- 587 PDF objects out of 1000 (max. 8388607)
- 528 compressed objects within 6 object streams
+ 590 PDF objects out of 1000 (max. 8388607)
+ 531 compressed objects within 6 object streams
  122 named destinations out of 1000 (max. 500000)
  81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

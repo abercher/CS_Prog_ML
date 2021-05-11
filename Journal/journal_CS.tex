@@ -1107,12 +1107,19 @@ An API is just an interface between a program (or a server) and another program 
 \end{loggentry}
 
 
-\begin{loggentry}{04.10.19}{Introduction to RabbitMQ}
+\begin{loggentry}{04.10.19}{Introduction to RabbitMQ and Celery}
 
 I read this intro to \textbf{RabbitMQ} and \textbf{Queue Managers} in general:\\
 \url{https://www.cloudamqp.com/blog/2015-05-18-part1-rabbitmq-for-beginners-what-is-rabbitmq.html}\\
 
-I started reading the code of the channels.py file of tl\_dm\_core. From what I understand, these \texttt{RabbitMQInputChannel} and \texttt{RabbitMQOutputChannel} are subclasses of Rasa \texttt{InputChannel} and \texttt{OutputChannel} which make use of the RabbitMQ queuing management mechanism (implemented in the library \texttt{pika}). I need to look at other examples of channels, maybe try to do something with slack first.
+I started reading the code of the channels.py file of tl\_dm\_core. From what I understand, these \texttt{RabbitMQInputChannel} and \texttt{RabbitMQOutputChannel} are subclasses of Rasa \texttt{InputChannel} and \texttt{OutputChannel} which make use of the RabbitMQ queuing management mechanism (implemented in the library \texttt{pika}). I need to look at other examples of channels, maybe try to do something with slack first.\\
+
+\textbf{Edit (11.05.2021):} I discovered \textbf{celery} which seem to be another way to handle queues. If I get it right, it comes with plenty of wrappers which makes it easy to distribute tasks to several servers in an asynchronous way. See these pages for an intro to celery:\\
+\url{https://en.wikipedia.org/wiki/Celery_(software)}\\
+and\\
+\url{https://www.fullstackpython.com/celery.html}\\
+and this one for a comparison with RabbitMQ:\\
+\url{https://stackoverflow.com/questions/9077687/why-use-celery-instead-of-rabbitmq}
 
 \end{loggentry}
 
