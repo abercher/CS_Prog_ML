@@ -309,7 +309,7 @@ This paper explains how \textbf{StarSpace} is working:\\
 I had encountered it already when doing duplicate detection in the NLP coursera course. It seems to be a way to build some custom embeddings. I found again a reference to it on \href{https://medium.com/rasa-blog/supervised-word-vectors-from-scratch-in-rasa-nlu-6daf794efcd8}{this page} explaining how the TensorFlow embedding pipeline of RasaNLU works.\\
 \textbf{Edit (08.10.19):} I looked at the paper again. The main idea is that depending on the task, we define a set of (discrete) features (for text classification, the features would be all words into a fixed English dictionary, and document labels), and then we train embedding for these features. Then we define ``entities" as bag of features. A text to classify would have as features the words it contains, and the document labels would have only one feature each, the feature corresponding to the given labels. Then one trains the features embeddings using a special loss function based on similarity, and positive/negative examples. Later we can try for a new text to classify it by looking at the labels which have an embedding similar to the embedding of the new document (obtained by summing the embedings of the words it contains). One other application is to try to \textbf{predict relations in a graph}. I was thinking that it's kind of pointless since one can query the graph, but then I realized that it could be used to \textbf{guess relations which aren't explicitly encoded in the graph}, if the graph is big enough and contains some recurring structure.\\
 
-\textbf{Edit (11.08.2020):} Nikos made me realize that using this similarity approach and choosing the class having the highest similarity with the embedding of the input is the same as passing the input through a last linear layer to reshape it to a vector having the length equal to the number of classes and selecting (with softmax for instance) the component having the highest value. It is simply a different way of seeing the same thing.
+\textbf{Edit (11.08.2020):} Using this similarity approach and choosing the class having the highest similarity with the embedding of the input is the same as passing the input through a last linear layer to reshape it to a vector having the length equal to the number of classes and selecting (with softmax for instance) the component having the highest value. It is simply a different way of seeing the same thing.
 
 \end{loggentry}
 
@@ -412,7 +412,7 @@ with the difference that they use the Transformer architecture instead of the LS
 (c.f. p.5). They explain there that they use only the decoder part. This makes me wonder what happens with the encoder-decoder attention sub-layer. Where are the queries computed from? Do we use the vectors of the previous decoder layer? Or do we remove the encoder-decoder attention sub-layers? If we remove them, why do we  say that this is the decoder part and not the encoder part? Is it because we keep the mask thing (which is actually modified in this paper \textit{Generating Wikipedia by summarizing long sequences} and replaced by two alternatives)? But coming back to using the transformer to get good embeddings, I don't understand why we would keep the masks if we want to generate embeddings. On the opposite, we would like that every token gets enriched by the whole context. Personally I would train the encoder together with the decoder, and then use only the encoder... It isn't clear at all in the \textit{Improving language understanding by Generative pre-training} article where the explanation is very shallow. I guess I should look at the implementation. I could look at it on the website paper with code:\\
 \url{https://github.com/openai/finetune-transformer-lm}\\
 but unfortunately it is in tensorflow which is a pain in the ass.\\
-\textbf{Edit (25.09.19):} Joram explained me that actually, what is used is indeed just the decoder part but the layers don't have the encoder-decoder attention sublayers. They keep the mask because it forces the model to have the ``auto-regressive" property, so in a sense, to predict one word after the other.\\
+\textbf{Edit (25.09.19):} What is used is indeed just the decoder part but the layers don't have the encoder-decoder attention sublayers. They keep the mask because it forces the model to have the ``auto-regressive" property, so in a sense, to predict one word after the other.\\
 \textbf{Exit (03.02.2021):} This page about \textbf{GPT-2}:\\
 \url{http://jalammar.github.io/illustrated-gpt2/}\\
 confirms what I suspected above: in the \textit{Improving language understanding by Generative pre-training} article, only the decoder part of the transformer is used and the encoder-decoder attention sub-layer is removed.
@@ -513,9 +513,9 @@ Declan also mentioned \textbf{homotopy type theory}:\\
 
 \begin{loggentry}{03.09.19}{Generating Logical Forms from Graph Representations of Text and Entities}
 
-Joram presented this paper:\\
+This paper:\\
 \url{https://arxiv.org/pdf/1905.08407.pdf}
-which adapts the concept of Transformer to see it as a way to embed a fully connected graph and transforms, layer after layer, in the encoder the representation of it nodes. In the described case the inputs are the list of token in a natural language sentence, and a list of possible entities (with possible overlaps or wrong entities), and the output is a query for a graph data base (the graph is given). One of the key ideas is to compute differently the attention depending on the two types of nodes (for which the attention is computed).
+adapts the concept of Transformer to see it as a way to embed a fully connected graph and transforms, layer after layer, in the encoder the representation of it nodes. In the described case the inputs are the list of token in a natural language sentence, and a list of possible entities (with possible overlaps or wrong entities), and the output is a query for a graph data base (the graph is given). One of the key ideas is to compute differently the attention depending on the two types of nodes (for which the attention is computed).
 
 \end{loggentry}
 
@@ -595,9 +595,9 @@ which intends to \textbf{build a neural semantic parser from a Domain Ontology}.
 
 \begin{loggentry}{14.01.20}{Text generation with specific topic}
 
-Joram presented this paper:\\
+This paper:\\
 \url{https://arxiv.org/pdf/1912.02164.pdf}\\
-which aims at doing text generation using a LM based on GPT2, with the possibility of deciding \textbf{which model topic is going to be the main theme of the generated text}.\\
+aims at doing text generation using a LM based on GPT2, with the possibility of deciding \textbf{which model topic is going to be the main theme of the generated text}.\\
 According to the paper, this approach requires less training (maybe even no additional training) than the classical approach consisting in fine-tuning the language model on specific data associated to the given topic. It seems to be somehow related to what is done with style transfer in image processing.\\
 The key idea was to use some implementation of hugging face for GPT2 (this implementation was introduced for optimization reasons), and before predicting what is the $k+1$ word, one update the activation values (and not the attention weight (this is a trick similar to the one used in transfer learning in image processing)) of the $k$ first words by using back propagation with regards to another loss function, not related to linear modeling but to topic prediction)
 

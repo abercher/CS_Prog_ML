@@ -54,18 +54,16 @@ In this section, I will try to list current limitations that the bots seem to ha
 \begin{enumerate}
 \item (30.06.19) Virtual assistants aren't able to \textbf{recognize the mood of the user} and adapt their behaviour in consequence.
 \item (17.05.19) A bot doesn't seem to have \textbf{general knowledge of the world}. If something goes out of its domain, it has no clue what to do, and can't even try to guess what this new topic is about. It would be great if it could 1) relate every OOD query to a wikipedia page 2) depending on the topic have a different reaction.
-\item (17.05.19) A bot isn't able to \textbf{learn from feedbacks/corrections on the spot}. So it will repetitively do the same mistakes in a conversation. Maybe one could add an intent ``correction" and when this comes up, one would ask for more details and depending on the answer, change the policy used.
+\item (17.05.19) A bot isn't able to \textbf{learn from feedbacks/corrections on the spot}. So it will repetitively do the same mistakes in a conversation.
 \item (09.05.19) In a conversation with a real human, a person will sometimes mention some vaguely related facts, just for the pleasure of speaking, in parentheses or even by orienting the conversation toward a brand new topic. Our bot only reacts to requests. We could improve that by adding the possibility for the bot to detect potential additional topics of interest of the user depending on information he or she gave, without having the user ask for it. So \textbf{proactive instead of only responsive}.
 \item (08.05.19) I get the feeling that a bot can \textbf{focus only on one task at the time} and keep track of only one topic. What if I want to make a parenthesis and come back to the first topic later?
-\item (08.05.19) I don't see any \textbf{reasoning} in our app. Every decision seems to be based on a hard coded procedure. But what is exactly reasoning? There seem to be models like ESIM to be able to deduce if a sentence is a consequence of a previous sentence. But this is a limited kind of reasoning. Can we do more? Can we use machine learning to determine when to use reasoning?
+\item (08.05.19) Human use \textbf{reasoning}. The kind of deduction that people do seem hard to achieve for a bot. Every decision seems to be based on a hard coded procedure. But what is exactly reasoning? There seem to be models like ESIM to be able to deduce if a sentence is a consequence of a previous sentence. But this is a limited kind of reasoning. Can we do more? Can we use machine learning to determine when to use reasoning?
 \item (08.05.19) The bot's \textbf{general behavior/responses will always be the same from one user to the other} and from one session to the other. It would be nice if it was keeping track of its previous interactions and that it behavior evolved. A bot which would have to do some recommendation task could after a while suggest something different from the current tastes (predicted using a recommander system) of the user.
 \item (08.05.19) A bot is \textbf{always polite and servile}. People generally don't react well to rude requests or comment. These should be handled.
-\item (01.03.19) I'm not sure that a bot can easily \textbf{understand that it has done a mistake} and not repeat it again. If there is a term which is ambiguous, like ``backhoe" in the riggs app and the computer tries to react to meaning 1, and the user says ``no, I meant meaning 2", I wonder how the bot could understand.
+\item (01.03.19) I'm not sure that a bot can easily \textbf{understand that it has done a mistake} and not repeat it again. If there is a term which is ambiguous and the computer tries to react to meaning 1, and the user says ``no, I meant meaning 2", I wonder how the bot could understand.
 \item (01.03.19) I wonder if a bot can \textbf{learn to fit its user need} while talking with him/her.
 \item (22.01.2021) Bots response most of the time in a \textbf{deterministic way}. Maybe one could try to implement a system of \textbf{mood}. One could look at what are random factors (like meteorology) which influence the behaviour of people, and then use them to put some randomnes in the behaviour of a bot.
 \end{enumerate}
-
-
 
 
 
@@ -106,7 +104,7 @@ This page explains what are the 5 levels of chat bots. For now we are currently 
 
 \begin{loggentry}{01.01.19}{Conversation One: The anatomy of a modern conversation application}
 
-Vijeta shared this link which gives an idea of concepts like \textbf{ontology} (which from my understanding comes down to the definition of intents and entities related to the domain), and how to implement a DM using the context:
+This link gives an idea of concepts like \textbf{ontology} (which from my understanding comes down to the definition of intents and entities related to the domain), and how to implement a DM using the context:
 
 \url{https://conversation.one/2017/10/25/anatomy-modern-conversational-application/}
 
@@ -124,9 +122,9 @@ it is explained that Rasa developped a way to create a DM using ``interractive l
 
 \begin{loggentry}{19.03.19}{Article detailing components of a chat bots (with shallow semantic parsing)}
 
-Mijail shared this article:\\
+This article:\\
 \href{http://aclweb.org/anthology/D18-2027}{Developing Production-Level Conversational Interfaces with Shallow Semantic Parsing}\\
-which presents the general architecture of a virtual assistant, decomposing it into:
+presents the general architecture of a virtual assistant, decomposing it into:
 \begin{enumerate}
 \item Intent Classification (Domain Classifier + Intent Classifier)
 \item Entity Recognition
