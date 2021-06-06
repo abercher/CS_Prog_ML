@@ -32,3 +32,6 @@ Programming/Python/*
 !Programming/Python/Useful_scripts/
 !Programming/Python/my_tests/
 !Programming/Linux_doc/
+!Programming/Java/
+Programming/Java/*
+!Programming/Java/Java_journal/

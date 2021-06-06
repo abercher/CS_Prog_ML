@@ -1,0 +1,122 @@
+
+
+%% See "book", "report", "letter" for other types of document.
+\documentclass[11pt,a4paper]{article}
+%\documentclass[11pt,a4paper]{article} % use larger type; default would be 10pt
+
+%% Packages
+\usepackage{lipsum} % to get some dummy text
+\usepackage[utf8]{inputenc} % set input encoding 
+%\usepackage[francais]{babel} %accens aigus acceptés dans le texte
+\usepackage{hyperref} % for web links
+\usepackage{amssymb, amsmath, amsfonts} % symbols math (\mathbb etc...).
+\usepackage{geometry} % for page dimensions, landscape, format
+\usepackage{fancyhdr}
+\usepackage{enumerate} % to be able to determine the style of the enumeration
+%\usepackage[toc,page]{appendix} % For appendices
+%\usepackage[final]{pdfpages} % to include a pdf
+
+%% Definition of the environment for a diary
+\newenvironment{loggentry}[2]% date, heading
+{\noindent\textbf{#1}\hspace{1cm}$\mathbf{\sim}$\text{ }\textbf{#2}\\}{\vspace{0.5cm}}
+
+
+%% Page dimensions, landscape format
+%\geometry{legalpaper, margin=1in} % c.f. doc package geometry
+
+
+%% Headers and footers
+%% This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{1pt} % customise the layout...
+\lhead{}\chead{}\rhead{Aritz Bercher}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%% Title
+
+\title{Java Journal}
+\author{Aritz Bercher}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+With the Coursera - Princeton Algorithms Part 1 course, I had to start learning Java. I will collect here useful information.
+\end{abstract}
+
+\begin{loggentry}{18.05.2021}{Getting started}
+
+Following the advice in the HelloWorld tutorial:\\
+\url{https://lift.cs.princeton.edu/java/linux/}\\
+I downloaded IntelliJ.\\
+
+Here are a couple of interesting things for Java, when coming from Python:\\
+\begin{itemize}
+\item There is one class per file and it should have the same name as the script.
+\item Imports are done automatically if we are importing something in the same folder.
+\item I have installed Java 11:\\
+\begin{verbatim}
+(base) aritz@aritz-ThinkPad-T460p:~$ javac -version
+javac 11.0.11
+(base) aritz@aritz-ThinkPad-T460p:~$ java -version
+openjdk version "11.0.11" 2021-04-20
+OpenJDK Runtime Environment (build 11.0.11+9-Ubuntu-0ubuntu2.20.04)
+OpenJDK 64-Bit Server VM (build 11.0.11+9-Ubuntu-0ubuntu2.20.04, mixed mode, sharing)
+\end{verbatim}
+\end{itemize}
+
+I did this \textbf{beginner tutorial for IntelliJ}:\\
+\url{https://www.jetbrains.com/help/idea/creating-and-running-your-first-java-application.html}
+
+\end{loggentry}
+
+
+\begin{loggentry}{23.05.2021}{How Java works}
+
+I read this explanation of Georgi from the Coursera Algorithms Part 1 forum about \textbf{ClassPath} (how Java imports classes used inside a program):\\
+\url{https://www.coursera.org/learn/algorithms-part1/discussions/forums/h8l7dMa0Eeatkg4PhuP1KA/threads/LFNq5AtTSSaTauQLU5kmtQ}\\
+There are also these two pages for more details:\\
+\url{https://en.wikipedia.org/wiki/Classpath}\\
+and\\
+\url{https://docs.oracle.com/javase/8/docs/technotes/tools/windows/findingclasses.html#A1012444}\\
+
+I also read this article presenting the \textbf{history of Java}:\\
+\url{https://www.coursereport.com/blog/what-is-java-programming-used-for}\\
+It is non-technical but it gives a good idea of what Java is. The article mentions this book as a good technical reference book, free to read online:\\
+\url{http://math.hws.edu/javanotes/}\\
+
+I watched this video which explains at a very high level \textbf{how Java works}:\\
+\url{https://www.youtube.com/watch?v=fhfVkPpIwjk}\\
+Here are things I found interesting:\\
+\begin{enumerate}
+\item \textbf{Java bytecode} isn't machine language. It's a transformed version of the code, created by the \textbf{Compiler} from the source code (blabla.java). This code is then run instruction by instruction by an interpreter. The Java bytecode format is blabla.class.
+\item The \textbf{Java Virtual Machine (JVM)}, the part which runs the Java bytecode is machine specific but the Java bytecode is universal.
+\end{enumerate}
+
+This tutorial gives another overview of Java with more focus on technical aspects:\\
+\url{https://beginnersbook.com/2013/05/java-introduction/}\\
+This page gives a nice picture of how \textbf{JVM}, \textbf{JRE}, and \textbf{JDK} are related:\\
+\url{https://beginnersbook.com/2013/05/jvm/}
+
+\end{loggentry}
+
+
+\begin{loggentry}{05.06.2021}{Difference between \texttt{class} and \texttt{interface}}
+
+This page explains well the difference between \texttt{class} and \texttt{interface}:\\
+\url{https://www.geeksforgeeks.org/differences-between-interface-and-class-in-java/}
+
+Interfaces appeared on slide 47 of the slides of Week 2 of Coursera Algorithms Part 1.
+
+\end{loggentry}
+
+
+\end{document}
+
+
+
+
+
+
